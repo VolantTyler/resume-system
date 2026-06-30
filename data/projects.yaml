@@ -1,0 +1,38 @@
+- id: nami-720-platform
+  name: NAMI 720 Event Platform
+  organization: NAMI
+  timeframe: 2024-present
+  problem: Nonprofit needed a reliable platform for event management and related workflows.
+  solution: Front-end implementation and testing support on a Laravel/Livewire event platform.
+  technologies:
+    - Laravel
+    - Livewire
+    - Alpine.js
+    - Cypress
+  outcomes:
+    - Improved regression coverage through Cypress
+    - Ongoing UI feature delivery and platform maintenance
+  related_accomplishment_ids:
+    - nami-cypress-testing-leadership
+    - nami-platform-maintenance
+  portfolio_visible: true
+  resume_relevance: high
+
+- id: nami-ccie-tm
+  name: CCIE-TM Training Registration
+  organization: NAMI
+  timeframe: 2024-present
+  problem: Training registration required multi-date handling and reliable release validation.
+  solution: Fixed registration edge cases, documented testing steps, and supported staging release.
+  technologies:
+    - Laravel
+    - Livewire
+    - Cypress
+  outcomes:
+    - Multi-date registration handling improvements
+    - Expanded test coverage for registration flows
+  related_accomplishment_ids:
+    - nami-ccie-registration-release
+    - nami-cypress-testing-leadership
+  portfolio_visible: true
+  resume_relevance: high

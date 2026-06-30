@@ -1,0 +1,106 @@
+categories:
+  - name: Front-End
+    skills:
+      - name: JavaScript
+        aliases:
+          - JS
+        evidence_ids:
+          - nami-platform-maintenance
+        proficiency: working
+        target_roles:
+          - frontend-engineer
+          - ui-engineer
+          - laravel-livewire
+
+      - name: HTML / CSS
+        evidence_ids:
+          - nami-platform-maintenance
+        proficiency: working
+        target_roles:
+          - frontend-engineer
+          - ui-engineer
+
+      - name: Alpine.js
+        evidence_ids:
+          - nami-platform-maintenance
+        proficiency: working
+        target_roles:
+          - frontend-engineer
+          - laravel-livewire
+
+      - name: Livewire
+        evidence_ids:
+          - nami-cypress-testing-leadership
+          - nami-ccie-registration-release
+        proficiency: working
+        target_roles:
+          - frontend-engineer
+          - laravel-livewire
+          - nonprofit-tech
+
+  - name: Back-End
+    skills:
+      - name: Laravel
+        evidence_ids:
+          - nami-cypress-testing-leadership
+          - nami-platform-maintenance
+        proficiency: working
+        target_roles:
+          - laravel-livewire
+          - nonprofit-tech
+          - frontend-engineer
+
+  - name: Testing
+    skills:
+      - name: Cypress
+        evidence_ids:
+          - nami-cypress-testing-leadership
+          - nami-ccie-registration-release
+        proficiency: working
+        target_roles:
+          - qa-minded-frontend
+          - frontend-engineer
+          - laravel-livewire
+
+      - name: Regression testing
+        evidence_ids:
+          - nami-cypress-testing-leadership
+        proficiency: working
+        target_roles:
+          - qa-minded-frontend
+
+  - name: Tooling
+    skills:
+      - name: Git
+        proficiency: working
+        target_roles:
+          - frontend-engineer
+          - laravel-livewire
+
+  - name: Collaboration
+    skills:
+      - name: Release support
+        evidence_ids:
+          - nami-ccie-registration-release
+        proficiency: working
+        target_roles:
+          - qa-minded-frontend
+          - nonprofit-tech
+
+      - name: Technical documentation
+        evidence_ids:
+          - nami-cypress-testing-leadership
+          - nami-ccie-registration-release
+        proficiency: working
+        target_roles:
+          - qa-minded-frontend
+
+  - name: CMS / Platform
+    skills:
+      - name: Platform maintenance
+        evidence_ids:
+          - nami-platform-maintenance
+        proficiency: working
+        target_roles:
+          - nonprofit-tech
+          - frontend-engineer

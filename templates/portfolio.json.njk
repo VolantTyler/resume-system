@@ -1,0 +1,63 @@
+{
+  "name": {{ profile.name | dump }},
+  "headline": {{ version.label | dump }},
+  "location": {{ profile.location | dump }},
+  "portfolioUrl": {{ profile.portfolio_url | dump }},
+  "githubUrl": {{ profile.github_url | dump }},
+  "linkedinUrl": {{ profile.linkedin_url | dump }},
+  "summary": {{ summary | dump }},
+  "featuredProjects": [
+{% for project in projects %}
+    {
+      "id": {{ project.id | dump }},
+      "name": {{ project.name | dump }},
+      "organization": {{ project.organization | dump }},
+      "timeframe": {{ project.timeframe | dump }},
+      "problem": {{ project.problem | dump }},
+      "solution": {{ project.solution | dump }},
+      "technologies": {{ project.technologies | dump }},
+      "outcomes": {{ project.outcomes | dump }},
+      "portfolioVisible": {{ project.portfolio_visible | dump }}
+    }{% if not loop.last %},{% endif %}
+{% endfor %}
+  ],
+  "skills": [
+{% for category in skills %}
+    {
+      "category": {{ category.name | dump }},
+      "items": {{ category.skill_names | dump }}
+    }{% if not loop.last %},{% endif %}
+{% endfor %}
+  ],
+  "experience": [
+{% for role in experience %}
+    {
+      "id": {{ role.id | dump }},
+      "company": {{ role.company | dump }},
+      "title": {{ role.title | dump }},
+      "location": {{ role.location | dump }},
+      "startDate": {{ role.start_date | dump }},
+      "endDate": {{ role.end_date | dump }},
+      "summary": {{ role.role_summary | dump }},
+      "technologies": {{ role.technologies | dump }},
+      "bullets": {{ role.bullets | dump }}
+    }{% if not loop.last %},{% endif %}
+{% endfor %}
+  ],
+  "selectedAccomplishments": [
+{% for accomplishment in accomplishments %}
+    {
+      "id": {{ accomplishment.id | dump }},
+      "company": {{ accomplishment.company | dump }},
+      "timeframe": {{ accomplishment.timeframe | dump }},
+      "bullet": {{ accomplishment.bullet | dump }},
+      "themes": {{ accomplishment.themes | dump }},
+      "technologies": {{ accomplishment.technologies | dump }},
+      "confidence": {{ accomplishment.confidence | dump }}
+    }{% if not loop.last %},{% endif %}
+{% endfor %}
+  ],
+  "generatedAt": {{ generated_at | dump }},
+  "versionId": {{ version.id | dump }},
+  "targetId": {{ version.target_id | dump }}
+}

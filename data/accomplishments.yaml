@@ -1,0 +1,103 @@
+- id: nami-cypress-testing-leadership
+  company: NAMI
+  role: Front-End Software Engineer
+  timeframe: 2024-present
+  category: testing
+  themes:
+    - Cypress
+    - Laravel
+    - Livewire
+    - QA automation
+    - release reliability
+  technologies:
+    - Cypress
+    - Laravel
+    - Livewire
+    - JavaScript
+  raw_fact: Led implementation of Cypress automated testing for a Laravel/Livewire event platform.
+  context: NAMI 720 event platform and CCIE-TM training management work.
+  resume_bullets:
+    standard: Led Cypress automated testing implementation for a Laravel/Livewire event platform, improving regression coverage and team confidence.
+    frontend: Built Cypress coverage for key user flows in a Laravel/Livewire application, helping stabilize releases and improve UI regression testing.
+    qa: Introduced Cypress-based regression testing practices, documented test flows, and improved release reliability.
+    nonprofit: Strengthened reliability of a nonprofit event-management platform by adding Cypress coverage for critical user workflows.
+  evidence:
+    - NAMI 720 platform
+    - CCIE-TM registration flow
+    - Cypress setup and documentation
+  target_roles:
+    - frontend-engineer
+    - ui-engineer
+    - qa-minded-frontend
+    - nonprofit-tech
+    - laravel-livewire
+  confidence: high
+  source_notes:
+    - Derived from Tyler's project notes.
+
+- id: nami-ccie-registration-release
+  company: NAMI
+  role: Front-End Software Engineer
+  timeframe: 2024-present
+  category: feature-delivery
+  themes:
+    - registration flows
+    - release support
+    - multi-date handling
+    - Livewire
+  technologies:
+    - Laravel
+    - Livewire
+    - Cypress
+  raw_fact: Fixed multi-date registration handling, wrote testing steps, improved Cypress coverage, and supported prime-to-staging release for CCIE-TM training registration.
+  context: CCIE-TM training registration release on the NAMI platform.
+  resume_bullets:
+    standard: Delivered CCIE-TM training registration improvements including multi-date handling fixes, testing documentation, and release support from prime to staging.
+    frontend: Implemented and stabilized multi-date registration UI behavior in a Livewire application as part of a training registration release.
+    qa: Authored testing steps and expanded Cypress coverage for a multi-date registration release, supporting staging validation.
+    nonprofit: Supported a nonprofit training registration release with bug fixes, test coverage, and staging deployment assistance.
+  evidence:
+    - CCIE-TM training registration release
+    - Multi-date registration handling fix
+    - Prime-to-staging release support
+  target_roles:
+    - frontend-engineer
+    - qa-minded-frontend
+    - nonprofit-tech
+    - laravel-livewire
+  confidence: high
+  source_notes:
+    - docs/intake/2026-06-29-example-update.md
+
+- id: nami-platform-maintenance
+  company: NAMI
+  role: Front-End Software Engineer
+  timeframe: 2024-present
+  category: platform
+  themes:
+    - platform maintenance
+    - UI implementation
+    - nonprofit technology
+  technologies:
+    - Laravel
+    - Livewire
+    - Alpine.js
+    - JavaScript
+  raw_fact: Maintains and implements UI features for nonprofit event and training management platforms.
+  context: Ongoing front-end work on NAMI web platforms.
+  resume_bullets:
+    standard: Maintains and implements UI features for nonprofit event and training management platforms built with Laravel and Livewire.
+    frontend: Implements and refines user-facing features in Laravel/Livewire applications, focusing on reliable UI delivery.
+    qa: Contributes UI fixes and testing support to keep nonprofit platform releases stable.
+    nonprofit: Supports mission-driven event and training platforms with practical front-end engineering and platform maintenance.
+  evidence:
+    - NAMI 720 platform
+    - Ongoing front-end feature work
+  target_roles:
+    - frontend-engineer
+    - ui-engineer
+    - nonprofit-tech
+    - laravel-livewire
+  confidence: high
+  source_notes:
+    - Derived from Tyler's professional background.

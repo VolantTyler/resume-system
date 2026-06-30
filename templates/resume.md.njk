@@ -1,0 +1,68 @@
+# {{ profile.name }}
+
+**{{ version.label }}**
+
+{% if profile.location %}{{ profile.location }}{% endif %}
+{% if profile.portfolio_url %} · [Portfolio]({{ profile.portfolio_url }}){% endif %}
+{% if profile.github_url %} · [GitHub]({{ profile.github_url }}){% endif %}
+{% if profile.linkedin_url %} · [LinkedIn]({{ profile.linkedin_url }}){% endif %}
+
+---
+
+## Summary
+
+{{ summary }}
+
+---
+
+## Experience
+
+{% for role in experience %}
+### {{ role.title }} — {{ role.company }}
+
+*{{ role.start_date }} – {{ role.end_date }}*{% if role.location %} · {{ role.location }}{% endif %}
+
+{% if role.role_summary %}{{ role.role_summary }}
+
+{% endif %}
+{% for bullet in role.bullets %}
+- {{ bullet }}
+{% endfor %}
+{% if role.technologies.length %}
+**Technologies:** {{ role.technologies | join(', ') }}
+{% endif %}
+
+{% endfor %}
+
+{% if projects.length %}
+## Selected Projects
+
+{% for project in projects %}
+### {{ project.name }} — {{ project.organization }}
+
+*{{ project.timeframe }}*
+
+{% if project.problem %}{{ project.problem }}
+
+{% endif %}
+{% if project.solution %}{{ project.solution }}
+
+{% endif %}
+{% if project.technologies.length %}
+**Technologies:** {{ project.technologies | join(', ') }}
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+{% if skills.length %}
+## Skills
+
+{% for category in skills %}
+**{{ category.name }}:** {{ category.skill_names | join(', ') }}
+{% endfor %}
+{% endif %}
+
+---
+
+*Generated from resume-system source data — {{ version.label }} ({{ version.id }})*

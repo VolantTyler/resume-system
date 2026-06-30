@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "skills.schema.json",
+  "title": "Skills",
+  "type": "object",
+  "required": ["categories"],
+  "properties": {
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "skills"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name"],
+              "properties": {
+                "name": { "type": "string", "minLength": 1 },
+                "aliases": { "type": "array", "items": { "type": "string" } },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "proficiency": { "type": "string" },
+                "target_roles": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

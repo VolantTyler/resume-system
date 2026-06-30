@@ -1,0 +1,24 @@
+{
+  "name": "resume-system",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "tsx scripts/validate-resume-data.ts",
+    "generate": "tsx scripts/generate-all.ts",
+    "build": "npm run validate && npm run generate",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/nunjucks": "^3.2.6",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.4",
+    "yaml": "^2.6.1",
+    "zod": "^3.24.1"
+  }
+}

@@ -1,0 +1,46 @@
+- id: frontend-engineer-v1
+  target_id: frontend-engineer
+  label: Front-End Engineer
+  summary_variant: frontend
+  experience_ids:
+    - nami-frontend-engineer
+  accomplishment_ids:
+    - nami-cypress-testing-leadership
+    - nami-ccie-registration-release
+    - nami-platform-maintenance
+  project_ids:
+    - nami-720-platform
+    - nami-ccie-tm
+  skill_emphasis:
+    - JavaScript
+    - Livewire
+    - Cypress
+    - HTML / CSS
+    - Alpine.js
+  output_slug: tyler-stahl-frontend-engineer
+  revision_history:
+    - date: "2026-06-29"
+      note: Initial Milestone 1 version.
+
+- id: nonprofit-tech-v1
+  target_id: nonprofit-tech
+  label: Nonprofit Technology Engineer
+  summary_variant: nonprofit
+  experience_ids:
+    - nami-frontend-engineer
+  accomplishment_ids:
+    - nami-cypress-testing-leadership
+    - nami-ccie-registration-release
+    - nami-platform-maintenance
+  project_ids:
+    - nami-720-platform
+    - nami-ccie-tm
+  skill_emphasis:
+    - Laravel
+    - Livewire
+    - Platform maintenance
+    - Cypress
+  output_slug: tyler-stahl-nonprofit-tech
+  revision_history:
+    - date: "2026-06-29"
+      note: Initial Milestone 1 version.

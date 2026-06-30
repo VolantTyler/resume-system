@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "accomplishments.schema.json",
+  "title": "Accomplishments",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "raw_fact",
+      "resume_bullets",
+      "confidence",
+      "target_roles"
+    ],
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "company": { "type": "string" },
+      "role": { "type": "string" },
+      "timeframe": { "type": "string" },
+      "category": { "type": "string" },
+      "themes": { "type": "array", "items": { "type": "string" } },
+      "technologies": { "type": "array", "items": { "type": "string" } },
+      "raw_fact": { "type": "string", "minLength": 1 },
+      "context": { "type": "string" },
+      "resume_bullets": {
+        "type": "object",
+        "minProperties": 1,
+        "additionalProperties": { "type": "string", "minLength": 1 }
+      },
+      "evidence": { "type": "array", "items": { "type": "string" } },
+      "target_roles": {
+        "type": "array",
+        "items": { "type": "string", "minLength": 1 },
+        "minItems": 1
+      },
+      "confidence": {
+        "type": "string",
+        "enum": ["high", "medium", "low"]
+      },
+      "source_notes": { "type": "array", "items": { "type": "string" } }
+    },
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "profile.schema.json",
+  "title": "Profile",
+  "type": "object",
+  "required": ["name", "headline", "summary_variants", "target_roles"],
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "headline": { "type": "string", "minLength": 1 },
+    "location": { "type": "string" },
+    "portfolio_url": { "type": "string", "format": "uri" },
+    "github_url": { "type": "string", "format": "uri" },
+    "linkedin_url": { "type": "string", "format": "uri" },
+    "summary_variants": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    },
+    "target_roles": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

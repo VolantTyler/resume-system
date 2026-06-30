@@ -1,0 +1,33 @@
+name: Tyler Stahl
+headline: Front-End Software Engineer
+location: United States
+portfolio_url: https://tylerstahl.dev
+github_url: https://github.com/tylerstahl
+linkedin_url: https://linkedin.com/in/tylerstahl
+
+summary_variants:
+  standard: >
+    Front-end software engineer with experience building and maintaining
+    user-facing web applications in nonprofit and mission-driven technology
+    settings. Skilled in Laravel, Livewire, Alpine.js, Cypress, and UI
+    implementation with a focus on reliability, testing, and practical delivery.
+  frontend: >
+    Front-end engineer focused on UI implementation, component architecture,
+    JavaScript frameworks, accessibility, and regression testing. Experienced
+    shipping features in Laravel/Livewire stacks with Cypress coverage.
+  nonprofit: >
+    Software engineer in nonprofit technology, building reliable donor- and
+    user-facing platforms. Combines front-end implementation with stakeholder
+    collaboration and mission-aligned engineering practices.
+  qa: >
+    Front-end engineer with a QA-minded approach to UI implementation,
+    Cypress automation, test documentation, and release reliability in
+    production web applications.
+
+target_roles:
+  - frontend-engineer
+  - ui-engineer
+  - qa-minded-frontend
+  - nonprofit-tech
+  - laravel-livewire
+  - portfolio-focused

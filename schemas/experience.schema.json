@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "experience.schema.json",
+  "title": "Experience",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "company", "title", "start_date", "accomplishment_ids"],
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "company": { "type": "string", "minLength": 1 },
+      "title": { "type": "string", "minLength": 1 },
+      "location": { "type": "string" },
+      "start_date": { "type": "string", "minLength": 1 },
+      "end_date": { "type": "string" },
+      "role_summary": { "type": "string" },
+      "technologies": { "type": "array", "items": { "type": "string" } },
+      "major_projects": { "type": "array", "items": { "type": "string" } },
+      "accomplishment_ids": {
+        "type": "array",
+        "items": { "type": "string", "minLength": 1 }
+      },
+      "project_ids": { "type": "array", "items": { "type": "string" } }
+    },
+    "additionalProperties": false
+  }
+}

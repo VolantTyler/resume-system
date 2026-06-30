@@ -1,0 +1,28 @@
+- id: nami-frontend-engineer
+  company: NAMI
+  title: Front-End Software Engineer
+  location: Remote
+  start_date: "2024"
+  end_date: present
+  role_summary: >
+    Front-end engineering on nonprofit event and training management platforms,
+    with emphasis on Laravel/Livewire UI implementation, Cypress testing, and
+    release reliability.
+  technologies:
+    - Laravel
+    - Livewire
+    - Alpine.js
+    - JavaScript
+    - Cypress
+    - HTML
+    - CSS
+  major_projects:
+    - NAMI 720 Event Platform
+    - CCIE-TM Training Registration
+  accomplishment_ids:
+    - nami-cypress-testing-leadership
+    - nami-ccie-registration-release
+    - nami-platform-maintenance
+  project_ids:
+    - nami-720-platform
+    - nami-ccie-tm

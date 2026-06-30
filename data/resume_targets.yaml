@@ -1,0 +1,72 @@
+- id: frontend-engineer
+  label: Front-End Engineer
+  summary_variant: frontend
+  bullet_variant: frontend
+  emphasis:
+    - UI implementation
+    - JavaScript
+    - accessibility
+    - component architecture
+    - testing
+  deprioritize:
+    - older non-technical career history
+
+- id: ui-engineer
+  label: UI Engineer
+  summary_variant: frontend
+  bullet_variant: frontend
+  emphasis:
+    - UI implementation
+    - design systems
+    - responsive layout
+    - user experience
+  deprioritize:
+    - back-end infrastructure
+
+- id: qa-minded-frontend
+  label: QA-minded Front-End Engineer
+  summary_variant: qa
+  bullet_variant: qa
+  emphasis:
+    - Cypress
+    - regression testing
+    - test documentation
+    - release reliability
+    - UI quality
+  deprioritize:
+    - pure design work
+
+- id: nonprofit-tech
+  label: Nonprofit Technology Engineer
+  summary_variant: nonprofit
+  bullet_variant: nonprofit
+  emphasis:
+    - mission-driven platforms
+    - donor/user-facing products
+    - stakeholder collaboration
+    - reliability
+    - practical engineering
+  deprioritize:
+    - older non-technical career history
+
+- id: laravel-livewire
+  label: Laravel / Livewire Engineer
+  summary_variant: standard
+  bullet_variant: standard
+  emphasis:
+    - Laravel
+    - Livewire
+    - Alpine.js
+    - full-stack feature delivery
+  deprioritize: []
+
+- id: portfolio-focused
+  label: Portfolio-focused Software Engineer
+  summary_variant: standard
+  bullet_variant: standard
+  emphasis:
+    - portfolio projects
+    - UI polish
+    - storytelling
+    - career transition narrative
+  deprioritize: []

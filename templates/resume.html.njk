@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ profile.name }} — {{ version.label }}</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.5;
+      color: var(--text);
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.25rem;
+      font-weight: 700;
+    }
+    .headline {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 0.5rem;
+    }
+    .contact {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact a:hover { text-decoration: underline; }
+    h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.25rem;
+      margin: 1.75rem 0 0.75rem;
+    }
+    h3 {
+      font-size: 1rem;
+      margin: 1rem 0 0.15rem;
+    }
+    .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.35rem;
+    }
+    ul {
+      margin: 0.35rem 0 0.75rem;
+      padding-left: 1.25rem;
+    }
+    li { margin-bottom: 0.25rem; }
+    .tech, .skills-line {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+    .summary { margin-bottom: 0.5rem; }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 0.75rem;
+    }
+    @media print {
+      body { margin: 0; max-width: none; padding: 0.5in; }
+      a { color: var(--text); text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>{{ profile.name }}</h1>
+    <p class="headline">{{ version.label }}</p>
+    <p class="contact">
+      {% if profile.location %}{{ profile.location }}{% endif %}
+      {% if profile.portfolio_url %} · <a href="{{ profile.portfolio_url }}">Portfolio</a>{% endif %}
+      {% if profile.github_url %} · <a href="{{ profile.github_url }}">GitHub</a>{% endif %}
+      {% if profile.linkedin_url %} · <a href="{{ profile.linkedin_url }}">LinkedIn</a>{% endif %}
+    </p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">{{ summary }}</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    {% for role in experience %}
+    <article>
+      <h3>{{ role.title }} — {{ role.company }}</h3>
+      <p class="meta">{{ role.start_date }} – {{ role.end_date }}{% if role.location %} · {{ role.location }}{% endif %}</p>
+      {% if role.role_summary %}<p>{{ role.role_summary }}</p>{% endif %}
+      <ul>
+        {% for bullet in role.bullets %}
+        <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+      {% if role.technologies.length %}
+      <p class="tech"><strong>Technologies:</strong> {{ role.technologies | join(', ') }}</p>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </section>
+
+  {% if projects.length %}
+  <section>
+    <h2>Selected Projects</h2>
+    {% for project in projects %}
+    <article>
+      <h3>{{ project.name }} — {{ project.organization }}</h3>
+      <p class="meta">{{ project.timeframe }}</p>
+      {% if project.problem %}<p>{{ project.problem }}</p>{% endif %}
+      {% if project.solution %}<p>{{ project.solution }}</p>{% endif %}
+      {% if project.technologies.length %}
+      <p class="tech"><strong>Technologies:</strong> {{ project.technologies | join(', ') }}</p>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if skills.length %}
+  <section>
+    <h2>Skills</h2>
+    {% for category in skills %}
+    <p class="skills-line"><strong>{{ category.name }}:</strong> {{ category.skill_names | join(', ') }}</p>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <footer>
+    Generated from resume-system source data — {{ version.label }} ({{ version.id }})
+  </footer>
+</body>
+</html>

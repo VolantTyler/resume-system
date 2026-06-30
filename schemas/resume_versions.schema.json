@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "resume_versions.schema.json",
+  "title": "Resume Versions",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "target_id",
+      "label",
+      "summary_variant",
+      "experience_ids",
+      "accomplishment_ids",
+      "output_slug"
+    ],
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "target_id": { "type": "string", "minLength": 1 },
+      "label": { "type": "string", "minLength": 1 },
+      "summary_variant": { "type": "string", "minLength": 1 },
+      "experience_ids": {
+        "type": "array",
+        "items": { "type": "string", "minLength": 1 }
+      },
+      "accomplishment_ids": {
+        "type": "array",
+        "items": { "type": "string", "minLength": 1 },
+        "minItems": 1
+      },
+      "project_ids": { "type": "array", "items": { "type": "string" } },
+      "skill_emphasis": { "type": "array", "items": { "type": "string" } },
+      "output_slug": { "type": "string", "minLength": 1 },
+      "revision_history": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["date", "note"],
+          "properties": {
+            "date": { "type": "string" },
+            "note": { "type": "string" }
+          }
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}
