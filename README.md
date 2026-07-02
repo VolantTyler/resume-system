@@ -9,12 +9,15 @@ A file-based résumé knowledge system for Tyler Stahl. Raw professional facts l
 ```bash
 npm install
 npm run validate     # Check YAML data integrity
-npm run generate     # Generate Markdown, HTML, and portfolio JSON
+npm run generate     # Generate Markdown, HTML, PDF, and portfolio JSON
+npm run generate:pdf # Regenerate just the PDF exports
 npm run build        # validate + generate
 npm test             # Run validation and generation tests
 npm run intake:list  # See which docs/intake/*.md notes are still pending
 npm run intake:log -- <filename> "<summary>"   # Mark a note as processed
 ```
+
+PDF export renders the print-ready HTML in a local headless Chrome via [`puppeteer-core`](https://pptr.dev/). It looks for Chrome/Chromium in common install locations, or you can point it at a specific binary with `PUPPETEER_EXECUTABLE_PATH` (or `CHROME_PATH`). If no browser is found, `npm run generate`/`npm run build` skip the PDF step with a warning rather than failing.
 
 ## Repository Structure
 
@@ -70,17 +73,21 @@ Validation checks:
 npm run generate
 ```
 
-Milestone 1 produces:
+This produces, per résumé version defined in `resume_versions.yaml`:
 
 ```txt
 output/resumes/tyler-stahl-frontend-engineer.md
 output/resumes/tyler-stahl-frontend-engineer.html
+output/resumes/tyler-stahl-frontend-engineer.pdf
 output/resumes/tyler-stahl-nonprofit-tech.md
 output/resumes/tyler-stahl-nonprofit-tech.html
+output/resumes/tyler-stahl-nonprofit-tech.pdf
 output/portfolio/resume-content.json
 ```
 
 Role-specific bullet selection uses each target's `bullet_variant` from `resume_targets.yaml`. The same atomic accomplishment can render different bullets for frontend vs. nonprofit résumés.
+
+The PDF is a direct render of the `.html` output's `@media print` styles — edit `templates/resume.html.njk` to change how either one looks.
 
 ### 4. Add and process intake notes
 
@@ -128,7 +135,7 @@ npm run intake:log -- 2026-07-02-some-note.md "Short summary of what changed."
 ## Future Milestones
 
 - ~~**Milestone 2:** Intake workflow script for `docs/intake/*.md`~~ — done (`npm run intake:list` / `npm run intake:log`)
-- **Milestone 3:** PDF export via print-ready HTML
+- ~~**Milestone 3:** PDF export via print-ready HTML~~ — done (`npm run generate:pdf`, via `puppeteer-core`)
 - **Milestone 4:** Job description tailoring
 - **Milestone 5:** Portfolio site integration (`tylerstahl.dev`)
 - **Milestone 6:** Optional Google Doc sync
