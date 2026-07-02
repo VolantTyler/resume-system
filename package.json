@@ -7,7 +7,9 @@
     "validate": "tsx scripts/validate-resume-data.ts",
     "generate": "tsx scripts/generate-all.ts",
     "build": "npm run validate && npm run generate",
-    "test": "vitest run"
+    "test": "vitest run",
+    "intake:list": "tsx scripts/process-intake.ts list",
+    "intake:log": "tsx scripts/process-intake.ts log"
   },
   "devDependencies": {
     "@types/nunjucks": "^3.2.6",

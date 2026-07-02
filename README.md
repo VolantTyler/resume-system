@@ -8,10 +8,12 @@ A file-based résumé knowledge system for Tyler Stahl. Raw professional facts l
 
 ```bash
 npm install
-npm run validate   # Check YAML data integrity
-npm run generate   # Generate Markdown, HTML, and portfolio JSON
-npm run build      # validate + generate
-npm test           # Run validation and generation tests
+npm run validate     # Check YAML data integrity
+npm run generate     # Generate Markdown, HTML, and portfolio JSON
+npm run build        # validate + generate
+npm test             # Run validation and generation tests
+npm run intake:list  # See which docs/intake/*.md notes are still pending
+npm run intake:log -- <filename> "<summary>"   # Mark a note as processed
 ```
 
 ## Repository Structure
@@ -80,16 +82,32 @@ output/portfolio/resume-content.json
 
 Role-specific bullet selection uses each target's `bullet_variant` from `resume_targets.yaml`. The same atomic accomplishment can render different bullets for frontend vs. nonprofit résumés.
 
-### 4. Add intake notes (Milestone 2+)
+### 4. Add and process intake notes
 
-Drop raw notes in `docs/intake/` and ask an agent:
+Drop raw notes in `docs/intake/` as Markdown files named `YYYY-MM-DD-slug.md`. Then either run the intake workflow yourself or ask an agent to.
+
+Check what's pending:
+
+```bash
+npm run intake:list
+```
+
+This diffs `docs/intake/*.md` against `docs/intake-log.md` and prints any notes that haven't been reflected in the YAML data yet, along with next steps.
+
+Ask an agent to process a pending note:
 
 ```txt
 Read AGENTS.md and the resume data files. Process the newest intake note.
 Propose YAML updates, generate updated résumé outputs, and explain what changed.
 ```
 
-See `docs/intake/2026-06-29-example-update.md` for an example note already reflected in starter data.
+Once the YAML updates are made and `npm run build` passes, mark the note as processed:
+
+```bash
+npm run intake:log -- 2026-07-02-some-note.md "Short summary of what changed."
+```
+
+`intake:log` appends a row to `docs/intake-log.md` and re-validates the résumé data so the log only ever reflects notes that are actually reflected in YAML. See `docs/intake/2026-06-29-example-update.md` for an example note already reflected in starter data.
 
 ## Design Principles
 
@@ -109,7 +127,7 @@ See `docs/intake/2026-06-29-example-update.md` for an example note already refle
 
 ## Future Milestones
 
-- **Milestone 2:** Intake workflow script for `docs/intake/*.md`
+- ~~**Milestone 2:** Intake workflow script for `docs/intake/*.md`~~ — done (`npm run intake:list` / `npm run intake:log`)
 - **Milestone 3:** PDF export via print-ready HTML
 - **Milestone 4:** Job description tailoring
 - **Milestone 5:** Portfolio site integration (`tylerstahl.dev`)
