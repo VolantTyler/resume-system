@@ -77,8 +77,12 @@
       padding-top: 0.75rem;
     }
     @media print {
-      body { margin: 0; max-width: none; padding: 0.5in; }
+      @page { size: letter; margin: 0.5in; }
+      body { margin: 0; max-width: none; padding: 0; }
       a { color: var(--text); text-decoration: none; }
+      h2 { break-after: avoid; }
+      h3 { break-after: avoid; }
+      article { break-inside: avoid; }
     }
   </style>
 </head>

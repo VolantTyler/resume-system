@@ -1,8 +1,19 @@
 import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { generateAllPdfs } from "../scripts/generate-pdf.js";
 import { generatePortfolioJson } from "../scripts/generate-portfolio-json.js";
 import { generateAllResumes } from "../scripts/generate-resume.js";
+import { findChromeExecutable } from "../scripts/lib/chrome.js";
 import { PORTFOLIO_OUTPUT_DIR, RESUMES_OUTPUT_DIR } from "../scripts/lib/paths.js";
+
+function hasLocalChrome(): boolean {
+  try {
+    findChromeExecutable();
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 describe("generation", () => {
   it("generates markdown and HTML résumés for all versions", () => {
@@ -43,4 +54,19 @@ describe("generation", () => {
     expect(json.selectedAccomplishments).toBeInstanceOf(Array);
     expect(json.featuredProjects.length).toBeGreaterThan(0);
   });
+});
+
+describe.skipIf(!hasLocalChrome())("PDF export", () => {
+  it("generates a valid PDF for every résumé version", async () => {
+    const paths = await generateAllPdfs();
+
+    expect(paths.length).toBeGreaterThanOrEqual(2);
+
+    for (const path of paths) {
+      expect(existsSync(path)).toBe(true);
+      const buffer = readFileSync(path);
+      expect(buffer.subarray(0, 5).toString("utf8")).toBe("%PDF-");
+      expect(buffer.length).toBeGreaterThan(1000);
+    }
+  }, 30000);
 });
