@@ -39,7 +39,7 @@ The agent's memory lives in the repository, not in chat threads. Key files:
 - `data/experience.yaml` — employment history
 - `data/projects.yaml` — notable projects
 - `data/skills.yaml` — skills by category
-- `docs/intake-log.md` — log of processed intake notes
+- `docs/intake-log.md` — log of processed intake notes (source of truth for `npm run intake:list`)
 - `docs/core-resume.md` — human-authored résumé reference
 
 ## Workflows
@@ -64,14 +64,20 @@ npm run build
 
 ### Process an intake note
 
+```bash
+npm run intake:list                                    # see pending vs. processed notes
+npm run intake:log -- <filename> "<summary>"            # log a note once YAML is updated
+```
+
 When Tyler adds a note to `docs/intake/`:
 
-1. Read the intake note and existing YAML data.
-2. Propose conservative additions to `accomplishments.yaml`, `projects.yaml`, `skills.yaml`.
-3. Do not invent metrics or unsupported claims.
-4. Run validation and generation.
-5. Log the intake in `docs/intake-log.md`.
-6. Explain what changed.
+1. Run `npm run intake:list` to see which notes are still pending (not yet reflected in `docs/intake-log.md`).
+2. Read the pending intake note(s) and existing YAML data.
+3. Propose conservative additions to `accomplishments.yaml`, `projects.yaml`, `skills.yaml`.
+4. Do not invent metrics or unsupported claims.
+5. Run `npm run build` (validate + generate).
+6. Log the intake: `npm run intake:log -- <filename> "<summary>"`. This appends a row to `docs/intake-log.md` and re-runs validation to confirm the YAML updates are consistent.
+7. Explain what changed.
 
 ## Data Modeling
 
