@@ -1,5 +1,6 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 import nunjucks from "nunjucks";
 import { buildResumeContext } from "./lib/build-resume-context.js";
 import { assertValidResumeData } from "./lib/validate.js";
@@ -21,15 +22,15 @@ function writeOutput(path: string, content: string): void {
   writeFileSync(path, content, "utf8");
 }
 
-export function generateResumeOutputs(version: ResumeVersion): {
-  markdownPath: string;
-  htmlPath: string;
-} {
-  const data = assertValidResumeData();
+export function renderResumeVersionToDir(
+  data: ReturnType<typeof assertValidResumeData>,
+  version: ResumeVersion,
+  outputDir: string,
+): { markdownPath: string; htmlPath: string } {
   const context = buildResumeContext(data, version);
 
-  const markdownPath = `${RESUMES_OUTPUT_DIR}/${version.output_slug}.md`;
-  const htmlPath = `${RESUMES_OUTPUT_DIR}/${version.output_slug}.html`;
+  const markdownPath = `${outputDir}/${version.output_slug}.md`;
+  const htmlPath = `${outputDir}/${version.output_slug}.html`;
 
   const markdown = env.render(TEMPLATE_FILES.resumeMarkdown, context);
   const html = env.render(TEMPLATE_FILES.resumeHtml, context);
@@ -38,6 +39,14 @@ export function generateResumeOutputs(version: ResumeVersion): {
   writeOutput(htmlPath, html);
 
   return { markdownPath, htmlPath };
+}
+
+export function generateResumeOutputs(version: ResumeVersion): {
+  markdownPath: string;
+  htmlPath: string;
+} {
+  const data = assertValidResumeData();
+  return renderResumeVersionToDir(data, version, RESUMES_OUTPUT_DIR);
 }
 
 export function generateAllResumes(): string[] {
@@ -60,4 +69,6 @@ function main(): void {
   }
 }
 
-main();
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  main();
+}

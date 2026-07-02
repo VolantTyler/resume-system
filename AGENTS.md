@@ -41,6 +41,7 @@ The agent's memory lives in the repository, not in chat threads. Key files:
 - `data/skills.yaml` — skills by category
 - `docs/intake-log.md` — log of processed intake notes (source of truth for `npm run intake:list`)
 - `docs/core-resume.md` — human-authored résumé reference
+- `docs/job-descriptions/` — raw job description text used as input for `npm run tailor`
 
 ## Workflows
 
@@ -78,6 +79,14 @@ When Tyler adds a note to `docs/intake/`:
 5. Run `npm run build` (validate + generate).
 6. Log the intake: `npm run intake:log -- <filename> "<summary>"`. This appends a row to `docs/intake-log.md` and re-runs validation to confirm the YAML updates are consistent.
 7. Explain what changed.
+
+### Tailor a résumé to a job description
+
+```bash
+npm run tailor -- docs/job-descriptions/<file>.md
+```
+
+This is a deterministic, non-LLM matching step (no claims are invented): it matches the job description text against terms already present in `data/` (skill names/aliases, accomplishment themes/technologies, target emphasis) to recommend a `resume_target`, rank that target's accomplishments by relevance, emphasize mentioned skills, and flag "possible gaps" (reference terms in the JD not yet reflected in the résumé data). Output goes to `output/resumes/tailored/` — a `.md`/`.html` résumé plus a `-match-report.md`. Use `--target <target-id>` to override the recommended target.
 
 ## Data Modeling
 

@@ -9,7 +9,8 @@
     "build": "npm run validate && npm run generate",
     "test": "vitest run",
     "intake:list": "tsx scripts/process-intake.ts list",
-    "intake:log": "tsx scripts/process-intake.ts log"
+    "intake:log": "tsx scripts/process-intake.ts log",
+    "tailor": "tsx scripts/tailor-resume.ts"
   },
   "devDependencies": {
     "@types/nunjucks": "^3.2.6",

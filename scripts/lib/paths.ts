@@ -8,9 +8,11 @@ export const DATA_DIR = join(ROOT, "data");
 export const DOCS_DIR = join(ROOT, "docs");
 export const INTAKE_DIR = join(DOCS_DIR, "intake");
 export const INTAKE_LOG_FILE = join(DOCS_DIR, "intake-log.md");
+export const JOB_DESCRIPTIONS_DIR = join(DOCS_DIR, "job-descriptions");
 export const TEMPLATES_DIR = join(ROOT, "templates");
 export const OUTPUT_DIR = join(ROOT, "output");
 export const RESUMES_OUTPUT_DIR = join(OUTPUT_DIR, "resumes");
+export const TAILORED_OUTPUT_DIR = join(RESUMES_OUTPUT_DIR, "tailored");
 export const PORTFOLIO_OUTPUT_DIR = join(OUTPUT_DIR, "portfolio");
 export const DEBUG_OUTPUT_DIR = join(OUTPUT_DIR, "debug");
 
