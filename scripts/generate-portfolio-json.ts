@@ -1,5 +1,6 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 import nunjucks from "nunjucks";
 import { buildPortfolioContext } from "./lib/build-resume-context.js";
 import { assertValidResumeData } from "./lib/validate.js";
@@ -37,4 +38,6 @@ function main(): void {
   console.log(`✓ Generated portfolio JSON: ${outputPath}`);
 }
 
-main();
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  main();
+}

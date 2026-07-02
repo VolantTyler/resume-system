@@ -15,6 +15,7 @@ npm run build        # validate + generate
 npm test             # Run validation and generation tests
 npm run intake:list  # See which docs/intake/*.md notes are still pending
 npm run intake:log -- <filename> "<summary>"   # Mark a note as processed
+npm run tailor -- <path-to-job-description.md>  # Generate a résumé tailored to a job description
 ```
 
 PDF export renders the print-ready HTML in a local headless Chrome via [`puppeteer-core`](https://pptr.dev/). It looks for Chrome/Chromium in common install locations, or you can point it at a specific binary with `PUPPETEER_EXECUTABLE_PATH` (or `CHROME_PATH`). If no browser is found, `npm run generate`/`npm run build` skip the PDF step with a warning rather than failing.
@@ -22,14 +23,15 @@ PDF export renders the print-ready HTML in a local headless Chrome via [`puppete
 ## Repository Structure
 
 ```txt
-data/              Source-of-truth YAML (profile, experience, accomplishments, etc.)
-docs/              Human-authored notes and intake files
-schemas/           JSON Schema documentation for data shapes
-templates/         Nunjucks templates for Markdown, HTML, portfolio JSON
-scripts/           Validation and generation TypeScript scripts
-output/            Generated résumés and portfolio content
-tests/             Vitest tests
-AGENTS.md          Instructions for coding agents maintaining this system
+data/                    Source-of-truth YAML (profile, experience, accomplishments, etc.)
+docs/                    Human-authored notes, intake files, and job descriptions
+docs/job-descriptions/   Raw job description text used as input for tailoring
+schemas/                 JSON Schema documentation for data shapes
+templates/               Nunjucks templates for Markdown, HTML, portfolio JSON
+scripts/                 Validation, generation, and tailoring TypeScript scripts
+output/                  Generated résumés, tailored résumés, and portfolio content
+tests/                   Vitest tests
+AGENTS.md                Instructions for coding agents maintaining this system
 ```
 
 ## Workflow
@@ -116,6 +118,28 @@ npm run intake:log -- 2026-07-02-some-note.md "Short summary of what changed."
 
 `intake:log` appends a row to `docs/intake-log.md` and re-validates the résumé data so the log only ever reflects notes that are actually reflected in YAML. See `docs/intake/2026-06-29-example-update.md` for an example note already reflected in starter data.
 
+### 5. Tailor a résumé to a job description
+
+Drop the job description text as a Markdown or plain-text file anywhere (conventionally `docs/job-descriptions/`), then run:
+
+```bash
+npm run tailor -- docs/job-descriptions/some-role.md
+```
+
+This does not call an LLM or invent anything — it deterministically matches the job description's text against known terms already present in the résumé data (skill names/aliases, accomplishment themes/technologies, and target emphasis) to:
+
+- Recommend the best-fitting `resume_target` (scored by matched emphasis, linked accomplishments, and linked skills).
+- Rank that target's linked accomplishments by relevance and include the most relevant ones first.
+- Emphasize skills that were actually mentioned in the job description.
+- Flag "possible gaps" — reference terms (e.g. `React`, `WCAG`, `AWS`) mentioned in the JD but not currently reflected anywhere in the résumé data. This is informational only; it never claims Tyler lacks a skill, only that it isn't documented yet.
+
+Output goes to `output/resumes/tailored/`:
+
+- `tailored-<slug>.md` / `.html` — the tailored résumé, rendered with the same templates as every other résumé version.
+- `tailored-<slug>-match-report.md` — the target ranking, matched terms, selected accomplishments, and possible gaps.
+
+Optional flags: `--target <target-id>` to override the recommended target, `--label "Custom Label"`, and `--slug custom-output-slug`.
+
 ## Design Principles
 
 1. **Source data is separate from generated outputs** — never edit `output/` by hand.
@@ -136,7 +160,7 @@ npm run intake:log -- 2026-07-02-some-note.md "Short summary of what changed."
 
 - ~~**Milestone 2:** Intake workflow script for `docs/intake/*.md`~~ — done (`npm run intake:list` / `npm run intake:log`)
 - ~~**Milestone 3:** PDF export via print-ready HTML~~ — done (`npm run generate:pdf`, via `puppeteer-core`)
-- **Milestone 4:** Job description tailoring
+- ~~**Milestone 4:** Job description tailoring~~ — done (`npm run tailor -- <job-description.md>`)
 - **Milestone 5:** Portfolio site integration (`tylerstahl.dev`)
 - **Milestone 6:** Optional Google Doc sync
 
