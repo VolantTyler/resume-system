@@ -1,11 +1,11 @@
 {
   "name": "Tyler Stahl",
-  "headline": "Front-End Engineer",
+  "headline": "Portfolio-Focused Software Engineer",
   "location": "United States",
   "portfolioUrl": "https://tylerstahl.dev",
   "githubUrl": "https://github.com/tylerstahl",
   "linkedinUrl": "https://linkedin.com/in/tylerstahl",
-  "summary": "Front-end engineer focused on UI implementation, component architecture, JavaScript frameworks, accessibility, and regression testing. Experienced shipping features in Laravel/Livewire stacks with Cypress coverage.\n",
+  "summary": "Front-end software engineer with experience building and maintaining user-facing web applications in nonprofit and mission-driven technology settings. Skilled in Laravel, Livewire, Alpine.js, Cypress, and UI implementation with a focus on reliability, testing, and practical delivery.\n",
   "featuredProjects": [
     {
       "id": "nami-720-platform",
@@ -33,8 +33,14 @@
       "category": "Front-End",
       "items": ["JavaScript","HTML / CSS","Alpine.js","Livewire"]
     },    {
+      "category": "Back-End",
+      "items": ["Laravel"]
+    },    {
       "category": "Testing",
       "items": ["Cypress"]
+    },    {
+      "category": "CMS / Platform",
+      "items": ["Platform maintenance"]
     }  ],
   "experience": [
     {
@@ -46,14 +52,14 @@
       "endDate": "Present",
       "summary": "Front-end engineering on nonprofit event and training management platforms, with emphasis on Laravel/Livewire UI implementation, Cypress testing, and release reliability.\n",
       "technologies": ["Laravel","Livewire","Alpine.js","JavaScript","Cypress","HTML","CSS"],
-      "bullets": ["Built Cypress coverage for key user flows in a Laravel/Livewire application, helping stabilize releases and improve UI regression testing.","Implemented and stabilized multi-date registration UI behavior in a Livewire application as part of a training registration release.","Implements and refines user-facing features in Laravel/Livewire applications, focusing on reliable UI delivery."]
+      "bullets": ["Led Cypress automated testing implementation for a Laravel/Livewire event platform, improving regression coverage and team confidence.","Delivered CCIE-TM training registration improvements including multi-date handling fixes, testing documentation, and release support from prime to staging.","Maintains and implements UI features for nonprofit event and training management platforms built with Laravel and Livewire."]
     }  ],
   "selectedAccomplishments": [
     {
       "id": "nami-cypress-testing-leadership",
       "company": "NAMI",
       "timeframe": "2024-present",
-      "bullet": "Built Cypress coverage for key user flows in a Laravel/Livewire application, helping stabilize releases and improve UI regression testing.",
+      "bullet": "Led Cypress automated testing implementation for a Laravel/Livewire event platform, improving regression coverage and team confidence.",
       "themes": ["Cypress","Laravel","Livewire","QA automation","release reliability"],
       "technologies": ["Cypress","Laravel","Livewire","JavaScript"],
       "confidence": "high"
@@ -61,7 +67,7 @@
       "id": "nami-ccie-registration-release",
       "company": "NAMI",
       "timeframe": "2024-present",
-      "bullet": "Implemented and stabilized multi-date registration UI behavior in a Livewire application as part of a training registration release.",
+      "bullet": "Delivered CCIE-TM training registration improvements including multi-date handling fixes, testing documentation, and release support from prime to staging.",
       "themes": ["registration flows","release support","multi-date handling","Livewire"],
       "technologies": ["Laravel","Livewire","Cypress"],
       "confidence": "high"
@@ -69,12 +75,12 @@
       "id": "nami-platform-maintenance",
       "company": "NAMI",
       "timeframe": "2024-present",
-      "bullet": "Implements and refines user-facing features in Laravel/Livewire applications, focusing on reliable UI delivery.",
+      "bullet": "Maintains and implements UI features for nonprofit event and training management platforms built with Laravel and Livewire.",
       "themes": ["platform maintenance","UI implementation","nonprofit technology"],
       "technologies": ["Laravel","Livewire","Alpine.js","JavaScript"],
       "confidence": "high"
     }  ],
-  "generatedAt": "2026-07-02T19:20:09.840Z",
-  "versionId": "frontend-engineer-v1",
-  "targetId": "frontend-engineer"
+  "generatedAt": "2026-07-02T20:33:22.674Z",
+  "versionId": "portfolio-v1",
+  "targetId": "portfolio-focused"
 }

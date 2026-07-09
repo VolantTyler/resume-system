@@ -11,6 +11,7 @@ npm install
 npm run validate     # Check YAML data integrity
 npm run generate     # Generate Markdown, HTML, PDF, and portfolio JSON
 npm run generate:pdf # Regenerate just the PDF exports
+npm run generate:portfolio # Regenerate just output/portfolio/resume-content.json
 npm run build        # validate + generate
 npm test             # Run validation and generation tests
 npm run intake:list  # See which docs/intake/*.md notes are still pending
@@ -84,6 +85,9 @@ output/resumes/tyler-stahl-frontend-engineer.pdf
 output/resumes/tyler-stahl-nonprofit-tech.md
 output/resumes/tyler-stahl-nonprofit-tech.html
 output/resumes/tyler-stahl-nonprofit-tech.pdf
+output/resumes/tyler-stahl-portfolio.md
+output/resumes/tyler-stahl-portfolio.html
+output/resumes/tyler-stahl-portfolio.pdf
 output/portfolio/resume-content.json
 ```
 
@@ -140,6 +144,17 @@ Output goes to `output/resumes/tailored/`:
 
 Optional flags: `--target <target-id>` to override the recommended target, `--label "Custom Label"`, and `--slug custom-output-slug`.
 
+### 6. Portfolio site integration
+
+`output/portfolio/resume-content.json` is generated from a dedicated `portfolio-v1`
+résumé version (`target_id: portfolio-focused`) so it's driven by an intentional
+selection of content rather than reusing another résumé's version by coincidence.
+Its shape is documented at `schemas/portfolio.schema.json`.
+
+See `docs/portfolio-integration.md` for the recommended way for `tylerstahl.dev` (or
+any other portfolio site) to consume this file — this repo does not push to the site
+directly.
+
 ## Design Principles
 
 1. **Source data is separate from generated outputs** — never edit `output/` by hand.
@@ -161,7 +176,7 @@ Optional flags: `--target <target-id>` to override the recommended target, `--la
 - ~~**Milestone 2:** Intake workflow script for `docs/intake/*.md`~~ — done (`npm run intake:list` / `npm run intake:log`)
 - ~~**Milestone 3:** PDF export via print-ready HTML~~ — done (`npm run generate:pdf`, via `puppeteer-core`)
 - ~~**Milestone 4:** Job description tailoring~~ — done (`npm run tailor -- <job-description.md>`)
-- **Milestone 5:** Portfolio site integration (`tylerstahl.dev`)
+- ~~**Milestone 5:** Portfolio site integration (`tylerstahl.dev`)~~ — done on this repo's side (dedicated `portfolio-focused` version, documented JSON contract, `npm run generate:portfolio`); see `docs/portfolio-integration.md` for how `tylerstahl.dev` should consume it
 - **Milestone 6:** Optional Google Doc sync
 
 ## For Coding Agents

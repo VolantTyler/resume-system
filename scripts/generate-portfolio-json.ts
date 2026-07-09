@@ -19,11 +19,12 @@ const env = nunjucks.configure(TEMPLATES_DIR, {
 export function generatePortfolioJson(): string {
   const data = assertValidResumeData();
 
-  const frontendVersion =
+  const portfolioVersion =
+    data.resumeVersions.find((item) => item.target_id === "portfolio-focused") ??
     data.resumeVersions.find((item) => item.target_id === "frontend-engineer") ??
     data.resumeVersions[0];
 
-  const context = buildPortfolioContext(data, frontendVersion);
+  const context = buildPortfolioContext(data, portfolioVersion);
   const outputPath = `${PORTFOLIO_OUTPUT_DIR}/resume-content.json`;
   const json = env.render(TEMPLATE_FILES.portfolioJson, context);
 

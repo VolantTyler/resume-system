@@ -44,3 +44,32 @@
   revision_history:
     - date: "2026-06-29"
       note: Initial Milestone 1 version.
+
+- id: portfolio-v1
+  target_id: portfolio-focused
+  label: Portfolio-Focused Software Engineer
+  summary_variant: standard
+  experience_ids:
+    - nami-frontend-engineer
+  accomplishment_ids:
+    - nami-cypress-testing-leadership
+    - nami-ccie-registration-release
+    - nami-platform-maintenance
+  project_ids:
+    - nami-720-platform
+    - nami-ccie-tm
+  skill_emphasis:
+    - JavaScript
+    - HTML / CSS
+    - Alpine.js
+    - Livewire
+    - Laravel
+    - Cypress
+    - Platform maintenance
+  output_slug: tyler-stahl-portfolio
+  revision_history:
+    - date: "2026-07-02"
+      note: >
+        Milestone 5 — dedicated portfolio-focused version so
+        output/portfolio/resume-content.json reflects an intentional
+        target instead of reusing the frontend-engineer version.
