@@ -19,7 +19,7 @@ describe("generation", () => {
   it("generates markdown and HTML résumés for all versions", () => {
     const paths = generateAllResumes();
 
-    expect(paths.length).toBeGreaterThanOrEqual(4);
+    expect(paths.length).toBeGreaterThanOrEqual(6);
 
     for (const path of paths) {
       expect(existsSync(path)).toBe(true);
@@ -48,11 +48,16 @@ describe("generation", () => {
     const json = JSON.parse(readFileSync(outputPath, "utf8"));
 
     expect(json.name).toBe("Tyler Stahl");
+    expect(json.targetId).toBe("portfolio-focused");
+    expect(json.versionId).toBe("portfolio-v1");
     expect(json.featuredProjects).toBeInstanceOf(Array);
     expect(json.skills).toBeInstanceOf(Array);
     expect(json.experience).toBeInstanceOf(Array);
     expect(json.selectedAccomplishments).toBeInstanceOf(Array);
     expect(json.featuredProjects.length).toBeGreaterThan(0);
+    for (const project of json.featuredProjects) {
+      expect(project.portfolioVisible).toBe(true);
+    }
   });
 });
 
