@@ -1,6 +1,82 @@
+- id: applied-ai-developer
+  label: Applied AI Developer
+  summary_variant: applied-ai-developer
+  bullet_variant: applied-ai
+  emphasis:
+    - multi-agent orchestration
+    - hybrid LLM inference
+    - Python ETL
+    - durable agent state
+    - human-in-the-loop controls
+  deprioritize:
+    - unsupported profitability claims
+    - older non-technical career history
+- id: agentic-ai-engineer
+  label: Agentic AI Engineer
+  summary_variant: agentic-ai-engineer
+  bullet_variant: applied-ai
+  emphasis:
+    - multi-agent orchestration
+    - agent evaluation
+    - human-in-the-loop controls
+    - durable agent memory
+    - RAG and embeddings
+    - PII-aware data handling
+    - production Python systems
+  deprioritize:
+    - frontend design systems
+    - marketing partnership framing
+    - unsupported profitability claims
+    - older non-technical career history
+- id: agentic-software-engineer
+  label: Agentic Software Engineer
+  summary_variant: agentic-software-engineer
+  bullet_variant: full-stack
+  emphasis:
+    - AI-assisted software delivery
+    - Cursor Agent SDK
+    - requirements to structured tasks
+    - code and test review
+    - automated testing
+    - Agile delivery
+    - production web platforms
+  deprioritize:
+    - deep RAG research framing
+    - unsupported profitability claims
+    - older non-technical career history
+    - speculative model fine-tuning claims
+- id: forward-deployed-engineer
+  label: Forward Deployed Engineer
+  summary_variant: forward-deployed-engineer
+  bullet_variant: applied-ai
+  emphasis:
+    - client and stakeholder engagement
+    - GenAI prototyping and delivery
+    - Gemini and Vertex AI
+    - agentic workflows
+    - human-in-the-loop controls
+    - translating business problems into AI solutions
+    - production-quality shipping
+  deprioritize:
+    - frontend design systems detail
+    - unsupported profitability claims
+    - older non-technical career history
+    - speculative model fine-tuning claims
+- id: full-stack-engineer
+  label: Full-Stack Engineer
+  summary_variant: full-stack-engineer
+  bullet_variant: full-stack
+  emphasis:
+    - React
+    - TypeScript
+    - GraphQL
+    - Laravel
+    - production web platforms
+  deprioritize:
+    - speculative AI architecture claims
 - id: frontend-engineer
   label: Front-End Engineer
-  summary_variant: frontend
+  summary_variant: frontend-engineer
   bullet_variant: frontend
   emphasis:
     - UI implementation
@@ -10,63 +86,57 @@
     - testing
   deprioritize:
     - older non-technical career history
-
 - id: ui-engineer
   label: UI Engineer
-  summary_variant: frontend
+  summary_variant: ui-engineer
   bullet_variant: frontend
   emphasis:
-    - UI implementation
-    - design systems
-    - responsive layout
-    - user experience
+    - interface implementation
+    - component behavior
+    - responsive layouts
+    - browser quality
   deprioritize:
-    - back-end infrastructure
-
+    - unrelated platform administration
 - id: qa-minded-frontend
-  label: QA-minded Front-End Engineer
-  summary_variant: qa
+  label: QA-Minded Front-End Engineer
+  summary_variant: qa-minded-frontend
   bullet_variant: qa
   emphasis:
     - Cypress
     - regression testing
-    - test documentation
     - release reliability
-    - UI quality
+    - critical user flows
   deprioritize:
-    - pure design work
-
+    - unsupported performance claims
 - id: nonprofit-tech
   label: Nonprofit Technology Engineer
-  summary_variant: nonprofit
+  summary_variant: nonprofit-tech
   bullet_variant: nonprofit
   emphasis:
     - mission-driven platforms
-    - donor/user-facing products
     - stakeholder collaboration
-    - reliability
     - practical engineering
+    - reliability
   deprioritize:
-    - older non-technical career history
-
-- id: laravel-livewire
+    - purely commercial framing
+- id: laravel-livewire-engineer
   label: Laravel / Livewire Engineer
-  summary_variant: standard
-  bullet_variant: standard
+  summary_variant: laravel-livewire-engineer
+  bullet_variant: frontend
   emphasis:
     - Laravel
     - Livewire
-    - Alpine.js
-    - full-stack feature delivery
-  deprioritize: []
-
+    - Alpine
+    - application maintenance
+    - testing
+  deprioritize:
+    - unrelated framework claims
 - id: portfolio-focused
   label: Portfolio-focused Software Engineer
-  summary_variant: standard
+  summary_variant: full-stack-engineer
   bullet_variant: standard
   emphasis:
     - portfolio projects
     - UI polish
     - storytelling
-    - career transition narrative
   deprioritize: []

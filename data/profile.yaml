@@ -1,33 +1,30 @@
 name: Tyler Stahl
-headline: Front-End Software Engineer
-location: United States
+headline: Full-Stack Software Engineer and Applied AI Developer
+location: Glen Rock, NJ
 portfolio_url: https://tylerstahl.dev
-github_url: https://github.com/tylerstahl
-linkedin_url: https://linkedin.com/in/tylerstahl
-
-summary_variants:
-  standard: >
-    Front-end software engineer with experience building and maintaining
-    user-facing web applications in nonprofit and mission-driven technology
-    settings. Skilled in Laravel, Livewire, Alpine.js, Cypress, and UI
-    implementation with a focus on reliability, testing, and practical delivery.
-  frontend: >
-    Front-end engineer focused on UI implementation, component architecture,
-    JavaScript frameworks, accessibility, and regression testing. Experienced
-    shipping features in Laravel/Livewire stacks with Cypress coverage.
-  nonprofit: >
-    Software engineer in nonprofit technology, building reliable donor- and
-    user-facing platforms. Combines front-end implementation with stakeholder
-    collaboration and mission-aligned engineering practices.
-  qa: >
-    Front-end engineer with a QA-minded approach to UI implementation,
-    Cypress automation, test documentation, and release reliability in
-    production web applications.
-
+github_url: https://github.com/VolantTyler
+linkedin_url: https://linkedin.com/in/tyler-j-stahl
 target_roles:
+  - applied-ai-developer
+  - agentic-ai-engineer
+  - agentic-software-engineer
+  - forward-deployed-engineer
+  - full-stack-engineer
   - frontend-engineer
   - ui-engineer
   - qa-minded-frontend
   - nonprofit-tech
-  - laravel-livewire
-  - portfolio-focused
+  - laravel-livewire-engineer
+summary_variants:
+  applied-ai-developer: Full-stack software engineer and applied AI developer specializing in bridging multi-agent workflows with human-centric production environments—structured extraction, hybrid LLM inference, and HITL controls that turn autonomous systems into tools stakeholders trust.
+  agentic-ai-engineer: Applied AI engineer who designs and ships multi-agent systems with durable state, retrieval-minded context, evaluation gates, and human-in-the-loop controls—pairing production Python/agent orchestration with a counseling background that prioritizes safe handoffs when model confidence is low.
+  agentic-software-engineer: Software engineer who ships production web platforms and uses AI-assisted delivery—Cursor Agent SDK orchestration, structured task breakdown, automated testing, and human review gates—to turn requirements into reliable build, test, and release outcomes.
+  forward-deployed-engineer: Forward-leaning applied AI engineer who prototypes and ships GenAI solutions with Gemini/Vertex, agentic workflows, and human-in-the-loop controls—translating ambiguous stakeholder needs into working software, from nonprofit product delivery to productionized agent systems.
+  applied-ai-short: Full-stack engineer and applied AI builder specializing in multi-agent orchestration. Combining 7+ years scaling web platforms for millions with an MA in Counseling to bridge the human-to-AI gap.
+  applied-ai-medium: Full-stack software engineer and applied AI developer who bridges complex autonomous architecture and the stakeholders who use it. Focused on HITL workflows, stable specs, and change management that turn volatile AI systems into reliable enterprise tools.
+  full-stack-engineer: Full-stack software engineer with experience shipping React/TypeScript and Laravel applications at nonprofit scale, plus hands-on applied AI systems work.
+  frontend-engineer: Front-end software engineer focused on accessible UI implementation, practical testing, and maintainable web applications across React, TypeScript, and Laravel/Livewire stacks.
+  ui-engineer: UI-focused engineer who translates product and stakeholder needs into polished, reliable browser experiences.
+  qa-minded-frontend: Front-end engineer with a strong testing mindset, using Cypress and careful release practices to improve confidence in user-facing workflows.
+  nonprofit-tech: Software engineer experienced in mission-driven platforms, stakeholder collaboration, and practical improvements to nonprofit technology systems.
+  laravel-livewire-engineer: Front-end leaning software engineer working across Laravel, Livewire, Alpine, and Cypress to maintain and improve application experiences.

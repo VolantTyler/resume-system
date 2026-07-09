@@ -1,0 +1,15 @@
+---
+description: When customizing a resume from a job description, always include a fit analysis
+alwaysApply: true
+---
+
+# Tailored Resume + Fit Analysis
+
+When the user provides a job description for a customized resume:
+
+1. Generate a tailored resume from evidence in `data/` YAML. Never invent claims, metrics, employers, dates, technologies, or outcomes.
+2. Always include a simple application-strength analysis covering overall fit, strengths, and weaknesses.
+3. In every fit analysis, include:
+   - **2–3 strongest JD criteria**, each with a quick reference to the resume section where that evidence appears (e.g. Experience → Independent R&D, Selected Projects → InSummery.AI).
+   - **2–3 weakest JD criteria**, each with an explanation of how the candidate’s background addresses that need indirectly or non-obviously.
+4. Keep the analysis honest and evidence-based; note where confidence is limited by missing source data.

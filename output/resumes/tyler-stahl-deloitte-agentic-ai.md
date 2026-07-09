@@ -1,13 +1,13 @@
 # Tyler Stahl
 
-**Portfolio-Focused Software Engineer**
+**Agentic AI Engineer**
 
 Glen Rock, NJ · [Portfolio](https://tylerstahl.dev) · [GitHub](https://github.com/VolantTyler) · [LinkedIn](https://linkedin.com/in/tyler-j-stahl)
 ---
 
 ## Summary
 
-Full-stack software engineer with experience shipping React/TypeScript and Laravel applications at nonprofit scale, plus hands-on applied AI systems work.
+Applied AI engineer who designs and ships multi-agent systems with durable state, retrieval-minded context, evaluation gates, and human-in-the-loop controls—pairing production Python/agent orchestration with a counseling background that prioritizes safe handoffs when model confidence is low.
 
 ---
 
@@ -18,9 +18,18 @@ Full-stack software engineer with experience shipping React/TypeScript and Larav
 *2026-02 – Present* · NJ
 Builds applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls—including the InSummery.AI family schedule concierge capstone.
 
-- Built InSummery.AI, an ADK multi-agent family schedule concierge that turns messy registration and disruption messages into a structured multi-child schedule.
-- Deployed InSummery on Firebase (Auth, Cloud Functions, Firestore) with a React dashboard and local CLI mode for zero-cloud demos.
-- Built a multi-agent market-intelligence pilot on OpenClaw with specialized agents and SQLite-backed durable memory for long-running research workflows.
+- Designed a Google ADK 2.0 conditional workflow with triager and interpreter agents for registration, disruption, and schedule analysis in a Kaggle Agents Intensive capstone.
+- Designed privacy-by-design masking so Gemini sees placeholders for household PII while retaining public schedule context needed for accurate extraction.
+- Routed low-confidence ADK extractions through a HITL node with persisted workflow state instead of silently writing uncertain schedule data.
+- Measured InSummery agent quality with deterministic scoring suites and committed model baselines instead of vibe-only demos.
+- Productionized an ADK agent workflow behind Firebase Auth and Cloud Functions with observability instrumentation.
+- Architected an OpenClaw multi-agent ecosystem with orchestrator and specialist agents, durable SQLite state, and structured market-data extraction.
+- Built a tri-tier inference strategy separating reasoning, verification, and formatting across cloud Gemini and local Gemma models, with reported ~40% token-cost optimization.
+- Developed structured-extraction pipelines that turn unstructured web data into relational formats for agent workflows.
+- Added human approval gates and strict subagent controls so high-stakes agent actions require validation before commit.
+- Designed a Cursor Agent SDK orchestrator that splits evaluation and testing subagents behind HITL checkpoints.
+- Migrated an AI Studio personality prototype to a serverless Python backend on Firebase/Vertex AI with durable Firestore agent memory.
+- Stress-testing embedding implementations and vector persistence to improve RAG performance in iBlueprint workflows.
 **Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK
 
 ### Front-End Developer — NAMI
@@ -37,6 +46,7 @@ Built and maintained NAMI's Laravel-based core business application with a focus
 Contributed to a high-traffic React/TypeScript data portal, GraphQL API transitions, and cross-functional delivery with product and data teams.
 
 - Built React/TypeScript portal features for 50,000+ clients and helped sustain high-traffic events with hundreds of thousands of concurrent visitors.
+- Helped transition legacy data flows into GraphQL API endpoints, streamlining backend-to-frontend communication.
 **Technologies:** React, TypeScript, GraphQL, JavaScript
 
 ### Front-End Web Developer — Charity Navigator
@@ -70,6 +80,26 @@ Built an autonomous research framework on OpenClaw with specialized agents (data
 
 **Technologies:** OpenClaw, Python, SQLite, Google Gemini, Gemma
 
+### Tri-Tier Hybrid Inference Pilot — Independent R&D
+
+*2025-2026*
+
+Agentic workloads need a practical balance of reasoning quality, latency, cost, and privacy across cloud and local models.
+
+Designed a routing strategy that sends complex reasoning to stronger cloud/local models and offloads formatting and utility work to faster, cheaper models via Ollama-hosted local Gemma and cloud Gemini.
+
+**Technologies:** Google Gemini, Gemma, Ollama, Antigravity, Python
+
+### AgentOS: Chief of Staff Agent — Independent R&D
+
+*2025-2026*
+
+Complex long-running workflows need reliable orchestration with mandatory human checkpoints.
+
+Built a multi-agent orchestrator with the Cursor Agent SDK, modular subagents, and HITL handoffs for evaluation and testing stages.
+
+**Technologies:** Cursor Agent SDK, Python
+
 ### Cognitive Bridge: AI Personality Alignment — Independent R&D
 
 *2025-2026*
@@ -80,18 +110,24 @@ Built an OCEAN-based personality alignment prototype in Google AI Studio, then p
 
 **Technologies:** Google AI Studio, Google Gemini, Firebase, Firebase Cloud Functions, Cloud Firestore, Firebase Authentication, Vertex AI, Pydantic, Python
 
-### Charity Navigator Platform Rebuild — Charity Navigator
+### iBlueprint Embeddings Collaboration — Independent R&D / Humanservices.ai
 
-*2019-2023*
+*2025-2026*
 
-Modernize and rebrand a high-traffic nonprofit platform serving millions of annual users.
+Domain-specific blueprinting workflows need better embedding accuracy and vector persistence for RAG.
 
-Led frontend execution of the 20th-anniversary rebrand and platform rebuild in collaboration with external design agencies and internal stakeholders.
+Collaborating with Stephen Rockwell on embedding model stress-testing and vector-store integration within existing blueprinting workflows.
 
-**Technologies:** JavaScript, HTML5, CSS, React
+**Technologies:** Vector databases, Embeddings, RAG
 
 
+## Skills
+
+**Applied AI:** Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK
+**Front-End:** React, TypeScript
+**Back-End:** Python, SQLite
+**Testing:** Cypress
 
 ---
 
-*Generated from resume-system source data — Portfolio-Focused Software Engineer (portfolio-v1)*
+*Generated from resume-system source data — Agentic AI Engineer (tyler-stahl-deloitte-agentic-ai)*
