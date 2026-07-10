@@ -1,7 +1,439 @@
+- id: insummery-adk-multi-agent-workflow
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: applied-ai
+  themes:
+    - Google ADK
+    - multi-agent workflow
+    - family scheduling
+    - Kaggle capstone
+  technologies:
+    - Google ADK 2.0
+    - Python
+    - Pydantic
+    - Google Gemini
+    - Vertex AI
+  raw_fact: Built InSummery.AI, a Google ADK 2.0 conditional multi-agent family schedule concierge (triager, registration/disruption interpreters, HITL, matrix analyzer) as the Consult-track capstone for the Kaggle + Google 5-Day AI Agents Intensive.
+  context: Capstone project addressing chaotic summer family logistics via agentic ingestion of emails/texts into a multi-child schedule matrix.
+  resume_bullets:
+    standard: Built InSummery.AI, an ADK multi-agent family schedule concierge that turns messy registration and disruption messages into a structured multi-child schedule.
+    applied-ai: Designed a Google ADK 2.0 conditional workflow with triager and interpreter agents for registration, disruption, and schedule analysis in a Kaggle Agents Intensive capstone.
+    full-stack: Shipped an agentic scheduling product spanning ADK workflow, structured extraction, and a parent-facing schedule matrix.
+  evidence:
+    - Kaggle writeup In-Summery.AI
+    - https://github.com/VolantTyler/InSummery-AI
+    - https://www.youtube.com/watch?v=EeXLKUxHdsw
+  target_roles:
+    - applied-ai-developer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - Derived from user-pasted Kaggle writeup and confirmed GitHub/YouTube/live app links (2026-07-09).
+- id: insummery-pii-masking
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: security
+  themes:
+    - PII masking
+    - privacy by design
+    - family data
+  technologies:
+    - Python
+    - Pydantic
+  raw_fact: Implemented profile-driven PII masking that replaces family names and contact details with placeholders before LLM calls, then unmasks locally after structured extraction while leaving public context (camps, coaches, venues) visible for accurate parsing.
+  context: Privacy-by-design pipeline in InSummery before Gemini/Vertex inference.
+  resume_bullets:
+    standard: Built a PII masking pipeline that protects family names and contacts before LLM calls and restores them after structured extraction.
+    applied-ai: Designed privacy-by-design masking so Gemini sees placeholders for household PII while retaining public schedule context needed for accurate extraction.
+  evidence:
+    - Kaggle writeup Privacy by design section
+    - InSummery README
+  target_roles:
+    - applied-ai-developer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - Consistent across writeup and README.
+- id: insummery-hitl-confidence-gate
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: applied-ai
+  themes:
+    - human-in-the-loop
+    - confidence gating
+    - async resume
+  technologies:
+    - Google ADK 2.0
+    - Python
+    - Firestore
+  raw_fact: Added an 80% confidence gate that pauses low-certainty extractions, saves workflow state (local JSON or Firestore), asks a clarifying question, and resumes via CLI or web HITL modal.
+  context: HITL treated as a core product behavior for ambiguous family scheduling input.
+  resume_bullets:
+    standard: Implemented an 80% confidence HITL gate that pauses ambiguous extractions, asks for clarification, and resumes the workflow asynchronously.
+    applied-ai: Routed low-confidence ADK extractions through a HITL node with persisted workflow state instead of silently writing uncertain schedule data.
+    full-stack: Built a review-and-resume HITL checkpoint so uncertain agent output is validated before it updates production schedule state.
+    qa: Enforced a hard confidence threshold so uncertain agent output cannot pollute the schedule matrix without human clarification.
+  evidence:
+    - Kaggle writeup HITL section
+    - Demo scenario for ambiguous camp input
+  target_roles:
+    - applied-ai-developer
+    - qa-minded-frontend
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - 80% threshold explicitly documented in writeup as a product decision.
+- id: insummery-gap-analysis-calendar
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: product
+  themes:
+    - gap analysis
+    - Google Calendar
+    - multi-child scheduling
+  technologies:
+    - Python
+    - Google Calendar API
+    - React
+  raw_fact: Built schedule matrix gap analysis for absolute uncovered weekday hours and relative sibling mismatches against baseline school coverage, with Google Calendar sync that prefixes child names and marks disruptions as [DISRUPTED] rather than deleting history.
+  context: Parent-facing clarity layer for InSummery after agent extraction.
+  resume_bullets:
+    standard: Built multi-child gap analysis (absolute and sibling mismatches) with Google Calendar sync that preserves disruption history.
+    applied-ai: Combined deterministic matrix analysis with calendar updates so parents see uncovered hours and disrupted slots at a glance.
+    frontend: Shipped a React schedule matrix and alerts sidebar highlighting gaps in high-contrast light/dark themes.
+    full-stack: Connected structured schedule state to Google Calendar OAuth sync and a parent-facing dashboard.
+  evidence:
+    - Kaggle writeup gap analysis and UX sections
+    - https://in-summery.web.app/
+  target_roles:
+    - applied-ai-developer
+    - full-stack-engineer
+    - frontend-engineer
+  confidence: high
+  source_notes:
+    - Writeup + live app homepage.
+- id: insummery-eval-harness
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: evaluation
+  themes:
+    - agent evaluation
+    - regression baselines
+    - quality gates
+  technologies:
+    - Python
+    - Google Gemini
+  raw_fact: Built `insummery-eval`, a unified evaluation harness covering triager classification, field extraction, and end-to-end workflow pass rate, with absolute gates (including 90% triager accuracy and 80% workflow pass rate) and a committed Gemini baseline for regression detection.
+  context: Day-4-aligned evaluation for InSummery agents before production trust.
+  resume_bullets:
+    standard: Built an agent eval harness with absolute quality gates and baseline regression tracking for triager, extraction, and end-to-end workflows.
+    applied-ai: Measured InSummery agent quality with deterministic scoring suites and committed model baselines instead of vibe-only demos.
+    full-stack: Added automated quality gates and regression baselines so agent workflow changes are validated before release.
+    qa: Added absolute eval thresholds (including 90% triager accuracy and 80% workflow pass rate) to catch prompt and model regressions.
+  evidence:
+    - Kaggle writeup Evaluation section
+    - InSummery README Agent Evaluation Loop
+  target_roles:
+    - applied-ai-developer
+    - qa-minded-frontend
+  confidence: high
+  source_notes:
+    - Gate percentages stated in writeup; treat as project-defined thresholds rather than independently audited production SLAs.
+- id: insummery-firebase-production
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: deployment
+  themes:
+    - Firebase
+    - production deployment
+    - React dashboard
+  technologies:
+    - Firebase Authentication
+    - Firebase Cloud Functions
+    - Cloud Firestore
+    - React
+    - Vite
+    - OpenTelemetry
+  raw_fact: Deployed InSummery as a Firebase web app with Auth (email/password and Google SSO), Python Cloud Functions, Firestore persistence, React/Vite dashboard, OpenTelemetry instrumentation, plus a zero-cloud local CLI mode.
+  context: Day-5 production deployment for the Agents Intensive capstone.
+  resume_bullets:
+    standard: Deployed InSummery on Firebase (Auth, Cloud Functions, Firestore) with a React dashboard and local CLI mode for zero-cloud demos.
+    applied-ai: Productionized an ADK agent workflow behind Firebase Auth and Cloud Functions with observability instrumentation.
+    full-stack: Shipped a full-stack agentic product with Firebase backend, React frontend, and Google Calendar integration.
+    frontend: Built an accessible React dashboard with onboarding, ingest panel, schedule matrix, alerts sidebar, and light/dark themes.
+  evidence:
+    - https://in-summery.web.app/
+    - https://github.com/VolantTyler/InSummery-AI
+    - Kaggle writeup Tech stack / Try it sections
+  target_roles:
+    - applied-ai-developer
+    - full-stack-engineer
+    - frontend-engineer
+  confidence: high
+  source_notes:
+    - Live app and GitHub homepage confirmed 2026-07-09.
+- id: openclaw-multi-agent-orchestration
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: 2025-2026
+  category: applied-ai
+  themes:
+    - multi-agent orchestration
+    - OpenClaw
+    - durable memory
+    - market intelligence
+  technologies:
+    - OpenClaw
+    - Python
+    - SQLite
+    - Google Gemini
+    - Gemma
+  raw_fact: Built and deployed a secure multi-agent intelligence pilot using OpenClaw to manage specialized autonomous agents (Orchestrator, Data Analyst, UI Developer) with SQLite persistence for durable multi-turn memory, applied to real-world and World of Warcraft commodity market synthesis.
+  context: Independent applied AI R&D focused on long-running market-intelligence workflows; technical brief describes crawl/parse/store architecture with HITL gates.
+  resume_bullets:
+    standard: Built a multi-agent market-intelligence pilot on OpenClaw with specialized agents and SQLite-backed durable memory for long-running research workflows.
+    applied-ai: Architected an OpenClaw multi-agent ecosystem with orchestrator and specialist agents, durable SQLite state, and structured market-data extraction.
+    full-stack: Shipped a distributed multi-agent research system with Python workers, SQLite persistence, and production-minded state management.
+  evidence:
+    - Applied AI Project Portfolio
+    - Applied AI Resume
+    - Technical Brief - Multi-Agent Market Intelligence Ecosystem
+    - Master AI Career Document interview notes
+  target_roles:
+    - applied-ai-developer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - Derived from Applied AI Resume.pdf, portfolio, and Technical Brief PDF. Interview notes also describe ~15% profit lift; kept out of primary bullet pending stronger evidence.
+- id: hybrid-inference-routing
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: 2025-2026
+  category: applied-ai
+  themes:
+    - hybrid inference
+    - LLM routing
+    - cost and latency optimization
+  technologies:
+    - Google Gemini
+    - Gemma
+    - Python
+  raw_fact: Engineered a hybrid inference strategy routing complex reasoning to stronger Gemini/Gemma models and utility or formatting tasks to faster, cheaper models; Master Career Document claims ~40% operational token-cost optimization from that routing.
+  context: Tri-tier inference pilot balancing reasoning quality, latency, cost, and privacy; local Gemma via Ollama and cloud Gemini, with Antigravity in the tooling path.
+  resume_bullets:
+    standard: Designed a hybrid inference router that sends complex reasoning to stronger Gemini/Gemma models and offloads utility work to faster, cheaper models.
+    applied-ai: Built a tri-tier inference strategy separating reasoning, verification, and formatting across cloud Gemini and local Gemma models, with reported ~40% token-cost optimization.
+  evidence:
+    - Applied AI Resume
+    - Applied AI Project Portfolio hybrid inference section
+    - Technical Brief - Multi-Agent Market Intelligence Ecosystem
+    - Master AI Career Document
+  target_roles:
+    - applied-ai-developer
+  confidence: medium
+  source_notes:
+    - Model version names vary across drafts (Gemini 1.5/2.5/3.1 Pro, Gemma 27b vs Gemma4:26b). 40% token-cost claim appears in Master Career Document and IBM-tailored resumes; kept as medium confidence.
+- id: autonomous-etl-pipelines
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: 2025-2026
+  category: data-engineering
+  themes:
+    - ETL
+    - structured extraction
+    - Python
+    - SQLite
+  technologies:
+    - Python
+    - SQLite
+  raw_fact: Developed autonomous Python ETL pipelines to scrape, clean, and structure market data, using SQLite for state management and automated reporting integrations.
+  context: Data infrastructure supporting agentic market-intelligence workflows.
+  resume_bullets:
+    standard: Built autonomous Python ETL pipelines to scrape, clean, and structure market data with SQLite-backed state management.
+    applied-ai: Developed structured-extraction pipelines that turn unstructured web data into relational formats for agent workflows.
+    full-stack: Implemented Python data pipelines with durable SQLite state for agent-driven research and reporting.
+  evidence:
+    - Applied AI Resume
+    - Applied AI Project Portfolio
+  target_roles:
+    - applied-ai-developer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - Applied AI Resume cites Google Workspace CLI for reporting; Accenture-tailored draft mentions Firestore/IAM. Kept SQLite/Python facts that appear in the portfolio and primary Applied AI resume.
+- id: agentic-hitl-security
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: 2025-2026
+  category: security
+  themes:
+    - human-in-the-loop
+    - agent security
+    - secrets management
+  technologies:
+    - Antigravity IDE
+    - 1Password
+  raw_fact: Hardened the agentic environment with Human-in-the-Loop terminal approvals, strict subagent gateway whitelisting, and secrets management via 1Password.
+  context: Governance and safety controls for autonomous agent workflows.
+  resume_bullets:
+    standard: Hardened agent workflows with HITL terminal approvals, subagent gateway whitelisting, and 1Password-managed secrets.
+    applied-ai: Added human approval gates and strict subagent controls so high-stakes agent actions require validation before commit.
+    full-stack: Added delivery controls around agent actions—HITL approvals, gateway whitelisting, and secrets management—before commits land.
+  evidence:
+    - Applied AI Resume
+    - Applied AI Project Portfolio governance notes
+  target_roles:
+    - applied-ai-developer
+  confidence: high
+  source_notes:
+    - Consistent across Applied AI Resume and portfolio technical highlights.
+- id: agentos-orchestration
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: 2025-2026
+  category: applied-ai
+  themes:
+    - Cursor Agent SDK
+    - workflow orchestration
+    - HITL
+  technologies:
+    - Cursor Agent SDK
+    - Python
+  raw_fact: Built AgentOS, a chief-of-staff style multi-agent orchestrator using the Cursor Agent SDK with modular subagents and mandatory HITL handoffs.
+  context: Autonomous workflow orchestration for evaluation and testing-style long-running tasks.
+  resume_bullets:
+    standard: Built an AgentOS chief-of-staff orchestrator with the Cursor Agent SDK, modular subagents, and mandatory human approval handoffs.
+    applied-ai: Designed a Cursor Agent SDK orchestrator that splits evaluation and testing subagents behind HITL checkpoints.
+    full-stack: Used the Cursor Agent SDK to orchestrate evaluation and testing subagents with mandatory human review before high-stakes handoffs.
+  evidence:
+    - Applied AI Project Portfolio AgentOS section
+  target_roles:
+    - applied-ai-developer
+  confidence: high
+  source_notes:
+    - Derived from Applied AI Project Portfolio - Tyler Stahl.pdf.
+- id: cognitive-bridge-personality
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: 2025-2026
+  category: applied-ai
+  themes:
+    - personality alignment
+    - OCEAN
+    - human-AI collaboration
+  technologies:
+    - Google AI Studio
+    - Google Gemini
+  raw_fact: Built Cognitive Bridge, an experimental tool that maps user personality via OCEAN traits and generates aligned vs unaligned AI chat responses for evaluation.
+  context: Research prototype exploring personality-matched human-AI collaboration.
+  resume_bullets:
+    standard: Built Cognitive Bridge, an OCEAN-based personality alignment prototype that compares aligned and unaligned AI responses.
+    applied-ai: Prototyped Gemini-backed personality alignment using brief user interviews and OCEAN trait maps.
+  evidence:
+    - Applied AI Project Portfolio Cognitive Bridge section
+  target_roles:
+    - applied-ai-developer
+  confidence: high
+  source_notes:
+    - Portfolio describes Google AI Studio / Gemini usage for aligned vs unaligned response demos.
+- id: cognitive-bridge-firebase-productionization
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: 2025-2026
+  category: applied-ai
+  themes:
+    - Firebase
+    - Vertex AI
+    - productionization
+    - structured outputs
+  technologies:
+    - Firebase Cloud Functions
+    - Cloud Firestore
+    - Firebase Authentication
+    - Vertex AI
+    - Pydantic
+    - Python
+    - Google Gemini
+  raw_fact: Migrated Cognitive Bridge from a Google AI Studio prototype into a Firebase Cloud Functions Python backend with Firestore durable memory, Firebase Auth-scoped endpoints, Vertex AI, and Pydantic-validated structured Gemini JSON outputs.
+  context: Architectural pivot from prototyping to production for the Cognitive Bridge personality-alignment project.
+  resume_bullets:
+    standard: Productionized Cognitive Bridge on Firebase Cloud Functions with Firestore memory, auth-scoped endpoints, and Pydantic-validated Gemini structured outputs.
+    applied-ai: Migrated an AI Studio personality prototype to a serverless Python backend on Firebase/Vertex AI with durable Firestore agent memory.
+    full-stack: Shipped a secured serverless Cognitive Bridge backend with Firebase Auth, Firestore state, and type-safe Gemini JSON responses driving UI and DB updates.
+  evidence:
+    - Applied AI Project Portfolio Cognitive Bridge architectural pivot section
+  target_roles:
+    - applied-ai-developer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - Added from updated Applied AI Project Portfolio PDF (architectural pivot / enterprise talking points).
+- id: iblueprint-embedding-work
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: 2025-2026
+  category: applied-ai
+  themes:
+    - embeddings
+    - vector databases
+    - RAG
+  technologies:
+    - Vector databases
+    - Embeddings
+  raw_fact: Collaborating with Stephen Rockwell (Humanservices.ai) on embedding model stress-testing and vector persistence for iBlueprint workflows.
+  context: In-progress collaboration on domain-specific embedding accuracy and RAG performance.
+  resume_bullets:
+    standard: Collaborating on embedding model evaluation and vector-store integration for domain-specific blueprinting workflows.
+    applied-ai: Stress-testing embedding implementations and vector persistence to improve RAG performance in iBlueprint workflows.
+  evidence:
+    - Applied AI Project Portfolio iBlueprint section
+  target_roles:
+    - applied-ai-developer
+  confidence: medium
+  source_notes:
+    - Marked in-progress in portfolio; no completed outcome metrics claimed.
+- id: nami-design-component-library
+  company: NAMI
+  role: Front-End Developer
+  timeframe: 2024-2026
+  category: platform
+  themes:
+    - design systems
+    - component library
+    - architecture standards
+  technologies:
+    - Laravel
+    - Livewire
+    - JavaScript
+  raw_fact: Built and implemented a centralized Design Component Library to enforce architecture/brand standards and streamline UI deployment for NAMI's core business application.
+  context: Internal platform infrastructure for NAMI front-end delivery.
+  resume_bullets:
+    standard: Built a centralized design component library that enforced UI standards and streamlined deployment for NAMI's core application.
+    frontend: Introduced reusable design-system components to standardize front-end delivery across NAMI's Laravel application.
+    nonprofit: Helped scale nonprofit engineering delivery by centralizing reusable UI components for the core business application.
+    full-stack: Implemented a shared component library to enforce architecture standards and accelerate UI delivery.
+  evidence:
+    - Tyler Stahl - CV - 2026.pdf
+    - Applied AI Resume.pdf
+  target_roles:
+    - frontend-engineer
+    - ui-engineer
+    - laravel-livewire-engineer
+    - nonprofit-tech
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - Consistent across CV 2026 and Applied AI / Ramp resume drafts.
 - id: nami-cypress-testing-leadership
   company: NAMI
-  role: Front-End Software Engineer
-  timeframe: 2024-present
+  role: Front-End Developer
+  timeframe: 2024-2026
   category: testing
   themes:
     - Cypress
@@ -13,91 +445,327 @@
     - Cypress
     - Laravel
     - Livewire
-    - JavaScript
-  raw_fact: Led implementation of Cypress automated testing for a Laravel/Livewire event platform.
-  context: NAMI 720 event platform and CCIE-TM training management work.
+  raw_fact: Led implementation of Cypress automated E2E testing for NAMI's Laravel/Livewire platforms, reducing manual QA cycles and improving deployment confidence.
+  context: NAMI core application, 720 event platform, and CCIE-TM training management work.
   resume_bullets:
     standard: Led Cypress automated testing implementation for a Laravel/Livewire event platform, improving regression coverage and team confidence.
     frontend: Built Cypress coverage for key user flows in a Laravel/Livewire application, helping stabilize releases and improve UI regression testing.
     qa: Introduced Cypress-based regression testing practices, documented test flows, and improved release reliability.
     nonprofit: Strengthened reliability of a nonprofit event-management platform by adding Cypress coverage for critical user workflows.
+    full-stack: Developed automated E2E testing pipelines with Cypress to reduce manual QA cycles and improve release confidence.
   evidence:
     - NAMI 720 platform
     - CCIE-TM registration flow
     - Cypress setup and documentation
+    - Applied AI Resume.pdf
+    - Tyler Stahl - CV - 2026.pdf
   target_roles:
     - frontend-engineer
     - ui-engineer
     - qa-minded-frontend
     - nonprofit-tech
-    - laravel-livewire
+    - laravel-livewire-engineer
+    - full-stack-engineer
   confidence: high
   source_notes:
-    - Derived from Tyler's project notes.
-
-- id: nami-ccie-registration-release
+    - Consistent across CV, Applied AI resume, and prior intake note.
+- id: nami-accessibility-compliance
   company: NAMI
-  role: Front-End Software Engineer
-  timeframe: 2024-present
-  category: feature-delivery
+  role: Front-End Developer
+  timeframe: 2024-2026
+  category: accessibility
   themes:
-    - registration flows
+    - accessibility
+    - code quality
+    - compliance
+  technologies:
+    - JavaScript
+    - Laravel
+  raw_fact: Executed code quality and accessibility audits that contributed to initiatives increasing the aggregate compliance score by 30%.
+  context: Quality and accessibility work on NAMI's core business application.
+  resume_bullets:
+    standard: Contributed to accessibility and code-quality audits that increased aggregate compliance score by 30%.
+    frontend: Ran accessibility audits and quality improvements that raised aggregate compliance score by 30%.
+    nonprofit: Improved accessibility compliance on a mission-driven platform through audits and follow-through initiatives.
+    qa: Supported quality and accessibility compliance work that raised aggregate score by 30%.
+  evidence:
+    - Tyler Stahl - CV - 2026.pdf
+    - Applied AI Resume.pdf
+  target_roles:
+    - frontend-engineer
+    - ui-engineer
+    - qa-minded-frontend
+    - nonprofit-tech
+    - full-stack-engineer
+  confidence: medium
+  source_notes:
+    - 30% figure appears consistently across resume drafts; collaborative initiative language preserved.
+- id: ccie-tm-registration-release-support
+  company: NAMI
+  role: Front-End Developer
+  timeframe: 2024-2026
+  category: release-support
+  themes:
+    - registration workflows
     - release support
-    - multi-date handling
+    - stakeholder collaboration
+    - Laravel
     - Livewire
   technologies:
     - Laravel
     - Livewire
+    - Alpine
     - Cypress
-  raw_fact: Fixed multi-date registration handling, wrote testing steps, improved Cypress coverage, and supported prime-to-staging release for CCIE-TM training registration.
-  context: CCIE-TM training registration release on the NAMI platform.
+  raw_fact: Supported CCIE-TM training registration release work, including multi-date registration handling, testing steps, and prime-to-staging release support.
+  context: Training management registration workflow for nonprofit users and staff.
   resume_bullets:
-    standard: Delivered CCIE-TM training registration improvements including multi-date handling fixes, testing documentation, and release support from prime to staging.
-    frontend: Implemented and stabilized multi-date registration UI behavior in a Livewire application as part of a training registration release.
-    qa: Authored testing steps and expanded Cypress coverage for a multi-date registration release, supporting staging validation.
-    nonprofit: Supported a nonprofit training registration release with bug fixes, test coverage, and staging deployment assistance.
+    standard: Supported CCIE-TM registration release work by improving multi-date registration handling, documenting testing steps, and assisting staging release readiness.
+    frontend: Improved front-end registration behavior for multi-date training workflows in a Laravel/Livewire application.
+    qa: Documented release testing steps and supported staging validation for a training registration workflow.
+    nonprofit: Helped improve reliability of nonprofit training registration workflows used by staff and program participants.
   evidence:
-    - CCIE-TM training registration release
-    - Multi-date registration handling fix
+    - CCIE-TM registration flow
+    - Multi-date registration handling
     - Prime-to-staging release support
   target_roles:
     - frontend-engineer
     - qa-minded-frontend
     - nonprofit-tech
-    - laravel-livewire
+    - laravel-livewire-engineer
+    - full-stack-engineer
+  confidence: medium
+  source_notes:
+    - Derived from docs/intake/2026-06-29-example-update.md and prior seed data.
+- id: cn-portal-scale
+  company: Charity Navigator
+  role: Software Engineer
+  timeframe: 2023-2024
+  category: scale
+  themes:
+    - React
+    - TypeScript
+    - high traffic
+    - client portal
+  technologies:
+    - React
+    - TypeScript
+  raw_fact: Engineered features for a React/TypeScript portal used by 50,000+ clients and optimized front-end architecture for high-traffic events of up to about 700,000 concurrent visitors.
+  context: Charity Navigator data-review portal and public high-traffic events.
+  resume_bullets:
+    standard: Built React/TypeScript portal features for 50,000+ clients and helped sustain high-traffic events with hundreds of thousands of concurrent visitors.
+    frontend: Optimized front-end architecture for a React/TypeScript portal serving tens of thousands of clients under high-traffic load.
+    full-stack: Engineered portal features in React/TypeScript for a high-traffic nonprofit data platform.
+    nonprofit: Supported a mission-driven data portal used by tens of thousands of clients during peak traffic events.
+  evidence:
+    - Tyler Stahl - CV - 2026.pdf
+    - Applied AI Resume.pdf
+  target_roles:
+    - full-stack-engineer
+    - frontend-engineer
+    - nonprofit-tech
+  confidence: medium
+  source_notes:
+    - 50,000+ clients and ~700,000 concurrent visitors appear consistently across resume drafts; treated as self-reported production metrics.
+- id: cn-graphql-migration
+  company: Charity Navigator
+  role: Software Engineer
+  timeframe: 2023-2024
+  category: api
+  themes:
+    - GraphQL
+    - API modernization
+    - data flows
+  technologies:
+    - GraphQL
+    - React
+    - TypeScript
+  raw_fact: Assisted in transitioning legacy data flows into optimized GraphQL API endpoints to streamline backend-to-frontend communication.
+  context: Charity Navigator portal and data-platform modernization.
+  resume_bullets:
+    standard: Helped transition legacy data flows into GraphQL API endpoints, streamlining backend-to-frontend communication.
+    frontend: Integrated GraphQL endpoints into React/TypeScript portal workflows during API modernization.
+    full-stack: Supported GraphQL migration of legacy data flows for a high-traffic nonprofit platform.
+  evidence:
+    - Tyler Stahl - CV - 2026.pdf
+    - Applied AI Resume.pdf
+  target_roles:
+    - full-stack-engineer
+    - frontend-engineer
+    - nonprofit-tech
   confidence: high
   source_notes:
-    - docs/intake/2026-06-29-example-update.md
-
-- id: nami-platform-maintenance
-  company: NAMI
-  role: Front-End Software Engineer
-  timeframe: 2024-present
-  category: platform
+    - Consistent across CV and Applied AI resume drafts.
+- id: cn-cross-functional-delivery
+  company: Charity Navigator
+  role: Software Engineer
+  timeframe: 2023-2024
+  category: collaboration
   themes:
-    - platform maintenance
-    - UI implementation
-    - nonprofit technology
+    - product collaboration
+    - data teams
+    - operational excellence
   technologies:
-    - Laravel
-    - Livewire
-    - Alpine.js
-    - JavaScript
-  raw_fact: Maintains and implements UI features for nonprofit event and training management platforms.
-  context: Ongoing front-end work on NAMI web platforms.
+    - React
+    - TypeScript
+  raw_fact: Worked directly with product and data teams to ship tools that improved operational excellence and streamlined data-review processes.
+  context: Cross-functional delivery on Charity Navigator's data portal.
   resume_bullets:
-    standard: Maintains and implements UI features for nonprofit event and training management platforms built with Laravel and Livewire.
-    frontend: Implements and refines user-facing features in Laravel/Livewire applications, focusing on reliable UI delivery.
-    qa: Contributes UI fixes and testing support to keep nonprofit platform releases stable.
-    nonprofit: Supports mission-driven event and training platforms with practical front-end engineering and platform maintenance.
+    standard: Partnered with product and data teams to ship tools that streamlined data-review processes.
+    full-stack: Collaborated across product and data teams to translate requirements into portal and API improvements.
+    nonprofit: Worked cross-functionally to improve nonprofit data-review operations.
   evidence:
-    - NAMI 720 platform
-    - Ongoing front-end feature work
+    - Tyler Stahl - CV - 2026.pdf
+    - Applied AI Resume.pdf
+  target_roles:
+    - full-stack-engineer
+    - frontend-engineer
+    - nonprofit-tech
+  confidence: high
+  source_notes:
+    - Qualitative collaboration claim consistent across sources.
+- id: cn-rebrand-platform-rebuild
+  company: Charity Navigator
+  role: Front-End Web Developer
+  timeframe: 2019-2023
+  category: delivery
+  themes:
+    - rebrand
+    - platform rebuild
+    - agency collaboration
+  technologies:
+    - JavaScript
+    - HTML5
+    - CSS
+    - React
+  raw_fact: Played a key role in frontend execution of Charity Navigator's 20th-anniversary rebrand and platform rebuild, collaborating with external design agencies to ship a production system for 10M+ annual users.
+  context: Major public-platform modernization and rebranding initiative.
+  resume_bullets:
+    standard: Led frontend execution of a major rebrand and platform rebuild serving 10M+ annual users in collaboration with external design agencies.
+    frontend: Translated agency designs into production frontend for a high-traffic nonprofit platform rebuild.
+    nonprofit: Helped modernize a mission-driven public platform used by millions of annual visitors.
+    full-stack: Contributed to end-to-end delivery of a large nonprofit platform rebuild and rebrand.
+  evidence:
+    - Tyler Stahl - CV - 2026.pdf
+    - Applied AI Resume.pdf
+    - Master AI Career Document
   target_roles:
     - frontend-engineer
     - ui-engineer
+    - full-stack-engineer
     - nonprofit-tech
-    - laravel-livewire
+  confidence: medium
+  source_notes:
+    - CV cites 10M+ annual visitors; Master Career Document and some tailored resumes say 11M+. Used 10M+ from CV. Agency names (Ogilvy, 2nd Melody) appear in AI Solution Architect draft only.
+- id: cn-cmo-marketing-partnership
+  company: Charity Navigator
+  role: Front-End Web Developer
+  timeframe: 2019-2023
+  category: collaboration
+  themes:
+    - marketing partnership
+    - executive collaboration
+    - rapid deployment
+  technologies:
+    - JavaScript
+  raw_fact: Partnered directly with the Chief Marketing Officer and marketing team on cross-functional initiatives ranging from the 20th-anniversary rebrand to rapid deployment of time-sensitive website features aligned with marketing schedules.
+  context: Strategic marketing partnership during Charity Navigator frontend tenure.
+  resume_bullets:
+    standard: Partnered with the CMO and marketing team on rebrand work and time-sensitive website feature launches.
+    frontend: Collaborated with marketing leadership to ship schedule-driven website features alongside major rebrand initiatives.
+    nonprofit: Worked directly with nonprofit marketing leadership to align technical delivery with campaign and rebrand timelines.
+    full-stack: Supported cross-functional marketing initiatives from large rebrand projects to rapid tactical website deployments.
+  evidence:
+    - Master AI Career Document
+    - Stripe / IBM tailored resumes
+  target_roles:
+    - frontend-engineer
+    - full-stack-engineer
+    - nonprofit-tech
   confidence: high
   source_notes:
-    - Derived from Tyler's professional background.
+    - Explicit CMO partnership language appears in Master AI Career Document and multiple application resumes.
+- id: cn-processing-efficiency
+  company: Charity Navigator
+  role: Front-End Web Developer
+  timeframe: 2019-2023
+  category: business-outcome
+  themes:
+    - processing efficiency
+    - grant support
+    - full-stack initiatives
+  technologies:
+    - JavaScript
+  raw_fact: Delivered full-stack technology initiatives that contributed to securing a $5M grant and increased processing efficiency by 43%.
+  context: Business-impact work during Charity Navigator frontend tenure.
+  resume_bullets:
+    standard: Delivered technology initiatives that contributed to a $5M grant and a 43% increase in processing efficiency.
+    frontend: Supported frontend and full-stack initiatives tied to major grant and processing-efficiency outcomes.
+    nonprofit: Contributed to technology work that supported a major nonprofit grant outcome and improved processing efficiency.
+    full-stack: Shipped full-stack initiatives linked to a $5M grant and 43% processing-efficiency improvement.
+  evidence:
+    - Tyler Stahl - CV - 2026.pdf
+    - Applied AI Resume.pdf
+  target_roles:
+    - frontend-engineer
+    - full-stack-engineer
+    - nonprofit-tech
+  confidence: medium
+  source_notes:
+    - $5M grant and 43% efficiency appear across multiple resume drafts. CV also mentions 75% revenue boost and $35M+ revenue; those were not repeated as consistently and were omitted pending confirmation.
+- id: volant-fullstack-client-delivery
+  company: Volant Web Design
+  role: Founder & Web Developer
+  timeframe: 2024-present
+  category: consulting
+  themes:
+    - client delivery
+    - full-stack
+    - SEO
+  technologies:
+    - PHP
+    - JavaScript
+    - HTML5
+    - CSS
+  raw_fact: Resumed Volant Web Design client work, shipping full-stack solutions and SEO/analytics reporting for B2B clients from requirements through production deployment.
+  context: Sole-proprietorship consulting resumed September 2024.
+  resume_bullets:
+    standard: Delivered full-stack client websites and SEO/analytics reporting from requirements through production deployment.
+    full-stack: Consulted with B2B clients to design, build, and deploy PHP/JS web solutions end to end.
+    frontend: Built client-facing web experiences with JavaScript, PHP, and HTML/CSS, including SEO support.
+  evidence:
+    - Tyler Stahl - CV - 2026.pdf
+    - Applied AI Resume.pdf
+  target_roles:
+    - full-stack-engineer
+    - frontend-engineer
+  confidence: high
+  source_notes:
+    - Consistent across CV and Applied AI resume drafts.
+- id: volant-business-founding
+  company: Volant Web Design
+  role: Founder & Web Developer
+  timeframe: 2017-2019
+  category: founding
+  themes:
+    - entrepreneurship
+    - client delivery
+    - SEO
+  technologies:
+    - PHP
+    - JavaScript
+    - HTML5
+    - CSS
+  raw_fact: Founded and managed a web design business serving clients across industries, delivering development, SEO, and analytics while supervising an intern and running operations.
+  context: Original Volant Web Design period before Charity Navigator.
+  resume_bullets:
+    standard: Founded a web design business delivering PHP/JS sites, SEO, and analytics for clients across multiple industries.
+    full-stack: Owned end-to-end client delivery from requirements gathering through deployment and SEO reporting.
+  evidence:
+    - Tyler Stahl - CV - 2026.pdf
+    - Applied AI Resume.pdf
+  target_roles:
+    - full-stack-engineer
+    - frontend-engineer
+  confidence: high
+  source_notes:
+    - CV lists example client industries and intern supervision.

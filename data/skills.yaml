@@ -1,106 +1,275 @@
 categories:
+  - name: Applied AI
+    skills:
+      - name: Multi-agent orchestration
+        aliases:
+          - OpenClaw
+          - Agent workflows
+          - Google ADK
+        evidence_ids:
+          - insummery-adk-multi-agent-workflow
+          - openclaw-multi-agent-orchestration
+          - agentos-orchestration
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+      - name: Hybrid LLM inference
+        aliases:
+          - Google Gemini
+          - Gemma
+        evidence_ids:
+          - hybrid-inference-routing
+          - insummery-adk-multi-agent-workflow
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - forward-deployed-engineer
+      - name: Human-in-the-loop controls
+        aliases:
+          - HITL
+        evidence_ids:
+          - insummery-hitl-confidence-gate
+          - agentic-hitl-security
+          - agentos-orchestration
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - qa-minded-frontend
+      - name: PII masking
+        aliases:
+          - privacy by design
+        evidence_ids:
+          - insummery-pii-masking
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
+      - name: Agent evaluation
+        aliases:
+          - insummery-eval
+        evidence_ids:
+          - insummery-eval-harness
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - qa-minded-frontend
+      - name: Embeddings / RAG
+        aliases:
+          - vector databases
+          - RAG
+        evidence_ids:
+          - iblueprint-embedding-work
+        proficiency: medium
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - forward-deployed-engineer
+      - name: Firebase
+        aliases:
+          - Cloud Firestore
+          - Firebase Cloud Functions
+        evidence_ids:
+          - insummery-firebase-production
+          - cognitive-bridge-firebase-productionization
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
+      - name: Vertex AI
+        evidence_ids:
+          - insummery-adk-multi-agent-workflow
+          - cognitive-bridge-firebase-productionization
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+      - name: Ollama
+        evidence_ids:
+          - hybrid-inference-routing
+          - insummery-adk-multi-agent-workflow
+        proficiency: medium
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - forward-deployed-engineer
+      - name: Cursor Agent SDK
+        aliases:
+          - Cursor
+          - AI-assisted development
+        evidence_ids:
+          - agentos-orchestration
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
   - name: Front-End
     skills:
       - name: JavaScript
-        aliases:
-          - JS
-        evidence_ids:
-          - nami-platform-maintenance
-        proficiency: working
-        target_roles:
-          - frontend-engineer
-          - ui-engineer
-          - laravel-livewire
-
-      - name: HTML / CSS
-        evidence_ids:
-          - nami-platform-maintenance
-        proficiency: working
-        target_roles:
-          - frontend-engineer
-          - ui-engineer
-
-      - name: Alpine.js
-        evidence_ids:
-          - nami-platform-maintenance
-        proficiency: working
-        target_roles:
-          - frontend-engineer
-          - laravel-livewire
-
-      - name: Livewire
         evidence_ids:
           - nami-cypress-testing-leadership
-          - nami-ccie-registration-release
-        proficiency: working
+          - cn-portal-scale
+          - cn-rebrand-platform-rebuild
+        proficiency: high
         target_roles:
           - frontend-engineer
-          - laravel-livewire
-          - nonprofit-tech
-
+          - ui-engineer
+          - full-stack-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+      - name: React
+        evidence_ids:
+          - insummery-firebase-production
+          - insummery-gap-analysis-calendar
+          - cn-portal-scale
+          - cn-graphql-migration
+        proficiency: high
+        target_roles:
+          - frontend-engineer
+          - full-stack-engineer
+          - ui-engineer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+      - name: TypeScript
+        evidence_ids:
+          - cn-portal-scale
+          - cn-graphql-migration
+        proficiency: high
+        target_roles:
+          - frontend-engineer
+          - full-stack-engineer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+      - name: Alpine
+        aliases:
+          - Alpine.js
+        evidence_ids:
+          - ccie-tm-registration-release-support
+        proficiency: medium
+        target_roles:
+          - frontend-engineer
+          - laravel-livewire-engineer
   - name: Back-End
     skills:
+      - name: Python
+        evidence_ids:
+          - insummery-adk-multi-agent-workflow
+          - autonomous-etl-pipelines
+          - openclaw-multi-agent-orchestration
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
       - name: Laravel
         evidence_ids:
           - nami-cypress-testing-leadership
-          - nami-platform-maintenance
-        proficiency: working
+          - nami-design-component-library
+          - ccie-tm-registration-release-support
+        proficiency: high
         target_roles:
-          - laravel-livewire
+          - laravel-livewire-engineer
           - nonprofit-tech
+          - full-stack-engineer
+          - agentic-software-engineer
+      - name: GraphQL
+        evidence_ids:
+          - cn-graphql-migration
+        proficiency: high
+        target_roles:
+          - full-stack-engineer
           - frontend-engineer
-
+          - agentic-software-engineer
+          - forward-deployed-engineer
+      - name: SQLite
+        evidence_ids:
+          - autonomous-etl-pipelines
+          - openclaw-multi-agent-orchestration
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
+      - name: PHP
+        evidence_ids:
+          - volant-fullstack-client-delivery
+          - volant-business-founding
+        proficiency: medium
+        target_roles:
+          - full-stack-engineer
   - name: Testing
     skills:
       - name: Cypress
         evidence_ids:
           - nami-cypress-testing-leadership
-          - nami-ccie-registration-release
-        proficiency: working
+          - ccie-tm-registration-release-support
+        proficiency: high
         target_roles:
           - qa-minded-frontend
           - frontend-engineer
-          - laravel-livewire
-
-      - name: Regression testing
+          - full-stack-engineer
+          - nonprofit-tech
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+  - name: CMS / Platform
+    skills:
+      - name: Livewire
         evidence_ids:
           - nami-cypress-testing-leadership
-        proficiency: working
+          - ccie-tm-registration-release-support
+          - nami-design-component-library
+        proficiency: medium
         target_roles:
-          - qa-minded-frontend
-
-  - name: Tooling
-    skills:
-      - name: Git
-        proficiency: working
-        target_roles:
-          - frontend-engineer
-          - laravel-livewire
-
+          - laravel-livewire-engineer
+          - nonprofit-tech
   - name: Collaboration
     skills:
       - name: Release support
+        aliases:
+          - staging validation
         evidence_ids:
-          - nami-ccie-registration-release
-        proficiency: working
+          - ccie-tm-registration-release-support
+        proficiency: medium
         target_roles:
           - qa-minded-frontend
           - nonprofit-tech
-
-      - name: Technical documentation
+          - agentic-software-engineer
+      - name: Stakeholder collaboration
+        aliases:
+          - client consulting
         evidence_ids:
-          - nami-cypress-testing-leadership
-          - nami-ccie-registration-release
-        proficiency: working
-        target_roles:
-          - qa-minded-frontend
-
-  - name: CMS / Platform
-    skills:
-      - name: Platform maintenance
-        evidence_ids:
-          - nami-platform-maintenance
-        proficiency: working
+          - cn-cross-functional-delivery
+          - cn-cmo-marketing-partnership
+          - volant-fullstack-client-delivery
+        proficiency: high
         target_roles:
           - nonprofit-tech
+          - full-stack-engineer
+          - applied-ai-developer
           - frontend-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer

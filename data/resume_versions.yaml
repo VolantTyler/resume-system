@@ -1,75 +1,297 @@
-- id: frontend-engineer-v1
+- id: tyler-stahl-applied-ai
+  target_id: applied-ai-developer
+  label: Applied AI Developer
+  summary_variant: applied-ai-developer
+  experience_ids:
+    - independent-rnd-applied-ai
+    - nami-front-end-developer
+    - charity-navigator-software-engineer
+    - charity-navigator-frontend
+  accomplishment_ids:
+    - insummery-adk-multi-agent-workflow
+    - insummery-pii-masking
+    - insummery-hitl-confidence-gate
+    - insummery-eval-harness
+    - insummery-firebase-production
+    - openclaw-multi-agent-orchestration
+    - hybrid-inference-routing
+    - autonomous-etl-pipelines
+    - agentic-hitl-security
+    - agentos-orchestration
+    - cognitive-bridge-firebase-productionization
+    - nami-design-component-library
+    - nami-cypress-testing-leadership
+    - cn-portal-scale
+    - cn-graphql-migration
+    - cn-cmo-marketing-partnership
+    - cn-rebrand-platform-rebuild
+  project_ids:
+    - insummery-ai
+    - openclaw-multi-agent-ecosystem
+    - hybrid-inference-pilot
+    - agentos-chief-of-staff
+    - cognitive-bridge
+  skill_emphasis: []
+  output_slug: tyler-stahl-applied-ai
+  revision_history:
+    - date: 2026-07-08
+      note: Initial version from intake PDF ingestion.
+    - date: 2026-07-08
+      note: Added Master Career / Technical Brief / portfolio productionization details.
+    - date: 2026-07-09
+      note: Added InSummery.AI Kaggle Agents Intensive capstone.
+- id: tyler-stahl-deloitte-agentic-ai
+  target_id: agentic-ai-engineer
+  label: Agentic AI Engineer
+  summary_variant: agentic-ai-engineer
+  experience_ids:
+    - independent-rnd-applied-ai
+    - nami-front-end-developer
+    - charity-navigator-software-engineer
+    - charity-navigator-frontend
+  accomplishment_ids:
+    - insummery-adk-multi-agent-workflow
+    - insummery-hitl-confidence-gate
+    - insummery-eval-harness
+    - insummery-pii-masking
+    - insummery-firebase-production
+    - openclaw-multi-agent-orchestration
+    - agentic-hitl-security
+    - hybrid-inference-routing
+    - autonomous-etl-pipelines
+    - agentos-orchestration
+    - cognitive-bridge-firebase-productionization
+    - iblueprint-embedding-work
+    - nami-cypress-testing-leadership
+    - cn-portal-scale
+    - cn-graphql-migration
+    - cn-rebrand-platform-rebuild
+  project_ids:
+    - insummery-ai
+    - openclaw-multi-agent-ecosystem
+    - hybrid-inference-pilot
+    - agentos-chief-of-staff
+    - cognitive-bridge
+    - iblueprint-embeddings
+  skill_emphasis: []
+  output_slug: tyler-stahl-deloitte-agentic-ai
+  revision_history:
+    - date: 2026-07-09
+      note: Tailored for Deloitte Agentic AI Engineer — Healthcare AI (req 355577).
+- id: tyler-stahl-deloitte-agentic-se-ii
+  target_id: agentic-software-engineer
+  label: Agentic Software Engineer
+  summary_variant: agentic-software-engineer
+  experience_ids:
+    - independent-rnd-applied-ai
+    - nami-front-end-developer
+    - charity-navigator-software-engineer
+    - charity-navigator-frontend
+  accomplishment_ids:
+    - agentos-orchestration
+    - insummery-eval-harness
+    - insummery-hitl-confidence-gate
+    - insummery-adk-multi-agent-workflow
+    - insummery-firebase-production
+    - openclaw-multi-agent-orchestration
+    - agentic-hitl-security
+    - autonomous-etl-pipelines
+    - cognitive-bridge-firebase-productionization
+    - nami-cypress-testing-leadership
+    - ccie-tm-registration-release-support
+    - nami-design-component-library
+    - cn-portal-scale
+    - cn-graphql-migration
+    - cn-cross-functional-delivery
+    - cn-rebrand-platform-rebuild
+    - cn-cmo-marketing-partnership
+  project_ids:
+    - agentos-chief-of-staff
+    - insummery-ai
+    - openclaw-multi-agent-ecosystem
+    - cognitive-bridge
+    - nami-720-event-platform
+    - cn-data-review-portal
+  skill_emphasis: []
+  output_slug: tyler-stahl-deloitte-agentic-se-ii
+  revision_history:
+    - date: 2026-07-09
+      note: Tailored for Deloitte Agentic Software Engineer II (req 352139).
+- id: tyler-stahl-deloitte-fde-frontier-genai
+  target_id: forward-deployed-engineer
+  label: Forward Deployed Engineer
+  summary_variant: forward-deployed-engineer
+  experience_ids:
+    - independent-rnd-applied-ai
+    - nami-front-end-developer
+    - charity-navigator-software-engineer
+    - charity-navigator-frontend
+    - volant-founder-2024
+  accomplishment_ids:
+    - insummery-adk-multi-agent-workflow
+    - insummery-hitl-confidence-gate
+    - insummery-eval-harness
+    - insummery-pii-masking
+    - insummery-firebase-production
+    - openclaw-multi-agent-orchestration
+    - agentic-hitl-security
+    - hybrid-inference-routing
+    - cognitive-bridge-firebase-productionization
+    - agentos-orchestration
+    - autonomous-etl-pipelines
+    - cn-cmo-marketing-partnership
+    - cn-cross-functional-delivery
+    - cn-portal-scale
+    - cn-graphql-migration
+    - nami-cypress-testing-leadership
+    - volant-fullstack-client-delivery
+  project_ids:
+    - insummery-ai
+    - openclaw-multi-agent-ecosystem
+    - cognitive-bridge
+    - hybrid-inference-pilot
+    - agentos-chief-of-staff
+    - cn-data-review-portal
+  skill_emphasis: []
+  output_slug: tyler-stahl-deloitte-fde-frontier-genai
+  revision_history:
+    - date: 2026-07-09
+      note: Tailored for Deloitte Forward Deployed Engineer, Frontier GenAI (req 350555).
+- id: tyler-stahl-full-stack
+  target_id: full-stack-engineer
+  label: Full-Stack Engineer
+  summary_variant: full-stack-engineer
+  experience_ids:
+    - independent-rnd-applied-ai
+    - nami-front-end-developer
+    - charity-navigator-software-engineer
+    - charity-navigator-frontend
+    - volant-founder-2024
+  accomplishment_ids:
+    - insummery-adk-multi-agent-workflow
+    - insummery-firebase-production
+    - insummery-gap-analysis-calendar
+    - openclaw-multi-agent-orchestration
+    - autonomous-etl-pipelines
+    - cognitive-bridge-firebase-productionization
+    - nami-design-component-library
+    - nami-cypress-testing-leadership
+    - cn-portal-scale
+    - cn-graphql-migration
+    - cn-cmo-marketing-partnership
+    - cn-rebrand-platform-rebuild
+    - cn-processing-efficiency
+    - volant-fullstack-client-delivery
+  project_ids:
+    - insummery-ai
+    - openclaw-multi-agent-ecosystem
+    - cognitive-bridge
+    - nami-design-component-library
+    - cn-data-review-portal
+    - cn-platform-rebuild
+  skill_emphasis: []
+  output_slug: tyler-stahl-full-stack
+  revision_history:
+    - date: 2026-07-08
+      note: Initial version from intake PDF ingestion.
+    - date: 2026-07-08
+      note: Added Cognitive Bridge productionization and CMO partnership.
+    - date: 2026-07-09
+      note: Added InSummery.AI capstone.
+- id: tyler-stahl-frontend-engineer
   target_id: frontend-engineer
   label: Front-End Engineer
-  summary_variant: frontend
+  summary_variant: frontend-engineer
   experience_ids:
-    - nami-frontend-engineer
+    - independent-rnd-applied-ai
+    - nami-front-end-developer
+    - charity-navigator-software-engineer
+    - charity-navigator-frontend
   accomplishment_ids:
+    - insummery-gap-analysis-calendar
+    - insummery-firebase-production
+    - nami-design-component-library
     - nami-cypress-testing-leadership
-    - nami-ccie-registration-release
-    - nami-platform-maintenance
+    - nami-accessibility-compliance
+    - ccie-tm-registration-release-support
+    - cn-portal-scale
+    - cn-graphql-migration
+    - cn-cmo-marketing-partnership
+    - cn-rebrand-platform-rebuild
   project_ids:
-    - nami-720-platform
-    - nami-ccie-tm
-  skill_emphasis:
-    - JavaScript
-    - Livewire
-    - Cypress
-    - HTML / CSS
-    - Alpine.js
+    - insummery-ai
+    - nami-design-component-library
+    - nami-720-event-platform
+    - ccie-tm-training-registration
+    - cn-data-review-portal
+    - cn-platform-rebuild
+  skill_emphasis: []
   output_slug: tyler-stahl-frontend-engineer
   revision_history:
-    - date: "2026-06-29"
-      note: Initial Milestone 1 version.
-
-- id: nonprofit-tech-v1
+    - date: 2026-06-29
+      note: Initial generated version for Milestone 1.
+    - date: 2026-07-08
+      note: Expanded with Charity Navigator and fuller NAMI evidence from intake PDFs.
+    - date: 2026-07-08
+      note: Added CMO marketing partnership accomplishment.
+    - date: 2026-07-09
+      note: Added InSummery.AI dashboard/UX accomplishments.
+- id: tyler-stahl-nonprofit-tech
   target_id: nonprofit-tech
   label: Nonprofit Technology Engineer
-  summary_variant: nonprofit
+  summary_variant: nonprofit-tech
   experience_ids:
-    - nami-frontend-engineer
+    - nami-front-end-developer
+    - charity-navigator-software-engineer
+    - charity-navigator-frontend
   accomplishment_ids:
+    - nami-design-component-library
     - nami-cypress-testing-leadership
-    - nami-ccie-registration-release
-    - nami-platform-maintenance
+    - nami-accessibility-compliance
+    - ccie-tm-registration-release-support
+    - cn-portal-scale
+    - cn-cross-functional-delivery
+    - cn-cmo-marketing-partnership
+    - cn-rebrand-platform-rebuild
+    - cn-processing-efficiency
   project_ids:
-    - nami-720-platform
-    - nami-ccie-tm
-  skill_emphasis:
-    - Laravel
-    - Livewire
-    - Platform maintenance
-    - Cypress
+    - nami-design-component-library
+    - nami-720-event-platform
+    - ccie-tm-training-registration
+    - cn-data-review-portal
+    - cn-platform-rebuild
+  skill_emphasis: []
   output_slug: tyler-stahl-nonprofit-tech
   revision_history:
-    - date: "2026-06-29"
-      note: Initial Milestone 1 version.
-
+    - date: 2026-06-29
+      note: Initial generated version for Milestone 1.
+    - date: 2026-07-08
+      note: Expanded with Charity Navigator history from intake PDFs.
+    - date: 2026-07-08
+      note: Added CMO marketing partnership accomplishment.
 - id: portfolio-v1
   target_id: portfolio-focused
   label: Portfolio-Focused Software Engineer
-  summary_variant: standard
+  summary_variant: full-stack-engineer
   experience_ids:
-    - nami-frontend-engineer
+    - independent-rnd-applied-ai
+    - nami-front-end-developer
+    - charity-navigator-software-engineer
+    - charity-navigator-frontend
   accomplishment_ids:
+    - insummery-adk-multi-agent-workflow
+    - insummery-firebase-production
+    - openclaw-multi-agent-orchestration
     - nami-cypress-testing-leadership
-    - nami-ccie-registration-release
-    - nami-platform-maintenance
+    - cn-portal-scale
+    - cn-rebrand-platform-rebuild
   project_ids:
-    - nami-720-platform
-    - nami-ccie-tm
-  skill_emphasis:
-    - JavaScript
-    - HTML / CSS
-    - Alpine.js
-    - Livewire
-    - Laravel
-    - Cypress
-    - Platform maintenance
+    - insummery-ai
+    - openclaw-multi-agent-ecosystem
+    - cognitive-bridge
+    - cn-platform-rebuild
+  skill_emphasis: []
   output_slug: tyler-stahl-portfolio
   revision_history:
-    - date: "2026-07-02"
-      note: >
-        Milestone 5 — dedicated portfolio-focused version so
-        output/portfolio/resume-content.json reflects an intentional
-        target instead of reusing the frontend-engineer version.
+    - date: 2026-07-09
+      note: Rebuilt portfolio version from merged Autobiography-Agent career data.

@@ -1,6 +1,6 @@
 # Tyler Stahl
 
-**Portfolio-Focused Software Engineer**
+**Full-Stack Engineer**
 
 Glen Rock, NJ · [Portfolio](https://tylerstahl.dev) · [GitHub](https://github.com/VolantTyler) · [LinkedIn](https://linkedin.com/in/tyler-j-stahl)
 ---
@@ -18,9 +18,12 @@ Full-stack software engineer with experience shipping React/TypeScript and Larav
 *2026-02 – Present* · NJ
 Builds applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls—including the InSummery.AI family schedule concierge capstone.
 
-- Built InSummery.AI, an ADK multi-agent family schedule concierge that turns messy registration and disruption messages into a structured multi-child schedule.
-- Deployed InSummery on Firebase (Auth, Cloud Functions, Firestore) with a React dashboard and local CLI mode for zero-cloud demos.
-- Built a multi-agent market-intelligence pilot on OpenClaw with specialized agents and SQLite-backed durable memory for long-running research workflows.
+- Shipped an agentic scheduling product spanning ADK workflow, structured extraction, and a parent-facing schedule matrix.
+- Connected structured schedule state to Google Calendar OAuth sync and a parent-facing dashboard.
+- Shipped a full-stack agentic product with Firebase backend, React frontend, and Google Calendar integration.
+- Shipped a distributed multi-agent research system with Python workers, SQLite persistence, and production-minded state management.
+- Implemented Python data pipelines with durable SQLite state for agent-driven research and reporting.
+- Shipped a secured serverless Cognitive Bridge backend with Firebase Auth, Firestore state, and type-safe Gemini JSON responses driving UI and DB updates.
 **Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK
 
 ### Front-End Developer — NAMI
@@ -28,7 +31,8 @@ Builds applied AI infrastructure spanning multi-agent orchestration, hybrid LLM 
 *2024-12 – 2026-01* · Remote
 Built and maintained NAMI's Laravel-based core business application with a focus on reusable UI components, accessibility, and Cypress E2E testing.
 
-- Led Cypress automated testing implementation for a Laravel/Livewire event platform, improving regression coverage and team confidence.
+- Implemented a shared component library to enforce architecture standards and accelerate UI delivery.
+- Developed automated E2E testing pipelines with Cypress to reduce manual QA cycles and improve release confidence.
 **Technologies:** Laravel, Livewire, Alpine, Cypress, JavaScript
 
 ### Software Engineer — Charity Navigator
@@ -36,7 +40,8 @@ Built and maintained NAMI's Laravel-based core business application with a focus
 *2023-08 – 2024-09* · NJ
 Contributed to a high-traffic React/TypeScript data portal, GraphQL API transitions, and cross-functional delivery with product and data teams.
 
-- Built React/TypeScript portal features for 50,000+ clients and helped sustain high-traffic events with hundreds of thousands of concurrent visitors.
+- Engineered portal features in React/TypeScript for a high-traffic nonprofit data platform.
+- Supported GraphQL migration of legacy data flows for a high-traffic nonprofit platform.
 **Technologies:** React, TypeScript, GraphQL, JavaScript
 
 ### Front-End Web Developer — Charity Navigator
@@ -44,8 +49,18 @@ Contributed to a high-traffic React/TypeScript data portal, GraphQL API transiti
 *2019-03 – 2023-08* · NJ
 Led frontend design and development for platform rebranding, technology migration, and high-traffic public web experiences.
 
-- Led frontend execution of a major rebrand and platform rebuild serving 10M+ annual users in collaboration with external design agencies.
+- Contributed to end-to-end delivery of a large nonprofit platform rebuild and rebrand.
+- Supported cross-functional marketing initiatives from large rebrand projects to rapid tactical website deployments.
+- Shipped full-stack initiatives linked to a $5M grant and 43% processing-efficiency improvement.
 **Technologies:** JavaScript, HTML5, CSS, React
+
+### Founder & Web Developer — Volant Web Design
+
+*2024-09 – Present* · NJ
+Resumed sole-proprietorship web design and development work for B2B clients, covering requirements through production deployment and SEO.
+
+- Consulted with B2B clients to design, build, and deploy PHP/JS web solutions end to end.
+**Technologies:** PHP, JavaScript, HTML5, CSS
 
 
 ## Selected Projects
@@ -80,6 +95,26 @@ Built an OCEAN-based personality alignment prototype in Google AI Studio, then p
 
 **Technologies:** Google AI Studio, Google Gemini, Firebase, Firebase Cloud Functions, Cloud Firestore, Firebase Authentication, Vertex AI, Pydantic, Python
 
+### NAMI Design Component Library — NAMI
+
+*2024-2026*
+
+Front-end delivery needed stronger architecture standards and reusable UI patterns across the core business application.
+
+Built and implemented a centralized design component library to enforce standards and streamline UI deployment.
+
+**Technologies:** Laravel, Livewire, JavaScript
+
+### Charity Navigator Data Review Portal — Charity Navigator
+
+*2023-2024*
+
+Internal and client data-review workflows needed a scalable React/TypeScript portal with modern API integration.
+
+Engineered portal features and helped transition legacy data flows into GraphQL endpoints while collaborating with product and data teams.
+
+**Technologies:** React, TypeScript, GraphQL
+
 ### Charity Navigator Platform Rebuild — Charity Navigator
 
 *2019-2023*
@@ -91,7 +126,14 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 **Technologies:** JavaScript, HTML5, CSS, React
 
 
+## Skills
+
+**Applied AI:** PII masking, Firebase
+**Front-End:** JavaScript, React, TypeScript
+**Back-End:** Laravel, GraphQL, SQLite, PHP
+**Testing:** Cypress
+**Collaboration:** Stakeholder collaboration
 
 ---
 
-*Generated from resume-system source data — Portfolio-Focused Software Engineer (portfolio-v1)*
+*Generated from resume-system source data — Full-Stack Engineer (tyler-stahl-full-stack)*

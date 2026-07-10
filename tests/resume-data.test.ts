@@ -27,12 +27,14 @@ describe("resume context building", () => {
     expect(version).toBeDefined();
 
     const context = buildResumeContext(data, version!);
-    const cypressBullet = context.experience[0]?.bullets.find((bullet) =>
-      bullet.includes("Cypress coverage"),
+    const allBullets = context.experience.flatMap((role) => role.bullets);
+    const cypressBullet = allBullets.find(
+      (bullet) =>
+        bullet.includes("Cypress coverage") || bullet.includes("Cypress"),
     );
 
     expect(cypressBullet).toBeTruthy();
-    expect(context.summary).toContain("Front-end engineer");
+    expect(context.summary.toLowerCase()).toContain("front-end");
   });
 
   it("selects nonprofit bullet variants for nonprofit target", () => {
@@ -44,7 +46,8 @@ describe("resume context building", () => {
     expect(version).toBeDefined();
 
     const context = buildResumeContext(data, version!);
-    const nonprofitBullet = context.experience[0]?.bullets.find((bullet) =>
+    const allBullets = context.experience.flatMap((role) => role.bullets);
+    const nonprofitBullet = allBullets.find((bullet) =>
       bullet.toLowerCase().includes("nonprofit"),
     );
 

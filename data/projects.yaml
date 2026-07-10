@@ -1,38 +1,227 @@
-- id: nami-720-platform
+- id: insummery-ai
+  name: InSummery.AI
+  organization: Independent R&D
+  timeframe: "2026"
+  problem: Family scheduling information lives in messy emails, texts, and PDFs; calendar apps assume tidy manual entry and do not detect multi-child childcare gaps or real-time disruptions with a human still in control.
+  solution: Built a Google ADK 2.0 multi-agent concierge that masks PII, triages and extracts schedule data, pauses below 80% confidence for HITL clarification, maintains a multi-child schedule matrix with absolute/relative gap analysis, and syncs disruptions to Google Calendar—shipped as a Kaggle + Google 5-Day AI Agents Intensive Consult-track capstone.
+  technologies:
+    - Google ADK 2.0
+    - Python
+    - Pydantic
+    - Google Gemini
+    - Vertex AI
+    - Gemma
+    - Ollama
+    - Firebase
+    - Firebase Cloud Functions
+    - Cloud Firestore
+    - Firebase Authentication
+    - React
+    - Vite
+    - Google Calendar API
+    - OpenTelemetry
+  outcomes:
+    - Capstone writeup published on Kaggle for the vibecoding agents competition.
+    - Public demo app and GitHub repository with CLI and Firebase web modes.
+    - Deterministic eval harness with absolute quality gates (e.g., 90% triager accuracy, 80% workflow pass rate) and baseline regression tracking.
+  related_accomplishment_ids:
+    - insummery-adk-multi-agent-workflow
+    - insummery-pii-masking
+    - insummery-hitl-confidence-gate
+    - insummery-gap-analysis-calendar
+    - insummery-eval-harness
+    - insummery-firebase-production
+  portfolio_visible: true
+  resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer, frontend-engineer, qa-minded-frontend
+- id: openclaw-multi-agent-ecosystem
+  name: OpenClaw Multi-Agent Market Intelligence Ecosystem
+  organization: Independent R&D
+  timeframe: 2025-2026
+  problem: Long-running agentic market-research tasks lose state and context without durable memory and governance when synthesizing fragmented commodity and market data.
+  solution: Built an autonomous research framework on OpenClaw with specialized agents (data pull, profitability analysis, dashboard UI, orchestrator), SQLite persistence, Python ETL workers, and HITL approval gates—applied to real-world and World of Warcraft commodity markets.
+  technologies:
+    - OpenClaw
+    - Python
+    - SQLite
+    - Google Gemini
+    - Gemma
+  outcomes:
+    - Durable multi-turn agent memory across interrupted research tasks.
+    - Structured extraction of market data into relational formats.
+    - Human validation before high-stakes database commits.
+    - Faster market-context decision making in the pilot domain (self-reported ~15% profit lift in interview notes; medium/low confidence).
+  related_accomplishment_ids:
+    - openclaw-multi-agent-orchestration
+    - autonomous-etl-pipelines
+    - agentic-hitl-security
+  portfolio_visible: false
+  resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
+- id: hybrid-inference-pilot
+  name: Tri-Tier Hybrid Inference Pilot
+  organization: Independent R&D
+  timeframe: 2025-2026
+  problem: Agentic workloads need a practical balance of reasoning quality, latency, cost, and privacy across cloud and local models.
+  solution: Designed a routing strategy that sends complex reasoning to stronger cloud/local models and offloads formatting and utility work to faster, cheaper models via Ollama-hosted local Gemma and cloud Gemini.
+  technologies:
+    - Google Gemini
+    - Gemma
+    - Ollama
+    - Antigravity
+    - Python
+  outcomes:
+    - Separated reasoning, verification, and formatting into distinct inference tiers.
+    - Reduced reliance on a single model for every task type.
+    - Master career doc claims ~40% operational token-cost optimization from routing high-velocity parsing to cheaper models (medium confidence).
+  related_accomplishment_ids:
+    - hybrid-inference-routing
+  portfolio_visible: false
+  resume_relevance: applied-ai-developer, agentic-ai-engineer, forward-deployed-engineer
+- id: agentos-chief-of-staff
+  name: "AgentOS: Chief of Staff Agent"
+  organization: Independent R&D
+  timeframe: 2025-2026
+  problem: Complex long-running workflows need reliable orchestration with mandatory human checkpoints.
+  solution: Built a multi-agent orchestrator with the Cursor Agent SDK, modular subagents, and HITL handoffs for evaluation and testing stages.
+  technologies:
+    - Cursor Agent SDK
+    - Python
+  outcomes:
+    - Modular subagent design for evaluation and testing workflows.
+    - Mandatory human approval handoffs at critical stages.
+  related_accomplishment_ids:
+    - agentos-orchestration
+  portfolio_visible: false
+  resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer
+- id: cognitive-bridge
+  name: "Cognitive Bridge: AI Personality Alignment"
+  organization: Independent R&D
+  timeframe: 2025-2026
+  problem: Human-AI collaboration can suffer when agent personality is poorly matched to the user, and prototypes need a path from AI Studio into secured production backends.
+  solution: Built an OCEAN-based personality alignment prototype in Google AI Studio, then productionized it on Firebase Cloud Functions with Firestore memory, Firebase Auth, Vertex AI, and Pydantic-validated structured Gemini outputs.
+  technologies:
+    - Google AI Studio
+    - Google Gemini
+    - Firebase
+    - Firebase Cloud Functions
+    - Cloud Firestore
+    - Firebase Authentication
+    - Vertex AI
+    - Pydantic
+    - Python
+  outcomes:
+    - Personality map generation from a brief user interview.
+    - Demonstration of aligned and unaligned chat responses for evaluation.
+    - Migrated prototype to a serverless Python backend with auth-scoped endpoints and durable Firestore memory.
+  related_accomplishment_ids:
+    - cognitive-bridge-personality
+    - cognitive-bridge-firebase-productionization
+  portfolio_visible: false
+  resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
+- id: iblueprint-embeddings
+  name: iBlueprint Embeddings Collaboration
+  organization: Independent R&D / Humanservices.ai
+  timeframe: 2025-2026
+  problem: Domain-specific blueprinting workflows need better embedding accuracy and vector persistence for RAG.
+  solution: Collaborating with Stephen Rockwell on embedding model stress-testing and vector-store integration within existing blueprinting workflows.
+  technologies:
+    - Vector databases
+    - Embeddings
+    - RAG
+  outcomes:
+    - In-progress evaluation of embedding accuracy thresholds for domain-specific data.
+  related_accomplishment_ids:
+    - iblueprint-embedding-work
+  portfolio_visible: false
+  resume_relevance: applied-ai-developer, agentic-ai-engineer
+- id: nami-design-component-library
+  name: NAMI Design Component Library
+  organization: NAMI
+  timeframe: 2024-2026
+  problem: Front-end delivery needed stronger architecture standards and reusable UI patterns across the core business application.
+  solution: Built and implemented a centralized design component library to enforce standards and streamline UI deployment.
+  technologies:
+    - Laravel
+    - Livewire
+    - JavaScript
+  outcomes:
+    - Reusable components for brand and architecture standards.
+    - Streamlined UI deployment for the core application.
+  related_accomplishment_ids:
+    - nami-design-component-library
+  portfolio_visible: false
+  resume_relevance: frontend-engineer, ui-engineer, laravel-livewire-engineer, nonprofit-tech, full-stack-engineer
+- id: nami-720-event-platform
   name: NAMI 720 Event Platform
   organization: NAMI
-  timeframe: 2024-present
-  problem: Nonprofit needed a reliable platform for event management and related workflows.
-  solution: Front-end implementation and testing support on a Laravel/Livewire event platform.
+  timeframe: 2024-2026
+  problem: Maintain and improve event-management workflows for nonprofit users and staff.
+  solution: Contributed front-end implementation and Cypress testing practices in a Laravel/Livewire application.
   technologies:
     - Laravel
     - Livewire
-    - Alpine.js
+    - Alpine
     - Cypress
   outcomes:
-    - Improved regression coverage through Cypress
-    - Ongoing UI feature delivery and platform maintenance
+    - Improved regression coverage for critical user workflows.
+    - Increased release confidence through documented testing practices.
   related_accomplishment_ids:
     - nami-cypress-testing-leadership
-    - nami-platform-maintenance
-  portfolio_visible: true
-  resume_relevance: high
-
-- id: nami-ccie-tm
+  portfolio_visible: false
+  resume_relevance: frontend-engineer, qa-minded-frontend, nonprofit-tech, laravel-livewire-engineer, agentic-software-engineer
+- id: ccie-tm-training-registration
   name: CCIE-TM Training Registration
   organization: NAMI
-  timeframe: 2024-present
-  problem: Training registration required multi-date handling and reliable release validation.
-  solution: Fixed registration edge cases, documented testing steps, and supported staging release.
+  timeframe: 2024-2026
+  problem: Support reliable registration behavior for multi-date nonprofit training workflows.
+  solution: Improved registration handling, documented testing steps, and supported staging validation.
   technologies:
     - Laravel
     - Livewire
+    - Alpine
     - Cypress
   outcomes:
-    - Multi-date registration handling improvements
-    - Expanded test coverage for registration flows
+    - Supported release readiness for training registration workflows.
+    - Captured testing steps for future validation.
   related_accomplishment_ids:
-    - nami-ccie-registration-release
-    - nami-cypress-testing-leadership
-  portfolio_visible: true
-  resume_relevance: high
+    - ccie-tm-registration-release-support
+  portfolio_visible: false
+  resume_relevance: frontend-engineer, qa-minded-frontend, nonprofit-tech, laravel-livewire-engineer, full-stack-engineer
+- id: cn-data-review-portal
+  name: Charity Navigator Data Review Portal
+  organization: Charity Navigator
+  timeframe: 2023-2024
+  problem: Internal and client data-review workflows needed a scalable React/TypeScript portal with modern API integration.
+  solution: Engineered portal features and helped transition legacy data flows into GraphQL endpoints while collaborating with product and data teams.
+  technologies:
+    - React
+    - TypeScript
+    - GraphQL
+  outcomes:
+    - Portal used by tens of thousands of clients.
+    - Front-end architecture supporting high-traffic events.
+  related_accomplishment_ids:
+    - cn-portal-scale
+    - cn-graphql-migration
+    - cn-cross-functional-delivery
+  portfolio_visible: false
+  resume_relevance: full-stack-engineer, frontend-engineer, nonprofit-tech, agentic-software-engineer, forward-deployed-engineer
+- id: cn-platform-rebuild
+  name: Charity Navigator Platform Rebuild
+  organization: Charity Navigator
+  timeframe: 2019-2023
+  problem: Modernize and rebrand a high-traffic nonprofit platform serving millions of annual users.
+  solution: Led frontend execution of the 20th-anniversary rebrand and platform rebuild in collaboration with external design agencies and internal stakeholders.
+  technologies:
+    - JavaScript
+    - HTML5
+    - CSS
+    - React
+  outcomes:
+    - Production system serving 10M+ annual users.
+    - Technology initiatives that contributed to a major grant outcome.
+  related_accomplishment_ids:
+    - cn-rebrand-platform-rebuild
+    - cn-cmo-marketing-partnership
+    - cn-processing-efficiency
+  portfolio_visible: false
+  resume_relevance: frontend-engineer, full-stack-engineer, nonprofit-tech, ui-engineer
