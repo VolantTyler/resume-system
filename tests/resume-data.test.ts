@@ -54,4 +54,18 @@ describe("resume context building", () => {
     expect(nonprofitBullet).toBeTruthy();
     expect(context.summary.toLowerCase()).toContain("nonprofit");
   });
+
+  it("includes application fit when configured on a resume version", () => {
+    const data = loadResumeData();
+    const version = data.resumeVersions.find(
+      (item) => item.id === "tyler-stahl-deloitte-fde-frontier-genai",
+    );
+
+    expect(version).toBeDefined();
+    expect(version?.application_fit).toBeDefined();
+
+    const context = buildResumeContext(data, version!);
+    expect(context.application_fit?.strengths.length).toBeGreaterThanOrEqual(2);
+    expect(context.application_fit?.weaknesses.length).toBeGreaterThanOrEqual(2);
+  });
 });

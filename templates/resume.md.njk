@@ -9,6 +9,29 @@
 
 ---
 
+{% if application_fit %}
+## Application Fit
+
+{% if application_fit.role_reference %}*{{ application_fit.role_reference }}*
+
+{% endif %}
+{{ application_fit.overall }}
+
+**Strongest alignment**
+
+{% for item in application_fit.strengths %}
+- **{{ item.criterion }}** — {{ item.resume_reference }}
+{% endfor %}
+
+**Gaps / indirect fit**
+
+{% for item in application_fit.weaknesses %}
+- **{{ item.criterion }}** — {{ item.indirect_address }}
+{% endfor %}
+
+---
+
+{% endif %}
 ## Summary
 
 {{ summary }}

@@ -153,10 +153,45 @@
     - agentos-chief-of-staff
     - cn-data-review-portal
   skill_emphasis: []
+  application_fit:
+    role_reference: Deloitte Forward Deployed Engineer, Frontier GenAI (req 350555)
+    overall: >-
+      Strong fit for rapid GenAI prototyping on Google platforms, agentic workflows with human-in-the-loop
+      controls, and shipping production-quality software with stakeholders. Lighter on formal consulting
+      engagement leadership and multi-cloud enterprise data-engineering depth.
+    strengths:
+      - criterion: Production GenAI and agentic workflow delivery on Google platforms
+        resume_reference: >-
+          Experience → Independent R&D; Selected Projects → InSummery.AI, Cognitive Bridge
+      - criterion: Human-in-the-loop controls, evaluation, and responsible AI patterns
+        resume_reference: >-
+          Experience → Independent R&D (HITL gates, eval harness, PII masking); Selected Projects →
+          OpenClaw Multi-Agent Ecosystem
+      - criterion: Translating ambiguous business needs into working software with senior stakeholders
+        resume_reference: >-
+          Experience → Charity Navigator (CMO partnership, cross-functional delivery); Volant Web Design
+          (client delivery end-to-end)
+    weaknesses:
+      - criterion: Formal engagement / workstream leadership at enterprise consulting scale
+        indirect_address: >-
+          Source data documents team contribution and solo client delivery rather than named engagement-lead
+          roles; Charity Navigator cross-functional and CMO partnership work shows stakeholder-facing
+          delivery without claiming undocumented consulting titles.
+      - criterion: Hybrid onshore/offshore pod operations
+        indirect_address: >-
+          NAMI and Charity Navigator were remote/hybrid engineering roles; no explicit offshore pod
+          leadership is documented in source data (confidence limited).
+      - criterion: Multi-cloud (AWS/Azure) and enterprise data-engineering stack depth
+        indirect_address: >-
+          Google Cloud, Firebase, and Vertex AI are well evidenced; high-scale web and GraphQL platform
+          work at Charity Navigator partially maps to cloud platform fluency without claiming undocumented
+          AWS, Azure, Spark, or Airflow experience.
   output_slug: tyler-stahl-deloitte-fde-frontier-genai
   revision_history:
     - date: 2026-07-09
       note: Tailored for Deloitte Forward Deployed Engineer, Frontier GenAI (req 350555).
+    - date: 2026-07-10
+      note: Added application fit section for req 350555 review.
 - id: tyler-stahl-full-stack
   target_id: full-stack-engineer
   label: Full-Stack Engineer

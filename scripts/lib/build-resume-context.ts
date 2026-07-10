@@ -1,5 +1,6 @@
 import type {
   Accomplishment,
+  ApplicationFit,
   ExperienceEntry,
   Profile,
   Project,
@@ -53,6 +54,7 @@ export interface ResumeRenderContext {
   version: ResumeVersion;
   target: ResumeTarget;
   summary: string;
+  application_fit?: ApplicationFit;
   experience: ResumeRoleContext[];
   projects: ResumeProjectContext[];
   skills: ResumeSkillCategoryContext[];
@@ -196,6 +198,7 @@ export function buildResumeContext(
     version,
     target,
     summary,
+    application_fit: version.application_fit,
     experience,
     projects,
     skills: buildSkillsContext(data.skills, version, target),
