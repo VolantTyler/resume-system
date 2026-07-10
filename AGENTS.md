@@ -110,3 +110,10 @@ Defined in `data/resume_targets.yaml` and instantiated in `data/resume_versions.
 - `output/portfolio/resume-content.json`
 
 Bullet selection uses the target's `bullet_variant` key on accomplishments when available, falling back to `standard`.
+
+## Cursor Cloud specific instructions
+
+- This repo is a CLI generation pipeline, not a long-running service — there is no dev server, port, or web app to start. "Running the app" means invoking the npm scripts documented in the README (`validate`, `generate`, `build`, `test`, `tailor`, `intake:*`).
+- There is no lint script/config in this repo; do not look for `npm run lint`. Correctness is enforced by `npm run validate` (Zod schema checks) plus `npm test` (Vitest).
+- PDF export and the `generate`/`build` PDF step, plus the "PDF export" Vitest cases, need a local Chrome/Chromium. It is preinstalled at `/usr/bin/google-chrome` and auto-detected by `puppeteer-core`, so PDFs generate without extra config. If Chrome were missing, the PDF step is skipped with a warning (non-fatal) but the PDF tests would fail; point `PUPPETEER_EXECUTABLE_PATH` at a browser binary in that case.
+- Generated files land in `output/` (gitignored). Regenerate anytime with `npm run build`.
