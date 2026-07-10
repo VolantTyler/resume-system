@@ -102,6 +102,23 @@ export const resumeTargetSchema = z.object({
 
 export const resumeTargetsSchema = z.array(resumeTargetSchema).min(1);
 
+const applicationFitStrengthSchema = z.object({
+  criterion: z.string().min(1),
+  resume_reference: z.string().min(1),
+});
+
+const applicationFitWeaknessSchema = z.object({
+  criterion: z.string().min(1),
+  indirect_address: z.string().min(1),
+});
+
+export const applicationFitSchema = z.object({
+  role_reference: z.string().min(1).optional(),
+  overall: z.string().min(1),
+  strengths: z.array(applicationFitStrengthSchema).min(1).max(5),
+  weaknesses: z.array(applicationFitWeaknessSchema).min(1).max(5),
+});
+
 export const resumeVersionSchema = z.object({
   id: z.string().min(1),
   target_id: z.string().min(1),
@@ -111,6 +128,7 @@ export const resumeVersionSchema = z.object({
   accomplishment_ids: z.array(z.string().min(1)).min(1),
   project_ids: z.array(z.string()).optional(),
   skill_emphasis: z.array(z.string()).optional(),
+  application_fit: applicationFitSchema.optional(),
   output_slug: z.string().min(1),
   revision_history: z
     .array(
@@ -130,6 +148,7 @@ export type Project = z.infer<typeof projectSchema>;
 export type ExperienceEntry = z.infer<typeof experienceEntrySchema>;
 export type SkillsData = z.infer<typeof skillsSchema>;
 export type ResumeTarget = z.infer<typeof resumeTargetSchema>;
+export type ApplicationFit = z.infer<typeof applicationFitSchema>;
 export type ResumeVersion = z.infer<typeof resumeVersionSchema>;
 
 export interface ResumeData {

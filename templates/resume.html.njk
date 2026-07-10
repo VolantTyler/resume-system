@@ -69,6 +69,18 @@
       margin-bottom: 0.75rem;
     }
     .summary { margin-bottom: 0.5rem; }
+    .fit-role {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 0.5rem;
+    }
+    .fit-overall { margin: 0 0 0.75rem; }
+    .fit-subhead {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 0.75rem 0 0.35rem;
+    }
     footer {
       margin-top: 2rem;
       font-size: 0.8rem;
@@ -97,6 +109,26 @@
       {% if profile.linkedin_url %} · <a href="{{ profile.linkedin_url }}">LinkedIn</a>{% endif %}
     </p>
   </header>
+
+  {% if application_fit %}
+  <section>
+    <h2>Application Fit</h2>
+    {% if application_fit.role_reference %}<p class="fit-role">{{ application_fit.role_reference }}</p>{% endif %}
+    <p class="fit-overall">{{ application_fit.overall }}</p>
+    <p class="fit-subhead">Strongest alignment</p>
+    <ul>
+      {% for item in application_fit.strengths %}
+      <li><strong>{{ item.criterion }}</strong> — {{ item.resume_reference }}</li>
+      {% endfor %}
+    </ul>
+    <p class="fit-subhead">Gaps / indirect fit</p>
+    <ul>
+      {% for item in application_fit.weaknesses %}
+      <li><strong>{{ item.criterion }}</strong> — {{ item.indirect_address }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
 
   <section>
     <h2>Summary</h2>

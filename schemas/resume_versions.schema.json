@@ -30,6 +30,43 @@
       },
       "project_ids": { "type": "array", "items": { "type": "string" } },
       "skill_emphasis": { "type": "array", "items": { "type": "string" } },
+      "application_fit": {
+        "type": "object",
+        "required": ["overall", "strengths", "weaknesses"],
+        "properties": {
+          "role_reference": { "type": "string", "minLength": 1 },
+          "overall": { "type": "string", "minLength": 1 },
+          "strengths": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "required": ["criterion", "resume_reference"],
+              "properties": {
+                "criterion": { "type": "string", "minLength": 1 },
+                "resume_reference": { "type": "string", "minLength": 1 }
+              },
+              "additionalProperties": false
+            }
+          },
+          "weaknesses": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "required": ["criterion", "indirect_address"],
+              "properties": {
+                "criterion": { "type": "string", "minLength": 1 },
+                "indirect_address": { "type": "string", "minLength": 1 }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "output_slug": { "type": "string", "minLength": 1 },
       "revision_history": {
         "type": "array",

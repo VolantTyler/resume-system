@@ -5,6 +5,26 @@
 Glen Rock, NJ · [Portfolio](https://tylerstahl.dev) · [GitHub](https://github.com/VolantTyler) · [LinkedIn](https://linkedin.com/in/tyler-j-stahl)
 ---
 
+## Application Fit
+
+*Deloitte Forward Deployed Engineer, Frontier GenAI (req 350555)*
+
+Strong fit for rapid GenAI prototyping on Google platforms, agentic workflows with human-in-the-loop controls, and shipping production-quality software with stakeholders. Lighter on formal consulting engagement leadership and multi-cloud enterprise data-engineering depth.
+
+**Strongest alignment**
+
+- **Production GenAI and agentic workflow delivery on Google platforms** — Experience → Independent R&D; Selected Projects → InSummery.AI, Cognitive Bridge
+- **Human-in-the-loop controls, evaluation, and responsible AI patterns** — Experience → Independent R&D (HITL gates, eval harness, PII masking); Selected Projects → OpenClaw Multi-Agent Ecosystem
+- **Translating ambiguous business needs into working software with senior stakeholders** — Experience → Charity Navigator (CMO partnership, cross-functional delivery); Volant Web Design (client delivery end-to-end)
+
+**Gaps / indirect fit**
+
+- **Formal engagement / workstream leadership at enterprise consulting scale** — Source data documents team contribution and solo client delivery rather than named engagement-lead roles; Charity Navigator cross-functional and CMO partnership work shows stakeholder-facing delivery without claiming undocumented consulting titles.
+- **Hybrid onshore/offshore pod operations** — NAMI and Charity Navigator were remote/hybrid engineering roles; no explicit offshore pod leadership is documented in source data (confidence limited).
+- **Multi-cloud (AWS/Azure) and enterprise data-engineering stack depth** — Google Cloud, Firebase, and Vertex AI are well evidenced; high-scale web and GraphQL platform work at Charity Navigator partially maps to cloud platform fluency without claiming undocumented AWS, Azure, Spark, or Airflow experience.
+
+---
+
 ## Summary
 
 Forward-leaning applied AI engineer who prototypes and ships GenAI solutions with Gemini/Vertex, agentic workflows, and human-in-the-loop controls—translating ambiguous stakeholder needs into working software, from nonprofit product delivery to productionized agent systems.
