@@ -13,15 +13,15 @@ Strong fit for rapid GenAI prototyping on Google platforms, agentic workflows wi
 
 **Strongest alignment**
 
-- **Production GenAI and agentic workflow delivery on Google platforms** — Experience → Independent R&D; Selected Projects → InSummery.AI, Cognitive Bridge
-- **Human-in-the-loop controls, evaluation, and responsible AI patterns** — Experience → Independent R&D (HITL gates, eval harness, PII masking); Selected Projects → OpenClaw Multi-Agent Ecosystem
-- **Translating ambiguous business needs into working software with senior stakeholders** — Experience → Charity Navigator (CMO partnership, cross-functional delivery); Volant Web Design (client delivery end-to-end)
+- **Production GenAI and agentic workflow delivery on Google platforms** — Independent R&D plus InSummery.AI and Cognitive Bridge—Google ADK workflows, Gemini/Vertex integration, and production Firebase deployment.
+- **Human-in-the-loop controls, evaluation, and responsible AI patterns** — InSummery.AI (confidence gates, eval harness, PII masking) and OpenClaw multi-agent work with approval gates before high-stakes actions.
+- **Translating ambiguous business needs into working software with senior stakeholders** — Charity Navigator cross-functional delivery and CMO partnership; Volant Web Design client engagements from requirements through production.
 
-**Gaps / indirect fit**
+**Additional alignment**
 
-- **Formal engagement / workstream leadership at enterprise consulting scale** — Source data documents team contribution and solo client delivery rather than named engagement-lead roles; Charity Navigator cross-functional and CMO partnership work shows stakeholder-facing delivery without claiming undocumented consulting titles.
-- **Hybrid onshore/offshore pod operations** — NAMI and Charity Navigator were remote/hybrid engineering roles; no explicit offshore pod leadership is documented in source data (confidence limited).
-- **Multi-cloud (AWS/Azure) and enterprise data-engineering stack depth** — Google Cloud, Firebase, and Vertex AI are well evidenced; high-scale web and GraphQL platform work at Charity Navigator partially maps to cloud platform fluency without claiming undocumented AWS, Azure, Spark, or Airflow experience.
+- **Formal engagement / workstream leadership at enterprise consulting scale** — Background centers on hands-on engineering and independent client delivery rather than titled engagement-lead roles; Charity Navigator work with the CMO and cross-functional product/data teams shows comfort owning stakeholder-facing outcomes in complex organizations.
+- **Hybrid onshore/offshore pod operations** — Experience is in remote and hybrid product engineering rather than formal onshore/offshore pod leadership; practiced collaborating across distributed teams in async, cross-functional settings.
+- **Multi-cloud (AWS/Azure) and enterprise data-engineering stack depth** — Deepest production cloud work is on Google Cloud (Firebase, Vertex AI); high-traffic web and GraphQL platform engineering at Charity Navigator demonstrates transferable enterprise platform experience.
 
 ---
 
@@ -156,7 +156,3 @@ Engineered portal features and helped transition legacy data flows into GraphQL 
 **Back-End:** Python, GraphQL, SQLite
 **Testing:** Cypress
 **Collaboration:** Stakeholder collaboration
-
----
-
-*Generated from resume-system source data — Forward Deployed Engineer (tyler-stahl-deloitte-fde-frontier-genai)*

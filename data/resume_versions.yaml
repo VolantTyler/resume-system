@@ -162,36 +162,39 @@
     strengths:
       - criterion: Production GenAI and agentic workflow delivery on Google platforms
         resume_reference: >-
-          Experience → Independent R&D; Selected Projects → InSummery.AI, Cognitive Bridge
+          Independent R&D plus InSummery.AI and Cognitive Bridge—Google ADK workflows, Gemini/Vertex
+          integration, and production Firebase deployment.
       - criterion: Human-in-the-loop controls, evaluation, and responsible AI patterns
         resume_reference: >-
-          Experience → Independent R&D (HITL gates, eval harness, PII masking); Selected Projects →
-          OpenClaw Multi-Agent Ecosystem
+          InSummery.AI (confidence gates, eval harness, PII masking) and OpenClaw multi-agent work with
+          approval gates before high-stakes actions.
       - criterion: Translating ambiguous business needs into working software with senior stakeholders
         resume_reference: >-
-          Experience → Charity Navigator (CMO partnership, cross-functional delivery); Volant Web Design
-          (client delivery end-to-end)
+          Charity Navigator cross-functional delivery and CMO partnership; Volant Web Design client
+          engagements from requirements through production.
     weaknesses:
       - criterion: Formal engagement / workstream leadership at enterprise consulting scale
         indirect_address: >-
-          Source data documents team contribution and solo client delivery rather than named engagement-lead
-          roles; Charity Navigator cross-functional and CMO partnership work shows stakeholder-facing
-          delivery without claiming undocumented consulting titles.
+          Background centers on hands-on engineering and independent client delivery rather than titled
+          engagement-lead roles; Charity Navigator work with the CMO and cross-functional product/data teams
+          shows comfort owning stakeholder-facing outcomes in complex organizations.
       - criterion: Hybrid onshore/offshore pod operations
         indirect_address: >-
-          NAMI and Charity Navigator were remote/hybrid engineering roles; no explicit offshore pod
-          leadership is documented in source data (confidence limited).
+          Experience is in remote and hybrid product engineering rather than formal onshore/offshore pod
+          leadership; practiced collaborating across distributed teams in async, cross-functional settings.
       - criterion: Multi-cloud (AWS/Azure) and enterprise data-engineering stack depth
         indirect_address: >-
-          Google Cloud, Firebase, and Vertex AI are well evidenced; high-scale web and GraphQL platform
-          work at Charity Navigator partially maps to cloud platform fluency without claiming undocumented
-          AWS, Azure, Spark, or Airflow experience.
+          Deepest production cloud work is on Google Cloud (Firebase, Vertex AI); high-traffic web and
+          GraphQL platform engineering at Charity Navigator demonstrates transferable enterprise platform
+          experience.
   output_slug: tyler-stahl-deloitte-fde-frontier-genai
   revision_history:
     - date: 2026-07-09
       note: Tailored for Deloitte Forward Deployed Engineer, Frontier GenAI (req 350555).
     - date: 2026-07-10
       note: Added application fit section for req 350555 review.
+    - date: 2026-07-10
+      note: Rewrote application fit copy for external (hiring-manager) audience.
 - id: tyler-stahl-full-stack
   target_id: full-stack-engineer
   label: Full-Stack Engineer

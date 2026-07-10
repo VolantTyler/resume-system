@@ -117,7 +117,3 @@ Built an OCEAN-based personality alignment prototype in Google AI Studio, then p
 **Applied AI:** Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK
 **Back-End:** Python, SQLite
 **Collaboration:** Stakeholder collaboration
-
----
-
-*Generated from resume-system source data — Applied AI Developer (tyler-stahl-applied-ai)*

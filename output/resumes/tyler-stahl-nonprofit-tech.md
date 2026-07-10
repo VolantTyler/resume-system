@@ -103,7 +103,3 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 **Testing:** Cypress
 **CMS / Platform:** Livewire
 **Collaboration:** Release support, Stakeholder collaboration
-
----
-
-*Generated from resume-system source data — Nonprofit Technology Engineer (tyler-stahl-nonprofit-tech)*

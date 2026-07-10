@@ -121,7 +121,3 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 **Back-End:** GraphQL
 **Testing:** Cypress
 **Collaboration:** Stakeholder collaboration
-
----
-
-*Generated from resume-system source data — Front-End Engineer (tyler-stahl-frontend-engineer)*

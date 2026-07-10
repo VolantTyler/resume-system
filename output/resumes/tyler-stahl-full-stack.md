@@ -133,7 +133,3 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 **Back-End:** Laravel, GraphQL, SQLite, PHP
 **Testing:** Cypress
 **Collaboration:** Stakeholder collaboration
-
----
-
-*Generated from resume-system source data — Full-Stack Engineer (tyler-stahl-full-stack)*
