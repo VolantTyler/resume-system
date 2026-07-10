@@ -88,6 +88,25 @@ npm run tailor -- docs/job-descriptions/<file>.md
 
 This is a deterministic, non-LLM matching step (no claims are invented): it matches the job description text against terms already present in `data/` (skill names/aliases, accomplishment themes/technologies, target emphasis) to recommend a `resume_target`, rank that target's accomplishments by relevance, emphasize mentioned skills, and flag "possible gaps" (reference terms in the JD not yet reflected in the résumé data). Output goes to `output/resumes/tailored/` — a `.md`/`.html` résumé plus a `-match-report.md`. Use `--target <target-id>` to override the recommended target.
 
+### Judge and revise a tailored résumé (LLM-as-judge)
+
+```bash
+npm run judge -- docs/job-descriptions/<file>.md
+npm run judge -- docs/job-descriptions/<file>.md --stub          # offline stub, no API key
+npm run judge -- docs/job-descriptions/<file>.md --max-rounds 3 --pass-score 7
+```
+
+After deterministic tailoring, an LLM judge reads the rendered résumé plus grounded evidence (`raw_fact`, themes, technologies, confidence) and returns a structured verdict: dimension scores, application-fit analysis, invented-claim flags, and claim-safe revision directives. A reviser then reorders accomplishments / adjusts skill emphasis / attaches `application_fit` — it never invents bullets, metrics, or employers. The loop repeats until the résumé passes or `--max-rounds` is hit.
+
+Requires an OpenAI-compatible API key (`RESUME_JUDGE_API_KEY` or `OPENAI_API_KEY`). Optional: `RESUME_JUDGE_BASE_URL`, `RESUME_JUDGE_MODEL`. Use `--stub` for offline runs and tests.
+
+Outputs (under `output/resumes/tailored/`):
+
+- tailored résumé `.md` / `.html` (with Application Fit when the judge attaches it)
+- `-match-report.md` (deterministic)
+- `-judge-round-N.md` (critique + revision directives)
+- debug JSON under `output/debug/` when enabled
+
 ## Data Modeling
 
 Each accomplishment is **atomic**. Store:
@@ -113,7 +132,8 @@ Bullet selection uses the target's `bullet_variant` key on accomplishments when 
 
 ## Cursor Cloud specific instructions
 
-- This repo is a CLI generation pipeline, not a long-running service — there is no dev server, port, or web app to start. "Running the app" means invoking the npm scripts documented in the README (`validate`, `generate`, `build`, `test`, `tailor`, `intake:*`).
+- This repo is a CLI generation pipeline, not a long-running service — there is no dev server, port, or web app to start. "Running the app" means invoking the npm scripts documented in the README (`validate`, `generate`, `build`, `test`, `tailor`, `judge`, `intake:*`).
 - There is no lint script/config in this repo; do not look for `npm run lint`. Correctness is enforced by `npm run validate` (Zod schema checks) plus `npm test` (Vitest).
 - PDF export and the `generate`/`build` PDF step, plus the "PDF export" Vitest cases, need a local Chrome/Chromium. It is preinstalled at `/usr/bin/google-chrome` and auto-detected by `puppeteer-core`, so PDFs generate without extra config. If Chrome were missing, the PDF step is skipped with a warning (non-fatal) but the PDF tests would fail; point `PUPPETEER_EXECUTABLE_PATH` at a browser binary in that case.
 - Generated files land in `output/` (gitignored). Regenerate anytime with `npm run build`.
+- The LLM judge (`npm run judge`) needs network egress and `RESUME_JUDGE_API_KEY` / `OPENAI_API_KEY` unless `--stub` is used. Judge revisions must stay claim-safe: reorder/emphasize existing evidence only; never invent claims.
