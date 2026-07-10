@@ -81,13 +81,6 @@
       font-weight: 700;
       margin: 0.75rem 0 0.35rem;
     }
-    footer {
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      padding-top: 0.75rem;
-    }
     @media print {
       @page { size: letter; margin: 0.5in; }
       body { margin: 0; max-width: none; padding: 0; }
@@ -121,7 +114,7 @@
       <li><strong>{{ item.criterion }}</strong> — {{ item.resume_reference }}</li>
       {% endfor %}
     </ul>
-    <p class="fit-subhead">Gaps / indirect fit</p>
+    <p class="fit-subhead">Additional alignment</p>
     <ul>
       {% for item in application_fit.weaknesses %}
       <li><strong>{{ item.criterion }}</strong> — {{ item.indirect_address }}</li>
@@ -179,9 +172,5 @@
     {% endfor %}
   </section>
   {% endif %}
-
-  <footer>
-    Generated from resume-system source data — {{ version.label }} ({{ version.id }})
-  </footer>
 </body>
 </html>

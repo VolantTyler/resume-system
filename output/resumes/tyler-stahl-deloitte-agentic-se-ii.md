@@ -129,7 +129,3 @@ Engineered portal features and helped transition legacy data flows into GraphQL 
 **Back-End:** Python, Laravel, GraphQL, SQLite
 **Testing:** Cypress
 **Collaboration:** Release support, Stakeholder collaboration
-
----
-
-*Generated from resume-system source data — Agentic Software Engineer (tyler-stahl-deloitte-agentic-se-ii)*

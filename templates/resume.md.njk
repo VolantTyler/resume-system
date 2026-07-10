@@ -23,7 +23,7 @@
 - **{{ item.criterion }}** — {{ item.resume_reference }}
 {% endfor %}
 
-**Gaps / indirect fit**
+**Additional alignment**
 
 {% for item in application_fit.weaknesses %}
 - **{{ item.criterion }}** — {{ item.indirect_address }}
@@ -85,7 +85,3 @@
 **{{ category.name }}:** {{ category.skill_names | join(', ') }}
 {% endfor %}
 {% endif %}
-
----
-
-*Generated from resume-system source data — {{ version.label }} ({{ version.id }})*

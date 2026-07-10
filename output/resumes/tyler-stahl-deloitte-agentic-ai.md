@@ -127,7 +127,3 @@ Collaborating with Stephen Rockwell on embedding model stress-testing and vector
 **Front-End:** React, TypeScript
 **Back-End:** Python, SQLite
 **Testing:** Cypress
-
----
-
-*Generated from resume-system source data — Agentic AI Engineer (tyler-stahl-deloitte-agentic-ai)*

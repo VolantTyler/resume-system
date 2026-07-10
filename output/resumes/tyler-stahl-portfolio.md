@@ -91,7 +91,3 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 **Technologies:** JavaScript, HTML5, CSS, React
 
 
-
----
-
-*Generated from resume-system source data — Portfolio-Focused Software Engineer (portfolio-v1)*
