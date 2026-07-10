@@ -3,13 +3,19 @@ import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import nunjucks from "nunjucks";
 import { buildResumeContext } from "./lib/build-resume-context.js";
-import { assertValidResumeData } from "./lib/validate.js";
+import {
+  finalizeResumeWithJudge,
+  type FinalizeResult,
+  type FinalizeWithJudgeOptions,
+} from "./lib/finalize-resume.js";
 import {
   RESUMES_OUTPUT_DIR,
   TEMPLATE_FILES,
   TEMPLATES_DIR,
 } from "./lib/paths.js";
-import type { ResumeVersion } from "./lib/schemas.js";
+import { buildRoleBriefFromTarget, resolveTargetForVersion } from "./lib/role-brief.js";
+import type { ResumeData, ResumeVersion } from "./lib/schemas.js";
+import { assertValidResumeData } from "./lib/validate.js";
 
 const env = nunjucks.configure(TEMPLATES_DIR, {
   autoescape: false,
@@ -23,7 +29,7 @@ function writeOutput(path: string, content: string): void {
 }
 
 export function renderResumeVersionToDir(
-  data: ReturnType<typeof assertValidResumeData>,
+  data: ResumeData,
   version: ResumeVersion,
   outputDir: string,
 ): { markdownPath: string; htmlPath: string } {
@@ -41,34 +47,91 @@ export function renderResumeVersionToDir(
   return { markdownPath, htmlPath };
 }
 
-export function generateResumeOutputs(version: ResumeVersion): {
-  markdownPath: string;
-  htmlPath: string;
-} {
-  const data = assertValidResumeData();
-  return renderResumeVersionToDir(data, version, RESUMES_OUTPUT_DIR);
+export type GenerateResumeOptions = Partial<
+  Pick<
+    FinalizeWithJudgeOptions,
+    | "maxRounds"
+    | "passScore"
+    | "client"
+    | "model"
+    | "stub"
+    | "skipJudge"
+    | "writeDebug"
+    | "writeLog"
+    | "logFile"
+    | "runsDir"
+    | "applicationFitMode"
+  >
+> & {
+  outputDir?: string;
+};
+
+/**
+ * Finalize one résumé version: judge + claim-safe revise, then save markdown/HTML.
+ */
+export async function generateResumeOutputs(
+  version: ResumeVersion,
+  options: GenerateResumeOptions = {},
+  data: ResumeData = assertValidResumeData(),
+): Promise<FinalizeResult> {
+  const outputDir = options.outputDir ?? RESUMES_OUTPUT_DIR;
+  const target = resolveTargetForVersion(data, version);
+  const roleBrief = buildRoleBriefFromTarget(target, version);
+
+  return finalizeResumeWithJudge(data, version, {
+    trigger: "generate",
+    roleBrief,
+    outputDir,
+    render: renderResumeVersionToDir,
+    maxRounds: options.maxRounds,
+    passScore: options.passScore,
+    client: options.client,
+    model: options.model,
+    stub: options.stub,
+    skipJudge: options.skipJudge,
+    writeDebug: options.writeDebug,
+    writeLog: options.writeLog,
+    logFile: options.logFile,
+    runsDir: options.runsDir,
+    ...(options.applicationFitMode
+      ? { applicationFitMode: options.applicationFitMode }
+      : {}),
+  });
 }
 
-export function generateAllResumes(): string[] {
+export async function generateAllResumes(
+  options: GenerateResumeOptions = {},
+): Promise<{ paths: string[]; results: FinalizeResult[] }> {
   const data = assertValidResumeData();
+  const results: FinalizeResult[] = [];
   const paths: string[] = [];
 
   for (const version of data.resumeVersions) {
-    const { markdownPath, htmlPath } = generateResumeOutputs(version);
-    paths.push(markdownPath, htmlPath);
+    const result = await generateResumeOutputs(version, options, data);
+    results.push(result);
+    paths.push(result.markdownPath, result.htmlPath);
   }
 
-  return paths;
+  return { paths, results };
 }
 
-function main(): void {
-  const paths = generateAllResumes();
-  console.log(`✓ Generated ${paths.length} résumé files:`);
-  for (const path of paths) {
-    console.log(`  - ${path}`);
+async function main(): Promise<void> {
+  const { paths, results } = await generateAllResumes();
+  const judged = results.filter((result) => result.judged).length;
+  console.log(`✓ Generated ${paths.length} résumé files (${judged} judged):`);
+  for (const result of results) {
+    const status = result.judged
+      ? `judge ${result.passed ? "pass" : "needs review"} · ${result.rounds.length} round(s)`
+      : "judge skipped";
+    console.log(`  - ${result.version.id} (${status})`);
+    console.log(`      ${result.markdownPath}`);
+    console.log(`      ${result.htmlPath}`);
+    if (result.detailPath) {
+      console.log(`      log: ${result.detailPath}`);
+    }
   }
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  main();
+  void main();
 }

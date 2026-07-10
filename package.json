@@ -12,7 +12,8 @@
     "test": "vitest run",
     "intake:list": "tsx scripts/process-intake.ts list",
     "intake:log": "tsx scripts/process-intake.ts log",
-    "tailor": "tsx scripts/tailor-resume.ts"
+    "tailor": "tsx scripts/tailor-resume.ts",
+    "judge": "tsx scripts/judge-resume.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

@@ -17,6 +17,7 @@ npm test             # Run validation and generation tests
 npm run intake:list  # See which docs/intake/*.md notes are still pending
 npm run intake:log -- <filename> "<summary>"   # Mark a note as processed
 npm run tailor -- <path-to-job-description.md>  # Generate a résumé tailored to a job description
+npm run judge -- <path-to-job-description.md>   # Tailor, then LLM-judge + claim-safe revise
 ```
 
 PDF export renders the print-ready HTML in a local headless Chrome via [`puppeteer-core`](https://pptr.dev/). It looks for Chrome/Chromium in common install locations, or you can point it at a specific binary with `PUPPETEER_EXECUTABLE_PATH` (or `CHROME_PATH`). If no browser is found, `npm run generate`/`npm run build` skip the PDF step with a warning rather than failing.
@@ -76,6 +77,12 @@ Validation checks:
 npm run generate
 ```
 
+Every curated résumé version is **judged before it is finalized**: the generator renders a draft, runs the LLM-as-judge loop against that version's target emphasis, applies claim-safe revisions if needed, appends a row to `docs/judge-log.md`, and only then keeps the final `.md` / `.html`.
+
+- With `RESUME_JUDGE_API_KEY` / `OPENAI_API_KEY`: live OpenAI-compatible judge
+- Without a key: automatic stub judge (still logs rounds/changes)
+- Escape hatch: `RESUME_JUDGE=off` skips judging and renders once
+
 This produces, per résumé version defined in `resume_versions.yaml`:
 
 ```txt
@@ -130,12 +137,13 @@ Drop the job description text as a Markdown or plain-text file anywhere (convent
 npm run tailor -- docs/job-descriptions/some-role.md
 ```
 
-This does not call an LLM or invent anything — it deterministically matches the job description's text against known terms already present in the résumé data (skill names/aliases, accomplishment themes/technologies, and target emphasis) to:
+This does not invent anything — it deterministically matches the job description's text against known terms already present in the résumé data (skill names/aliases, accomplishment themes/technologies, and target emphasis) to:
 
 - Recommend the best-fitting `resume_target` (scored by matched emphasis, linked accomplishments, and linked skills).
 - Rank that target's linked accomplishments by relevance and include the most relevant ones first.
 - Emphasize skills that were actually mentioned in the job description.
 - Flag "possible gaps" — reference terms (e.g. `React`, `WCAG`, `AWS`) mentioned in the JD but not currently reflected anywhere in the résumé data. This is informational only; it never claims Tyler lacks a skill, only that it isn't documented yet.
+- **Finalize through the same judge loop as `npm run generate`** (unless `--skip-judge`), so critiques can reorder/emphasize before the tailored files are saved.
 
 Output goes to `output/resumes/tailored/`:
 
@@ -144,7 +152,44 @@ Output goes to `output/resumes/tailored/`:
 
 Optional flags: `--target <target-id>` to override the recommended target, `--label "Custom Label"`, and `--slug custom-output-slug`.
 
-### 6. Portfolio site integration
+### 6. Judge and revise (built into generate + tailor)
+
+The LLM-as-judge finalize step is **automatic** in:
+
+- `npm run generate` / `npm run build` — every curated résumé version
+- `npm run tailor` — every tailored résumé (use `--skip-judge` to bypass)
+
+On-demand (same shared loop):
+
+```bash
+npm run judge -- docs/job-descriptions/some-role.md
+npm run judge -- docs/job-descriptions/some-role.md --stub
+```
+
+Flow inside generation/tailoring:
+
+1. Build/select the résumé version (YAML curation or deterministic tailor)
+2. Render a draft
+3. Judge scores relevance, evidence alignment, coverage, and clarity; produces application-fit analysis and revision directives
+4. Claim-safe reviser reorders accomplishments / adjusts skill emphasis / attaches `application_fit` when appropriate — never invents bullets, metrics, employers, or technologies
+5. Repeat until pass or max rounds, then save the final résumé
+6. Append a summary row to `docs/judge-log.md` and write a detail file under `output/judge-runs/`
+
+Environment:
+
+| Variable | Purpose |
+|----------|---------|
+| `RESUME_JUDGE_API_KEY` or `OPENAI_API_KEY` | OpenAI-compatible API key (live judge) |
+| `RESUME_JUDGE_BASE_URL` / `OPENAI_BASE_URL` | API base URL (default `https://api.openai.com/v1`) |
+| `RESUME_JUDGE_MODEL` / `OPENAI_MODEL` | Model id (default `gpt-4o-mini`) |
+| `RESUME_JUDGE=stub` | Force stub judge |
+| `RESUME_JUDGE=off` | Skip judge (render only) |
+| `RESUME_JUDGE_MAX_ROUNDS` | Max revise rounds (default `2`) |
+| `RESUME_JUDGE_PASS_SCORE` | Pass threshold (default `7`) |
+
+Look back later in `docs/judge-log.md` (rounds, scores, changes demanded) and `output/judge-runs/` (per-run detail).
+
+### 7. Portfolio site integration
 
 `output/portfolio/resume-content.json` is generated from a dedicated `portfolio-v1`
 résumé version (`target_id: portfolio-focused`) so it's driven by an intentional
@@ -177,7 +222,8 @@ directly.
 - ~~**Milestone 3:** PDF export via print-ready HTML~~ — done (`npm run generate:pdf`, via `puppeteer-core`)
 - ~~**Milestone 4:** Job description tailoring~~ — done (`npm run tailor -- <job-description.md>`)
 - ~~**Milestone 5:** Portfolio site integration (`tylerstahl.dev`)~~ — done on this repo's side (dedicated `portfolio-focused` version, documented JSON contract, `npm run generate:portfolio`); see `docs/portfolio-integration.md` for how `tylerstahl.dev` should consume it
-- **Milestone 6:** Optional Google Doc sync
+- ~~**Milestone 6:** LLM-as-judge evaluation + claim-safe revision loop~~ — done (`npm run judge`)
+- **Milestone 7:** Optional Google Doc sync
 
 ## For Coding Agents
 

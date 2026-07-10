@@ -2,7 +2,7 @@
 
 **Source:** `docs/job-descriptions/example-nonprofit-qa-frontend.md`
 **Job title:** Front-End Engineer, QA-Minded — Example Nonprofit Org
-**Generated:** 2026-07-02
+**Generated:** 2026-07-10
 
 ## Recommended Target
 
@@ -12,47 +12,57 @@
 
 | Target | Score | Matched Emphasis |
 |--------|-------|-------------------|
-| Front-End Engineer | 46 | UI implementation, JavaScript, accessibility, testing |
-| Laravel / Livewire Engineer | 39 | Laravel, Livewire, Alpine.js |
-| Nonprofit Technology Engineer | 34 | reliability, practical engineering |
-| QA-minded Front-End Engineer | 31 | Cypress, regression testing, release reliability, UI quality |
-| UI Engineer | 25 | UI implementation, design systems |
+| Front-End Engineer | 47 | UI implementation, JavaScript, accessibility, testing |
+| Nonprofit Technology Engineer | 39 | practical engineering, reliability |
+| Full-Stack Engineer | 38 | Laravel |
+| Laravel / Livewire Engineer | 36 | Laravel, Livewire, Alpine, testing |
+| QA-Minded Front-End Engineer | 30 | Cypress, regression testing, release reliability |
+| UI Engineer | 18 | — |
+| Agentic Software Engineer | 8 | — |
+| Forward Deployed Engineer | 4 | — |
+| Agentic AI Engineer | 2 | — |
+| Applied AI Developer | 0 | — |
 | Portfolio-focused Software Engineer | 0 | — |
 
-## Matched Terms (24)
+## Matched Terms (18)
 
-- accessibility (target-emphasis)
-- Alpine.js (skills, accomplishment-technology, experience-technology, project-technology, target-emphasis)
-- CSS (experience-technology)
+- accessibility (accomplishment-theme, target-emphasis)
+- Alpine (skills, accomplishment-technology, experience-technology, project-technology, target-emphasis)
+- Alpine.js (skills)
+- CSS (accomplishment-technology, experience-technology, project-technology)
 - Cypress (skills, accomplishment-theme, accomplishment-technology, experience-technology, project-technology, target-emphasis)
-- design systems (target-emphasis)
-- HTML (experience-technology)
-- HTML / CSS (skills)
-- JavaScript (skills, accomplishment-technology, experience-technology, target-emphasis)
-- JS (skills)
-- Laravel (skills, accomplishment-theme, accomplishment-technology, experience-technology, project-technology, target-emphasis)
-- Livewire (skills, accomplishment-theme, accomplishment-technology, experience-technology, project-technology, target-emphasis)
-- nonprofit technology (accomplishment-theme)
-- platform maintenance (accomplishment-theme)
-- Platform maintenance (skills)
+- design systems (accomplishment-theme)
+- JavaScript (skills, accomplishment-technology, experience-technology, project-technology, target-emphasis)
+- Laravel (skills, accomplishment-technology, accomplishment-theme, experience-technology, project-technology, target-emphasis)
+- Livewire (skills, accomplishment-technology, accomplishment-theme, experience-technology, project-technology, target-emphasis)
 - practical engineering (target-emphasis)
 - regression testing (target-emphasis)
-- Regression testing (skills)
 - release reliability (accomplishment-theme, target-emphasis)
 - release support (accomplishment-theme)
 - Release support (skills)
 - reliability (target-emphasis)
+- staging validation (skills)
 - testing (target-emphasis)
-- UI implementation (accomplishment-theme, target-emphasis)
-- UI quality (target-emphasis)
+- UI implementation (target-emphasis)
 
 ## Selected Accomplishments (ranked by relevance)
 
 Included in tailored version `tailored-front-end-engineer-qa-minded-example-nonprofit-org`, most relevant first:
 
 - nami-cypress-testing-leadership
-- nami-platform-maintenance
-- nami-ccie-registration-release
+- ccie-tm-registration-release-support
+- nami-design-component-library
+- nami-accessibility-compliance
+- cn-rebrand-platform-rebuild
+- volant-fullstack-client-delivery
+- volant-business-founding
+- cn-cmo-marketing-partnership
+- cn-processing-efficiency
+- insummery-gap-analysis-calendar
+- insummery-firebase-production
+- cn-portal-scale
+- cn-graphql-migration
+- cn-cross-functional-delivery
 
 ## Possible Gaps
 
