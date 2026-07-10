@@ -3,7 +3,16 @@ import type { JudgeVerdict, RevisionDirectives } from "./judge.js";
 
 export interface ReviseOptions {
   round: number;
-  /** When true, attach application_fit from the verdict onto the revised version. */
+  /**
+   * How to handle application_fit from the verdict:
+   * - "always" — overwrite with judge fit
+   * - "if-missing" — only attach when the version has no fit yet (default for curated generate)
+   * - "never" — leave version.application_fit unchanged
+   */
+  applicationFitMode?: "always" | "if-missing" | "never";
+  /** When false, skip prioritize/demote/skill directive application. Default true. */
+  applyDirectives?: boolean;
+  /** @deprecated Prefer applicationFitMode. When true, behaves like "always". */
   attachApplicationFit?: boolean;
 }
 
@@ -59,7 +68,8 @@ export function applyJudgeRevision(
   verdict: JudgeVerdict,
   options: ReviseOptions,
 ): ReviseResult {
-  const directives: RevisionDirectives = verdict.revision_directives ?? {};
+  const directives: RevisionDirectives =
+    options.applyDirectives === false ? {} : (verdict.revision_directives ?? {});
   const allowedIds = new Set(version.accomplishment_ids);
   const skillNames = knownSkillNameSet(data);
 
@@ -122,8 +132,20 @@ export function applyJudgeRevision(
     ...currentEmphasis.filter((name) => !deEmphasize.has(name.toLowerCase())),
   ]);
 
-  const attachFit = options.attachApplicationFit !== false;
-  const nextApplicationFit = attachFit ? verdict.application_fit : version.application_fit;
+  const fitMode: NonNullable<ReviseOptions["applicationFitMode"]> =
+    options.applicationFitMode ??
+    (options.attachApplicationFit === false
+      ? "never"
+      : options.attachApplicationFit === true
+        ? "always"
+        : "always");
+
+  let nextApplicationFit = version.application_fit;
+  if (fitMode === "always") {
+    nextApplicationFit = verdict.application_fit;
+  } else if (fitMode === "if-missing" && !version.application_fit) {
+    nextApplicationFit = verdict.application_fit;
+  }
 
   const accomplishmentChanged =
     nextAccomplishmentIds.join("\0") !== version.accomplishment_ids.join("\0");
@@ -154,22 +176,33 @@ export function applyJudgeRevision(
     });
   }
 
-  // Recompute experience/project membership from the (possibly reordered) accomplishment set.
-  const accomplishmentIdSet = new Set(nextAccomplishmentIds);
-  const experienceIds = data.experience
-    .filter((role) => role.accomplishment_ids.some((id) => accomplishmentIdSet.has(id)))
-    .map((role) => role.id);
-  const projectIds = data.projects
-    .filter((project) =>
-      (project.related_accomplishment_ids ?? []).some((id) => accomplishmentIdSet.has(id)),
-    )
-    .map((project) => project.id);
+  // Preserve curated experience/project selection unless the accomplishment *set* changes.
+  // Reordering alone must not reshuffle roles/projects away from the YAML version.
+  const previousSet = new Set(version.accomplishment_ids);
+  const nextSet = new Set(nextAccomplishmentIds);
+  const accomplishmentSetChanged =
+    previousSet.size !== nextSet.size ||
+    [...previousSet].some((id) => !nextSet.has(id));
+
+  let experienceIds = version.experience_ids;
+  let projectIds = version.project_ids;
+  if (accomplishmentSetChanged) {
+    experienceIds = data.experience
+      .filter((role) => role.accomplishment_ids.some((id) => nextSet.has(id)))
+      .map((role) => role.id);
+    const recomputedProjects = data.projects
+      .filter((project) =>
+        (project.related_accomplishment_ids ?? []).some((id) => nextSet.has(id)),
+      )
+      .map((project) => project.id);
+    projectIds = recomputedProjects.length > 0 ? recomputedProjects : undefined;
+  }
 
   const nextVersion: ResumeVersion = {
     ...version,
     accomplishment_ids: nextAccomplishmentIds,
     experience_ids: experienceIds,
-    project_ids: projectIds.length > 0 ? projectIds : undefined,
+    project_ids: projectIds,
     skill_emphasis: nextEmphasis.length > 0 ? nextEmphasis : undefined,
     application_fit: nextApplicationFit,
     revision_history: history,

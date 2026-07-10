@@ -16,10 +16,15 @@ function hasLocalChrome(): boolean {
 }
 
 describe("generation", () => {
-  it("generates markdown and HTML résumés for all versions", () => {
-    const paths = generateAllResumes();
+  it("generates markdown and HTML résumés for all versions", async () => {
+    const { paths, results } = await generateAllResumes({
+      stub: true,
+      writeDebug: false,
+      writeLog: false,
+    });
 
     expect(paths.length).toBeGreaterThanOrEqual(6);
+    expect(results.every((result) => result.judged)).toBe(true);
 
     for (const path of paths) {
       expect(existsSync(path)).toBe(true);

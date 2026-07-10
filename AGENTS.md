@@ -40,6 +40,7 @@ The agent's memory lives in the repository, not in chat threads. Key files:
 - `data/projects.yaml` — notable projects
 - `data/skills.yaml` — skills by category
 - `docs/intake-log.md` — log of processed intake notes (source of truth for `npm run intake:list`)
+- `docs/judge-log.md` — append-only log of judge finalize loops (rounds, scores, changes demanded)
 - `docs/core-resume.md` — human-authored résumé reference
 - `docs/job-descriptions/` — raw job description text used as input for `npm run tailor`
 
@@ -86,26 +87,28 @@ When Tyler adds a note to `docs/intake/`:
 npm run tailor -- docs/job-descriptions/<file>.md
 ```
 
-This is a deterministic, non-LLM matching step (no claims are invented): it matches the job description text against terms already present in `data/` (skill names/aliases, accomplishment themes/technologies, target emphasis) to recommend a `resume_target`, rank that target's accomplishments by relevance, emphasize mentioned skills, and flag "possible gaps" (reference terms in the JD not yet reflected in the résumé data). Output goes to `output/resumes/tailored/` — a `.md`/`.html` résumé plus a `-match-report.md`. Use `--target <target-id>` to override the recommended target.
+This is a deterministic matching step (no claims are invented): it matches the job description text against terms already present in `data/` (skill names/aliases, accomplishment themes/technologies, target emphasis) to recommend a `resume_target`, rank that target's accomplishments by relevance, emphasize mentioned skills, and flag "possible gaps". It then **finalizes through the shared judge loop** (same as `npm run generate`) unless `--skip-judge` is passed. Output goes to `output/resumes/tailored/` — a `.md`/`.html` résumé plus a `-match-report.md` and judge artifacts. Use `--target <target-id>` to override the recommended target.
 
-### Judge and revise a tailored résumé (LLM-as-judge)
+### Judge finalize loop (built into generate + tailor)
+
+`npm run generate`, `npm run build`, and `npm run tailor` all finalize résumés through `finalizeResumeWithJudge`:
+
+1. Render a draft from the version
+2. Judge against a role brief (target emphasis for curated versions, JD text for tailored)
+3. Apply claim-safe revisions when the verdict fails
+4. Append to `docs/judge-log.md` and write `output/judge-runs/<timestamp>-<slug>.md`
+5. Save the final résumé only after the loop completes
+
+On-demand (same shared path):
 
 ```bash
 npm run judge -- docs/job-descriptions/<file>.md
-npm run judge -- docs/job-descriptions/<file>.md --stub          # offline stub, no API key
-npm run judge -- docs/job-descriptions/<file>.md --max-rounds 3 --pass-score 7
+npm run judge -- docs/job-descriptions/<file>.md --stub
 ```
 
-After deterministic tailoring, an LLM judge reads the rendered résumé plus grounded evidence (`raw_fact`, themes, technologies, confidence) and returns a structured verdict: dimension scores, application-fit analysis, invented-claim flags, and claim-safe revision directives. A reviser then reorders accomplishments / adjusts skill emphasis / attaches `application_fit` — it never invents bullets, metrics, or employers. The loop repeats until the résumé passes or `--max-rounds` is hit.
+Env: `RESUME_JUDGE_API_KEY` / `OPENAI_API_KEY` for live judging; without a key the stub judge runs automatically. `RESUME_JUDGE=off` skips judging. Optional: `RESUME_JUDGE_BASE_URL`, `RESUME_JUDGE_MODEL`, `RESUME_JUDGE_MAX_ROUNDS`, `RESUME_JUDGE_PASS_SCORE`.
 
-Requires an OpenAI-compatible API key (`RESUME_JUDGE_API_KEY` or `OPENAI_API_KEY`). Optional: `RESUME_JUDGE_BASE_URL`, `RESUME_JUDGE_MODEL`. Use `--stub` for offline runs and tests.
-
-Outputs (under `output/resumes/tailored/`):
-
-- tailored résumé `.md` / `.html` (with Application Fit when the judge attaches it)
-- `-match-report.md` (deterministic)
-- `-judge-round-N.md` (critique + revision directives)
-- debug JSON under `output/debug/` when enabled
+Look back in `docs/judge-log.md` for round counts, scores, and changes demanded.
 
 ## Data Modeling
 
@@ -136,4 +139,4 @@ Bullet selection uses the target's `bullet_variant` key on accomplishments when 
 - There is no lint script/config in this repo; do not look for `npm run lint`. Correctness is enforced by `npm run validate` (Zod schema checks) plus `npm test` (Vitest).
 - PDF export and the `generate`/`build` PDF step, plus the "PDF export" Vitest cases, need a local Chrome/Chromium. It is preinstalled at `/usr/bin/google-chrome` and auto-detected by `puppeteer-core`, so PDFs generate without extra config. If Chrome were missing, the PDF step is skipped with a warning (non-fatal) but the PDF tests would fail; point `PUPPETEER_EXECUTABLE_PATH` at a browser binary in that case.
 - Generated files land in `output/` (gitignored). Regenerate anytime with `npm run build`.
-- The LLM judge (`npm run judge`) needs network egress and `RESUME_JUDGE_API_KEY` / `OPENAI_API_KEY` unless `--stub` is used. Judge revisions must stay claim-safe: reorder/emphasize existing evidence only; never invent claims.
+- `npm run generate` / `npm run tailor` finalize every résumé through the LLM judge loop before saving. Without an API key the stub judge is used; set `RESUME_JUDGE=off` to skip. Judge revisions must stay claim-safe. Append-only history lives in `docs/judge-log.md` with per-run details in `output/judge-runs/`.

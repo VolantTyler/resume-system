@@ -77,6 +77,12 @@ Validation checks:
 npm run generate
 ```
 
+Every curated résumé version is **judged before it is finalized**: the generator renders a draft, runs the LLM-as-judge loop against that version's target emphasis, applies claim-safe revisions if needed, appends a row to `docs/judge-log.md`, and only then keeps the final `.md` / `.html`.
+
+- With `RESUME_JUDGE_API_KEY` / `OPENAI_API_KEY`: live OpenAI-compatible judge
+- Without a key: automatic stub judge (still logs rounds/changes)
+- Escape hatch: `RESUME_JUDGE=off` skips judging and renders once
+
 This produces, per résumé version defined in `resume_versions.yaml`:
 
 ```txt
@@ -131,12 +137,13 @@ Drop the job description text as a Markdown or plain-text file anywhere (convent
 npm run tailor -- docs/job-descriptions/some-role.md
 ```
 
-This does not call an LLM or invent anything — it deterministically matches the job description's text against known terms already present in the résumé data (skill names/aliases, accomplishment themes/technologies, and target emphasis) to:
+This does not invent anything — it deterministically matches the job description's text against known terms already present in the résumé data (skill names/aliases, accomplishment themes/technologies, and target emphasis) to:
 
 - Recommend the best-fitting `resume_target` (scored by matched emphasis, linked accomplishments, and linked skills).
 - Rank that target's linked accomplishments by relevance and include the most relevant ones first.
 - Emphasize skills that were actually mentioned in the job description.
 - Flag "possible gaps" — reference terms (e.g. `React`, `WCAG`, `AWS`) mentioned in the JD but not currently reflected anywhere in the résumé data. This is informational only; it never claims Tyler lacks a skill, only that it isn't documented yet.
+- **Finalize through the same judge loop as `npm run generate`** (unless `--skip-judge`), so critiques can reorder/emphasize before the tailored files are saved.
 
 Output goes to `output/resumes/tailored/`:
 
@@ -145,32 +152,42 @@ Output goes to `output/resumes/tailored/`:
 
 Optional flags: `--target <target-id>` to override the recommended target, `--label "Custom Label"`, and `--slug custom-output-slug`.
 
-### 6. Judge and revise (LLM-as-judge)
+### 6. Judge and revise (built into generate + tailor)
 
-After tailoring, you can run an evaluation loop that reads the produced résumé and sends critiques back for claim-safe revision:
+The LLM-as-judge finalize step is **automatic** in:
+
+- `npm run generate` / `npm run build` — every curated résumé version
+- `npm run tailor` — every tailored résumé (use `--skip-judge` to bypass)
+
+On-demand (same shared loop):
 
 ```bash
 npm run judge -- docs/job-descriptions/some-role.md
-npm run judge -- docs/job-descriptions/some-role.md --stub   # offline, no API key
+npm run judge -- docs/job-descriptions/some-role.md --stub
 ```
 
-Flow:
+Flow inside generation/tailoring:
 
-1. Deterministic tailor (same as `npm run tailor`)
-2. Render the résumé
-3. LLM judge scores relevance, evidence alignment, coverage, and clarity; produces application-fit analysis and revision directives
-4. Claim-safe reviser reorders accomplishments / adjusts skill emphasis / attaches `application_fit` — it never invents bullets, metrics, employers, or technologies
-5. Repeat until pass or `--max-rounds` (default 2)
+1. Build/select the résumé version (YAML curation or deterministic tailor)
+2. Render a draft
+3. Judge scores relevance, evidence alignment, coverage, and clarity; produces application-fit analysis and revision directives
+4. Claim-safe reviser reorders accomplishments / adjusts skill emphasis / attaches `application_fit` when appropriate — never invents bullets, metrics, employers, or technologies
+5. Repeat until pass or max rounds, then save the final résumé
+6. Append a summary row to `docs/judge-log.md` and write a detail file under `output/judge-runs/`
 
 Environment:
 
 | Variable | Purpose |
 |----------|---------|
-| `RESUME_JUDGE_API_KEY` or `OPENAI_API_KEY` | OpenAI-compatible API key (required unless `--stub`) |
+| `RESUME_JUDGE_API_KEY` or `OPENAI_API_KEY` | OpenAI-compatible API key (live judge) |
 | `RESUME_JUDGE_BASE_URL` / `OPENAI_BASE_URL` | API base URL (default `https://api.openai.com/v1`) |
 | `RESUME_JUDGE_MODEL` / `OPENAI_MODEL` | Model id (default `gpt-4o-mini`) |
+| `RESUME_JUDGE=stub` | Force stub judge |
+| `RESUME_JUDGE=off` | Skip judge (render only) |
+| `RESUME_JUDGE_MAX_ROUNDS` | Max revise rounds (default `2`) |
+| `RESUME_JUDGE_PASS_SCORE` | Pass threshold (default `7`) |
 
-Additional outputs: `tailored-<slug>-judge-round-N.md` plus optional debug JSON under `output/debug/`.
+Look back later in `docs/judge-log.md` (rounds, scores, changes demanded) and `output/judge-runs/` (per-run detail).
 
 ### 7. Portfolio site integration
 

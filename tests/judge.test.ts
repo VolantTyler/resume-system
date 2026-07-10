@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, rmSync } from "node:fs";
+import { mkdirSync, readFileSync, rmSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import {
@@ -20,10 +20,20 @@ import {
 } from "../scripts/lib/tailor.js";
 import { runJudgeLoop } from "../scripts/judge-resume.js";
 import { JOB_DESCRIPTIONS_DIR } from "../scripts/lib/paths.js";
+import {
+  appendJudgeLogEntry,
+  buildJudgeLogEntry,
+  summarizeJudgeChanges,
+} from "../scripts/lib/judge-log.js";
+import { finalizeResumeWithJudge } from "../scripts/lib/finalize-resume.js";
+import { renderResumeVersionToDir } from "../scripts/generate-resume.js";
+import { buildRoleBriefFromTarget, resolveTargetForVersion } from "../scripts/lib/role-brief.js";
 
 const exampleJobPath = join(JOB_DESCRIPTIONS_DIR, "example-nonprofit-qa-frontend.md");
 const exampleJobText = readFileSync(exampleJobPath, "utf8");
 const tempOutputDir = join(ROOT, "output", "debug", "judge-test-output");
+const tempLogFile = join(tempOutputDir, "judge-log.md");
+const tempRunsDir = join(tempOutputDir, "runs");
 
 function makeJobDescription(text = exampleJobText): JobDescription {
   return {
@@ -59,11 +69,13 @@ function baseVerdict(overrides: Partial<JudgeVerdict> = {}): JudgeVerdict {
       weaknesses: [
         {
           criterion: "WCAG specialization",
-          indirect_address: "Accessibility appears indirectly via UI quality work, not as a dedicated WCAG practice.",
+          indirect_address:
+            "Accessibility appears indirectly via UI quality work, not as a dedicated WCAG practice.",
         },
         {
           criterion: "Large-team process ownership",
-          indirect_address: "Evidence shows individual ownership of release reliability rather than formal process leadership.",
+          indirect_address:
+            "Evidence shows individual ownership of release reliability rather than formal process leadership.",
         },
       ],
     },
@@ -100,12 +112,12 @@ describe("parseJudgeVerdict", () => {
 
     const verdict = parseJudgeVerdict(raw, 7);
     expect(verdict.overall_score).toBe(8);
-    // evidence_alignment < 7 forces fail even if model said pass
     expect(verdict.pass).toBe(false);
   });
 
   it("extracts JSON from fenced model output", () => {
-    const raw = "```json\n" + JSON.stringify(baseVerdict({ overall_score: 8, pass: true })) + "\n```";
+    const raw =
+      "```json\n" + JSON.stringify(baseVerdict({ overall_score: 8, pass: true })) + "\n```";
     const verdict = parseJudgeVerdict(raw, 7);
     expect(verdict.overall_score).toBe(8);
     expect(verdict.pass).toBe(true);
@@ -152,6 +164,91 @@ describe("applyJudgeRevision", () => {
     const result = applyJudgeRevision(data, tailor.version, verdict, { round: 1 });
     expect(result.version.accomplishment_ids.every((id) => before.has(id))).toBe(true);
     expect(result.version.accomplishment_ids).toHaveLength(before.size);
+  });
+
+  it("preserves existing application_fit when mode is if-missing", () => {
+    const data = loadResumeData();
+    const version = data.resumeVersions.find((item) => item.application_fit);
+    expect(version?.application_fit).toBeTruthy();
+    if (!version?.application_fit) {
+      return;
+    }
+
+    const original = version.application_fit.overall;
+    const result = applyJudgeRevision(data, version, baseVerdict(), {
+      round: 1,
+      applicationFitMode: "if-missing",
+      applyDirectives: false,
+    });
+    expect(result.version.application_fit?.overall).toBe(original);
+  });
+});
+
+describe("judge log", () => {
+  it("appends a summary row and writes a detail file", () => {
+    mkdirSync(tempRunsDir, { recursive: true });
+    const entry = buildJudgeLogEntry({
+      trigger: "generate",
+      version: {
+        id: "test-version",
+        target_id: "frontend-engineer",
+        label: "Test",
+        summary_variant: "standard",
+        experience_ids: [],
+        accomplishment_ids: ["a"],
+        output_slug: "test-version",
+      },
+      roleTitle: "Front-End Engineer",
+      roleSource: "resume_targets.yaml#frontend-engineer",
+      maxRounds: 2,
+      passed: true,
+      roundRecords: [
+        {
+          round: 1,
+          score: 6,
+          pass: false,
+          model: "stub",
+          revised: true,
+          directives: {
+            prioritize: ["a"],
+            demote: ["b"],
+            emphasizeSkills: ["Cypress"],
+            deEmphasizeSkills: [],
+            notes: ["surface testing"],
+          },
+          inventedClaimFlags: [],
+        },
+        {
+          round: 2,
+          score: 8,
+          pass: true,
+          model: "stub",
+          revised: false,
+          directives: {
+            prioritize: [],
+            demote: [],
+            emphasizeSkills: [],
+            deEmphasizeSkills: [],
+            notes: [],
+          },
+          inventedClaimFlags: [],
+        },
+      ],
+    });
+
+    expect(summarizeJudgeChanges(entry.roundRecords)).toContain("prioritize a");
+
+    const { logFile, detailPath } = appendJudgeLogEntry(entry, {
+      logFile: tempLogFile,
+      runsDir: tempRunsDir,
+    });
+
+    expect(existsSync(logFile)).toBe(true);
+    expect(existsSync(detailPath)).toBe(true);
+    const log = readFileSync(logFile, "utf8");
+    expect(log).toContain("test-version");
+    expect(log).toContain("generate");
+    expect(readFileSync(detailPath, "utf8")).toContain("## Round 1");
   });
 });
 
@@ -230,6 +327,9 @@ describe("stub judge + loop", () => {
         passScore: 7,
         outputDir: tempOutputDir,
         writeDebug: false,
+        writeLog: true,
+        logFile: tempLogFile,
+        runsDir: tempRunsDir,
       },
     );
 
@@ -238,13 +338,41 @@ describe("stub judge + loop", () => {
     expect(result.rounds).toHaveLength(2);
     expect(result.rounds[0].revised).toBe(true);
     expect(result.finalVersion.application_fit?.overall).toBeTruthy();
+    expect(existsSync(tempLogFile)).toBe(true);
+    expect(readFileSync(tempLogFile, "utf8")).toContain("judge-test-role");
 
-    const report = readFileSync(result.rounds[0].judgeReportPath, "utf8");
+    const report = readFileSync(result.rounds[0].judgeReportPath!, "utf8");
     expect(report).toContain("# LLM Judge Evaluation Report");
     expect(report).toContain("Revision Directives");
 
     const resume = readFileSync(result.finalMarkdownPath, "utf8");
     expect(resume).toContain("Application Fit");
+  });
+
+  it("finalizes a curated generate version through the shared judge path", async () => {
+    const data = loadResumeData();
+    mkdirSync(tempOutputDir, { recursive: true });
+    const version = data.resumeVersions[0];
+    const target = resolveTargetForVersion(data, version);
+    const roleBrief = buildRoleBriefFromTarget(target, version);
+
+    const result = await finalizeResumeWithJudge(data, version, {
+      trigger: "generate",
+      roleBrief,
+      outputDir: tempOutputDir,
+      render: renderResumeVersionToDir,
+      stub: true,
+      writeDebug: false,
+      writeLog: true,
+      logFile: tempLogFile,
+      runsDir: tempRunsDir,
+      applicationFitMode: "if-missing",
+    });
+
+    expect(result.judged).toBe(true);
+    expect(result.markdownPath).toContain(version.output_slug);
+    expect(existsSync(tempLogFile)).toBe(true);
+    expect(readFileSync(tempLogFile, "utf8")).toContain(version.id);
   });
 
   it("renders a judge report from a verdict", () => {

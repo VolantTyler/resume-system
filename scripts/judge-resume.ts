@@ -1,17 +1,9 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { dirname, isAbsolute, join } from "node:path";
+import { existsSync, readFileSync } from "node:fs";
+import { isAbsolute, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { renderResumeVersionToDir } from "./generate-resume.js";
-import {
-  buildJudgeEvidence,
-  buildJudgeReport,
-  createStubJudgeClient,
-  evaluateResumeWithJudge,
-  type JudgeResult,
-} from "./lib/judge.js";
-import { createJudgeLlmClient, type LlmClient } from "./lib/llm.js";
-import { DEBUG_OUTPUT_DIR, TAILORED_OUTPUT_DIR } from "./lib/paths.js";
-import { applyJudgeRevision } from "./lib/revise.js";
+import { finalizeResumeWithJudge, type FinalizeResult } from "./lib/finalize-resume.js";
+import { TAILORED_OUTPUT_DIR } from "./lib/paths.js";
 import {
   buildMatchReport,
   readJobDescriptionTitle,
@@ -21,7 +13,10 @@ import {
   type TailorResult,
 } from "./lib/tailor.js";
 import { assertValidResumeData } from "./lib/validate.js";
-import type { ResumeData, ResumeVersion } from "./lib/schemas.js";
+import type { ResumeData } from "./lib/schemas.js";
+import type { LlmClient } from "./lib/llm.js";
+import { mkdirSync, writeFileSync } from "node:fs";
+import { dirname } from "node:path";
 
 interface CliArgs {
   jobDescriptionPath: string;
@@ -42,26 +37,20 @@ export interface JudgeLoopOptions {
   stub?: boolean;
   outputDir?: string;
   writeDebug?: boolean;
-}
-
-export interface JudgeLoopRound {
-  round: number;
-  version: ResumeVersion;
-  markdownPath: string;
-  htmlPath: string;
-  judgeReportPath: string;
-  judgeResult: JudgeResult;
-  revised: boolean;
+  writeLog?: boolean;
+  logFile?: string;
+  runsDir?: string;
 }
 
 export interface JudgeLoopResult {
   tailorResult: TailorResult;
-  rounds: JudgeLoopRound[];
-  finalVersion: ResumeVersion;
+  finalize: FinalizeResult;
+  finalVersion: FinalizeResult["version"];
   finalMarkdownPath: string;
   finalHtmlPath: string;
   matchReportPath: string;
   passed: boolean;
+  rounds: FinalizeResult["rounds"];
 }
 
 function parseArgs(argv: string[]): CliArgs {
@@ -71,6 +60,9 @@ function parseArgs(argv: string[]): CliArgs {
     console.error(
       [
         "Usage: npm run judge -- <path-to-job-description.md> [options]",
+        "",
+        "On-demand judge for a job description. Standard `npm run generate` and",
+        "`npm run tailor` already run this finalize loop automatically.",
         "",
         "Options:",
         "  --target <target-id>     Override recommended résumé target",
@@ -138,19 +130,8 @@ function writeOutput(path: string, content: string): void {
   writeFileSync(path, content, "utf8");
 }
 
-function resolveClient(data: ResumeData, options: JudgeLoopOptions): LlmClient {
-  if (options.client) {
-    return options.client;
-  }
-  if (options.stub) {
-    return createStubJudgeClient(data);
-  }
-  return createJudgeLlmClient();
-}
-
 /**
- * Tailor → render → judge → revise loop.
- * Revisions are claim-safe (reorder/emphasis/application_fit only).
+ * Tailor → finalize-with-judge (shared path used by generate/tailor).
  */
 export async function runJudgeLoop(
   data: ResumeData,
@@ -158,95 +139,44 @@ export async function runJudgeLoop(
   tailorOptions: TailorOptions = {},
   loopOptions: JudgeLoopOptions = {},
 ): Promise<JudgeLoopResult> {
-  const maxRounds = loopOptions.maxRounds ?? 2;
-  const passScore = loopOptions.passScore ?? 7;
   const outputDir = loopOptions.outputDir ?? TAILORED_OUTPUT_DIR;
-  const writeDebug = loopOptions.writeDebug ?? true;
-  const client = resolveClient(data, loopOptions);
-
   const tailorResult = tailorResumeForJobDescription(data, jobDescription, tailorOptions);
-  let version = tailorResult.version;
-  const rounds: JudgeLoopRound[] = [];
-  let passed = false;
 
-  const matchReportPath = `${outputDir}/${version.output_slug}-match-report.md`;
+  const matchReportPath = `${outputDir}/${tailorResult.version.output_slug}-match-report.md`;
   writeOutput(matchReportPath, buildMatchReport(tailorResult));
 
-  for (let round = 1; round <= maxRounds; round += 1) {
-    const { markdownPath, htmlPath } = renderResumeVersionToDir(data, version, outputDir);
-    const resumeMarkdown = readFileSync(markdownPath, "utf8");
-    const evidence = buildJudgeEvidence(data, { ...tailorResult, version }, resumeMarkdown);
-
-    const judgeResult = await evaluateResumeWithJudge(evidence, {
-      client,
-      model: loopOptions.stub && !loopOptions.model ? "stub" : loopOptions.model,
-      passScore,
-      round,
-    });
-
-    const judgeReportPath = `${outputDir}/${version.output_slug}-judge-round-${round}.md`;
-    writeOutput(judgeReportPath, buildJudgeReport(judgeResult, jobDescription, version));
-
-    if (writeDebug) {
-      const debugPath = `${DEBUG_OUTPUT_DIR}/${version.output_slug}-judge-round-${round}.json`;
-      writeOutput(
-        debugPath,
-        JSON.stringify(
-          {
-            round,
-            model: judgeResult.model,
-            verdict: judgeResult.verdict,
-            rawResponse: judgeResult.rawResponse,
-          },
-          null,
-          2,
-        ),
-      );
-    }
-
-    let revised = false;
-    if (!judgeResult.verdict.pass && round < maxRounds) {
-      const revision = applyJudgeRevision(data, version, judgeResult.verdict, { round });
-      version = revision.version;
-      revised = revision.changed;
-    } else if (judgeResult.verdict.pass || round === maxRounds) {
-      // Always attach the latest application_fit on the terminal round.
-      const revision = applyJudgeRevision(data, version, judgeResult.verdict, {
-        round,
-        attachApplicationFit: true,
-      });
-      version = revision.version;
-      revised = revision.changed;
-      // Re-render so application_fit appears in the final résumé.
-      renderResumeVersionToDir(data, version, outputDir);
-    }
-
-    rounds.push({
-      round,
-      version,
-      markdownPath,
-      htmlPath,
-      judgeReportPath,
-      judgeResult,
-      revised,
-    });
-
-    if (judgeResult.verdict.pass) {
-      passed = true;
-      break;
-    }
-  }
-
-  const finalRender = renderResumeVersionToDir(data, version, outputDir);
+  const finalize = await finalizeResumeWithJudge(data, tailorResult.version, {
+    trigger: "judge",
+    roleBrief: jobDescription,
+    outputDir,
+    render: renderResumeVersionToDir,
+    applicationFitMode: "always",
+    maxRounds: loopOptions.maxRounds,
+    passScore: loopOptions.passScore,
+    client: loopOptions.client,
+    model: loopOptions.model,
+    stub: loopOptions.stub,
+    writeDebug: loopOptions.writeDebug,
+    writeLog: loopOptions.writeLog,
+    logFile: loopOptions.logFile,
+    runsDir: loopOptions.runsDir,
+    matchReportSummary: [
+      `Recommended target: ${tailorResult.target.label} (${tailorResult.target.id})`,
+      `Matched terms: ${tailorResult.matchedTerms.map((term) => term.term).join(", ") || "(none)"}`,
+      `Gap terms: ${tailorResult.gapTerms.join(", ") || "(none)"}`,
+    ].join("\n"),
+    gapTerms: tailorResult.gapTerms,
+  });
 
   return {
-    tailorResult: { ...tailorResult, version },
-    rounds,
-    finalVersion: version,
-    finalMarkdownPath: finalRender.markdownPath,
-    finalHtmlPath: finalRender.htmlPath,
+    tailorResult: { ...tailorResult, version: finalize.version },
+    finalize,
+    finalVersion: finalize.version,
+    finalMarkdownPath: finalize.markdownPath,
+    finalHtmlPath: finalize.htmlPath,
     matchReportPath,
-    passed,
+    passed: finalize.passed,
+    rounds: finalize.rounds,
   };
 }
 
@@ -280,9 +210,9 @@ async function main(): Promise<void> {
   console.log(`  Target: ${result.tailorResult.target.label} (${result.tailorResult.target.id})`);
   console.log(`  Rounds: ${result.rounds.length}/${args.maxRounds}`);
   console.log(
-    `  Final score: ${last.judgeResult.verdict.overall_score}/10 (${result.passed ? "pass" : "needs review"})`,
+    `  Final score: ${last.judgeResult?.verdict.overall_score}/10 (${result.passed ? "pass" : "needs review"})`,
   );
-  if (last.judgeResult.verdict.invented_claim_flags?.length) {
+  if (last.judgeResult?.verdict.invented_claim_flags?.length) {
     console.log(
       `  Invented-claim flags: ${last.judgeResult.verdict.invented_claim_flags.length}`,
     );
@@ -293,7 +223,15 @@ async function main(): Promise<void> {
   console.log(`    - ${result.finalHtmlPath}`);
   console.log(`    - ${result.matchReportPath}`);
   for (const round of result.rounds) {
-    console.log(`    - ${round.judgeReportPath}`);
+    if (round.judgeReportPath) {
+      console.log(`    - ${round.judgeReportPath}`);
+    }
+  }
+  if (result.finalize.detailPath) {
+    console.log(`    - ${result.finalize.detailPath}`);
+  }
+  if (result.finalize.logFile) {
+    console.log(`    - ${result.finalize.logFile}`);
   }
 }
 

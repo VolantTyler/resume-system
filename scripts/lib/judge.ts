@@ -71,7 +71,7 @@ export interface JudgeResult {
 const JUDGE_SYSTEM_PROMPT = `You are an evidence-bound résumé judge for Tyler Stahl's living résumé system.
 
 Your job:
-1. Evaluate a tailored résumé against a job description.
+1. Evaluate a résumé against a role brief (job description or curated target emphasis).
 2. Produce structured critiques and claim-safe revision directives.
 3. Produce an application_fit analysis (overall, 2–3 strengths with resume section references, 2–3 weaknesses with indirect-address explanations).
 
@@ -79,7 +79,7 @@ Hard rules:
 - NEVER invent employers, dates, metrics, technologies, or outcomes.
 - Only cite evidence present in the provided résumé markdown or selected accomplishment raw_facts.
 - revision_directives may ONLY reference accomplishment IDs from currentAccomplishmentOrder and skill names from availableSkillNames.
-- If a JD need is weakly covered, explain the indirect address in weaknesses — do not fabricate coverage.
+- If a role need is weakly covered, explain the indirect address in weaknesses — do not fabricate coverage.
 - invented_claim_flags: list any résumé statements that appear unsupported by the evidence packet (empty array if none).
 - overall_score is 1–10. Set pass=true only when overall_score >= the provided pass threshold AND evidence_alignment.score >= 7.
 - Respond with a single JSON object matching the required schema. No markdown fences.`;
@@ -98,12 +98,40 @@ function extractJsonObject(text: string): unknown {
   }
 }
 
+export interface JudgeEvidenceInput {
+  version: ResumeVersion;
+  roleBrief: JobDescription;
+  resumeMarkdown: string;
+  matchReportSummary?: string;
+  gapTerms?: string[];
+}
+
 export function buildJudgeEvidence(
   data: ResumeData,
-  tailorResult: TailorResult,
-  resumeMarkdown: string,
+  input: JudgeEvidenceInput | TailorResult,
+  resumeMarkdown?: string,
 ): JudgeEvidencePacket {
-  const { version, jobDescription, gapTerms, matchedTerms } = tailorResult;
+  // Backward-compatible: (data, tailorResult, resumeMarkdown)
+  const normalized: JudgeEvidenceInput =
+    "roleBrief" in input
+      ? input
+      : {
+          version: input.version,
+          roleBrief: input.jobDescription,
+          resumeMarkdown: resumeMarkdown ?? "",
+          matchReportSummary: [
+            `Recommended target: ${input.target.label} (${input.target.id})`,
+            `Matched terms: ${input.matchedTerms.map((term) => term.term).join(", ") || "(none)"}`,
+            `Gap terms: ${input.gapTerms.join(", ") || "(none)"}`,
+          ].join("\n"),
+          gapTerms: input.gapTerms,
+        };
+
+  if (!normalized.resumeMarkdown && resumeMarkdown) {
+    normalized.resumeMarkdown = resumeMarkdown;
+  }
+
+  const { version, roleBrief, gapTerms = [] } = normalized;
   const accomplishmentById = new Map(data.accomplishments.map((item) => [item.id, item]));
 
   const selectedAccomplishments = version.accomplishment_ids
@@ -122,17 +150,13 @@ export function buildJudgeEvidence(
     category.skills.map((skill) => skill.name),
   );
 
-  const matchReportSummary = [
-    `Recommended target: ${tailorResult.target.label} (${tailorResult.target.id})`,
-    `Matched terms: ${matchedTerms.map((term) => term.term).join(", ") || "(none)"}`,
-    `Gap terms: ${gapTerms.join(", ") || "(none)"}`,
-  ].join("\n");
-
   return {
-    jobTitle: jobDescription.title,
-    jobDescription: jobDescription.text,
-    resumeMarkdown,
-    matchReportSummary,
+    jobTitle: roleBrief.title,
+    jobDescription: roleBrief.text,
+    resumeMarkdown: normalized.resumeMarkdown,
+    matchReportSummary:
+      normalized.matchReportSummary ??
+      `Role brief: ${roleBrief.title} (${roleBrief.sourcePath})`,
     selectedAccomplishments,
     availableSkillNames,
     gapTerms,
@@ -412,13 +436,15 @@ export function createStubJudgeClient(data: ResumeData): LlmClient {
           ],
         },
         revision_directives: {
-          prioritize_accomplishment_ids: topIds,
-          demote_accomplishment_ids: demoteIds.filter((id) => !topIds.includes(id)),
-          emphasize_skills: skillHit ? [skillHit] : [],
+          prioritize_accomplishment_ids: overall >= passScore ? [] : topIds,
+          demote_accomplishment_ids:
+            overall >= passScore ? [] : demoteIds.filter((id) => !topIds.includes(id)),
+          emphasize_skills: overall >= passScore ? [] : skillHit ? [skillHit] : [],
           de_emphasize_skills: [],
-          notes: [
-            "Stub revision: keep claim-safe reordering only; do not invent new bullets.",
-          ],
+          notes:
+            overall >= passScore
+              ? ["Stub judge: pass — no revision directives."]
+              : ["Stub revision: keep claim-safe reordering only; do not invent new bullets."],
         },
         invented_claim_flags: [],
       };
