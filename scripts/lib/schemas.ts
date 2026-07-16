@@ -136,6 +136,15 @@ export const resumeVersionSchema = z.object({
   project_ids: z.array(z.string()).optional(),
   skill_emphasis: z.array(z.string()).optional(),
   application_fit: applicationFitSchema.optional(),
+  /** Subfolder under output/resumes/ (e.g. deloitte, frontend). */
+  output_folder: z
+    .string()
+    .min(1)
+    .regex(
+      /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
+      "output_folder must be a lowercase slug (letters, numbers, hyphens)",
+    )
+    .optional(),
   output_slug: z.string().min(1),
   revision_history: z
     .array(

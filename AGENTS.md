@@ -126,10 +126,12 @@ Experience and projects reference accomplishments by ID. Résumé versions in `r
 
 Defined in `data/resume_targets.yaml` and instantiated in `data/resume_versions.yaml`. `npm run generate` produces:
 
-- `output/resumes/tyler-stahl-{target-id}.md`
-- `output/resumes/tyler-stahl-{target-id}.html`
-- `output/resumes/tyler-stahl-{target-id}.pdf` — rendered from the `.html` output's print styles via `puppeteer-core` (`scripts/generate-pdf.ts`); skipped with a warning if no local Chrome/Chromium is found
+- `output/resumes/{output_folder}/tyler-stahl-{target-id}.md`
+- `output/resumes/{output_folder}/tyler-stahl-{target-id}.html`
+- `output/resumes/{output_folder}/tyler-stahl-{target-id}.pdf` — rendered from the `.html` output's print styles via `puppeteer-core` (`scripts/generate-pdf.ts`); skipped with a warning if no local Chrome/Chromium is found
 - `output/portfolio/resume-content.json`
+
+Curated versions set `output_folder` in `resume_versions.yaml` (e.g. `deloitte`, `google`, `frontend`, `nonprofit`) so related résumés group under `output/resumes/<folder>/`.
 
 Bullet selection uses the target's `bullet_variant` key on accomplishments when available, falling back to `standard`.
 

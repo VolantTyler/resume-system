@@ -16,6 +16,14 @@ export const TAILORED_OUTPUT_DIR = join(RESUMES_OUTPUT_DIR, "tailored");
 export const PORTFOLIO_OUTPUT_DIR = join(OUTPUT_DIR, "portfolio");
 export const DEBUG_OUTPUT_DIR = join(OUTPUT_DIR, "debug");
 
+/** Curated résumé output dir: output/resumes[/output_folder]. */
+export function resumeVersionOutputDir(outputFolder?: string): string {
+  if (!outputFolder) {
+    return RESUMES_OUTPUT_DIR;
+  }
+  return join(RESUMES_OUTPUT_DIR, outputFolder);
+}
+
 export const DATA_FILES = {
   profile: join(DATA_DIR, "profile.yaml"),
   experience: join(DATA_DIR, "experience.yaml"),

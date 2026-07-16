@@ -3,7 +3,11 @@ import nunjucks from "nunjucks";
 import { buildResumeContext } from "./lib/build-resume-context.js";
 import { renderHtmlToPdf } from "./lib/pdf.js";
 import { assertValidResumeData } from "./lib/validate.js";
-import { RESUMES_OUTPUT_DIR, TEMPLATE_FILES, TEMPLATES_DIR } from "./lib/paths.js";
+import {
+  TEMPLATE_FILES,
+  TEMPLATES_DIR,
+  resumeVersionOutputDir,
+} from "./lib/paths.js";
 import type { ResumeVersion } from "./lib/schemas.js";
 
 const env = nunjucks.configure(TEMPLATES_DIR, {
@@ -17,7 +21,8 @@ export async function generatePdfForVersion(version: ResumeVersion): Promise<str
   const context = buildResumeContext(data, version);
   const html = env.render(TEMPLATE_FILES.resumeHtml, context);
 
-  const pdfPath = `${RESUMES_OUTPUT_DIR}/${version.output_slug}.pdf`;
+  const outputDir = resumeVersionOutputDir(version.output_folder);
+  const pdfPath = `${outputDir}/${version.output_slug}.pdf`;
   await renderHtmlToPdf(html, pdfPath);
 
   return pdfPath;

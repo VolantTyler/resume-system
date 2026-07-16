@@ -32,6 +32,7 @@
     - agentos-chief-of-staff
     - cognitive-bridge
   skill_emphasis: []
+  output_folder: applied-ai
   output_slug: tyler-stahl-applied-ai
   revision_history:
     - date: 2026-07-08
@@ -74,6 +75,7 @@
     - cognitive-bridge
     - iblueprint-embeddings
   skill_emphasis: []
+  output_folder: deloitte
   output_slug: tyler-stahl-deloitte-agentic-ai
   revision_history:
     - date: 2026-07-09
@@ -113,6 +115,7 @@
     - nami-720-event-platform
     - cn-data-review-portal
   skill_emphasis: []
+  output_folder: deloitte
   output_slug: tyler-stahl-deloitte-agentic-se-ii
   revision_history:
     - date: 2026-07-09
@@ -187,6 +190,7 @@
           Deepest production cloud work is on Google Cloud (Firebase, Vertex AI); high-traffic web and
           GraphQL platform engineering at Charity Navigator demonstrates transferable enterprise platform
           experience.
+  output_folder: deloitte
   output_slug: tyler-stahl-deloitte-fde-frontier-genai
   revision_history:
     - date: 2026-07-09
@@ -275,6 +279,7 @@
           counseling background is a direct transfer for composure and facilitation when
           technical discovery turns ambiguous or high-stakes—not a substitute for the
           preferred AI/CS graduate credential.
+  output_folder: google
   output_slug: tyler-stahl-google-fde-genai
   revision_history:
     - date: 2026-07-13
@@ -312,6 +317,7 @@
     - cn-data-review-portal
     - cn-platform-rebuild
   skill_emphasis: []
+  output_folder: full-stack
   output_slug: tyler-stahl-full-stack
   revision_history:
     - date: 2026-07-08
@@ -348,6 +354,7 @@
     - cn-data-review-portal
     - cn-platform-rebuild
   skill_emphasis: []
+  output_folder: frontend
   output_slug: tyler-stahl-frontend-engineer
   revision_history:
     - date: 2026-06-29
@@ -383,6 +390,7 @@
     - cn-data-review-portal
     - cn-platform-rebuild
   skill_emphasis: []
+  output_folder: nonprofit
   output_slug: tyler-stahl-nonprofit-tech
   revision_history:
     - date: 2026-06-29
@@ -413,6 +421,7 @@
     - cognitive-bridge
     - cn-platform-rebuild
   skill_emphasis: []
+  output_folder: portfolio
   output_slug: tyler-stahl-portfolio
   revision_history:
     - date: 2026-07-09

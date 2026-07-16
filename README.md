@@ -83,20 +83,22 @@ Every curated résumé version is **judged before it is finalized**: the generat
 - Without a key: automatic stub judge (still logs rounds/changes)
 - Escape hatch: `RESUME_JUDGE=off` skips judging and renders once
 
-This produces, per résumé version defined in `resume_versions.yaml`:
+This produces, per résumé version defined in `resume_versions.yaml` (grouped under `output_folder`):
 
 ```txt
-output/resumes/tyler-stahl-frontend-engineer.md
-output/resumes/tyler-stahl-frontend-engineer.html
-output/resumes/tyler-stahl-frontend-engineer.pdf
-output/resumes/tyler-stahl-nonprofit-tech.md
-output/resumes/tyler-stahl-nonprofit-tech.html
-output/resumes/tyler-stahl-nonprofit-tech.pdf
-output/resumes/tyler-stahl-portfolio.md
-output/resumes/tyler-stahl-portfolio.html
-output/resumes/tyler-stahl-portfolio.pdf
+output/resumes/frontend/tyler-stahl-frontend-engineer.md
+output/resumes/frontend/tyler-stahl-frontend-engineer.html
+output/resumes/frontend/tyler-stahl-frontend-engineer.pdf
+output/resumes/nonprofit/tyler-stahl-nonprofit-tech.md
+output/resumes/nonprofit/tyler-stahl-nonprofit-tech.html
+output/resumes/nonprofit/tyler-stahl-nonprofit-tech.pdf
+output/resumes/portfolio/tyler-stahl-portfolio.md
+output/resumes/portfolio/tyler-stahl-portfolio.html
+output/resumes/portfolio/tyler-stahl-portfolio.pdf
 output/portfolio/resume-content.json
 ```
+
+Employer- and category-specific versions land in matching subfolders (e.g. `output/resumes/deloitte/`, `output/resumes/google/`).
 
 Role-specific bullet selection uses each target's `bullet_variant` from `resume_targets.yaml`. The same atomic accomplishment can render different bullets for frontend vs. nonprofit résumés.
 

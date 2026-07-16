@@ -67,6 +67,12 @@
         },
         "additionalProperties": false
       },
+      "output_folder": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "description": "Subfolder under output/resumes/ for employer or category grouping (e.g. deloitte, frontend)."
+      },
       "output_slug": { "type": "string", "minLength": 1 },
       "revision_history": {
         "type": "array",
