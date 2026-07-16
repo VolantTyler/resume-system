@@ -36,7 +36,7 @@ Forward-leaning applied AI engineer who prototypes and ships GenAI solutions wit
 ### Applied AI Developer — Independent R&D
 
 *2026-02 – Present* · NJ
-Builds applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls—including the InSummery.AI family schedule concierge capstone.
+Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
 - Designed a Google ADK 2.0 conditional workflow with triager and interpreter agents for registration, disruption, and schedule analysis in a Kaggle Agents Intensive capstone.
 - Designed privacy-by-design masking so Gemini sees placeholders for household PII while retaining public schedule context needed for accurate extraction.
@@ -50,7 +50,7 @@ Builds applied AI infrastructure spanning multi-agent orchestration, hybrid LLM 
 - Designed a Cursor Agent SDK orchestrator that splits evaluation and testing subagents behind HITL checkpoints.
 - Migrated an AI Studio personality prototype to a serverless Python backend on Firebase/Vertex AI with durable Firestore agent memory.
 - Stress-testing embedding implementations and vector persistence to improve RAG performance in iBlueprint workflows.
-**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK
+**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
 
 ### Front-End Developer — NAMI
 
@@ -162,11 +162,11 @@ Engineered portal features and helped transition legacy data flows into GraphQL 
 
 ## Skills
 
-**Applied AI:** Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK
+**Applied AI:** Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK, Weights & Biases Weave
 **Front-End:** JavaScript, React, TypeScript
 **Back-End:** Python, GraphQL, SQLite
 **Testing:** Cypress
-**Collaboration:** Stakeholder collaboration
+**Collaboration:** Stakeholder collaboration, Deep listening
 
 ## Education
 

@@ -16,7 +16,7 @@ Software engineer who ships production web platforms and uses AI-assisted delive
 ### Applied AI Developer — Independent R&D
 
 *2026-02 – Present* · NJ
-Builds applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls—including the InSummery.AI family schedule concierge capstone.
+Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
 - Shipped an agentic scheduling product spanning ADK workflow, structured extraction, and a parent-facing schedule matrix.
 - Built a review-and-resume HITL checkpoint so uncertain agent output is validated before it updates production schedule state.
@@ -27,7 +27,7 @@ Builds applied AI infrastructure spanning multi-agent orchestration, hybrid LLM 
 - Added delivery controls around agent actions—HITL approvals, gateway whitelisting, and secrets management—before commits land.
 - Used the Cursor Agent SDK to orchestrate evaluation and testing subagents with mandatory human review before high-stakes handoffs.
 - Shipped a secured serverless Cognitive Bridge backend with Firebase Auth, Firestore state, and type-safe Gemini JSON responses driving UI and DB updates.
-**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK
+**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
 
 ### Front-End Developer — NAMI
 
@@ -124,11 +124,11 @@ Engineered portal features and helped transition legacy data flows into GraphQL 
 
 ## Skills
 
-**Applied AI:** Multi-agent orchestration, Human-in-the-loop controls, Agent evaluation, Firebase, Vertex AI, Cursor Agent SDK
+**Applied AI:** Multi-agent orchestration, Human-in-the-loop controls, Agent evaluation, Firebase, Vertex AI, Cursor Agent SDK, Weights & Biases Weave
 **Front-End:** JavaScript, React, TypeScript
 **Back-End:** Python, Laravel, GraphQL, SQLite
 **Testing:** Cypress
-**Collaboration:** Release support, Stakeholder collaboration
+**Collaboration:** Release support, Stakeholder collaboration, Deep listening
 
 ## Education
 

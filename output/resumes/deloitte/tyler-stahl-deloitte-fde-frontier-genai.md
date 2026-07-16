@@ -9,7 +9,7 @@ Glen Rock, NJ · [Portfolio](https://tylerstahl.dev) · [GitHub](https://github.
 
 *Deloitte Forward Deployed Engineer, Frontier GenAI (req 350555)*
 
-Strong fit for rapid GenAI prototyping on Google platforms, agentic workflows with human-in-the-loop controls, and shipping production-quality software with stakeholders. Lighter on formal consulting engagement leadership and multi-cloud enterprise data-engineering depth.
+Strong fit for rapid GenAI prototyping (especially on Google platforms), agentic workflows with enterprise-ready guardrails, and collaborating with stakeholders and executives to ship production-quality software. Quick study on learning new technologies. Deep listening and communication skills from years as a counselor.
 
 **Strongest alignment**
 
@@ -36,20 +36,12 @@ Forward-leaning applied AI engineer who prototypes and ships GenAI solutions wit
 ### Applied AI Developer — Independent R&D
 
 *2026-02 – Present* · NJ
-Builds applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls—including the InSummery.AI family schedule concierge capstone.
+Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
-- Designed a Google ADK 2.0 conditional workflow with triager and interpreter agents for registration, disruption, and schedule analysis in a Kaggle Agents Intensive capstone.
-- Designed privacy-by-design masking so Gemini sees placeholders for household PII while retaining public schedule context needed for accurate extraction.
-- Routed low-confidence ADK extractions through a HITL node with persisted workflow state instead of silently writing uncertain schedule data.
-- Measured InSummery agent quality with deterministic scoring suites and committed model baselines instead of vibe-only demos.
-- Productionized an ADK agent workflow behind Firebase Auth and Cloud Functions with observability instrumentation.
-- Architected an OpenClaw multi-agent ecosystem with orchestrator and specialist agents, durable SQLite state, and structured market-data extraction.
-- Built a tri-tier inference strategy separating reasoning, verification, and formatting across cloud Gemini and local Gemma models, with reported ~40% token-cost optimization.
-- Developed structured-extraction pipelines that turn unstructured web data into relational formats for agent workflows.
-- Added human approval gates and strict subagent controls so high-stakes agent actions require validation before commit.
-- Designed a Cursor Agent SDK orchestrator that splits evaluation and testing subagents behind HITL checkpoints.
-- Migrated an AI Studio personality prototype to a serverless Python backend on Firebase/Vertex AI with durable Firestore agent memory.
-**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK
+- Shipped GenAI prototypes to production on Google Cloud—Gemini/Vertex AI with Firebase Auth, Cloud Functions, and Firestore—from ambiguous requirements through deployable agent workflows.
+- Applied HITL confidence gates and approval controls with deterministic LLM evaluation baselines—instrumented in Weights & Biases Weave—so agent output is measured and reviewed before production writes.
+- Orchestrated multi-agent workflows with the Cursor Agent SDK—modular subagents, HITL checkpoints, and structured requirements-to-production delivery for evaluation and testing stages.
+**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
 
 ### Front-End Developer — NAMI
 
@@ -151,11 +143,11 @@ Engineered portal features and helped transition legacy data flows into GraphQL 
 
 ## Skills
 
-**Applied AI:** Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK
+**Applied AI:** Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK, Weights & Biases Weave
 **Front-End:** JavaScript, React, TypeScript
 **Back-End:** Python, GraphQL, SQLite
 **Testing:** Cypress
-**Collaboration:** Stakeholder collaboration
+**Collaboration:** Stakeholder collaboration, Deep listening
 
 ## Education
 

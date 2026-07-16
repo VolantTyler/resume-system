@@ -16,11 +16,11 @@ Front-end software engineer focused on accessible UI implementation, practical t
 ### Applied AI Developer — Independent R&D
 
 *2026-02 – Present* · NJ
-Builds applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls—including the InSummery.AI family schedule concierge capstone.
+Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
 - Shipped a React schedule matrix and alerts sidebar highlighting gaps in high-contrast light/dark themes.
 - Built an accessible React dashboard with onboarding, ingest panel, schedule matrix, alerts sidebar, and light/dark themes.
-**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK
+**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
 
 ### Front-End Developer — NAMI
 

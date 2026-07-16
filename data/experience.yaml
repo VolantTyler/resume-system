@@ -4,7 +4,7 @@
   location: NJ
   start_date: 2026-02
   end_date: present
-  role_summary: Builds applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls—including the InSummery.AI family schedule concierge capstone.
+  role_summary: Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
   technologies:
     - Python
     - Google ADK 2.0
@@ -14,6 +14,7 @@
     - Firebase
     - SQLite
     - Cursor Agent SDK
+    - Weights & Biases Weave
   major_projects:
     - InSummery.AI family schedule concierge
     - OpenClaw multi-agent market intelligence ecosystem
@@ -21,6 +22,9 @@
     - AgentOS chief-of-staff agent
     - Cognitive Bridge personality alignment
   accomplishment_ids:
+    - rnd-gcp-genai-delivery
+    - rnd-hitl-eval-practices
+    - rnd-agent-orchestration-delivery
     - insummery-adk-multi-agent-workflow
     - insummery-pii-masking
     - insummery-hitl-confidence-gate

@@ -16,7 +16,7 @@ Full-stack software engineer with experience shipping React/TypeScript and Larav
 ### Applied AI Developer — Independent R&D
 
 *2026-02 – Present* · NJ
-Builds applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls—including the InSummery.AI family schedule concierge capstone.
+Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
 - Shipped an agentic scheduling product spanning ADK workflow, structured extraction, and a parent-facing schedule matrix.
 - Connected structured schedule state to Google Calendar OAuth sync and a parent-facing dashboard.
@@ -24,7 +24,7 @@ Builds applied AI infrastructure spanning multi-agent orchestration, hybrid LLM 
 - Shipped a distributed multi-agent research system with Python workers, SQLite persistence, and production-minded state management.
 - Implemented Python data pipelines with durable SQLite state for agent-driven research and reporting.
 - Shipped a secured serverless Cognitive Bridge backend with Firebase Auth, Firestore state, and type-safe Gemini JSON responses driving UI and DB updates.
-**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK
+**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
 
 ### Front-End Developer — NAMI
 
@@ -132,7 +132,7 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 **Front-End:** JavaScript, React, TypeScript
 **Back-End:** Laravel, GraphQL, SQLite, PHP
 **Testing:** Cypress
-**Collaboration:** Stakeholder collaboration
+**Collaboration:** Stakeholder collaboration, Deep listening
 
 ## Education
 

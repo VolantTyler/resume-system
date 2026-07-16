@@ -131,17 +131,9 @@
     - charity-navigator-frontend
     - volant-founder-2024
   accomplishment_ids:
-    - insummery-adk-multi-agent-workflow
-    - insummery-hitl-confidence-gate
-    - insummery-eval-harness
-    - insummery-pii-masking
-    - insummery-firebase-production
-    - openclaw-multi-agent-orchestration
-    - agentic-hitl-security
-    - hybrid-inference-routing
-    - cognitive-bridge-firebase-productionization
-    - agentos-orchestration
-    - autonomous-etl-pipelines
+    - rnd-gcp-genai-delivery
+    - rnd-hitl-eval-practices
+    - rnd-agent-orchestration-delivery
     - cn-cmo-marketing-partnership
     - cn-cross-functional-delivery
     - cn-portal-scale
@@ -159,9 +151,10 @@
   application_fit:
     role_reference: Deloitte Forward Deployed Engineer, Frontier GenAI (req 350555)
     overall: >-
-      Strong fit for rapid GenAI prototyping on Google platforms, agentic workflows with human-in-the-loop
-      controls, and shipping production-quality software with stakeholders. Lighter on formal consulting
-      engagement leadership and multi-cloud enterprise data-engineering depth.
+      Strong fit for rapid GenAI prototyping (especially on Google platforms), agentic workflows with
+      enterprise-ready guardrails, and collaborating with stakeholders and executives to ship
+      production-quality software. Quick study on learning new technologies. Deep listening and
+      communication skills from years as a counselor.
     strengths:
       - criterion: Production GenAI and agentic workflow delivery on Google platforms
         resume_reference: >-
@@ -199,6 +192,8 @@
       note: Added application fit section for req 350555 review.
     - date: 2026-07-10
       note: Rewrote application fit copy for external (hiring-manager) audience.
+    - date: 2026-07-16
+      note: Trimmed Independent R&D to three cross-cutting bullets; projects carry project-level detail.
 - id: tyler-stahl-google-fde-genai
   target_id: forward-deployed-engineer
   label: Forward Deployed Engineer

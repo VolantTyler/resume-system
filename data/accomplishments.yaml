@@ -374,6 +374,105 @@
   confidence: high
   source_notes:
     - Added from updated Applied AI Project Portfolio PDF (architectural pivot / enterprise talking points).
+- id: rnd-gcp-genai-delivery
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: 2025-2026
+  category: applied-ai
+  themes:
+    - Google Cloud
+    - Gemini
+    - Firebase
+    - productionization
+  technologies:
+    - Google Gemini
+    - Vertex AI
+    - Firebase
+    - Firebase Cloud Functions
+    - Cloud Firestore
+    - Firebase Authentication
+    - Python
+  raw_fact: Across Independent R&D projects including InSummery.AI and Cognitive Bridge, shipped GenAI prototypes into Google Cloud production stacks using Gemini/Vertex AI, Firebase Auth, Cloud Functions, and Firestore.
+  context: Cross-cutting stack pattern for FDE-style résumés; detail lives in Selected Projects.
+  resume_bullets:
+    standard: Shipped GenAI prototypes to production on Google Cloud using Gemini/Vertex AI and Firebase (Auth, Cloud Functions, Firestore).
+    applied-ai: Shipped GenAI prototypes to production on Google Cloud—Gemini/Vertex AI with Firebase Auth, Cloud Functions, and Firestore—from ambiguous requirements through deployable agent workflows.
+    full-stack: Delivered full-stack GenAI apps on Firebase/Vertex AI, taking prototypes through auth, serverless backends, and durable state.
+  evidence:
+    - InSummery Firebase production deployment
+    - Cognitive Bridge Firebase/Vertex productionization
+  target_roles:
+    - applied-ai-developer
+    - forward-deployed-engineer
+    - full-stack-engineer
+    - agentic-ai-engineer
+  confidence: high
+  source_notes:
+    - Synthesizes evidenced Firebase/Gemini/Vertex work across InSummery and Cognitive Bridge; not a new claim.
+- id: rnd-hitl-eval-practices
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: 2025-2026
+  category: evaluation
+  themes:
+    - human-in-the-loop
+    - agent evaluation
+    - responsible AI
+  technologies:
+    - Weights & Biases Weave
+    - Google Gemini
+    - Python
+  raw_fact: Established human-in-the-loop confidence gates, approval controls for high-stakes agent actions, and deterministic LLM evaluation baselines with Weights & Biases Weave instrumentation before trusting production writes.
+  context: Cross-cutting governance and quality practices for FDE-style résumés; project-level detail lives in Selected Projects.
+  resume_bullets:
+    standard: Built HITL confidence gates, approval controls, and deterministic LLM evaluation baselines (including Weights & Biases Weave) before production writes.
+    applied-ai: Applied HITL confidence gates and approval controls with deterministic LLM evaluation baselines—instrumented in Weights & Biases Weave—so agent output is measured and reviewed before production writes.
+    full-stack: Added evaluation gates and human review checkpoints so agent workflow changes are validated before they reach production systems.
+    qa: Enforced confidence thresholds and eval baselines so uncertain or regressing agent output cannot ship without human review.
+  evidence:
+    - InSummery HITL confidence gate and eval harness
+    - OpenClaw / AgentOS HITL approval patterns
+    - User-confirmed Weights & Biases Weave usage in Independent R&D stack
+  target_roles:
+    - applied-ai-developer
+    - forward-deployed-engineer
+    - agentic-ai-engineer
+    - agentic-software-engineer
+    - qa-minded-frontend
+  confidence: high
+  source_notes:
+    - HITL/eval practices evidenced in InSummery and agentic projects; Weave confirmed by Tyler as part of R&D stack (2026-07-16).
+- id: rnd-agent-orchestration-delivery
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: 2025-2026
+  category: applied-ai
+  themes:
+    - multi-agent orchestration
+    - Cursor Agent SDK
+    - requirements to production
+  technologies:
+    - Cursor Agent SDK
+    - Google ADK 2.0
+    - Python
+  raw_fact: Designed multi-agent orchestration patterns with the Cursor Agent SDK and related harnesses, using modular subagents, mandatory human checkpoints, and structured task breakdown from requirements through production handoffs.
+  context: Cross-cutting agent-management pattern for FDE-style résumés; AgentOS/InSummery detail lives in Selected Projects.
+  resume_bullets:
+    standard: Orchestrated multi-agent workflows with the Cursor Agent SDK, modular subagents, and mandatory human checkpoints from requirements through production handoffs.
+    applied-ai: Orchestrated multi-agent workflows with the Cursor Agent SDK—modular subagents, HITL checkpoints, and structured requirements-to-production delivery for evaluation and testing stages.
+    full-stack: Used the Cursor Agent SDK to break requirements into orchestrated agent tasks with human review gates before release handoffs.
+  evidence:
+    - AgentOS Cursor Agent SDK orchestration
+    - InSummery Google ADK multi-agent workflows
+  target_roles:
+    - applied-ai-developer
+    - forward-deployed-engineer
+    - agentic-ai-engineer
+    - agentic-software-engineer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - Synthesizes evidenced Cursor Agent SDK and ADK orchestration work; not a new claim.
 - id: iblueprint-embedding-work
   company: Independent R&D
   role: Applied AI Developer

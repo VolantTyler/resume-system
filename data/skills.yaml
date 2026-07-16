@@ -115,12 +115,26 @@ categories:
           - AI-assisted development
         evidence_ids:
           - agentos-orchestration
+          - rnd-agent-orchestration-delivery
         proficiency: high
         target_roles:
           - applied-ai-developer
           - agentic-ai-engineer
           - agentic-software-engineer
           - forward-deployed-engineer
+      - name: Weights & Biases Weave
+        aliases:
+          - Weave
+          - W&B Weave
+          - Weights & Biases
+        evidence_ids:
+          - rnd-hitl-eval-practices
+        proficiency: medium
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - forward-deployed-engineer
+          - agentic-software-engineer
   - name: Front-End
     skills:
       - name: JavaScript
@@ -273,3 +287,19 @@ categories:
           - frontend-engineer
           - agentic-software-engineer
           - forward-deployed-engineer
+      - name: Deep listening
+        aliases:
+          - counseling communication
+          - active listening
+        evidence_ids:
+          - cn-cmo-marketing-partnership
+          - cn-cross-functional-delivery
+          - volant-fullstack-client-delivery
+        proficiency: high
+        target_roles:
+          - forward-deployed-engineer
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - nonprofit-tech
+          - full-stack-engineer
+          - agentic-software-engineer

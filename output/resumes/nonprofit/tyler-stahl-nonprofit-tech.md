@@ -102,7 +102,7 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 **Back-End:** Laravel
 **Testing:** Cypress
 **CMS / Platform:** Livewire
-**Collaboration:** Release support, Stakeholder collaboration
+**Collaboration:** Release support, Stakeholder collaboration, Deep listening
 
 ## Education
 
