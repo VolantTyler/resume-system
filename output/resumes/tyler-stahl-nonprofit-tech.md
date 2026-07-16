@@ -103,3 +103,9 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 **Testing:** Cypress
 **CMS / Platform:** Livewire
 **Collaboration:** Release support, Stakeholder collaboration
+
+## Education
+
+- **Udacity** — Front-End Web Developer Nanodegree · Full scholarship from Google through the "Grow with Google" program.
+- **Seattle University** — MA, Counseling
+- **Dartmouth College** — BA, Anthropology

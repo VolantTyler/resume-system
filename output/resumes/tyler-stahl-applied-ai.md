@@ -117,3 +117,9 @@ Built an OCEAN-based personality alignment prototype in Google AI Studio, then p
 **Applied AI:** Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK
 **Back-End:** Python, SQLite
 **Collaboration:** Stakeholder collaboration
+
+## Education
+
+- **Udacity** — Front-End Web Developer Nanodegree · Full scholarship from Google through the "Grow with Google" program.
+- **Seattle University** — MA, Counseling
+- **Dartmouth College** — BA, Anthropology

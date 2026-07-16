@@ -28,3 +28,11 @@ summary_variants:
   qa-minded-frontend: Front-end engineer with a strong testing mindset, using Cypress and careful release practices to improve confidence in user-facing workflows.
   nonprofit-tech: Software engineer experienced in mission-driven platforms, stakeholder collaboration, and practical improvements to nonprofit technology systems.
   laravel-livewire-engineer: Front-end leaning software engineer working across Laravel, Livewire, Alpine, and Cypress to maintain and improve application experiences.
+education:
+  - institution: Udacity
+    credential: Front-End Web Developer Nanodegree
+    note: Full scholarship from Google through the "Grow with Google" program.
+  - institution: Seattle University
+    credential: MA, Counseling
+  - institution: Dartmouth College
+    credential: BA, Anthropology

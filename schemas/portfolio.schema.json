@@ -91,6 +91,19 @@
         "additionalProperties": false
       }
     },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["institution", "credential"],
+        "properties": {
+          "institution": { "type": "string", "minLength": 1 },
+          "credential": { "type": "string", "minLength": 1 },
+          "note": { "type": ["string", "null"] }
+        },
+        "additionalProperties": false
+      }
+    },
     "generatedAt": { "type": "string", "format": "date-time" },
     "versionId": { "type": "string", "minLength": 1 },
     "targetId": { "type": "string", "minLength": 1 }

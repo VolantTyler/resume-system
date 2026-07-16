@@ -195,6 +195,90 @@
       note: Added application fit section for req 350555 review.
     - date: 2026-07-10
       note: Rewrote application fit copy for external (hiring-manager) audience.
+- id: tyler-stahl-google-fde-genai
+  target_id: forward-deployed-engineer
+  label: Forward Deployed Engineer
+  summary_variant: forward-deployed-engineer
+  experience_ids:
+    - independent-rnd-applied-ai
+    - nami-front-end-developer
+    - charity-navigator-software-engineer
+    - charity-navigator-frontend
+    - volant-founder-2024
+  accomplishment_ids:
+    - insummery-adk-multi-agent-workflow
+    - insummery-hitl-confidence-gate
+    - insummery-eval-harness
+    - insummery-pii-masking
+    - insummery-firebase-production
+    - openclaw-multi-agent-orchestration
+    - agentic-hitl-security
+    - hybrid-inference-routing
+    - cognitive-bridge-firebase-productionization
+    - iblueprint-embedding-work
+    - agentos-orchestration
+    - autonomous-etl-pipelines
+    - cn-cmo-marketing-partnership
+    - cn-cross-functional-delivery
+    - cn-portal-scale
+    - cn-graphql-migration
+    - nami-cypress-testing-leadership
+    - volant-fullstack-client-delivery
+  project_ids:
+    - insummery-ai
+    - openclaw-multi-agent-ecosystem
+    - cognitive-bridge
+    - hybrid-inference-pilot
+    - iblueprint-embeddings
+    - agentos-chief-of-staff
+    - cn-data-review-portal
+  skill_emphasis: []
+  application_fit:
+    role_reference: >-
+      Google Cloud Forward Deployed Engineer III, Generative AI
+      (job 127965694384841414)
+    overall: >-
+      Strong fit for Google GenAI FDE builder work: Gemini/Vertex/ADK multi-agent
+      systems, prototype-to-production shipping on Firebase, and evaluation plus
+      observability. Partial fit on formal embedded enterprise-account FDE tenure,
+      production-scale RAG/vector platforms, and an AI/CS graduate degree.
+    strengths:
+      - criterion: Architect and ship GenAI systems on Google Cloud (Gemini, Vertex, ADK)
+        resume_reference: >-
+          Experience → Independent R&D; Selected Projects → InSummery.AI and Cognitive
+          Bridge (ADK multi-agent workflows, Vertex AI, Firebase production).
+      - criterion: Production-grade agentic workflows with evaluation and observability
+        resume_reference: >-
+          Selected Projects → InSummery.AI (eval harness with absolute quality gates;
+          Firebase deploy with OpenTelemetry instrumentation).
+      - criterion: Multi-agent systems using Google ADK and related agent patterns
+        resume_reference: >-
+          Selected Projects → InSummery.AI (ADK conditional multi-agent workflow) and
+          OpenClaw (orchestrated specialized agents with durable state and HITL gates).
+    weaknesses:
+      - criterion: Leading technical discovery inside enterprise customer accounts
+        indirect_address: >-
+          Discovery and stakeholder translation show up through Volant client
+          requirements-to-production delivery, Charity Navigator CMO and
+          cross-functional product/data partnership, and shipping the Kaggle + Google
+          Agents Intensive Consult-track capstone as working software.
+      - criterion: Production enterprise RAG and vector-database pipelines at scale
+        indirect_address: >-
+          Active embedding and vector-persistence evaluation for iBlueprint workflows;
+          production structured extraction into durable Firestore state (InSummery) and
+          autonomous Python ETL over unstructured market data (OpenClaw) cover adjacent
+          pipeline and retrieval-minded data work.
+      - criterion: Master’s or PhD in AI or Computer Science
+        indirect_address: >-
+          Formal degrees are MA Counseling (Seattle University) and BA Anthropology
+          (Dartmouth), plus a Udacity Front-End Web Developer Nanodegree via Grow with Google. The
+          counseling background is a direct transfer for composure and facilitation when
+          technical discovery turns ambiguous or high-stakes—not a substitute for the
+          preferred AI/CS graduate credential.
+  output_slug: tyler-stahl-google-fde-genai
+  revision_history:
+    - date: 2026-07-13
+      note: Tailored for Google Cloud FDE III Generative AI (job 127965694384841414).
 - id: tyler-stahl-full-stack
   target_id: full-stack-engineer
   label: Full-Stack Engineer

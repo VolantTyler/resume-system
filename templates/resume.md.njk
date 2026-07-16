@@ -85,3 +85,11 @@
 **{{ category.name }}:** {{ category.skill_names | join(', ') }}
 {% endfor %}
 {% endif %}
+
+{% if profile.education.length %}
+## Education
+
+{% for entry in profile.education %}
+- **{{ entry.institution }}** — {{ entry.credential }}{{ (" · " ~ entry.note) if entry.note }}
+{% endfor %}
+{% endif %}

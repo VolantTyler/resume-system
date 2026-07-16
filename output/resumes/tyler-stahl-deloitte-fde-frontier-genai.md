@@ -156,3 +156,9 @@ Engineered portal features and helped transition legacy data flows into GraphQL 
 **Back-End:** Python, GraphQL, SQLite
 **Testing:** Cypress
 **Collaboration:** Stakeholder collaboration
+
+## Education
+
+- **Udacity** — Front-End Web Developer Nanodegree · Full scholarship from Google through the "Grow with Google" program.
+- **Seattle University** — MA, Counseling
+- **Dartmouth College** — BA, Anthropology
