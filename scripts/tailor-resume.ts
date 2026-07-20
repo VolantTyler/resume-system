@@ -3,6 +3,7 @@ import { dirname, isAbsolute, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { renderResumeVersionToDir } from "./generate-resume.js";
 import { finalizeResumeWithJudge } from "./lib/finalize-resume.js";
+import { conductGapInterviewSession } from "./lib/gap-interview-session.js";
 import { TAILORED_OUTPUT_DIR } from "./lib/paths.js";
 import {
   buildMatchReport,
@@ -20,6 +21,8 @@ interface CliArgs {
   slug?: string;
   skipJudge: boolean;
   stub: boolean;
+  interviewGaps: boolean;
+  skipInterview: boolean;
 }
 
 function parseArgs(argv: string[]): CliArgs {
@@ -34,6 +37,8 @@ function parseArgs(argv: string[]): CliArgs {
         "  --target <target-id>   Override recommended résumé target",
         "  --label \"Custom Label\" Override tailored version label",
         "  --slug custom-slug     Override output slug",
+        "  --interview-gaps       Interview about undocumented JD terms before finalizing",
+        "  --skip-interview       Never prompt for a gap interview (even on a TTY)",
         "  --skip-judge           Skip the built-in judge finalize step",
         "  --stub                 Force stub judge (no API key)",
       ].join("\n"),
@@ -41,7 +46,13 @@ function parseArgs(argv: string[]): CliArgs {
     process.exit(1);
   }
 
-  const options: CliArgs = { jobDescriptionPath, skipJudge: false, stub: false };
+  const options: CliArgs = {
+    jobDescriptionPath,
+    skipJudge: false,
+    stub: false,
+    interviewGaps: false,
+    skipInterview: false,
+  };
 
   for (let i = 0; i < rest.length; i += 1) {
     const flag = rest[i];
@@ -59,6 +70,10 @@ function parseArgs(argv: string[]): CliArgs {
       options.skipJudge = true;
     } else if (flag === "--stub") {
       options.stub = true;
+    } else if (flag === "--interview-gaps") {
+      options.interviewGaps = true;
+    } else if (flag === "--skip-interview") {
+      options.skipInterview = true;
     }
   }
 
@@ -86,7 +101,7 @@ function writeOutput(path: string, content: string): void {
 async function main(): Promise<void> {
   const args = parseArgs(process.argv.slice(2));
   const jobDescription = loadJobDescription(args.jobDescriptionPath);
-  const data = assertValidResumeData();
+  let data = assertValidResumeData();
 
   const options: TailorOptions = {
     targetId: args.targetId,
@@ -101,6 +116,39 @@ async function main(): Promise<void> {
     console.error(`✗ ${(error as Error).message}`);
     process.exit(1);
     return;
+  }
+
+  // Offer / force a gap interview before judge finalize so confirmed evidence
+  // can change matching, ranking, and coverage.
+  if (tailorResult.gapCandidates.length > 0 && !args.skipInterview) {
+    try {
+      const session = await conductGapInterviewSession({
+        data,
+        jobDescription,
+        gaps: tailorResult.gapCandidates,
+        targetRoles: [tailorResult.target.id],
+        force: args.interviewGaps,
+        skip: false,
+      });
+
+      if (session.interviewed && session.confirmed.length > 0) {
+        data = session.data;
+        tailorResult = tailorResumeForJobDescription(data, jobDescription, options);
+        console.log(
+          `  Re-matched after gap interview (${session.confirmed.length} confirmation(s)).`,
+        );
+      } else if (session.notePath) {
+        console.log(`  Gap interview note: ${session.notePath}`);
+      }
+    } catch (error) {
+      console.error(`✗ Gap interview failed: ${(error as Error).message}`);
+      process.exit(1);
+      return;
+    }
+  } else if (tailorResult.gapCandidates.length > 0 && args.skipInterview) {
+    console.log(
+      `  Possible gaps (interview skipped): ${tailorResult.gapTerms.join(", ")}`,
+    );
   }
 
   const matchReportPath = `${TAILORED_OUTPUT_DIR}/${tailorResult.version.output_slug}-match-report.md`;

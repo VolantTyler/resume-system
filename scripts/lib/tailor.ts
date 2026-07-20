@@ -24,6 +24,15 @@ export interface TailorOptions {
   slug?: string;
 }
 
+export type GapKind = "skill" | "tool" | "responsibility";
+
+export interface GapCandidate {
+  term: string;
+  kind: GapKind;
+  /** Short prompt used by the gap interview CLI / agent. */
+  question: string;
+}
+
 export interface TailorResult {
   jobDescription: JobDescription;
   matchedTerms: MatchedTerm[];
@@ -31,6 +40,7 @@ export interface TailorResult {
   target: ResumeTarget;
   version: ResumeVersion;
   gapTerms: string[];
+  gapCandidates: GapCandidate[];
 }
 
 /**
@@ -38,60 +48,115 @@ export interface TailorResult {
  * data. Used only to flag possible coverage gaps in a job description — never
  * to assert Tyler does or doesn't have a skill.
  */
-const REFERENCE_VOCABULARY = [
-  "React",
-  "Vue",
-  "Angular",
-  "Svelte",
-  "TypeScript",
-  "Node.js",
-  "Next.js",
-  "Redux",
-  "Tailwind CSS",
-  "Sass",
-  "Webpack",
-  "Vite",
-  "GraphQL",
-  "REST API",
-  "PostgreSQL",
-  "MySQL",
-  "MongoDB",
-  "AWS",
-  "Docker",
-  "Kubernetes",
-  "CI/CD",
-  "Jest",
-  "Playwright",
-  "Selenium",
-  "Mocha",
-  "Storybook",
-  "Figma",
-  "WordPress",
-  "PHP",
-  "Symfony",
-  "Ruby on Rails",
-  "Python",
-  "Django",
-  "Salesforce",
-  "Agile",
-  "Scrum",
-  "Jira",
-  "Accessibility",
-  "WCAG",
-  "SEO",
-  "GitHub Actions",
-  "Vercel",
-  "Netlify",
-  "Firebase",
-  "Unit testing",
-  "End-to-end testing",
-  "Cross-browser testing",
-  "Performance optimization",
-  "Bootstrap",
-  "jQuery",
-  "REST",
-  "API design",
+const REFERENCE_GAP_VOCABULARY: Array<{ term: string; kind: GapKind }> = [
+  // Languages & frameworks
+  { term: "React", kind: "skill" },
+  { term: "Vue", kind: "skill" },
+  { term: "Angular", kind: "skill" },
+  { term: "Svelte", kind: "skill" },
+  { term: "TypeScript", kind: "skill" },
+  { term: "JavaScript", kind: "skill" },
+  { term: "Node.js", kind: "skill" },
+  { term: "Next.js", kind: "skill" },
+  { term: "Redux", kind: "skill" },
+  { term: "Tailwind CSS", kind: "skill" },
+  { term: "Sass", kind: "skill" },
+  { term: "Webpack", kind: "tool" },
+  { term: "Vite", kind: "tool" },
+  { term: "GraphQL", kind: "skill" },
+  { term: "REST API", kind: "skill" },
+  { term: "PostgreSQL", kind: "skill" },
+  { term: "MySQL", kind: "skill" },
+  { term: "MongoDB", kind: "skill" },
+  { term: "SQL", kind: "skill" },
+  { term: "Go", kind: "skill" },
+  { term: "Golang", kind: "skill" },
+  { term: "Rust", kind: "skill" },
+  { term: "Java", kind: "skill" },
+  { term: "C++", kind: "skill" },
+  { term: "C#", kind: "skill" },
+  { term: "Kotlin", kind: "skill" },
+  { term: "Swift", kind: "skill" },
+  { term: "Scala", kind: "skill" },
+  { term: "Ruby", kind: "skill" },
+  { term: "Ruby on Rails", kind: "skill" },
+  { term: "PHP", kind: "skill" },
+  { term: "Symfony", kind: "skill" },
+  { term: "Python", kind: "skill" },
+  { term: "Django", kind: "skill" },
+  { term: "Flask", kind: "skill" },
+  { term: "FastAPI", kind: "skill" },
+  { term: "Bash", kind: "skill" },
+  { term: "Terraform", kind: "skill" },
+  { term: "Bootstrap", kind: "skill" },
+  { term: "jQuery", kind: "skill" },
+  { term: "REST", kind: "skill" },
+  { term: "API design", kind: "skill" },
+  // Cloud / infra / tools
+  { term: "AWS", kind: "tool" },
+  { term: "GCP", kind: "tool" },
+  { term: "Google Cloud", kind: "tool" },
+  { term: "Azure", kind: "tool" },
+  { term: "Docker", kind: "tool" },
+  { term: "Kubernetes", kind: "tool" },
+  { term: "CI/CD", kind: "tool" },
+  { term: "GitHub Actions", kind: "tool" },
+  { term: "Vercel", kind: "tool" },
+  { term: "Netlify", kind: "tool" },
+  { term: "Firebase", kind: "tool" },
+  { term: "Cloud Run", kind: "tool" },
+  { term: "BigQuery", kind: "tool" },
+  { term: "Vertex AI", kind: "tool" },
+  { term: "Jest", kind: "tool" },
+  { term: "Playwright", kind: "tool" },
+  { term: "Selenium", kind: "tool" },
+  { term: "Mocha", kind: "tool" },
+  { term: "Storybook", kind: "tool" },
+  { term: "Figma", kind: "tool" },
+  { term: "WordPress", kind: "tool" },
+  { term: "Salesforce", kind: "tool" },
+  { term: "Jira", kind: "tool" },
+  { term: "Datadog", kind: "tool" },
+  { term: "Sentry", kind: "tool" },
+  // Practices / responsibilities
+  { term: "Agile", kind: "responsibility" },
+  { term: "Scrum", kind: "responsibility" },
+  { term: "Accessibility", kind: "responsibility" },
+  { term: "WCAG", kind: "responsibility" },
+  { term: "SEO", kind: "responsibility" },
+  { term: "Unit testing", kind: "responsibility" },
+  { term: "End-to-end testing", kind: "responsibility" },
+  { term: "Cross-browser testing", kind: "responsibility" },
+  { term: "Performance optimization", kind: "responsibility" },
+  { term: "Code review", kind: "responsibility" },
+  { term: "Mentoring", kind: "responsibility" },
+  { term: "System design", kind: "responsibility" },
+  { term: "Requirements gathering", kind: "responsibility" },
+  { term: "Customer discovery", kind: "responsibility" },
+  { term: "Stakeholder management", kind: "responsibility" },
+  { term: "Client-facing", kind: "responsibility" },
+  { term: "On-call", kind: "responsibility" },
+  { term: "Incident response", kind: "responsibility" },
+  { term: "Technical writing", kind: "responsibility" },
+  { term: "Rapid prototyping", kind: "responsibility" },
+  { term: "Production support", kind: "responsibility" },
+  { term: "Forward deployed", kind: "responsibility" },
+  { term: "A/B testing", kind: "responsibility" },
+  { term: "Product discovery", kind: "responsibility" },
+  { term: "UX research", kind: "responsibility" },
+  { term: "Design systems", kind: "responsibility" },
 ];
+
+function questionForGap(term: string, kind: GapKind): string {
+  switch (kind) {
+    case "skill":
+      return `Have you used ${term} in a professional or project context?`;
+    case "tool":
+      return `Have you worked with ${term} (deployed, configured, or shipped with it)?`;
+    case "responsibility":
+      return `Have you owned or regularly done work involving "${term}"?`;
+  }
+}
 
 function normalize(text: string): string {
   const cleaned = text
@@ -256,14 +321,44 @@ function selectProjectIds(data: ResumeData, accomplishmentIds: string[]): string
     .map((project) => project.id);
 }
 
-/** Finds job-relevant, résumé-adjacent terms that appear in the JD but aren't reflected in Tyler's data. */
-export function findGapTerms(jobText: string, matchedTerms: MatchedTerm[]): string[] {
+/**
+ * Finds job-relevant, résumé-adjacent terms that appear in the JD but aren't
+ * reflected in Tyler's data. Prefer {@link findGapCandidates} when you need
+ * kind/question metadata for an interview.
+ */
+export function findGapCandidates(
+  jobText: string,
+  matchedTerms: MatchedTerm[],
+): GapCandidate[] {
   const haystack = normalize(jobText);
   const matchedTermKeys = matchedTermKeySet(matchedTerms);
+  const seen = new Set<string>();
+  const candidates: GapCandidate[] = [];
 
-  return REFERENCE_VOCABULARY.filter(
-    (term) => containsTerm(haystack, term) && !matchedTermKeys.has(term.toLowerCase()),
-  );
+  for (const entry of REFERENCE_GAP_VOCABULARY) {
+    const key = entry.term.toLowerCase();
+    if (seen.has(key)) continue;
+    if (!containsTerm(haystack, entry.term)) continue;
+    if (matchedTermKeys.has(key)) continue;
+
+    // Treat Golang / Go as the same gap if either matches.
+    if (key === "golang" && (seen.has("go") || matchedTermKeys.has("go"))) continue;
+    if (key === "go" && (seen.has("golang") || matchedTermKeys.has("golang"))) continue;
+
+    seen.add(key);
+    candidates.push({
+      term: entry.term,
+      kind: entry.kind,
+      question: questionForGap(entry.term, entry.kind),
+    });
+  }
+
+  return candidates;
+}
+
+/** Convenience wrapper — term strings only (same set as {@link findGapCandidates}). */
+export function findGapTerms(jobText: string, matchedTerms: MatchedTerm[]): string[] {
+  return findGapCandidates(jobText, matchedTerms).map((gap) => gap.term);
 }
 
 export function buildTailoredVersion(
@@ -351,9 +446,18 @@ export function tailorResumeForJobDescription(
     matchedTerms,
     options,
   );
-  const gapTerms = findGapTerms(jobDescription.text, matchedTerms);
+  const gapCandidates = findGapCandidates(jobDescription.text, matchedTerms);
+  const gapTerms = gapCandidates.map((gap) => gap.term);
 
-  return { jobDescription, matchedTerms, ranking, target, version, gapTerms };
+  return {
+    jobDescription,
+    matchedTerms,
+    ranking,
+    target,
+    version,
+    gapTerms,
+    gapCandidates,
+  };
 }
 
 export function buildMatchReport(result: TailorResult): string {
@@ -406,9 +510,13 @@ export function buildMatchReport(result: TailorResult): string {
   if (gapTerms.length === 0) {
     lines.push("No obvious gaps detected against the reference vocabulary.");
   } else {
-    for (const term of gapTerms) {
-      lines.push(`- ${term}`);
+    for (const gap of result.gapCandidates) {
+      lines.push(`- **${gap.term}** (${gap.kind}) — ${gap.question}`);
     }
+    lines.push("");
+    lines.push(
+      "To capture missing evidence interactively: `npm run tailor -- <jd> --interview-gaps` (or `npm run interview-gaps -- <jd>`).",
+    );
   }
   lines.push("");
 

@@ -1,29 +1,29 @@
 # LLM Judge Evaluation Report
 
-**Source:** `resume_targets.yaml#frontend-engineer`
-**Job title:** Front-End Engineer
-**Résumé version:** `tyler-stahl-frontend-engineer`
+**Source:** `docs/job-descriptions/securaai-product-ux-engagement.md`
+**Job title:** SecuraAI — Product, UX & Customer Engagement
+**Résumé version:** `tailored-securaai-product-ux-engagement`
 **Round:** 1
 **Model:** `stub`
-**Generated:** 2026-07-20
+**Generated:** 2026-07-15
 
 ## Verdict
 
-- **Overall score:** 8/10
+- **Overall score:** 9/10
 - **Pass:** yes
 
 ## Dimension Scores
 
 | Dimension | Score | Critique |
 |-----------|-------|----------|
-| relevance | 8/10 | Selected accomplishments share themes/technologies with the JD (4 overlapping). |
+| relevance | 10/10 | Selected accomplishments share themes/technologies with the JD (14 overlapping). |
 | evidence_alignment | 8/10 | Stub judge only references provided raw_facts; no invented claims detected. |
 | coverage | 8/10 | No reference-vocabulary gaps flagged. |
 | clarity | 8/10 | Stub clarity check based on résumé section structure. |
 
 ## Application Fit
 
-*Front-End Engineer*
+*SecuraAI — Product, UX & Customer Engagement*
 
 Solid keyword-level fit for the role based on documented themes and skills.
 

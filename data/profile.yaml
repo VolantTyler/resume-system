@@ -9,6 +9,7 @@ target_roles:
   - agentic-ai-engineer
   - agentic-software-engineer
   - forward-deployed-engineer
+  - ai-security-product
   - full-stack-engineer
   - frontend-engineer
   - ui-engineer
@@ -22,6 +23,7 @@ summary_variants:
   forward-deployed-engineer: Forward-leaning applied AI engineer who prototypes and ships GenAI solutions with Gemini/Vertex, agentic workflows, and human-in-the-loop controls—translating ambiguous stakeholder needs into working software, from nonprofit product delivery to productionized agent systems.
   applied-ai-short: Full-stack engineer and applied AI builder specializing in multi-agent orchestration. Combining 7+ years scaling web platforms for millions with an MA in Counseling to bridge the human-to-AI gap.
   applied-ai-medium: Full-stack software engineer and applied AI developer who bridges complex autonomous architecture and the stakeholders who use it. Focused on HITL workflows, stable specs, and change management that turn volatile AI systems into reliable enterprise tools.
+  ai-security-product: Product-minded engineer who designs trustworthy AI experiences—HITL approvals, privacy-by-design PII handling, and accessible operator UX—pairing multi-agent production work with an MA in Counseling that treats safe human handoffs as a first-class product behavior. Comfortable translating stakeholder needs into demos and shipped interfaces for security and governance workflows.
   full-stack-engineer: Full-stack software engineer with experience shipping React/TypeScript and Laravel applications at nonprofit scale, plus hands-on applied AI systems work.
   frontend-engineer: Front-end software engineer focused on accessible UI implementation, practical testing, and maintainable web applications across React, TypeScript, and Laravel/Livewire stacks.
   ui-engineer: UI-focused engineer who translates product and stakeholder needs into polished, reliable browser experiences.
