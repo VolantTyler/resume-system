@@ -58,7 +58,7 @@ describe("resume context building", () => {
   it("includes application fit when configured on a resume version", () => {
     const data = loadResumeData();
     const version = data.resumeVersions.find(
-      (item) => item.id === "tyler-stahl-deloitte-fde-frontier-genai",
+      (item) => item.id === "tyler-stahl-google-fde-genai",
     );
 
     expect(version).toBeDefined();

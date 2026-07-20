@@ -2,6 +2,12 @@ import { z } from "zod";
 
 export const confidenceSchema = z.enum(["high", "medium", "low"]);
 
+export const educationEntrySchema = z.object({
+  institution: z.string().min(1),
+  credential: z.string().min(1),
+  note: z.string().optional(),
+});
+
 export const profileSchema = z.object({
   name: z.string().min(1),
   headline: z.string().min(1),
@@ -14,6 +20,7 @@ export const profileSchema = z.object({
     "At least one summary variant is required",
   ),
   target_roles: z.array(z.string().min(1)).min(1),
+  education: z.array(educationEntrySchema).optional(),
 });
 
 export const accomplishmentSchema = z.object({
@@ -129,6 +136,15 @@ export const resumeVersionSchema = z.object({
   project_ids: z.array(z.string()).optional(),
   skill_emphasis: z.array(z.string()).optional(),
   application_fit: applicationFitSchema.optional(),
+  /** Subfolder under output/resumes/ (e.g. deloitte, frontend). */
+  output_folder: z
+    .string()
+    .min(1)
+    .regex(
+      /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
+      "output_folder must be a lowercase slug (letters, numbers, hyphens)",
+    )
+    .optional(),
   output_slug: z.string().min(1),
   revision_history: z
     .array(

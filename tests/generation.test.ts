@@ -32,16 +32,16 @@ describe("generation", () => {
       expect(content.length).toBeGreaterThan(100);
     }
 
-    expect(existsSync(`${RESUMES_OUTPUT_DIR}/tyler-stahl-frontend-engineer.md`)).toBe(
+    expect(existsSync(`${RESUMES_OUTPUT_DIR}/frontend/tyler-stahl-frontend-engineer.md`)).toBe(
       true,
     );
-    expect(existsSync(`${RESUMES_OUTPUT_DIR}/tyler-stahl-frontend-engineer.html`)).toBe(
+    expect(existsSync(`${RESUMES_OUTPUT_DIR}/frontend/tyler-stahl-frontend-engineer.html`)).toBe(
       true,
     );
-    expect(existsSync(`${RESUMES_OUTPUT_DIR}/tyler-stahl-nonprofit-tech.md`)).toBe(
+    expect(existsSync(`${RESUMES_OUTPUT_DIR}/nonprofit/tyler-stahl-nonprofit-tech.md`)).toBe(
       true,
     );
-    expect(existsSync(`${RESUMES_OUTPUT_DIR}/tyler-stahl-nonprofit-tech.html`)).toBe(
+    expect(existsSync(`${RESUMES_OUTPUT_DIR}/nonprofit/tyler-stahl-nonprofit-tech.html`)).toBe(
       true,
     );
   });

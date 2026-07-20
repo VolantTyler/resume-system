@@ -32,6 +32,7 @@
     - agentos-chief-of-staff
     - cognitive-bridge
   skill_emphasis: []
+  output_folder: applied-ai
   output_slug: tyler-stahl-applied-ai
   revision_history:
     - date: 2026-07-08
@@ -74,6 +75,7 @@
     - cognitive-bridge
     - iblueprint-embeddings
   skill_emphasis: []
+  output_folder: deloitte
   output_slug: tyler-stahl-deloitte-agentic-ai
   revision_history:
     - date: 2026-07-09
@@ -113,6 +115,7 @@
     - nami-720-event-platform
     - cn-data-review-portal
   skill_emphasis: []
+  output_folder: deloitte
   output_slug: tyler-stahl-deloitte-agentic-se-ii
   revision_history:
     - date: 2026-07-09
@@ -128,17 +131,9 @@
     - charity-navigator-frontend
     - volant-founder-2024
   accomplishment_ids:
-    - insummery-adk-multi-agent-workflow
-    - insummery-hitl-confidence-gate
-    - insummery-eval-harness
-    - insummery-pii-masking
-    - insummery-firebase-production
-    - openclaw-multi-agent-orchestration
-    - agentic-hitl-security
-    - hybrid-inference-routing
-    - cognitive-bridge-firebase-productionization
-    - agentos-orchestration
-    - autonomous-etl-pipelines
+    - rnd-gcp-genai-delivery
+    - rnd-hitl-eval-practices
+    - rnd-agent-orchestration-delivery
     - cn-cmo-marketing-partnership
     - cn-cross-functional-delivery
     - cn-portal-scale
@@ -156,9 +151,10 @@
   application_fit:
     role_reference: Deloitte Forward Deployed Engineer, Frontier GenAI (req 350555)
     overall: >-
-      Strong fit for rapid GenAI prototyping on Google platforms, agentic workflows with human-in-the-loop
-      controls, and shipping production-quality software with stakeholders. Lighter on formal consulting
-      engagement leadership and multi-cloud enterprise data-engineering depth.
+      Strong fit for rapid GenAI prototyping (especially on Google platforms), agentic workflows with
+      enterprise-ready guardrails, and collaborating with stakeholders and executives to ship
+      production-quality software. Quick study on learning new technologies. Deep listening and
+      communication skills from years as a counselor.
     strengths:
       - criterion: Production GenAI and agentic workflow delivery on Google platforms
         resume_reference: >-
@@ -187,6 +183,7 @@
           Deepest production cloud work is on Google Cloud (Firebase, Vertex AI); high-traffic web and
           GraphQL platform engineering at Charity Navigator demonstrates transferable enterprise platform
           experience.
+  output_folder: deloitte
   output_slug: tyler-stahl-deloitte-fde-frontier-genai
   revision_history:
     - date: 2026-07-09
@@ -195,6 +192,93 @@
       note: Added application fit section for req 350555 review.
     - date: 2026-07-10
       note: Rewrote application fit copy for external (hiring-manager) audience.
+    - date: 2026-07-16
+      note: Trimmed Independent R&D to three cross-cutting bullets; projects carry project-level detail.
+- id: tyler-stahl-google-fde-genai
+  target_id: forward-deployed-engineer
+  label: Forward Deployed Engineer
+  summary_variant: forward-deployed-engineer
+  experience_ids:
+    - independent-rnd-applied-ai
+    - nami-front-end-developer
+    - charity-navigator-software-engineer
+    - charity-navigator-frontend
+    - volant-founder-2024
+  accomplishment_ids:
+    - insummery-adk-multi-agent-workflow
+    - insummery-hitl-confidence-gate
+    - insummery-eval-harness
+    - insummery-pii-masking
+    - insummery-firebase-production
+    - openclaw-multi-agent-orchestration
+    - agentic-hitl-security
+    - hybrid-inference-routing
+    - cognitive-bridge-firebase-productionization
+    - iblueprint-embedding-work
+    - agentos-orchestration
+    - autonomous-etl-pipelines
+    - cn-cmo-marketing-partnership
+    - cn-cross-functional-delivery
+    - cn-portal-scale
+    - cn-graphql-migration
+    - nami-cypress-testing-leadership
+    - volant-fullstack-client-delivery
+  project_ids:
+    - insummery-ai
+    - openclaw-multi-agent-ecosystem
+    - cognitive-bridge
+    - hybrid-inference-pilot
+    - iblueprint-embeddings
+    - agentos-chief-of-staff
+    - cn-data-review-portal
+  skill_emphasis: []
+  application_fit:
+    role_reference: >-
+      Google Cloud Forward Deployed Engineer III, Generative AI
+      (job 127965694384841414)
+    overall: >-
+      Strong fit for Google GenAI FDE builder work: Gemini/Vertex/ADK multi-agent
+      systems, prototype-to-production shipping on Firebase, and evaluation plus
+      observability. Partial fit on formal embedded enterprise-account FDE tenure,
+      production-scale RAG/vector platforms, and an AI/CS graduate degree.
+    strengths:
+      - criterion: Architect and ship GenAI systems on Google Cloud (Gemini, Vertex, ADK)
+        resume_reference: >-
+          Experience → Independent R&D; Selected Projects → InSummery.AI and Cognitive
+          Bridge (ADK multi-agent workflows, Vertex AI, Firebase production).
+      - criterion: Production-grade agentic workflows with evaluation and observability
+        resume_reference: >-
+          Selected Projects → InSummery.AI (eval harness with absolute quality gates;
+          Firebase deploy with OpenTelemetry instrumentation).
+      - criterion: Multi-agent systems using Google ADK and related agent patterns
+        resume_reference: >-
+          Selected Projects → InSummery.AI (ADK conditional multi-agent workflow) and
+          OpenClaw (orchestrated specialized agents with durable state and HITL gates).
+    weaknesses:
+      - criterion: Leading technical discovery inside enterprise customer accounts
+        indirect_address: >-
+          Discovery and stakeholder translation show up through Volant client
+          requirements-to-production delivery, Charity Navigator CMO and
+          cross-functional product/data partnership, and shipping the Kaggle + Google
+          Agents Intensive Consult-track capstone as working software.
+      - criterion: Production enterprise RAG and vector-database pipelines at scale
+        indirect_address: >-
+          Active embedding and vector-persistence evaluation for iBlueprint workflows;
+          production structured extraction into durable Firestore state (InSummery) and
+          autonomous Python ETL over unstructured market data (OpenClaw) cover adjacent
+          pipeline and retrieval-minded data work.
+      - criterion: Master’s or PhD in AI or Computer Science
+        indirect_address: >-
+          Formal degrees are MA Counseling (Seattle University) and BA Anthropology
+          (Dartmouth), plus a Udacity Front-End Web Developer Nanodegree via Grow with Google. The
+          counseling background is a direct transfer for composure and facilitation when
+          technical discovery turns ambiguous or high-stakes—not a substitute for the
+          preferred AI/CS graduate credential.
+  output_folder: google
+  output_slug: tyler-stahl-google-fde-genai
+  revision_history:
+    - date: 2026-07-13
+      note: Tailored for Google Cloud FDE III Generative AI (job 127965694384841414).
 - id: tyler-stahl-full-stack
   target_id: full-stack-engineer
   label: Full-Stack Engineer
@@ -228,6 +312,7 @@
     - cn-data-review-portal
     - cn-platform-rebuild
   skill_emphasis: []
+  output_folder: full-stack
   output_slug: tyler-stahl-full-stack
   revision_history:
     - date: 2026-07-08
@@ -264,6 +349,7 @@
     - cn-data-review-portal
     - cn-platform-rebuild
   skill_emphasis: []
+  output_folder: frontend
   output_slug: tyler-stahl-frontend-engineer
   revision_history:
     - date: 2026-06-29
@@ -299,6 +385,7 @@
     - cn-data-review-portal
     - cn-platform-rebuild
   skill_emphasis: []
+  output_folder: nonprofit
   output_slug: tyler-stahl-nonprofit-tech
   revision_history:
     - date: 2026-06-29
@@ -329,6 +416,7 @@
     - cognitive-bridge
     - cn-platform-rebuild
   skill_emphasis: []
+  output_folder: portfolio
   output_slug: tyler-stahl-portfolio
   revision_history:
     - date: 2026-07-09

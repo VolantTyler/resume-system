@@ -6,7 +6,7 @@ This file is for stable, hand-authored resume notes that may later be converted 
 
 - Location: Glen Rock, NJ
 - LinkedIn: https://linkedin.com/in/tyler-j-stahl
-- Education: Udacity Front-End Nanodegree (Google Grow with Google scholarship); MA Counseling, Seattle University; BA Anthropology, Dartmouth College
+- Education: Udacity Front-End Web Developer Nanodegree (Google Grow with Google scholarship); MA Counseling, Seattle University; BA Anthropology, Dartmouth College
 - Non-technical background noted in CV / Master Career Doc: Apple retail/B2B sales (5th Avenue); counseling roles at Wellspring Family Services and Samaritan Center of Puget Sound
 
 ## Mission statement variants

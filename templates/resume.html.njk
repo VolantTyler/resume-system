@@ -174,5 +174,17 @@
     {% endfor %}
   </section>
   {% endif %}
+
+  {% if profile.education.length %}
+  <section>
+    <h2>Education</h2>
+    {% for entry in profile.education %}
+    <article>
+      <h3>{{ entry.institution }} — {{ entry.credential }}</h3>
+      {% if entry.note %}<p class="meta">{{ entry.note }}</p>{% endif %}
+    </article>
+    {% endfor %}
+  </section>
+  {% endif %}
 </body>
 </html>

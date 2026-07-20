@@ -57,6 +57,15 @@
     }{% if not loop.last %},{% endif %}
 {% endfor %}
   ],
+  "education": [
+{% for entry in profile.education %}
+    {
+      "institution": {{ entry.institution | dump }},
+      "credential": {{ entry.credential | dump }},
+      "note": {{ (entry.note or null) | dump }}
+    }{% if not loop.last %},{% endif %}
+{% endfor %}
+  ],
   "generatedAt": {{ generated_at | dump }},
   "versionId": {{ version.id | dump }},
   "targetId": {{ version.target_id | dump }}

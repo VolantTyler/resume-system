@@ -9,9 +9,9 @@ import {
   type FinalizeWithJudgeOptions,
 } from "./lib/finalize-resume.js";
 import {
-  RESUMES_OUTPUT_DIR,
   TEMPLATE_FILES,
   TEMPLATES_DIR,
+  resumeVersionOutputDir,
 } from "./lib/paths.js";
 import { buildRoleBriefFromTarget, resolveTargetForVersion } from "./lib/role-brief.js";
 import type { ResumeData, ResumeVersion } from "./lib/schemas.js";
@@ -63,6 +63,7 @@ export type GenerateResumeOptions = Partial<
     | "applicationFitMode"
   >
 > & {
+  /** Override output directory (e.g. tailored/). When unset, uses output/resumes[/output_folder]. */
   outputDir?: string;
 };
 
@@ -74,7 +75,8 @@ export async function generateResumeOutputs(
   options: GenerateResumeOptions = {},
   data: ResumeData = assertValidResumeData(),
 ): Promise<FinalizeResult> {
-  const outputDir = options.outputDir ?? RESUMES_OUTPUT_DIR;
+  const outputDir =
+    options.outputDir ?? resumeVersionOutputDir(version.output_folder);
   const target = resolveTargetForVersion(data, version);
   const roleBrief = buildRoleBriefFromTarget(target, version);
 
