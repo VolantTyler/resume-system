@@ -85,9 +85,11 @@
       @page { size: letter; margin: 0.5in; }
       body { margin: 0; max-width: none; padding: 0; }
       a { color: var(--text); text-decoration: none; }
-      h2 { break-after: avoid; }
-      h3 { break-after: avoid; }
-      article { break-inside: avoid; }
+      /* Keep headings with following content, but allow long roles to
+         split across pages so page 1 is not left mostly blank. */
+      h2, h3 { break-after: avoid; page-break-after: avoid; }
+      h3 + .meta { break-after: avoid; page-break-after: avoid; }
+      article { break-inside: auto; page-break-inside: auto; }
     }
   </style>
 </head>

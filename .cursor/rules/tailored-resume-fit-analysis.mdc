@@ -13,3 +13,4 @@ When the user provides a job description for a customized resume:
    - **2–3 strongest JD criteria**, each with a quick reference to the resume section where that evidence appears (e.g. Experience → Independent R&D, Selected Projects → InSummery.AI).
    - **2–3 weakest JD criteria**, each with an explanation of how the candidate’s background addresses that need indirectly or non-obviously.
 4. Keep the analysis honest and evidence-based; note where confidence is limited by missing source data.
+5. When the match report (or tailor output) lists **possible gaps**, interview the user about each one before treating it as a real weakness. If they confirm experience ("yeah I did that"), add claim-safe evidence to `data/` (`confidence: medium`, source note pointing at the interview) — never invent metrics — then re-tailor. Prefer `npm run interview-gaps` / `--interview-gaps`, or ask the same questions in chat.

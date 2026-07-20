@@ -7,6 +7,7 @@ import { resumeVersionSchema } from "../scripts/lib/schemas.js";
 import {
   buildMatchReport,
   extractMatchedTerms,
+  findGapCandidates,
   findGapTerms,
   rankTargets,
   readJobDescriptionTitle,
@@ -143,6 +144,16 @@ describe("gap detection", () => {
     expect(gaps).toContain("WCAG");
   });
 
+  it("includes kind and interview question on gap candidates", () => {
+    const data = loadResumeData();
+    const matches = extractMatchedTerms(exampleJobText, data);
+    const candidates = findGapCandidates(exampleJobText, matches);
+    const wcag = candidates.find((gap) => gap.term === "WCAG");
+
+    expect(wcag?.kind).toBe("responsibility");
+    expect(wcag?.question).toMatch(/WCAG/);
+  });
+
   it("does not flag reference terms that aren't mentioned in the JD", () => {
     const data = loadResumeData();
     const matches = extractMatchedTerms(exampleJobText, data);
@@ -181,5 +192,6 @@ describe("match report", () => {
     expect(report).toContain("## Selected Accomplishments");
     expect(report).toContain("## Possible Gaps");
     expect(report).toContain("WCAG");
+    expect(report).toContain("--interview-gaps");
   });
 });

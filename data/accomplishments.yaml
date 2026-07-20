@@ -25,6 +25,8 @@
     - https://github.com/VolantTyler/InSummery-AI
     - https://www.youtube.com/watch?v=EeXLKUxHdsw
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - applied-ai-developer
     - full-stack-engineer
   confidence: high
@@ -51,6 +53,8 @@
     - Kaggle writeup Privacy by design section
     - InSummery README
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - applied-ai-developer
     - full-stack-engineer
   confidence: high
@@ -80,6 +84,8 @@
     - Kaggle writeup HITL section
     - Demo scenario for ambiguous camp input
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - applied-ai-developer
     - qa-minded-frontend
     - full-stack-engineer
@@ -110,6 +116,7 @@
     - Kaggle writeup gap analysis and UX sections
     - https://in-summery.web.app/
   target_roles:
+    - ai-security-product
     - applied-ai-developer
     - full-stack-engineer
     - frontend-engineer
@@ -139,6 +146,8 @@
     - Kaggle writeup Evaluation section
     - InSummery README Agent Evaluation Loop
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - applied-ai-developer
     - qa-minded-frontend
   confidence: high
@@ -172,6 +181,8 @@
     - https://github.com/VolantTyler/InSummery-AI
     - Kaggle writeup Tech stack / Try it sections
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - applied-ai-developer
     - full-stack-engineer
     - frontend-engineer
@@ -206,6 +217,8 @@
     - Technical Brief - Multi-Agent Market Intelligence Ecosystem
     - Master AI Career Document interview notes
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - applied-ai-developer
     - full-stack-engineer
   confidence: high
@@ -235,6 +248,7 @@
     - Technical Brief - Multi-Agent Market Intelligence Ecosystem
     - Master AI Career Document
   target_roles:
+    - forward-deployed-engineer
     - applied-ai-developer
   confidence: medium
   source_notes:
@@ -262,6 +276,7 @@
     - Applied AI Resume
     - Applied AI Project Portfolio
   target_roles:
+    - forward-deployed-engineer
     - applied-ai-developer
     - full-stack-engineer
   confidence: high
@@ -289,6 +304,8 @@
     - Applied AI Resume
     - Applied AI Project Portfolio governance notes
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - applied-ai-developer
   confidence: high
   source_notes:
@@ -314,6 +331,8 @@
   evidence:
     - Applied AI Project Portfolio AgentOS section
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - applied-ai-developer
   confidence: high
   source_notes:
@@ -338,6 +357,7 @@
   evidence:
     - Applied AI Project Portfolio Cognitive Bridge section
   target_roles:
+    - ai-security-product
     - applied-ai-developer
   confidence: high
   source_notes:
@@ -369,6 +389,8 @@
   evidence:
     - Applied AI Project Portfolio Cognitive Bridge architectural pivot section
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - applied-ai-developer
     - full-stack-engineer
   confidence: high
@@ -493,6 +515,7 @@
   evidence:
     - Applied AI Project Portfolio iBlueprint section
   target_roles:
+    - forward-deployed-engineer
     - applied-ai-developer
   confidence: medium
   source_notes:
@@ -521,6 +544,7 @@
     - Tyler Stahl - CV - 2026.pdf
     - Applied AI Resume.pdf
   target_roles:
+    - ai-security-product
     - frontend-engineer
     - ui-engineer
     - laravel-livewire-engineer
@@ -559,6 +583,8 @@
     - Applied AI Resume.pdf
     - Tyler Stahl - CV - 2026.pdf
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - frontend-engineer
     - ui-engineer
     - qa-minded-frontend
@@ -591,6 +617,7 @@
     - Tyler Stahl - CV - 2026.pdf
     - Applied AI Resume.pdf
   target_roles:
+    - ai-security-product
     - frontend-engineer
     - ui-engineer
     - qa-minded-frontend
@@ -659,6 +686,8 @@
     - Tyler Stahl - CV - 2026.pdf
     - Applied AI Resume.pdf
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - full-stack-engineer
     - frontend-engineer
     - nonprofit-tech
@@ -688,6 +717,7 @@
     - Tyler Stahl - CV - 2026.pdf
     - Applied AI Resume.pdf
   target_roles:
+    - forward-deployed-engineer
     - full-stack-engineer
     - frontend-engineer
     - nonprofit-tech
@@ -716,6 +746,8 @@
     - Tyler Stahl - CV - 2026.pdf
     - Applied AI Resume.pdf
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - full-stack-engineer
     - frontend-engineer
     - nonprofit-tech
@@ -748,6 +780,7 @@
     - Applied AI Resume.pdf
     - Master AI Career Document
   target_roles:
+    - ai-security-product
     - frontend-engineer
     - ui-engineer
     - full-stack-engineer
@@ -777,6 +810,8 @@
     - Master AI Career Document
     - Stripe / IBM tailored resumes
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - frontend-engineer
     - full-stack-engineer
     - nonprofit-tech
@@ -835,6 +870,8 @@
     - Tyler Stahl - CV - 2026.pdf
     - Applied AI Resume.pdf
   target_roles:
+    - ai-security-product
+    - forward-deployed-engineer
     - full-stack-engineer
     - frontend-engineer
   confidence: high

@@ -5,7 +5,7 @@
 **Résumé version:** `tyler-stahl-deloitte-fde-frontier-genai`
 **Round:** 1
 **Model:** `stub`
-**Generated:** 2026-07-16
+**Generated:** 2026-07-20
 
 ## Verdict
 
