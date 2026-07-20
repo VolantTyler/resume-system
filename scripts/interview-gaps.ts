@@ -2,7 +2,12 @@ import { existsSync, readFileSync } from "node:fs";
 import { isAbsolute, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { conductGapInterviewSession } from "./lib/gap-interview-session.js";
-import { extractMatchedTerms, findGapCandidates, readJobDescriptionTitle } from "./lib/tailor.js";
+import {
+  extractMatchedTerms,
+  findGapCandidates,
+  rankTargets,
+  readJobDescriptionTitle,
+} from "./lib/tailor.js";
 import type { JobDescription } from "./lib/tailor.js";
 import { assertValidResumeData } from "./lib/validate.js";
 
@@ -24,7 +29,8 @@ function parseArgs(argv: string[]): CliArgs {
         "writes claim-safe accomplishments/skills (confidence: medium) plus an intake note.",
         "",
         "Options:",
-        "  --target <target-id>   Target roles to attach on new accomplishments",
+        "  --target <target-id>   Target role to attach on new accomplishments",
+        "                         (defaults to the JD's recommended target, like tailor)",
         "  --yes                  Skip the initial proceed confirmation",
       ].join("\n"),
     );
@@ -77,22 +83,29 @@ async function main(): Promise<void> {
     return;
   }
 
-  const targetRoles = args.targetId
-    ? [args.targetId]
-    : data.profile.target_roles.filter((id) =>
-        data.resumeTargets.some((target) => target.id === id),
-      );
+  // Attach confirmed gaps to a single target: the explicit --target, or the
+  // JD's recommended target (same ranking tailor uses). Broadening to every
+  // profile role would make one confirmation surface across unrelated résumés.
+  const recommendedTarget = rankTargets(data, matchedTerms)[0]?.target;
+  const targetId = args.targetId ?? recommendedTarget?.id;
+  if (!targetId) {
+    console.error(
+      "✗ No résumé targets are defined in data/resume_targets.yaml — add one or pass --target.",
+    );
+    process.exit(1);
+    return;
+  }
+  if (!args.targetId) {
+    console.log(
+      `  Recommended target: ${recommendedTarget?.label ?? targetId} (${targetId}) — override with --target <target-id>.`,
+    );
+  }
 
   const session = await conductGapInterviewSession({
     data,
     jobDescription,
     gaps,
-    targetRoles:
-      targetRoles.length > 0
-        ? targetRoles
-        : data.resumeTargets[0]
-          ? [data.resumeTargets[0].id]
-          : ["full-stack-engineer"],
+    targetRoles: [targetId],
     force: args.yes,
     skip: false,
   });

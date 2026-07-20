@@ -1,4 +1,4 @@
-import { mkdirSync } from "node:fs";
+import { existsSync, mkdirSync } from "node:fs";
 import { basename, join } from "node:path";
 import {
   createReadlineInterviewIO,
@@ -28,14 +28,28 @@ export interface GapInterviewSessionResult {
   data: ResumeData;
 }
 
-function interviewNoteFilename(jobDescriptionPath: string): string {
+/**
+ * Picks a transcript filename that does not collide with an existing intake
+ * note, so re-interviewing the same JD on the same date never overwrites the
+ * evidence trail cited by previously persisted accomplishments.
+ */
+export function interviewNoteFilename(
+  jobDescriptionPath: string,
+  noteExists: (filename: string) => boolean,
+): string {
   const date = new Date().toISOString().slice(0, 10);
   const slug = basename(jobDescriptionPath, ".md")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .slice(0, 40);
-  return `${date}-gap-interview-${slug || "role"}.md`;
+  const base = `${date}-gap-interview-${slug || "role"}`;
+
+  let candidate = `${base}.md`;
+  for (let n = 2; noteExists(candidate); n += 1) {
+    candidate = `${base}-${n}.md`;
+  }
+  return candidate;
 }
 
 /**
@@ -108,8 +122,11 @@ export async function conductGapInterviewSession(opts: {
       io,
     );
 
-    const noteFilename = interviewNoteFilename(opts.jobDescription.sourcePath);
     mkdirSync(INTAKE_DIR, { recursive: true });
+    const noteFilename = interviewNoteFilename(
+      opts.jobDescription.sourcePath,
+      (filename) => existsSync(join(INTAKE_DIR, filename)),
+    );
     const absoluteNotePath = join(INTAKE_DIR, noteFilename);
     const relativeNotePath = `docs/intake/${noteFilename}`;
 

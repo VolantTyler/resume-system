@@ -8,11 +8,13 @@ import {
   shouldOfferInterview,
   type GapInterviewIO,
 } from "../scripts/lib/gap-interview.js";
+import { interviewNoteFilename } from "../scripts/lib/gap-interview-session.js";
 import { persistConfirmedGaps } from "../scripts/lib/persist-gap-evidence.js";
 import { loadResumeData } from "../scripts/lib/load-data.js";
 import {
   findGapCandidates,
   type GapCandidate,
+  type MatchedTerm,
 } from "../scripts/lib/tailor.js";
 import type { Accomplishment, ResumeData } from "../scripts/lib/schemas.js";
 
@@ -53,6 +55,30 @@ describe("shouldOfferInterview", () => {
     expect(
       shouldOfferInterview({ gapCount: 2, force: false, skip: false, isTty: false }),
     ).toBe("skip");
+  });
+});
+
+describe("interviewNoteFilename", () => {
+  const date = new Date().toISOString().slice(0, 10);
+
+  it("slugifies the job description filename", () => {
+    const filename = interviewNoteFilename(
+      "docs/job-descriptions/Example Role.md",
+      () => false,
+    );
+    expect(filename).toBe(`${date}-gap-interview-example-role.md`);
+  });
+
+  it("appends a counter instead of reusing an existing note path", () => {
+    const existing = new Set([
+      `${date}-gap-interview-example-role.md`,
+      `${date}-gap-interview-example-role-2.md`,
+    ]);
+    const filename = interviewNoteFilename(
+      "docs/job-descriptions/example-role.md",
+      (candidate) => existing.has(candidate),
+    );
+    expect(filename).toBe(`${date}-gap-interview-example-role-3.md`);
   });
 });
 
@@ -117,7 +143,7 @@ describe("findGapCandidates", () => {
     const jobText =
       "We need someone with Go and Kubernetes experience who can lead customer discovery.";
     // Ensure these are not already matched from data.
-    const matches = [];
+    const matches: MatchedTerm[] = [];
     const gaps = findGapCandidates(jobText, matches);
 
     expect(gaps.map((g) => g.term)).toEqual(
