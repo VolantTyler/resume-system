@@ -1,3 +1,108 @@
+- id: graic-crewai-supervisor-routing
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: applied-ai
+  themes:
+    - CrewAI
+    - supervisor routing
+    - multi-agent orchestration
+    - dynamic persona selection
+    - Google Gemini
+  technologies:
+    - CrewAI
+    - Google Gemini
+    - Python
+    - Pydantic
+  raw_fact: Built Glen Rock AI Guild's Supervisor layer on CrewAI that classifies Slack/API prompts into simple (direct Supervisor answer) vs detailed (dynamic crew), selecting only needed specialists—Engineer, Data Analyst, Insurance SME, Web Designer, Writer—and running Gemini with automatic failover across flash/lite model candidates on 429/404 errors.
+  context: Augment demo backend for Glen Rock AI Club community mentoring and domain synthesis without spinning every agent on every mention.
+  resume_bullets:
+    standard: Built a CrewAI Supervisor that routes simple Slack prompts to a direct answer and detailed requests to a dynamically selected specialist crew.
+    applied-ai: Designed intent-based CrewAI routing with dynamic Engineer/Analyst/Insurance SME/Writer selection and Gemini model failover for a community AI Guild backend.
+    agentic: Implemented Supervisor intent classification (`simple` vs `detailed`) that assembles only the specialist agents required for each Glen Rock AI Guild request.
+    full-stack: Shipped a Gemini-backed CrewAI orchestration layer with structured Supervisor decisions and sequential specialist task execution.
+  evidence:
+    - https://github.com/VolantTyler/graic-augment-demo-antigravity
+    - User-provided Glen Rock AI Guild Backend README (2026-07-31)
+    - Local repo supervisor.py, crew.py, agents.py (gemini-3.6-flash + failover patch)
+  target_roles:
+    - applied-ai-developer
+    - agentic-ai-engineer
+    - agentic-software-engineer
+    - forward-deployed-engineer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - Derived from user-pasted README and confirmed against graic-augment-demo-antigravity source (2026-07-31). No usage or latency metrics claimed.
+- id: graic-slack-fastapi-backend
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: applied-ai
+  themes:
+    - Slack Socket Mode
+    - FastAPI
+    - real-time agent interface
+    - threaded delivery
+  technologies:
+    - FastAPI
+    - Slack Bolt
+    - Socket Mode
+    - Python
+    - uvicorn
+  raw_fact: Built the Glen Rock AI Guild FastAPI + Slack Bolt Socket Mode service that acknowledges @mentions immediately, runs CrewAI work on a background thread pool, posts Guild reports into Slack threads, and exposes /, /health, and /agents plus a Slack /agents-list roster command—without requiring a public webhook URL or ngrok.
+  context: Club-facing chat interface for the multi-agent backend using outbound WebSocket Socket Mode.
+  resume_bullets:
+    standard: Shipped a FastAPI + Slack Socket Mode backend that turns @mentions into threaded multi-agent Guild reports without a public webhook.
+    applied-ai: Wired Slack Bolt Socket Mode and FastAPI health/roster endpoints as the real-time interface for a CrewAI specialist Guild.
+    full-stack: Built a mention-driven Slack service with immediate ack, background crew execution, threaded replies, and HTTP health/agent roster APIs.
+    agentic: Exposed a Slack-first agent runtime with Socket Mode, ephemeral agent roster cards, and non-blocking multi-agent execution.
+  evidence:
+    - https://github.com/VolantTyler/graic-augment-demo-antigravity
+    - User-provided Glen Rock AI Guild Backend README Slack/FastAPI sections (2026-07-31)
+    - Local repo main.py (SocketModeHandler, app_mention, ThreadPoolExecutor)
+  target_roles:
+    - applied-ai-developer
+    - agentic-ai-engineer
+    - agentic-software-engineer
+    - forward-deployed-engineer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - Confirmed Socket Mode, FastAPI routes, and threaded delivery from README + main.py. No production uptime or user-count metrics claimed.
+- id: graic-gdocs-drive-integration
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: applied-ai
+  themes:
+    - Google Docs API
+    - Google Drive
+    - OAuth
+    - mock fallback
+  technologies:
+    - Google Docs API
+    - Google Drive API
+    - OAuth
+    - Python
+  raw_fact: Implemented Google Docs/Drive create-read-sync for Glen Rock AI Guild agent outputs, supporting personal Gmail OAuth tokens and Workspace service accounts, with graceful mock fallback when credentials are missing so CrewAI workflows continue instead of failing.
+  context: Artifact persistence for Guild reports and newsletter-style outputs without hard-failing local demos.
+  resume_bullets:
+    standard: Added Google Docs/Drive sync for Guild agent outputs with OAuth or service-account auth and a mock fallback when credentials are absent.
+    applied-ai: Built resilient Docs/Drive persistence for multi-agent reports so missing Google credentials degrade to mock mode instead of breaking the crew.
+    full-stack: Integrated Google Docs and Drive APIs with personal OAuth and service-account paths plus safe mock mode for demo environments.
+  evidence:
+    - https://github.com/VolantTyler/graic-augment-demo-antigravity
+    - User-provided README Google Docs & Drive Integration section (2026-07-31)
+    - Local repo gdocs_service.py (OAuth token, service account, mock fallback)
+  target_roles:
+    - applied-ai-developer
+    - agentic-ai-engineer
+    - forward-deployed-engineer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - Auth modes and mock fallback confirmed in gdocs_service.py and README. No claim of production Drive quota or document volume.
 - id: knowledge-vault-mcp-server
   company: Independent R&D
   role: Applied AI Developer

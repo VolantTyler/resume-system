@@ -18,6 +18,8 @@ Software engineer who ships production web platforms and uses AI-assisted delive
 *2026-02 – Present* · NJ
 Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
+- Shipped a Gemini-backed CrewAI orchestration layer with structured Supervisor decisions and sequential specialist task execution.
+- Built a mention-driven Slack service with immediate ack, background crew execution, threaded replies, and HTTP health/agent roster APIs.
 - Shipped an agentic scheduling product spanning ADK workflow, structured extraction, and a parent-facing schedule matrix.
 - Built a review-and-resume HITL checkpoint so uncertain agent output is validated before it updates production schedule state.
 - Added automated quality gates and regression baselines so agent workflow changes are validated before release.
@@ -27,7 +29,7 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 - Added delivery controls around agent actions—HITL approvals, gateway whitelisting, and secrets management—before commits land.
 - Used the Cursor Agent SDK to orchestrate evaluation and testing subagents with mandatory human review before high-stakes handoffs.
 - Shipped a secured serverless Cognitive Bridge backend with Firebase Auth, Firestore state, and type-safe Gemini JSON responses driving UI and DB updates.
-**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
+**Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
 
 ### Front-End Developer — NAMI
 
@@ -70,6 +72,16 @@ Complex long-running workflows need reliable orchestration with mandatory human 
 Built a multi-agent orchestrator with the Cursor Agent SDK, modular subagents, and HITL handoffs for evaluation and testing stages.
 
 **Technologies:** Cursor Agent SDK, Python
+
+### Glen Rock AI Guild — Independent R&D
+
+*2026*
+
+A community AI club needed a mention-driven Slack assistant that could answer simple questions immediately while spinning up the right domain specialists for deeper technical, data, insurance, and writing work—without requiring a public webhook URL.
+
+Built a CrewAI multi-agent backend with a Supervisor that classifies Slack mentions into simple vs detailed intents, dynamically selects Engineer / Data Analyst / Insurance SME / Web Designer / Writer agents, runs on Google Gemini with model failover, and exposes FastAPI health/roster endpoints plus Google Docs/Drive sync with mock fallback.
+
+**Technologies:** CrewAI, Google Gemini, FastAPI, Slack Bolt, Socket Mode, Python, Pydantic, Google Docs API, Google Drive API, AgentOps
 
 ### InSummery.AI — Independent R&D
 
@@ -124,9 +136,9 @@ Engineered portal features and helped transition legacy data flows into GraphQL 
 
 ## Skills
 
-**Applied AI:** Multi-agent orchestration, Human-in-the-loop controls, Agent evaluation, Firebase, Vertex AI, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
+**Applied AI:** Multi-agent orchestration, CrewAI, Human-in-the-loop controls, Agent evaluation, Firebase, Vertex AI, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
 **Front-End:** JavaScript, React, TypeScript, Next.js
-**Back-End:** Python, Laravel, GraphQL, SQLite, Clerk OAuth
+**Back-End:** Python, FastAPI, Slack Bolt, Laravel, GraphQL, SQLite, Clerk OAuth
 **Testing:** Cypress
 **Collaboration:** Release support, Stakeholder collaboration, Deep listening
 

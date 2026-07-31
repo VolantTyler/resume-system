@@ -1,3 +1,30 @@
+- id: glen-rock-ai-guild
+  name: Glen Rock AI Guild
+  organization: Independent R&D
+  timeframe: "2026"
+  problem: A community AI club needed a mention-driven Slack assistant that could answer simple questions immediately while spinning up the right domain specialists for deeper technical, data, insurance, and writing work—without requiring a public webhook URL.
+  solution: Built a CrewAI multi-agent backend with a Supervisor that classifies Slack mentions into simple vs detailed intents, dynamically selects Engineer / Data Analyst / Insurance SME / Web Designer / Writer agents, runs on Google Gemini with model failover, and exposes FastAPI health/roster endpoints plus Google Docs/Drive sync with mock fallback.
+  technologies:
+    - CrewAI
+    - Google Gemini
+    - FastAPI
+    - Slack Bolt
+    - Socket Mode
+    - Python
+    - Pydantic
+    - Google Docs API
+    - Google Drive API
+    - AgentOps
+  outcomes:
+    - Intent-based Supervisor routing with fast-path simple answers and dynamic specialist crew assembly for complex prompts.
+    - Slack Socket Mode integration (no public webhook/ngrok) with threaded Guild reports and `/agents-list` roster card.
+    - Google Docs/Drive create-and-sync path with personal OAuth or service-account credentials and mock fallback when unset.
+  related_accomplishment_ids:
+    - graic-crewai-supervisor-routing
+    - graic-slack-fastapi-backend
+    - graic-gdocs-drive-integration
+  portfolio_visible: true
+  resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
 - id: development-knowledge-vault
   name: Development Knowledge Vault
   organization: Independent R&D

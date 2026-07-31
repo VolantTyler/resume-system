@@ -4,12 +4,26 @@ categories:
       - name: Multi-agent orchestration
         aliases:
           - OpenClaw
+          - CrewAI
           - Agent workflows
           - Google ADK
         evidence_ids:
+          - graic-crewai-supervisor-routing
           - insummery-adk-multi-agent-workflow
           - openclaw-multi-agent-orchestration
           - agentos-orchestration
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+      - name: CrewAI
+        aliases:
+          - Crew AI
+          - crewai
+        evidence_ids:
+          - graic-crewai-supervisor-routing
         proficiency: high
         target_roles:
           - applied-ai-developer
@@ -22,6 +36,7 @@ categories:
           - Gemma
         evidence_ids:
           - hybrid-inference-routing
+          - graic-crewai-supervisor-routing
           - insummery-adk-multi-agent-workflow
         proficiency: high
         target_roles:
@@ -216,6 +231,8 @@ categories:
     skills:
       - name: Python
         evidence_ids:
+          - graic-crewai-supervisor-routing
+          - graic-slack-fastapi-backend
           - insummery-adk-multi-agent-workflow
           - autonomous-etl-pipelines
           - openclaw-multi-agent-orchestration
@@ -225,6 +242,42 @@ categories:
           - agentic-ai-engineer
           - agentic-software-engineer
           - forward-deployed-engineer
+      - name: FastAPI
+        aliases:
+          - uvicorn
+        evidence_ids:
+          - graic-slack-fastapi-backend
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
+      - name: Slack Bolt
+        aliases:
+          - Slack Socket Mode
+          - Slack API
+        evidence_ids:
+          - graic-slack-fastapi-backend
+        proficiency: medium
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
+      - name: Google Docs / Drive APIs
+        aliases:
+          - Google Docs API
+          - Google Drive API
+        evidence_ids:
+          - graic-gdocs-drive-integration
+        proficiency: medium
+        target_roles:
+          - applied-ai-developer
+          - forward-deployed-engineer
+          - full-stack-engineer
       - name: Laravel
         evidence_ids:
           - nami-cypress-testing-leadership

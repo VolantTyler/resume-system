@@ -18,6 +18,9 @@ Full-stack software engineer with experience shipping React/TypeScript and Larav
 *2026-02 – Present* · NJ
 Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
+- Shipped a Gemini-backed CrewAI orchestration layer with structured Supervisor decisions and sequential specialist task execution.
+- Built a mention-driven Slack service with immediate ack, background crew execution, threaded replies, and HTTP health/agent roster APIs.
+- Integrated Google Docs and Drive APIs with personal OAuth and service-account paths plus safe mock mode for demo environments.
 - Deployed a Next.js MCP endpoint on Vercel that loads markdown patterns at request time for cross-client agent tooling.
 - Wired Clerk OAuth and optional MCP_SECRET_KEY Bearer acceptance into a Next.js MCP route with well-known authorization-server and protected-resource endpoints left public.
 - Shipped an agentic scheduling product spanning ADK workflow, structured extraction, and a parent-facing schedule matrix.
@@ -26,7 +29,7 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 - Shipped a distributed multi-agent research system with Python workers, SQLite persistence, and production-minded state management.
 - Implemented Python data pipelines with durable SQLite state for agent-driven research and reporting.
 - Shipped a secured serverless Cognitive Bridge backend with Firebase Auth, Firestore state, and type-safe Gemini JSON responses driving UI and DB updates.
-**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
+**Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
 
 ### Front-End Developer — NAMI
 
@@ -66,6 +69,16 @@ Resumed sole-proprietorship web design and development work for B2B clients, cov
 
 
 ## Selected Projects
+
+### Glen Rock AI Guild — Independent R&D
+
+*2026*
+
+A community AI club needed a mention-driven Slack assistant that could answer simple questions immediately while spinning up the right domain specialists for deeper technical, data, insurance, and writing work—without requiring a public webhook URL.
+
+Built a CrewAI multi-agent backend with a Supervisor that classifies Slack mentions into simple vs detailed intents, dynamically selects Engineer / Data Analyst / Insurance SME / Web Designer / Writer agents, runs on Google Gemini with model failover, and exposes FastAPI health/roster endpoints plus Google Docs/Drive sync with mock fallback.
+
+**Technologies:** CrewAI, Google Gemini, FastAPI, Slack Bolt, Socket Mode, Python, Pydantic, Google Docs API, Google Drive API, AgentOps
 
 ### Development Knowledge Vault — Independent R&D
 
@@ -142,7 +155,7 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 
 **Applied AI:** PII masking, Firebase, Model Context Protocol
 **Front-End:** JavaScript, React, TypeScript, Next.js
-**Back-End:** Laravel, GraphQL, SQLite, Clerk OAuth, PHP
+**Back-End:** FastAPI, Slack Bolt, Google Docs / Drive APIs, Laravel, GraphQL, SQLite, Clerk OAuth, PHP
 **Testing:** Cypress
 **Collaboration:** Stakeholder collaboration, Deep listening
 

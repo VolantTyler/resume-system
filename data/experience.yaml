@@ -9,13 +9,17 @@
     - Python
     - Google ADK 2.0
     - OpenClaw
+    - CrewAI
     - Google Gemini
     - Gemma
+    - FastAPI
+    - Slack Bolt
     - Firebase
     - SQLite
     - Cursor Agent SDK
     - Weights & Biases Weave
   major_projects:
+    - Glen Rock AI Guild (CrewAI / Slack augment demo)
     - Development Knowledge Vault (MCP pattern server)
     - InSummery.AI family schedule concierge
     - OpenClaw multi-agent market intelligence ecosystem
@@ -26,6 +30,9 @@
     - rnd-gcp-genai-delivery
     - rnd-hitl-eval-practices
     - rnd-agent-orchestration-delivery
+    - graic-crewai-supervisor-routing
+    - graic-slack-fastapi-backend
+    - graic-gdocs-drive-integration
     - knowledge-vault-mcp-server
     - knowledge-vault-dual-auth
     - insummery-adk-multi-agent-workflow
@@ -43,6 +50,7 @@
     - cognitive-bridge-firebase-productionization
     - iblueprint-embedding-work
   project_ids:
+    - glen-rock-ai-guild
     - development-knowledge-vault
     - insummery-ai
     - openclaw-multi-agent-ecosystem
