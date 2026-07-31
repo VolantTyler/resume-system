@@ -144,7 +144,8 @@ This does not invent anything — it deterministically matches the job descripti
 - Recommend the best-fitting `resume_target` (scored by matched emphasis, linked accomplishments, and linked skills).
 - Rank that target's linked accomplishments by relevance and include the most relevant ones first.
 - Emphasize skills that were actually mentioned in the job description.
-- Flag "possible gaps" — reference terms (e.g. `React`, `WCAG`, `AWS`) mentioned in the JD but not currently reflected anywhere in the résumé data. This is informational only; it never claims Tyler lacks a skill, only that it isn't documented yet.
+- Flag "possible gaps" — reference terms (e.g. `React`, `WCAG`, `AWS`, `Go`, `customer discovery`) mentioned in the JD but not currently reflected anywhere in the résumé data. This is informational only; it never claims Tyler lacks a skill, only that it isn't documented yet.
+- **Optionally interview about gaps** — on a TTY, tailor offers an interactive Q&A; confirmed answers are written into `data/` (`confidence: medium`) and an intake transcript. Force with `--interview-gaps`, skip with `--skip-interview`, or run `npm run interview-gaps -- <jd>` alone.
 - **Finalize through the same judge loop as `npm run generate`** (unless `--skip-judge`), so critiques can reorder/emphasize before the tailored files are saved.
 
 Output goes to `output/resumes/tailored/`:
@@ -152,7 +153,7 @@ Output goes to `output/resumes/tailored/`:
 - `tailored-<slug>.md` / `.html` — the tailored résumé, rendered with the same templates as every other résumé version.
 - `tailored-<slug>-match-report.md` — the target ranking, matched terms, selected accomplishments, and possible gaps.
 
-Optional flags: `--target <target-id>` to override the recommended target, `--label "Custom Label"`, and `--slug custom-output-slug`.
+Optional flags: `--target <target-id>` to override the recommended target, `--label "Custom Label"`, `--slug custom-output-slug`, `--interview-gaps`, `--skip-interview`.
 
 ### 6. Judge and revise (built into generate + tailor)
 

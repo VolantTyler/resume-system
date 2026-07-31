@@ -85,9 +85,26 @@ When Tyler adds a note to `docs/intake/`:
 
 ```bash
 npm run tailor -- docs/job-descriptions/<file>.md
+npm run tailor -- docs/job-descriptions/<file>.md --interview-gaps
+npm run interview-gaps -- docs/job-descriptions/<file>.md
 ```
 
 This is a deterministic matching step (no claims are invented): it matches the job description text against terms already present in `data/` (skill names/aliases, accomplishment themes/technologies, target emphasis) to recommend a `resume_target`, rank that target's accomplishments by relevance, emphasize mentioned skills, and flag "possible gaps". It then **finalizes through the shared judge loop** (same as `npm run generate`) unless `--skip-judge` is passed. Output goes to `output/resumes/tailored/` — a `.md`/`.html` résumé plus a `-match-report.md` and judge artifacts. Use `--target <target-id>` to override the recommended target.
+
+#### Gap interview (capture missing evidence)
+
+Possible gaps mean a reference term appears in the JD but is **not documented** in `data/` — not that Tyler lacks it.
+
+When gaps are found:
+
+1. On an interactive TTY, `npm run tailor` offers to interview about them (use `--interview-gaps` to force, `--skip-interview` to never ask).
+2. Or run `npm run interview-gaps -- <jd>` on its own.
+3. For each gap: confirm (y), deny (n), or skip (s). On confirm, provide a one-sentence raw fact (no invented metrics) and optionally link an experience id.
+4. Confirmed answers are written claim-safely into `data/accomplishments.yaml`, `data/skills.yaml`, and optionally `data/experience.yaml` with `confidence: medium` and source notes pointing at the interview transcript.
+5. An intake note is written under `docs/intake/YYYY-MM-DD-gap-interview-*.md` and logged in `docs/intake-log.md`.
+6. Tailor re-matches after confirmations so new evidence can affect ranking and coverage.
+
+**Agent workflow:** If you are interviewing in chat (not the CLI), ask the same questions for each gap in the match report, then update YAML conservatively from the user's answers and log an intake note — never invent metrics or employers.
 
 ### Judge finalize loop (built into generate + tailor)
 
@@ -137,7 +154,7 @@ Bullet selection uses the target's `bullet_variant` key on accomplishments when 
 
 ## Cursor Cloud specific instructions
 
-- This repo is a CLI generation pipeline, not a long-running service — there is no dev server, port, or web app to start. "Running the app" means invoking the npm scripts documented in the README (`validate`, `generate`, `build`, `test`, `tailor`, `judge`, `intake:*`).
+- This repo is a CLI generation pipeline, not a long-running service — there is no dev server, port, or web app to start. "Running the app" means invoking the npm scripts documented in the README (`validate`, `generate`, `build`, `test`, `tailor`, `interview-gaps`, `judge`, `intake:*`).
 - There is no lint script/config in this repo; do not look for `npm run lint`. Correctness is enforced by `npm run validate` (Zod schema checks) plus `npm test` (Vitest).
 - PDF export and the `generate`/`build` PDF step, plus the "PDF export" Vitest cases, need a local Chrome/Chromium. It is preinstalled at `/usr/bin/google-chrome` and auto-detected by `puppeteer-core`, so PDFs generate without extra config. If Chrome were missing, the PDF step is skipped with a warning (non-fatal) but the PDF tests would fail; point `PUPPETEER_EXECUTABLE_PATH` at a browser binary in that case.
 - Generated files land in `output/` (gitignored). Regenerate anytime with `npm run build`.

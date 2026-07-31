@@ -62,6 +62,22 @@
     - unsupported profitability claims
     - older non-technical career history
     - speculative model fine-tuning claims
+- id: ai-security-product
+  label: AI Security Product & UX
+  summary_variant: ai-security-product
+  bullet_variant: applied-ai
+  emphasis:
+    - human-in-the-loop controls
+    - PII-aware data handling
+    - agent evaluation
+    - accessibility
+    - UI implementation
+    - client and stakeholder engagement
+    - multi-agent orchestration
+  deprioritize:
+    - unsupported profitability claims
+    - older non-technical career history
+    - speculative model fine-tuning claims
 - id: full-stack-engineer
   label: Full-Stack Engineer
   summary_variant: full-stack-engineer
