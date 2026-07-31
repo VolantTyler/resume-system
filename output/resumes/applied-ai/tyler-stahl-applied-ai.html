@@ -111,6 +111,8 @@ Glen Rock, NJ · <a href="https://tylerstahl.dev">Portfolio</a> · <a href="http
       <h3>Applied AI Developer — Independent R&D</h3>
       <p class="meta">2026-02 – Present · NJ</p>
 <p>Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.</p>      <ul>
+        <li>Shipped an MCP tool server that lets agents list and fetch distilled patterns (auth, deploy, evals, PII, orchestration) instead of rediscovering them per project.</li>
+        <li>Made MCP auth client-config-driven (OAuth for cloud agents/Spark; Bearer for local/curl) with public OAuth discovery metadata for protected-resource challenges.</li>
         <li>Designed a Google ADK 2.0 conditional workflow with triager and interpreter agents for registration, disruption, and schedule analysis in a Kaggle Agents Intensive capstone.</li>
         <li>Designed privacy-by-design masking so Gemini sees placeholders for household PII while retaining public schedule context needed for accurate extraction.</li>
         <li>Routed low-confidence ADK extractions through a HITL node with persisted workflow state instead of silently writing uncertain schedule data.</li>
@@ -157,6 +159,11 @@ Glen Rock, NJ · <a href="https://tylerstahl.dev">Portfolio</a> · <a href="http
   <section>
     <h2>Selected Projects</h2>
     <article>
+      <h3>Development Knowledge Vault — Independent R&D</h3>
+      <p class="meta">2026</p>
+<p>AI coding agents on new projects rediscover the same deploy, auth, eval, and security practices instead of reusing distilled patterns from prior agent and product repos.</p><p>Built a Vercel-hosted MCP server that exposes markdown engineering patterns as tools (`list_patterns`, `get_pattern`), with dual auth on one URL—Clerk OAuth for cloud clients and an optional shared-secret Bearer for local/curl—so Cursor, Gemini Spark, and other MCP clients can pull operational preferences and prior solutions at request time.</p>      <p class="tech"><strong>Technologies:</strong> Next.js, Vercel, MCP, Clerk, OAuth, TypeScript, Markdown</p>
+    </article>
+    <article>
       <h3>InSummery.AI — Independent R&D</h3>
       <p class="meta">2026</p>
 <p>Family scheduling information lives in messy emails, texts, and PDFs; calendar apps assume tidy manual entry and do not detect multi-child childcare gaps or real-time disruptions with a human still in control.</p><p>Built a Google ADK 2.0 multi-agent concierge that masks PII, triages and extracts schedule data, pauses below 80% confidence for HITL clarification, maintains a multi-child schedule matrix with absolute/relative gap analysis, and syncs disruptions to Google Calendar—shipped as a Kaggle + Google 5-Day AI Agents Intensive Consult-track capstone.</p>      <p class="tech"><strong>Technologies:</strong> Google ADK 2.0, Python, Pydantic, Google Gemini, Vertex AI, Gemma, Ollama, Firebase, Firebase Cloud Functions, Cloud Firestore, Firebase Authentication, React, Vite, Google Calendar API, OpenTelemetry</p>
@@ -185,8 +192,9 @@ Glen Rock, NJ · <a href="https://tylerstahl.dev">Portfolio</a> · <a href="http
 
   <section>
     <h2>Skills</h2>
-    <p class="skills-line"><strong>Applied AI:</strong> Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK, Weights & Biases Weave</p>
-    <p class="skills-line"><strong>Back-End:</strong> Python, SQLite</p>
+    <p class="skills-line"><strong>Applied AI:</strong> Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave</p>
+    <p class="skills-line"><strong>Front-End:</strong> Next.js</p>
+    <p class="skills-line"><strong>Back-End:</strong> Python, SQLite, Clerk OAuth</p>
     <p class="skills-line"><strong>Collaboration:</strong> Stakeholder collaboration, Deep listening</p>
   </section>
 

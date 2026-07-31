@@ -18,6 +18,8 @@ Full-stack software engineer with experience shipping React/TypeScript and Larav
 *2026-02 – Present* · NJ
 Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
+- Built a Vercel-hosted MCP knowledge vault that serves reusable engineering patterns as tools for AI coding agents.
+- Designed one-URL MCP auth that accepts either a shared-secret Bearer token or a Clerk OAuth access token based on the client request.
 - Built InSummery.AI, an ADK multi-agent family schedule concierge that turns messy registration and disruption messages into a structured multi-child schedule.
 - Deployed InSummery on Firebase (Auth, Cloud Functions, Firestore) with a React dashboard and local CLI mode for zero-cloud demos.
 - Built a multi-agent market-intelligence pilot on OpenClaw with specialized agents and SQLite-backed durable memory for long-running research workflows.
@@ -49,6 +51,16 @@ Led frontend design and development for platform rebranding, technology migratio
 
 
 ## Selected Projects
+
+### Development Knowledge Vault — Independent R&D
+
+*2026*
+
+AI coding agents on new projects rediscover the same deploy, auth, eval, and security practices instead of reusing distilled patterns from prior agent and product repos.
+
+Built a Vercel-hosted MCP server that exposes markdown engineering patterns as tools (`list_patterns`, `get_pattern`), with dual auth on one URL—Clerk OAuth for cloud clients and an optional shared-secret Bearer for local/curl—so Cursor, Gemini Spark, and other MCP clients can pull operational preferences and prior solutions at request time.
+
+**Technologies:** Next.js, Vercel, MCP, Clerk, OAuth, TypeScript, Markdown
 
 ### InSummery.AI — Independent R&D
 

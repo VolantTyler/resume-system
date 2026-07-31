@@ -18,6 +18,8 @@ Full-stack software engineer with experience shipping React/TypeScript and Larav
 *2026-02 – Present* · NJ
 Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
+- Deployed a Next.js MCP endpoint on Vercel that loads markdown patterns at request time for cross-client agent tooling.
+- Wired Clerk OAuth and optional MCP_SECRET_KEY Bearer acceptance into a Next.js MCP route with well-known authorization-server and protected-resource endpoints left public.
 - Shipped an agentic scheduling product spanning ADK workflow, structured extraction, and a parent-facing schedule matrix.
 - Connected structured schedule state to Google Calendar OAuth sync and a parent-facing dashboard.
 - Shipped a full-stack agentic product with Firebase backend, React frontend, and Google Calendar integration.
@@ -64,6 +66,16 @@ Resumed sole-proprietorship web design and development work for B2B clients, cov
 
 
 ## Selected Projects
+
+### Development Knowledge Vault — Independent R&D
+
+*2026*
+
+AI coding agents on new projects rediscover the same deploy, auth, eval, and security practices instead of reusing distilled patterns from prior agent and product repos.
+
+Built a Vercel-hosted MCP server that exposes markdown engineering patterns as tools (`list_patterns`, `get_pattern`), with dual auth on one URL—Clerk OAuth for cloud clients and an optional shared-secret Bearer for local/curl—so Cursor, Gemini Spark, and other MCP clients can pull operational preferences and prior solutions at request time.
+
+**Technologies:** Next.js, Vercel, MCP, Clerk, OAuth, TypeScript, Markdown
 
 ### InSummery.AI — Independent R&D
 
@@ -128,9 +140,9 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 
 ## Skills
 
-**Applied AI:** PII masking, Firebase
-**Front-End:** JavaScript, React, TypeScript
-**Back-End:** Laravel, GraphQL, SQLite, PHP
+**Applied AI:** PII masking, Firebase, Model Context Protocol
+**Front-End:** JavaScript, React, TypeScript, Next.js
+**Back-End:** Laravel, GraphQL, SQLite, Clerk OAuth, PHP
 **Testing:** Cypress
 **Collaboration:** Stakeholder collaboration, Deep listening
 

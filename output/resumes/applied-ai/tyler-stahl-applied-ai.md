@@ -18,6 +18,8 @@ Full-stack software engineer and applied AI developer specializing in bridging m
 *2026-02 – Present* · NJ
 Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
+- Shipped an MCP tool server that lets agents list and fetch distilled patterns (auth, deploy, evals, PII, orchestration) instead of rediscovering them per project.
+- Made MCP auth client-config-driven (OAuth for cloud agents/Spark; Bearer for local/curl) with public OAuth discovery metadata for protected-resource challenges.
 - Designed a Google ADK 2.0 conditional workflow with triager and interpreter agents for registration, disruption, and schedule analysis in a Kaggle Agents Intensive capstone.
 - Designed privacy-by-design masking so Gemini sees placeholders for household PII while retaining public schedule context needed for accurate extraction.
 - Routed low-confidence ADK extractions through a HITL node with persisted workflow state instead of silently writing uncertain schedule data.
@@ -60,6 +62,16 @@ Led frontend design and development for platform rebranding, technology migratio
 
 
 ## Selected Projects
+
+### Development Knowledge Vault — Independent R&D
+
+*2026*
+
+AI coding agents on new projects rediscover the same deploy, auth, eval, and security practices instead of reusing distilled patterns from prior agent and product repos.
+
+Built a Vercel-hosted MCP server that exposes markdown engineering patterns as tools (`list_patterns`, `get_pattern`), with dual auth on one URL—Clerk OAuth for cloud clients and an optional shared-secret Bearer for local/curl—so Cursor, Gemini Spark, and other MCP clients can pull operational preferences and prior solutions at request time.
+
+**Technologies:** Next.js, Vercel, MCP, Clerk, OAuth, TypeScript, Markdown
 
 ### InSummery.AI — Independent R&D
 
@@ -114,8 +126,9 @@ Built an OCEAN-based personality alignment prototype in Google AI Studio, then p
 
 ## Skills
 
-**Applied AI:** Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK, Weights & Biases Weave
-**Back-End:** Python, SQLite
+**Applied AI:** Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
+**Front-End:** Next.js
+**Back-End:** Python, SQLite, Clerk OAuth
 **Collaboration:** Stakeholder collaboration, Deep listening
 
 ## Education

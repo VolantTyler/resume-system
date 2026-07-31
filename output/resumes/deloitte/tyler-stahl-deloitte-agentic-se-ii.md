@@ -124,9 +124,9 @@ Engineered portal features and helped transition legacy data flows into GraphQL 
 
 ## Skills
 
-**Applied AI:** Multi-agent orchestration, Human-in-the-loop controls, Agent evaluation, Firebase, Vertex AI, Cursor Agent SDK, Weights & Biases Weave
-**Front-End:** JavaScript, React, TypeScript
-**Back-End:** Python, Laravel, GraphQL, SQLite
+**Applied AI:** Multi-agent orchestration, Human-in-the-loop controls, Agent evaluation, Firebase, Vertex AI, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
+**Front-End:** JavaScript, React, TypeScript, Next.js
+**Back-End:** Python, Laravel, GraphQL, SQLite, Clerk OAuth
 **Testing:** Cypress
 **Collaboration:** Release support, Stakeholder collaboration, Deep listening
 

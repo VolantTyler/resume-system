@@ -117,7 +117,7 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 
 ## Skills
 
-**Front-End:** JavaScript, React, TypeScript, Alpine
+**Front-End:** JavaScript, React, TypeScript, Next.js, Alpine
 **Back-End:** GraphQL
 **Testing:** Cypress
 **Collaboration:** Stakeholder collaboration

@@ -1,3 +1,73 @@
+- id: knowledge-vault-mcp-server
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: applied-ai
+  themes:
+    - MCP
+    - knowledge reuse
+    - agent tooling
+    - pattern distillation
+  technologies:
+    - Next.js
+    - Vercel
+    - MCP
+    - TypeScript
+    - Markdown
+  raw_fact: Built and deployed Development Knowledge Vault, a Vercel-hosted MCP server that reads markdown under patterns/ at request time and exposes list_patterns and get_pattern tools so Cursor, Gemini, and other MCP clients can reuse distilled engineering practices across new projects.
+  context: Durable developer knowledge layer for preferences, prior solutions, and operational patterns (deploy, evals, PII, multi-agent, YAML SOT) without putting private identity dumps in the cloud-safe corpus.
+  resume_bullets:
+    standard: Built a Vercel-hosted MCP knowledge vault that serves reusable engineering patterns as tools for AI coding agents.
+    applied-ai: Shipped an MCP tool server that lets agents list and fetch distilled patterns (auth, deploy, evals, PII, orchestration) instead of rediscovering them per project.
+    full-stack: Deployed a Next.js MCP endpoint on Vercel that loads markdown patterns at request time for cross-client agent tooling.
+    agentic: Turned a living pattern corpus into MCP tools so Cursor and Gemini agents can pull stack defaults and prior solutions on demand.
+  evidence:
+    - https://development-knowledge-vault.vercel.app/
+    - Production MCP URL https://development-knowledge-vault.vercel.app/api/mcp/mcp
+    - User-provided Development Knowledge Vault README (2026-07-31)
+    - Live MCP tools list_patterns and get_pattern
+  target_roles:
+    - applied-ai-developer
+    - agentic-ai-engineer
+    - agentic-software-engineer
+    - forward-deployed-engineer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - Derived from user-pasted vault README and confirmed live production site/MCP tools (2026-07-31). No usage metrics claimed.
+- id: knowledge-vault-dual-auth
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: security
+  themes:
+    - MCP auth
+    - Clerk OAuth
+    - Bearer shared secret
+    - dual acceptance
+  technologies:
+    - Clerk
+    - OAuth
+    - Next.js
+    - MCP
+  raw_fact: Implemented dual MCP auth on a single production URL—Authorization Bearer matching MCP_SECRET_KEY allows shared-secret clients; otherwise Clerk OAuth access tokens are verified; else 401 with protected-resource metadata—so client config (URL-only vs Bearer header) chooses the path without automatic Cursor Desktop vs cloud detection.
+  context: Cloud agents and Gemini Spark need Clerk OAuth; local IDE/curl need a stable shared secret. Same endpoint, no hybrid fall-through when a Bearer header is present.
+  resume_bullets:
+    standard: Designed one-URL MCP auth that accepts either a shared-secret Bearer token or a Clerk OAuth access token based on the client request.
+    applied-ai: Made MCP auth client-config-driven (OAuth for cloud agents/Spark; Bearer for local/curl) with public OAuth discovery metadata for protected-resource challenges.
+    full-stack: Wired Clerk OAuth and optional MCP_SECRET_KEY Bearer acceptance into a Next.js MCP route with well-known authorization-server and protected-resource endpoints left public.
+  evidence:
+    - User-provided Development Knowledge Vault README auth section (2026-07-31)
+    - patterns/mcp-auth-modes.md via live Knowledge Vault MCP
+    - /.well-known/oauth-protected-resource/api/mcp/mcp and oauth-authorization-server routes documented in README
+  target_roles:
+    - applied-ai-developer
+    - agentic-ai-engineer
+    - full-stack-engineer
+    - forward-deployed-engineer
+  confidence: high
+  source_notes:
+    - Auth behavior confirmed against vault USER.md / mcp-auth-modes.md via MCP and user README. Gemini Spark static OAuth app setup documented as a learned ops detail, not a separate product claim.
 - id: insummery-adk-multi-agent-workflow
   company: Independent R&D
   role: Applied AI Developer

@@ -8,6 +8,8 @@
     - charity-navigator-software-engineer
     - charity-navigator-frontend
   accomplishment_ids:
+    - knowledge-vault-mcp-server
+    - knowledge-vault-dual-auth
     - insummery-adk-multi-agent-workflow
     - insummery-pii-masking
     - insummery-hitl-confidence-gate
@@ -26,6 +28,7 @@
     - cn-cmo-marketing-partnership
     - cn-rebrand-platform-rebuild
   project_ids:
+    - development-knowledge-vault
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - hybrid-inference-pilot
@@ -41,6 +44,8 @@
       note: Added Master Career / Technical Brief / portfolio productionization details.
     - date: 2026-07-09
       note: Added InSummery.AI Kaggle Agents Intensive capstone.
+    - date: 2026-07-31
+      note: Added Development Knowledge Vault MCP pattern server.
 - id: tyler-stahl-deloitte-agentic-ai
   target_id: agentic-ai-engineer
   label: Agentic AI Engineer
@@ -290,6 +295,8 @@
     - charity-navigator-frontend
     - volant-founder-2024
   accomplishment_ids:
+    - knowledge-vault-mcp-server
+    - knowledge-vault-dual-auth
     - insummery-adk-multi-agent-workflow
     - insummery-firebase-production
     - insummery-gap-analysis-calendar
@@ -305,6 +312,7 @@
     - cn-processing-efficiency
     - volant-fullstack-client-delivery
   project_ids:
+    - development-knowledge-vault
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - cognitive-bridge
@@ -321,6 +329,8 @@
       note: Added Cognitive Bridge productionization and CMO partnership.
     - date: 2026-07-09
       note: Added InSummery.AI capstone.
+    - date: 2026-07-31
+      note: Added Development Knowledge Vault MCP pattern server.
 - id: tyler-stahl-frontend-engineer
   target_id: frontend-engineer
   label: Front-End Engineer
@@ -404,6 +414,8 @@
     - charity-navigator-software-engineer
     - charity-navigator-frontend
   accomplishment_ids:
+    - knowledge-vault-mcp-server
+    - knowledge-vault-dual-auth
     - insummery-adk-multi-agent-workflow
     - insummery-firebase-production
     - openclaw-multi-agent-orchestration
@@ -411,6 +423,7 @@
     - cn-portal-scale
     - cn-rebrand-platform-rebuild
   project_ids:
+    - development-knowledge-vault
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - cognitive-bridge
@@ -421,3 +434,5 @@
   revision_history:
     - date: 2026-07-09
       note: Rebuilt portfolio version from merged Autobiography-Agent career data.
+    - date: 2026-07-31
+      note: Added Development Knowledge Vault MCP pattern server.

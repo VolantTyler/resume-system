@@ -123,7 +123,7 @@ Collaborating with Stephen Rockwell on embedding model stress-testing and vector
 
 ## Skills
 
-**Applied AI:** Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK, Weights & Biases Weave
+**Applied AI:** Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
 **Front-End:** React, TypeScript
 **Back-End:** Python, SQLite
 **Testing:** Cypress

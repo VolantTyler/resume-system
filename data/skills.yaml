@@ -116,12 +116,27 @@ categories:
         evidence_ids:
           - agentos-orchestration
           - rnd-agent-orchestration-delivery
+          - knowledge-vault-mcp-server
         proficiency: high
         target_roles:
           - applied-ai-developer
           - agentic-ai-engineer
           - agentic-software-engineer
           - forward-deployed-engineer
+      - name: Model Context Protocol
+        aliases:
+          - MCP
+          - MCP server
+        evidence_ids:
+          - knowledge-vault-mcp-server
+          - knowledge-vault-dual-auth
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
       - name: Weights & Biases Weave
         aliases:
           - Weave
@@ -167,11 +182,25 @@ categories:
         evidence_ids:
           - cn-portal-scale
           - cn-graphql-migration
+          - knowledge-vault-mcp-server
         proficiency: high
         target_roles:
           - frontend-engineer
           - full-stack-engineer
           - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+      - name: Next.js
+        aliases:
+          - Vercel
+        evidence_ids:
+          - knowledge-vault-mcp-server
+          - knowledge-vault-dual-auth
+        proficiency: high
+        target_roles:
+          - full-stack-engineer
+          - frontend-engineer
+          - applied-ai-developer
           - agentic-software-engineer
           - forward-deployed-engineer
       - name: Alpine
@@ -227,6 +256,18 @@ categories:
           - agentic-software-engineer
           - forward-deployed-engineer
           - full-stack-engineer
+      - name: Clerk OAuth
+        aliases:
+          - Clerk
+          - OAuth
+        evidence_ids:
+          - knowledge-vault-dual-auth
+        proficiency: medium
+        target_roles:
+          - full-stack-engineer
+          - applied-ai-developer
+          - agentic-software-engineer
+          - forward-deployed-engineer
       - name: PHP
         evidence_ids:
           - volant-fullstack-client-delivery

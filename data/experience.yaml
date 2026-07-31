@@ -16,6 +16,7 @@
     - Cursor Agent SDK
     - Weights & Biases Weave
   major_projects:
+    - Development Knowledge Vault (MCP pattern server)
     - InSummery.AI family schedule concierge
     - OpenClaw multi-agent market intelligence ecosystem
     - Hybrid inference routing pilot
@@ -25,6 +26,8 @@
     - rnd-gcp-genai-delivery
     - rnd-hitl-eval-practices
     - rnd-agent-orchestration-delivery
+    - knowledge-vault-mcp-server
+    - knowledge-vault-dual-auth
     - insummery-adk-multi-agent-workflow
     - insummery-pii-masking
     - insummery-hitl-confidence-gate
@@ -40,6 +43,7 @@
     - cognitive-bridge-firebase-productionization
     - iblueprint-embedding-work
   project_ids:
+    - development-knowledge-vault
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - hybrid-inference-pilot
