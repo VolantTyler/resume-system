@@ -5,7 +5,7 @@
 **Résumé version:** `tyler-stahl-frontend-engineer`
 **Round:** 1
 **Model:** `stub`
-**Generated:** 2026-07-20
+**Generated:** 2026-07-31
 
 ## Verdict
 
@@ -30,7 +30,7 @@ Solid keyword-level fit for the role based on documented themes and skills.
 ### Strongest alignment
 
 - **Hands-on delivery aligned to matched résumé themes** — Experience → Independent R&D
-- **Project evidence available for selected accomplishments** — Selected Projects → InSummery.AI
+- **Project evidence available for selected accomplishments** — Selected Projects → Development Knowledge Vault
 
 ### Weakest / indirect alignment
 

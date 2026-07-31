@@ -4,12 +4,26 @@ categories:
       - name: Multi-agent orchestration
         aliases:
           - OpenClaw
+          - CrewAI
           - Agent workflows
           - Google ADK
         evidence_ids:
+          - graic-crewai-supervisor-routing
           - insummery-adk-multi-agent-workflow
           - openclaw-multi-agent-orchestration
           - agentos-orchestration
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+      - name: CrewAI
+        aliases:
+          - Crew AI
+          - crewai
+        evidence_ids:
+          - graic-crewai-supervisor-routing
         proficiency: high
         target_roles:
           - applied-ai-developer
@@ -22,6 +36,7 @@ categories:
           - Gemma
         evidence_ids:
           - hybrid-inference-routing
+          - graic-crewai-supervisor-routing
           - insummery-adk-multi-agent-workflow
         proficiency: high
         target_roles:
@@ -116,12 +131,27 @@ categories:
         evidence_ids:
           - agentos-orchestration
           - rnd-agent-orchestration-delivery
+          - knowledge-vault-mcp-server
         proficiency: high
         target_roles:
           - applied-ai-developer
           - agentic-ai-engineer
           - agentic-software-engineer
           - forward-deployed-engineer
+      - name: Model Context Protocol
+        aliases:
+          - MCP
+          - MCP server
+        evidence_ids:
+          - knowledge-vault-mcp-server
+          - knowledge-vault-dual-auth
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
       - name: Weights & Biases Weave
         aliases:
           - Weave
@@ -167,11 +197,25 @@ categories:
         evidence_ids:
           - cn-portal-scale
           - cn-graphql-migration
+          - knowledge-vault-mcp-server
         proficiency: high
         target_roles:
           - frontend-engineer
           - full-stack-engineer
           - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+      - name: Next.js
+        aliases:
+          - Vercel
+        evidence_ids:
+          - knowledge-vault-mcp-server
+          - knowledge-vault-dual-auth
+        proficiency: high
+        target_roles:
+          - full-stack-engineer
+          - frontend-engineer
+          - applied-ai-developer
           - agentic-software-engineer
           - forward-deployed-engineer
       - name: Alpine
@@ -187,6 +231,8 @@ categories:
     skills:
       - name: Python
         evidence_ids:
+          - graic-crewai-supervisor-routing
+          - graic-slack-fastapi-backend
           - insummery-adk-multi-agent-workflow
           - autonomous-etl-pipelines
           - openclaw-multi-agent-orchestration
@@ -196,6 +242,42 @@ categories:
           - agentic-ai-engineer
           - agentic-software-engineer
           - forward-deployed-engineer
+      - name: FastAPI
+        aliases:
+          - uvicorn
+        evidence_ids:
+          - graic-slack-fastapi-backend
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
+      - name: Slack Bolt
+        aliases:
+          - Slack Socket Mode
+          - Slack API
+        evidence_ids:
+          - graic-slack-fastapi-backend
+        proficiency: medium
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
+      - name: Google Docs / Drive APIs
+        aliases:
+          - Google Docs API
+          - Google Drive API
+        evidence_ids:
+          - graic-gdocs-drive-integration
+        proficiency: medium
+        target_roles:
+          - applied-ai-developer
+          - forward-deployed-engineer
+          - full-stack-engineer
       - name: Laravel
         evidence_ids:
           - nami-cypress-testing-leadership
@@ -227,6 +309,18 @@ categories:
           - agentic-software-engineer
           - forward-deployed-engineer
           - full-stack-engineer
+      - name: Clerk OAuth
+        aliases:
+          - Clerk
+          - OAuth
+        evidence_ids:
+          - knowledge-vault-dual-auth
+        proficiency: medium
+        target_roles:
+          - full-stack-engineer
+          - applied-ai-developer
+          - agentic-software-engineer
+          - forward-deployed-engineer
       - name: PHP
         evidence_ids:
           - volant-fullstack-client-delivery

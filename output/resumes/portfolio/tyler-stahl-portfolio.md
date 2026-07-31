@@ -18,10 +18,14 @@ Full-stack software engineer with experience shipping React/TypeScript and Larav
 *2026-02 – Present* · NJ
 Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
+- Built a CrewAI Supervisor that routes simple Slack prompts to a direct answer and detailed requests to a dynamically selected specialist crew.
+- Shipped a FastAPI + Slack Socket Mode backend that turns @mentions into threaded multi-agent Guild reports without a public webhook.
+- Built a Vercel-hosted MCP knowledge vault that serves reusable engineering patterns as tools for AI coding agents.
+- Designed one-URL MCP auth that accepts either a shared-secret Bearer token or a Clerk OAuth access token based on the client request.
 - Built InSummery.AI, an ADK multi-agent family schedule concierge that turns messy registration and disruption messages into a structured multi-child schedule.
 - Deployed InSummery on Firebase (Auth, Cloud Functions, Firestore) with a React dashboard and local CLI mode for zero-cloud demos.
 - Built a multi-agent market-intelligence pilot on OpenClaw with specialized agents and SQLite-backed durable memory for long-running research workflows.
-**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
+**Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
 
 ### Front-End Developer — NAMI
 
@@ -49,6 +53,26 @@ Led frontend design and development for platform rebranding, technology migratio
 
 
 ## Selected Projects
+
+### Glen Rock AI Guild — Independent R&D
+
+*2026*
+
+A community AI club needed a mention-driven Slack assistant that could answer simple questions immediately while spinning up the right domain specialists for deeper technical, data, insurance, and writing work—without requiring a public webhook URL.
+
+Built a CrewAI multi-agent backend with a Supervisor that classifies Slack mentions into simple vs detailed intents, dynamically selects Engineer / Data Analyst / Insurance SME / Web Designer / Writer agents, runs on Google Gemini with model failover, and exposes FastAPI health/roster endpoints plus Google Docs/Drive sync with mock fallback.
+
+**Technologies:** CrewAI, Google Gemini, FastAPI, Slack Bolt, Socket Mode, Python, Pydantic, Google Docs API, Google Drive API, AgentOps
+
+### Development Knowledge Vault — Independent R&D
+
+*2026*
+
+AI coding agents on new projects rediscover the same deploy, auth, eval, and security practices instead of reusing distilled patterns from prior agent and product repos.
+
+Built a Vercel-hosted MCP server that exposes markdown engineering patterns as tools (`list_patterns`, `get_pattern`), with dual auth on one URL—Clerk OAuth for cloud clients and an optional shared-secret Bearer for local/curl—so Cursor, Gemini Spark, and other MCP clients can pull operational preferences and prior solutions at request time.
+
+**Technologies:** Next.js, Vercel, MCP, Clerk, OAuth, TypeScript, Markdown
 
 ### InSummery.AI — Independent R&D
 

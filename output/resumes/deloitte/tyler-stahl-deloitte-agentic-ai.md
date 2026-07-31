@@ -18,6 +18,8 @@ Applied AI engineer who designs and ships multi-agent systems with durable state
 *2026-02 – Present* · NJ
 Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
+- Designed intent-based CrewAI routing with dynamic Engineer/Analyst/Insurance SME/Writer selection and Gemini model failover for a community AI Guild backend.
+- Wired Slack Bolt Socket Mode and FastAPI health/roster endpoints as the real-time interface for a CrewAI specialist Guild.
 - Designed a Google ADK 2.0 conditional workflow with triager and interpreter agents for registration, disruption, and schedule analysis in a Kaggle Agents Intensive capstone.
 - Designed privacy-by-design masking so Gemini sees placeholders for household PII while retaining public schedule context needed for accurate extraction.
 - Routed low-confidence ADK extractions through a HITL node with persisted workflow state instead of silently writing uncertain schedule data.
@@ -30,7 +32,7 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 - Designed a Cursor Agent SDK orchestrator that splits evaluation and testing subagents behind HITL checkpoints.
 - Migrated an AI Studio personality prototype to a serverless Python backend on Firebase/Vertex AI with durable Firestore agent memory.
 - Stress-testing embedding implementations and vector persistence to improve RAG performance in iBlueprint workflows.
-**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
+**Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
 
 ### Front-End Developer — NAMI
 
@@ -59,6 +61,16 @@ Led frontend design and development for platform rebranding, technology migratio
 
 
 ## Selected Projects
+
+### Glen Rock AI Guild — Independent R&D
+
+*2026*
+
+A community AI club needed a mention-driven Slack assistant that could answer simple questions immediately while spinning up the right domain specialists for deeper technical, data, insurance, and writing work—without requiring a public webhook URL.
+
+Built a CrewAI multi-agent backend with a Supervisor that classifies Slack mentions into simple vs detailed intents, dynamically selects Engineer / Data Analyst / Insurance SME / Web Designer / Writer agents, runs on Google Gemini with model failover, and exposes FastAPI health/roster endpoints plus Google Docs/Drive sync with mock fallback.
+
+**Technologies:** CrewAI, Google Gemini, FastAPI, Slack Bolt, Socket Mode, Python, Pydantic, Google Docs API, Google Drive API, AgentOps
 
 ### InSummery.AI — Independent R&D
 
@@ -123,9 +135,9 @@ Collaborating with Stephen Rockwell on embedding model stress-testing and vector
 
 ## Skills
 
-**Applied AI:** Multi-agent orchestration, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK, Weights & Biases Weave
+**Applied AI:** Multi-agent orchestration, CrewAI, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
 **Front-End:** React, TypeScript
-**Back-End:** Python, SQLite
+**Back-End:** Python, FastAPI, Slack Bolt, SQLite
 **Testing:** Cypress
 **Collaboration:** Deep listening
 

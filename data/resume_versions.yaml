@@ -8,6 +8,11 @@
     - charity-navigator-software-engineer
     - charity-navigator-frontend
   accomplishment_ids:
+    - graic-crewai-supervisor-routing
+    - graic-slack-fastapi-backend
+    - graic-gdocs-drive-integration
+    - knowledge-vault-mcp-server
+    - knowledge-vault-dual-auth
     - insummery-adk-multi-agent-workflow
     - insummery-pii-masking
     - insummery-hitl-confidence-gate
@@ -26,6 +31,8 @@
     - cn-cmo-marketing-partnership
     - cn-rebrand-platform-rebuild
   project_ids:
+    - glen-rock-ai-guild
+    - development-knowledge-vault
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - hybrid-inference-pilot
@@ -41,6 +48,10 @@
       note: Added Master Career / Technical Brief / portfolio productionization details.
     - date: 2026-07-09
       note: Added InSummery.AI Kaggle Agents Intensive capstone.
+    - date: 2026-07-31
+      note: Added Development Knowledge Vault MCP pattern server.
+    - date: 2026-07-31
+      note: Added Glen Rock AI Guild CrewAI / Slack augment demo.
 - id: tyler-stahl-deloitte-agentic-ai
   target_id: agentic-ai-engineer
   label: Agentic AI Engineer
@@ -51,6 +62,8 @@
     - charity-navigator-software-engineer
     - charity-navigator-frontend
   accomplishment_ids:
+    - graic-crewai-supervisor-routing
+    - graic-slack-fastapi-backend
     - insummery-adk-multi-agent-workflow
     - insummery-hitl-confidence-gate
     - insummery-eval-harness
@@ -68,6 +81,7 @@
     - cn-graphql-migration
     - cn-rebrand-platform-rebuild
   project_ids:
+    - glen-rock-ai-guild
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - hybrid-inference-pilot
@@ -80,6 +94,8 @@
   revision_history:
     - date: 2026-07-09
       note: Tailored for Deloitte Agentic AI Engineer — Healthcare AI (req 355577).
+    - date: 2026-07-31
+      note: Added Glen Rock AI Guild CrewAI supervisor routing and Slack backend.
 - id: tyler-stahl-deloitte-agentic-se-ii
   target_id: agentic-software-engineer
   label: Agentic Software Engineer
@@ -91,6 +107,8 @@
     - charity-navigator-frontend
   accomplishment_ids:
     - agentos-orchestration
+    - graic-crewai-supervisor-routing
+    - graic-slack-fastapi-backend
     - insummery-eval-harness
     - insummery-hitl-confidence-gate
     - insummery-adk-multi-agent-workflow
@@ -109,6 +127,7 @@
     - cn-cmo-marketing-partnership
   project_ids:
     - agentos-chief-of-staff
+    - glen-rock-ai-guild
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - cognitive-bridge
@@ -120,6 +139,8 @@
   revision_history:
     - date: 2026-07-09
       note: Tailored for Deloitte Agentic Software Engineer II (req 352139).
+    - date: 2026-07-31
+      note: Added Glen Rock AI Guild CrewAI / Slack augment demo.
 - id: tyler-stahl-deloitte-fde-frontier-genai
   target_id: forward-deployed-engineer
   label: Forward Deployed Engineer
@@ -141,6 +162,7 @@
     - nami-cypress-testing-leadership
     - volant-fullstack-client-delivery
   project_ids:
+    - glen-rock-ai-guild
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - cognitive-bridge
@@ -194,6 +216,8 @@
       note: Rewrote application fit copy for external (hiring-manager) audience.
     - date: 2026-07-16
       note: Trimmed Independent R&D to three cross-cutting bullets; projects carry project-level detail.
+    - date: 2026-07-31
+      note: Added Glen Rock AI Guild to selected projects.
 - id: tyler-stahl-google-fde-genai
   target_id: forward-deployed-engineer
   label: Forward Deployed Engineer
@@ -205,6 +229,9 @@
     - charity-navigator-frontend
     - volant-founder-2024
   accomplishment_ids:
+    - graic-crewai-supervisor-routing
+    - graic-slack-fastapi-backend
+    - graic-gdocs-drive-integration
     - insummery-adk-multi-agent-workflow
     - insummery-hitl-confidence-gate
     - insummery-eval-harness
@@ -224,6 +251,7 @@
     - nami-cypress-testing-leadership
     - volant-fullstack-client-delivery
   project_ids:
+    - glen-rock-ai-guild
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - cognitive-bridge
@@ -244,15 +272,17 @@
     strengths:
       - criterion: Architect and ship GenAI systems on Google Cloud (Gemini, Vertex, ADK)
         resume_reference: >-
-          Experience → Independent R&D; Selected Projects → InSummery.AI and Cognitive
-          Bridge (ADK multi-agent workflows, Vertex AI, Firebase production).
+          Experience → Independent R&D; Selected Projects → InSummery.AI, Cognitive
+          Bridge, and Glen Rock AI Guild (ADK/CrewAI multi-agent workflows, Gemini,
+          Vertex AI, Firebase/Docs integrations).
       - criterion: Production-grade agentic workflows with evaluation and observability
         resume_reference: >-
           Selected Projects → InSummery.AI (eval harness with absolute quality gates;
           Firebase deploy with OpenTelemetry instrumentation).
       - criterion: Multi-agent systems using Google ADK and related agent patterns
         resume_reference: >-
-          Selected Projects → InSummery.AI (ADK conditional multi-agent workflow) and
+          Selected Projects → InSummery.AI (ADK conditional multi-agent workflow),
+          Glen Rock AI Guild (CrewAI Supervisor + specialist routing on Gemini), and
           OpenClaw (orchestrated specialized agents with durable state and HITL gates).
     weaknesses:
       - criterion: Leading technical discovery inside enterprise customer accounts
@@ -279,6 +309,8 @@
   revision_history:
     - date: 2026-07-13
       note: Tailored for Google Cloud FDE III Generative AI (job 127965694384841414).
+    - date: 2026-07-31
+      note: Added Glen Rock AI Guild CrewAI / Gemini / Slack augment demo.
 - id: tyler-stahl-full-stack
   target_id: full-stack-engineer
   label: Full-Stack Engineer
@@ -290,6 +322,11 @@
     - charity-navigator-frontend
     - volant-founder-2024
   accomplishment_ids:
+    - graic-crewai-supervisor-routing
+    - graic-slack-fastapi-backend
+    - graic-gdocs-drive-integration
+    - knowledge-vault-mcp-server
+    - knowledge-vault-dual-auth
     - insummery-adk-multi-agent-workflow
     - insummery-firebase-production
     - insummery-gap-analysis-calendar
@@ -305,6 +342,8 @@
     - cn-processing-efficiency
     - volant-fullstack-client-delivery
   project_ids:
+    - glen-rock-ai-guild
+    - development-knowledge-vault
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - cognitive-bridge
@@ -321,6 +360,10 @@
       note: Added Cognitive Bridge productionization and CMO partnership.
     - date: 2026-07-09
       note: Added InSummery.AI capstone.
+    - date: 2026-07-31
+      note: Added Development Knowledge Vault MCP pattern server.
+    - date: 2026-07-31
+      note: Added Glen Rock AI Guild FastAPI / Slack / CrewAI backend.
 - id: tyler-stahl-frontend-engineer
   target_id: frontend-engineer
   label: Front-End Engineer
@@ -404,6 +447,10 @@
     - charity-navigator-software-engineer
     - charity-navigator-frontend
   accomplishment_ids:
+    - graic-crewai-supervisor-routing
+    - graic-slack-fastapi-backend
+    - knowledge-vault-mcp-server
+    - knowledge-vault-dual-auth
     - insummery-adk-multi-agent-workflow
     - insummery-firebase-production
     - openclaw-multi-agent-orchestration
@@ -411,6 +458,8 @@
     - cn-portal-scale
     - cn-rebrand-platform-rebuild
   project_ids:
+    - glen-rock-ai-guild
+    - development-knowledge-vault
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - cognitive-bridge
@@ -421,3 +470,7 @@
   revision_history:
     - date: 2026-07-09
       note: Rebuilt portfolio version from merged Autobiography-Agent career data.
+    - date: 2026-07-31
+      note: Added Development Knowledge Vault MCP pattern server.
+    - date: 2026-07-31
+      note: Added Glen Rock AI Guild CrewAI / Slack augment demo.

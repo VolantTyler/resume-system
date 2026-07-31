@@ -8,6 +8,26 @@
   "summary": "Full-stack software engineer with experience shipping React/TypeScript and Laravel applications at nonprofit scale, plus hands-on applied AI systems work.",
   "featuredProjects": [
     {
+      "id": "glen-rock-ai-guild",
+      "name": "Glen Rock AI Guild",
+      "organization": "Independent R&D",
+      "timeframe": "2026",
+      "problem": "A community AI club needed a mention-driven Slack assistant that could answer simple questions immediately while spinning up the right domain specialists for deeper technical, data, insurance, and writing work—without requiring a public webhook URL.",
+      "solution": "Built a CrewAI multi-agent backend with a Supervisor that classifies Slack mentions into simple vs detailed intents, dynamically selects Engineer / Data Analyst / Insurance SME / Web Designer / Writer agents, runs on Google Gemini with model failover, and exposes FastAPI health/roster endpoints plus Google Docs/Drive sync with mock fallback.",
+      "technologies": ["CrewAI","Google Gemini","FastAPI","Slack Bolt","Socket Mode","Python","Pydantic","Google Docs API","Google Drive API","AgentOps"],
+      "outcomes": ["Intent-based Supervisor routing with fast-path simple answers and dynamic specialist crew assembly for complex prompts.","Slack Socket Mode integration (no public webhook/ngrok) with threaded Guild reports and `/agents-list` roster card.","Google Docs/Drive create-and-sync path with personal OAuth or service-account credentials and mock fallback when unset."],
+      "portfolioVisible": true
+    },    {
+      "id": "development-knowledge-vault",
+      "name": "Development Knowledge Vault",
+      "organization": "Independent R&D",
+      "timeframe": "2026",
+      "problem": "AI coding agents on new projects rediscover the same deploy, auth, eval, and security practices instead of reusing distilled patterns from prior agent and product repos.",
+      "solution": "Built a Vercel-hosted MCP server that exposes markdown engineering patterns as tools (`list_patterns`, `get_pattern`), with dual auth on one URL—Clerk OAuth for cloud clients and an optional shared-secret Bearer for local/curl—so Cursor, Gemini Spark, and other MCP clients can pull operational preferences and prior solutions at request time.",
+      "technologies": ["Next.js","Vercel","MCP","Clerk","OAuth","TypeScript","Markdown"],
+      "outcomes": ["Production MCP endpoint serving a curated pattern corpus (deploy, auth, evals, PII, multi-agent, YAML SOT, and related practices).","Dual-acceptance auth documented and shipped so the same URL works for OAuth clients and Bearer-configured IDE/curl without smart surface detection.","Personal Cursor skill (`knowledge-vault`) that steers agents to query the vault before inventing process."],
+      "portfolioVisible": true
+    },    {
       "id": "insummery-ai",
       "name": "InSummery.AI",
       "organization": "Independent R&D",
@@ -29,8 +49,8 @@
       "startDate": "2026-02",
       "endDate": "Present",
       "summary": "Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.",
-      "technologies": ["Python","Google ADK 2.0","OpenClaw","Google Gemini","Gemma","Firebase","SQLite","Cursor Agent SDK","Weights & Biases Weave"],
-      "bullets": ["Built InSummery.AI, an ADK multi-agent family schedule concierge that turns messy registration and disruption messages into a structured multi-child schedule.","Deployed InSummery on Firebase (Auth, Cloud Functions, Firestore) with a React dashboard and local CLI mode for zero-cloud demos.","Built a multi-agent market-intelligence pilot on OpenClaw with specialized agents and SQLite-backed durable memory for long-running research workflows."]
+      "technologies": ["Python","Google ADK 2.0","OpenClaw","CrewAI","Google Gemini","Gemma","FastAPI","Slack Bolt","Firebase","SQLite","Cursor Agent SDK","Weights & Biases Weave"],
+      "bullets": ["Built a CrewAI Supervisor that routes simple Slack prompts to a direct answer and detailed requests to a dynamically selected specialist crew.","Shipped a FastAPI + Slack Socket Mode backend that turns @mentions into threaded multi-agent Guild reports without a public webhook.","Built a Vercel-hosted MCP knowledge vault that serves reusable engineering patterns as tools for AI coding agents.","Designed one-URL MCP auth that accepts either a shared-secret Bearer token or a Clerk OAuth access token based on the client request.","Built InSummery.AI, an ADK multi-agent family schedule concierge that turns messy registration and disruption messages into a structured multi-child schedule.","Deployed InSummery on Firebase (Auth, Cloud Functions, Firestore) with a React dashboard and local CLI mode for zero-cloud demos.","Built a multi-agent market-intelligence pilot on OpenClaw with specialized agents and SQLite-backed durable memory for long-running research workflows."]
     },    {
       "id": "nami-front-end-developer",
       "company": "NAMI",
@@ -64,6 +84,38 @@
     }  ],
   "selectedAccomplishments": [
     {
+      "id": "graic-crewai-supervisor-routing",
+      "company": "Independent R&D",
+      "timeframe": "2026",
+      "bullet": "Built a CrewAI Supervisor that routes simple Slack prompts to a direct answer and detailed requests to a dynamically selected specialist crew.",
+      "themes": ["CrewAI","supervisor routing","multi-agent orchestration","dynamic persona selection","Google Gemini"],
+      "technologies": ["CrewAI","Google Gemini","Python","Pydantic"],
+      "confidence": "high"
+    },    {
+      "id": "graic-slack-fastapi-backend",
+      "company": "Independent R&D",
+      "timeframe": "2026",
+      "bullet": "Shipped a FastAPI + Slack Socket Mode backend that turns @mentions into threaded multi-agent Guild reports without a public webhook.",
+      "themes": ["Slack Socket Mode","FastAPI","real-time agent interface","threaded delivery"],
+      "technologies": ["FastAPI","Slack Bolt","Socket Mode","Python","uvicorn"],
+      "confidence": "high"
+    },    {
+      "id": "knowledge-vault-mcp-server",
+      "company": "Independent R&D",
+      "timeframe": "2026",
+      "bullet": "Built a Vercel-hosted MCP knowledge vault that serves reusable engineering patterns as tools for AI coding agents.",
+      "themes": ["MCP","knowledge reuse","agent tooling","pattern distillation"],
+      "technologies": ["Next.js","Vercel","MCP","TypeScript","Markdown"],
+      "confidence": "high"
+    },    {
+      "id": "knowledge-vault-dual-auth",
+      "company": "Independent R&D",
+      "timeframe": "2026",
+      "bullet": "Designed one-URL MCP auth that accepts either a shared-secret Bearer token or a Clerk OAuth access token based on the client request.",
+      "themes": ["MCP auth","Clerk OAuth","Bearer shared secret","dual acceptance"],
+      "technologies": ["Clerk","OAuth","Next.js","MCP"],
+      "confidence": "high"
+    },    {
       "id": "insummery-adk-multi-agent-workflow",
       "company": "Independent R&D",
       "timeframe": "2026",
@@ -126,7 +178,7 @@
       "credential": "BA, Anthropology",
       "note": null
     }  ],
-  "generatedAt": "2026-07-20T14:41:52.503Z",
+  "generatedAt": "2026-07-31T13:15:19.511Z",
   "versionId": "portfolio-v1",
   "targetId": "portfolio-focused"
 }

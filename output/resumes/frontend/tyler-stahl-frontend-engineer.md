@@ -20,7 +20,7 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 
 - Shipped a React schedule matrix and alerts sidebar highlighting gaps in high-contrast light/dark themes.
 - Built an accessible React dashboard with onboarding, ingest panel, schedule matrix, alerts sidebar, and light/dark themes.
-**Technologies:** Python, Google ADK 2.0, OpenClaw, Google Gemini, Gemma, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
+**Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
 
 ### Front-End Developer — NAMI
 
@@ -117,7 +117,7 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 
 ## Skills
 
-**Front-End:** JavaScript, React, TypeScript, Alpine
+**Front-End:** JavaScript, React, TypeScript, Next.js, Alpine
 **Back-End:** GraphQL
 **Testing:** Cypress
 **Collaboration:** Stakeholder collaboration
