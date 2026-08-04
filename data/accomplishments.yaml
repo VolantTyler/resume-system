@@ -571,6 +571,37 @@
   confidence: high
   source_notes:
     - Added from updated Applied AI Project Portfolio PDF (architectural pivot / enterprise talking points).
+- id: stack-overlord-openai-build-week
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: applied-ai
+  themes:
+    - Codex
+    - GPT
+    - hackathon
+    - AI-assisted development
+    - project intelligence
+  technologies:
+    - Codex
+    - GPT-5.6
+  raw_fact: Built Stack Overlord primarily in Codex/GPT-5.6 for the OpenAI Build Week hackathon; project intelligence for the system is powered by GPT-5.6.
+  context: OpenAI Build Week hackathon project demonstrating Codex/GPT-driven development and GPT-5.6 project intelligence.
+  resume_bullets:
+    standard: Built Stack Overlord for OpenAI Build Week primarily with Codex/GPT-5.6, using GPT-5.6 for project intelligence.
+    applied-ai: Shipped Stack Overlord in OpenAI Build Week using Codex/GPT-5.6 as the primary build stack and GPT-5.6 for project intelligence.
+    full-stack: Developed Stack Overlord for OpenAI Build Week with Codex/GPT-5.6-assisted delivery and GPT-5.6-powered project intelligence.
+  evidence:
+    - User confirmation 2026-08-04
+  target_roles:
+    - applied-ai-developer
+    - agentic-ai-engineer
+    - agentic-software-engineer
+    - forward-deployed-engineer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - Added from user confirmation 2026-08-04; no placement, usage, or latency metrics claimed.
 - id: rnd-gcp-genai-delivery
   company: Independent R&D
   role: Applied AI Developer
@@ -704,20 +735,26 @@
     - design systems
     - component library
     - architecture standards
+    - Storybook
+    - Tailwind CSS
+    - UX design
   technologies:
     - Laravel
     - Livewire
     - JavaScript
-  raw_fact: Built and implemented a centralized Design Component Library to enforce architecture/brand standards and streamline UI deployment for NAMI's core business application.
-  context: Internal platform infrastructure for NAMI front-end delivery.
+    - Tailwind CSS
+    - Storybook
+  raw_fact: Built and implemented a centralized Design Component Library—Tailwind-based UI for NAMI design work—including a custom org-wide shared library and a Storybook version for rapid iteration and testing, to enforce architecture/brand standards and streamline UI deployment for NAMI's core business application.
+  context: Internal platform infrastructure for NAMI front-end delivery and UX iteration.
   resume_bullets:
-    standard: Built a centralized design component library that enforced UI standards and streamlined deployment for NAMI's core application.
-    frontend: Introduced reusable design-system components to standardize front-end delivery across NAMI's Laravel application.
-    nonprofit: Helped scale nonprofit engineering delivery by centralizing reusable UI components for the core business application.
-    full-stack: Implemented a shared component library to enforce architecture standards and accelerate UI delivery.
+    standard: Built a Tailwind-based design component library with a Storybook workflow for rapid iteration, enforcing UI standards across NAMI's core application.
+    frontend: Introduced reusable Tailwind design-system components and a Storybook version for rapid iteration and testing across NAMI's Laravel application.
+    nonprofit: Helped scale nonprofit engineering delivery by centralizing reusable Tailwind UI components and Storybook-based iteration for the core business application.
+    full-stack: Implemented a shared Tailwind component library plus Storybook for org-wide reuse, architecture standards, and faster UI delivery.
   evidence:
     - Tyler Stahl - CV - 2026.pdf
     - Applied AI Resume.pdf
+    - User confirmation 2026-08-04 (Tailwind-based NAMI design; custom shared library + Storybook for iteration/testing)
   target_roles:
     - ai-security-product
     - frontend-engineer
@@ -727,7 +764,40 @@
     - full-stack-engineer
   confidence: high
   source_notes:
-    - Consistent across CV 2026 and Applied AI / Ramp resume drafts.
+    - Base claim consistent across CV 2026 and Applied AI / Ramp resume drafts.
+    - Tailwind and dual custom/Storybook library details from user confirmation 2026-08-04.
+- id: nami-event-planning-ux-prototyping
+  company: NAMI
+  role: Front-End Developer
+  timeframe: 2024-2026
+  category: ux
+  themes:
+    - UX prototyping
+    - user journeys
+    - event planning
+    - Figma
+    - Adobe XD
+  technologies:
+    - Figma
+    - Adobe XD
+  raw_fact: Prototyped new user journeys in Figma and Adobe XD for NAMI's internal event planning tool.
+  context: UX design and prototyping ahead of front-end implementation for internal event-planning workflows.
+  resume_bullets:
+    standard: Prototyped new user journeys in Figma and Adobe XD for an internal nonprofit event planning tool.
+    frontend: Mapped and prototyped event-planning user journeys in Figma and Adobe XD before implementation.
+    nonprofit: Designed UX prototypes for NAMI's internal event planning workflows to clarify staff user journeys.
+    full-stack: Used Figma and Adobe XD to prototype event-planning journeys that informed front-end delivery.
+  evidence:
+    - User confirmation 2026-08-04
+  target_roles:
+    - frontend-engineer
+    - ui-engineer
+    - nonprofit-tech
+    - full-stack-engineer
+    - laravel-livewire-engineer
+  confidence: high
+  source_notes:
+    - Added from user confirmation 2026-08-04; no separate metrics claimed.
 - id: nami-cypress-testing-leadership
   company: NAMI
   role: Front-End Developer
@@ -899,6 +969,69 @@
   confidence: high
   source_notes:
     - Consistent across CV and Applied AI resume drafts.
+- id: cn-sequelize-mysql-frontend
+  company: Charity Navigator
+  role: Software Engineer
+  timeframe: 2023-2024
+  category: data-access
+  themes:
+    - Sequelize
+    - MySQL
+    - data access
+    - front-end integration
+  technologies:
+    - Sequelize
+    - MySQL
+    - React
+    - TypeScript
+  raw_fact: Used Sequelize to query MySQL databases at Charity Navigator and surface that data in the front-end.
+  context: Backend-to-frontend data access for Charity Navigator portal features.
+  resume_bullets:
+    standard: Queried MySQL via Sequelize and surfaced results in Charity Navigator front-end features.
+    frontend: Integrated Sequelize/MySQL data into React/TypeScript portal UI workflows.
+    full-stack: Connected MySQL data to the front-end through Sequelize for Charity Navigator portal features.
+  evidence:
+    - User confirmation 2026-08-04
+  target_roles:
+    - full-stack-engineer
+    - frontend-engineer
+    - nonprofit-tech
+    - agentic-software-engineer
+    - forward-deployed-engineer
+  confidence: high
+  source_notes:
+    - Added from user confirmation 2026-08-04; no performance metrics claimed.
+- id: cn-docker-cicd-deploy
+  company: Charity Navigator
+  role: Software Engineer
+  timeframe: 2023-2024
+  category: devops
+  themes:
+    - Docker
+    - CI/CD
+    - deploy scripts
+  technologies:
+    - Docker
+    - CI/CD
+  raw_fact: Worked with Charity Navigator deploy scripts that used Docker as part of the CI/CD pipeline.
+  context: Deployment and continuous integration/delivery tooling for Charity Navigator applications.
+  resume_bullets:
+    standard: Supported Charity Navigator CI/CD deploy scripts that used Docker for application delivery.
+    frontend: Worked with Docker-based CI/CD deploy scripts supporting Charity Navigator front-end releases.
+    full-stack: Used Docker in Charity Navigator CI/CD deploy scripts for application delivery.
+  evidence:
+    - User confirmation 2026-08-04
+  target_roles:
+    - full-stack-engineer
+    - frontend-engineer
+    - agentic-software-engineer
+    - forward-deployed-engineer
+    - applied-ai-developer
+    - nonprofit-tech
+    - qa-minded-frontend
+  confidence: high
+  source_notes:
+    - Added from user confirmation 2026-08-04; does not claim authorship of the full pipeline or GitHub Actions specifically.
 - id: cn-cross-functional-delivery
   company: Charity Navigator
   role: Software Engineer

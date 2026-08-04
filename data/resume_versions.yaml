@@ -24,6 +24,7 @@
     - agentic-hitl-security
     - agentos-orchestration
     - cognitive-bridge-firebase-productionization
+    - stack-overlord-openai-build-week
     - nami-design-component-library
     - nami-cypress-testing-leadership
     - cn-portal-scale
@@ -38,6 +39,7 @@
     - hybrid-inference-pilot
     - agentos-chief-of-staff
     - cognitive-bridge
+    - stack-overlord
   skill_emphasis: []
   output_folder: applied-ai
   output_slug: tyler-stahl-applied-ai
@@ -52,6 +54,8 @@
       note: Added Development Knowledge Vault MCP pattern server.
     - date: 2026-07-31
       note: Added Glen Rock AI Guild CrewAI / Slack augment demo.
+    - date: 2026-08-04
+      note: Added Stack Overlord OpenAI Build Week (Codex/GPT-5.6).
 - id: tyler-stahl-deloitte-agentic-ai
   target_id: agentic-ai-engineer
   label: Agentic AI Engineer
@@ -75,6 +79,7 @@
     - autonomous-etl-pipelines
     - agentos-orchestration
     - cognitive-bridge-firebase-productionization
+    - stack-overlord-openai-build-week
     - iblueprint-embedding-work
     - nami-cypress-testing-leadership
     - cn-portal-scale
@@ -87,6 +92,7 @@
     - hybrid-inference-pilot
     - agentos-chief-of-staff
     - cognitive-bridge
+    - stack-overlord
     - iblueprint-embeddings
   skill_emphasis: []
   output_folder: deloitte
@@ -96,6 +102,8 @@
       note: Tailored for Deloitte Agentic AI Engineer — Healthcare AI (req 355577).
     - date: 2026-07-31
       note: Added Glen Rock AI Guild CrewAI supervisor routing and Slack backend.
+    - date: 2026-08-04
+      note: Added Stack Overlord OpenAI Build Week (Codex/GPT-5.6).
 - id: tyler-stahl-deloitte-agentic-se-ii
   target_id: agentic-software-engineer
   label: Agentic Software Engineer
@@ -117,11 +125,14 @@
     - agentic-hitl-security
     - autonomous-etl-pipelines
     - cognitive-bridge-firebase-productionization
+    - stack-overlord-openai-build-week
     - nami-cypress-testing-leadership
     - ccie-tm-registration-release-support
     - nami-design-component-library
     - cn-portal-scale
     - cn-graphql-migration
+    - cn-sequelize-mysql-frontend
+    - cn-docker-cicd-deploy
     - cn-cross-functional-delivery
     - cn-rebrand-platform-rebuild
     - cn-cmo-marketing-partnership
@@ -131,6 +142,7 @@
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - cognitive-bridge
+    - stack-overlord
     - nami-720-event-platform
     - cn-data-review-portal
   skill_emphasis: []
@@ -141,6 +153,8 @@
       note: Tailored for Deloitte Agentic Software Engineer II (req 352139).
     - date: 2026-07-31
       note: Added Glen Rock AI Guild CrewAI / Slack augment demo.
+    - date: 2026-08-04
+      note: Added Stack Overlord, CN Sequelize/MySQL, and Docker CI/CD deploy evidence.
 - id: tyler-stahl-deloitte-fde-frontier-genai
   target_id: forward-deployed-engineer
   label: Forward Deployed Engineer
@@ -168,6 +182,7 @@
     - cognitive-bridge
     - hybrid-inference-pilot
     - agentos-chief-of-staff
+    - stack-overlord
     - cn-data-review-portal
   skill_emphasis: []
   application_fit:
@@ -218,6 +233,8 @@
       note: Trimmed Independent R&D to three cross-cutting bullets; projects carry project-level detail.
     - date: 2026-07-31
       note: Added Glen Rock AI Guild to selected projects.
+    - date: 2026-08-04
+      note: Added Stack Overlord to selected projects (kept Independent R&D bullets trimmed).
 - id: tyler-stahl-google-fde-genai
   target_id: forward-deployed-engineer
   label: Forward Deployed Engineer
@@ -258,6 +275,7 @@
     - hybrid-inference-pilot
     - iblueprint-embeddings
     - agentos-chief-of-staff
+    - stack-overlord
     - cn-data-review-portal
   skill_emphasis: []
   application_fit:
@@ -311,6 +329,8 @@
       note: Tailored for Google Cloud FDE III Generative AI (job 127965694384841414).
     - date: 2026-07-31
       note: Added Glen Rock AI Guild CrewAI / Gemini / Slack augment demo.
+    - date: 2026-08-04
+      note: Added Stack Overlord to selected projects.
 - id: tyler-stahl-full-stack
   target_id: full-stack-engineer
   label: Full-Stack Engineer
@@ -333,10 +353,14 @@
     - openclaw-multi-agent-orchestration
     - autonomous-etl-pipelines
     - cognitive-bridge-firebase-productionization
+    - stack-overlord-openai-build-week
     - nami-design-component-library
+    - nami-event-planning-ux-prototyping
     - nami-cypress-testing-leadership
     - cn-portal-scale
     - cn-graphql-migration
+    - cn-sequelize-mysql-frontend
+    - cn-docker-cicd-deploy
     - cn-cmo-marketing-partnership
     - cn-rebrand-platform-rebuild
     - cn-processing-efficiency
@@ -347,7 +371,9 @@
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - cognitive-bridge
+    - stack-overlord
     - nami-design-component-library
+    - nami-event-planning-ux
     - cn-data-review-portal
     - cn-platform-rebuild
   skill_emphasis: []
@@ -364,6 +390,8 @@
       note: Added Development Knowledge Vault MCP pattern server.
     - date: 2026-07-31
       note: Added Glen Rock AI Guild FastAPI / Slack / CrewAI backend.
+    - date: 2026-08-04
+      note: Added Stack Overlord, NAMI UX prototyping, CN Sequelize/MySQL, and Docker CI/CD.
 - id: tyler-stahl-frontend-engineer
   target_id: frontend-engineer
   label: Front-End Engineer
@@ -377,16 +405,20 @@
     - insummery-gap-analysis-calendar
     - insummery-firebase-production
     - nami-design-component-library
+    - nami-event-planning-ux-prototyping
     - nami-cypress-testing-leadership
     - nami-accessibility-compliance
     - ccie-tm-registration-release-support
     - cn-portal-scale
     - cn-graphql-migration
+    - cn-sequelize-mysql-frontend
+    - cn-docker-cicd-deploy
     - cn-cmo-marketing-partnership
     - cn-rebrand-platform-rebuild
   project_ids:
     - insummery-ai
     - nami-design-component-library
+    - nami-event-planning-ux
     - nami-720-event-platform
     - ccie-tm-training-registration
     - cn-data-review-portal
@@ -403,6 +435,8 @@
       note: Added CMO marketing partnership accomplishment.
     - date: 2026-07-09
       note: Added InSummery.AI dashboard/UX accomplishments.
+    - date: 2026-08-04
+      note: Added NAMI UX prototyping, CN Sequelize/MySQL, and Docker CI/CD.
 - id: tyler-stahl-nonprofit-tech
   target_id: nonprofit-tech
   label: Nonprofit Technology Engineer
@@ -413,16 +447,20 @@
     - charity-navigator-frontend
   accomplishment_ids:
     - nami-design-component-library
+    - nami-event-planning-ux-prototyping
     - nami-cypress-testing-leadership
     - nami-accessibility-compliance
     - ccie-tm-registration-release-support
     - cn-portal-scale
+    - cn-sequelize-mysql-frontend
+    - cn-docker-cicd-deploy
     - cn-cross-functional-delivery
     - cn-cmo-marketing-partnership
     - cn-rebrand-platform-rebuild
     - cn-processing-efficiency
   project_ids:
     - nami-design-component-library
+    - nami-event-planning-ux
     - nami-720-event-platform
     - ccie-tm-training-registration
     - cn-data-review-portal
@@ -437,6 +475,8 @@
       note: Expanded with Charity Navigator history from intake PDFs.
     - date: 2026-07-08
       note: Added CMO marketing partnership accomplishment.
+    - date: 2026-08-04
+      note: Added NAMI UX prototyping, CN Sequelize/MySQL, and Docker CI/CD.
 - id: portfolio-v1
   target_id: portfolio-focused
   label: Portfolio-Focused Software Engineer
@@ -454,6 +494,7 @@
     - insummery-adk-multi-agent-workflow
     - insummery-firebase-production
     - openclaw-multi-agent-orchestration
+    - stack-overlord-openai-build-week
     - nami-cypress-testing-leadership
     - cn-portal-scale
     - cn-rebrand-platform-rebuild
@@ -463,6 +504,7 @@
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - cognitive-bridge
+    - stack-overlord
     - cn-platform-rebuild
   skill_emphasis: []
   output_folder: portfolio
@@ -474,3 +516,5 @@
       note: Added Development Knowledge Vault MCP pattern server.
     - date: 2026-07-31
       note: Added Glen Rock AI Guild CrewAI / Slack augment demo.
+    - date: 2026-08-04
+      note: Added Stack Overlord OpenAI Build Week (Codex/GPT-5.6).

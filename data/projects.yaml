@@ -167,6 +167,22 @@
     - cognitive-bridge-firebase-productionization
   portfolio_visible: false
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
+- id: stack-overlord
+  name: Stack Overlord
+  organization: Independent R&D
+  timeframe: "2026"
+  problem: OpenAI Build Week required shipping a working product under tight hackathon constraints with AI-assisted development.
+  solution: Built Stack Overlord primarily in Codex/GPT-5.6, with project intelligence powered by GPT-5.6.
+  technologies:
+    - Codex
+    - GPT-5.6
+  outcomes:
+    - Hackathon project delivered primarily via Codex/GPT-5.6.
+    - GPT-5.6 used for project intelligence.
+  related_accomplishment_ids:
+    - stack-overlord-openai-build-week
+  portfolio_visible: false
+  resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
 - id: iblueprint-embeddings
   name: iBlueprint Embeddings Collaboration
   organization: Independent R&D / Humanservices.ai
@@ -188,18 +204,36 @@
   organization: NAMI
   timeframe: 2024-2026
   problem: Front-end delivery needed stronger architecture standards and reusable UI patterns across the core business application.
-  solution: Built and implemented a centralized design component library to enforce standards and streamline UI deployment.
+  solution: Built a Tailwind-based centralized design component library—including a custom org-wide shared library and a Storybook version for rapid iteration and testing—to enforce standards and streamline UI deployment.
   technologies:
     - Laravel
     - Livewire
     - JavaScript
+    - Tailwind CSS
+    - Storybook
   outcomes:
-    - Reusable components for brand and architecture standards.
+    - Reusable Tailwind components for brand and architecture standards.
+    - Storybook workflow for rapid iteration and testing.
     - Streamlined UI deployment for the core application.
   related_accomplishment_ids:
     - nami-design-component-library
   portfolio_visible: false
   resume_relevance: frontend-engineer, ui-engineer, laravel-livewire-engineer, nonprofit-tech, full-stack-engineer
+- id: nami-event-planning-ux
+  name: NAMI Internal Event Planning UX
+  organization: NAMI
+  timeframe: 2024-2026
+  problem: Internal event planning workflows needed clearer user journeys before front-end implementation.
+  solution: Prototyped new user journeys in Figma and Adobe XD for NAMI's internal event planning tool.
+  technologies:
+    - Figma
+    - Adobe XD
+  outcomes:
+    - Prototyped staff-facing event-planning journeys to guide implementation.
+  related_accomplishment_ids:
+    - nami-event-planning-ux-prototyping
+  portfolio_visible: false
+  resume_relevance: frontend-engineer, ui-engineer, nonprofit-tech, full-stack-engineer
 - id: nami-720-event-platform
   name: NAMI 720 Event Platform
   organization: NAMI
@@ -241,17 +275,22 @@
   organization: Charity Navigator
   timeframe: 2023-2024
   problem: Internal and client data-review workflows needed a scalable React/TypeScript portal with modern API integration.
-  solution: Engineered portal features and helped transition legacy data flows into GraphQL endpoints while collaborating with product and data teams.
+  solution: Engineered portal features, queried MySQL via Sequelize for front-end data, helped transition legacy flows into GraphQL, and worked with Docker-based CI/CD deploy scripts.
   technologies:
     - React
     - TypeScript
     - GraphQL
+    - Sequelize
+    - MySQL
+    - Docker
   outcomes:
     - Portal used by tens of thousands of clients.
     - Front-end architecture supporting high-traffic events.
   related_accomplishment_ids:
     - cn-portal-scale
     - cn-graphql-migration
+    - cn-sequelize-mysql-frontend
+    - cn-docker-cicd-deploy
     - cn-cross-functional-delivery
   portfolio_visible: false
   resume_relevance: full-stack-engineer, frontend-engineer, nonprofit-tech, agentic-software-engineer, forward-deployed-engineer
