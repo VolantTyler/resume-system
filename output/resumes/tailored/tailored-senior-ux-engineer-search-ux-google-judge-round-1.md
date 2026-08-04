@@ -1,0 +1,48 @@
+# LLM Judge Evaluation Report
+
+**Source:** `docs/job-descriptions/google-senior-ux-engineer-search-ux.md`
+**Job title:** Senior UX Engineer, Search UX - Google
+**Résumé version:** `tailored-senior-ux-engineer-search-ux-google`
+**Round:** 1
+**Model:** `stub`
+**Generated:** 2026-08-04
+
+## Verdict
+
+- **Overall score:** 8/10
+- **Pass:** yes
+
+## Dimension Scores
+
+| Dimension | Score | Critique |
+|-----------|-------|----------|
+| relevance | 6/10 | Selected accomplishments share themes/technologies with the JD (2 overlapping). |
+| evidence_alignment | 8/10 | Stub judge only references provided raw_facts; no invented claims detected. |
+| coverage | 8/10 | No reference-vocabulary gaps flagged. |
+| clarity | 8/10 | Stub clarity check based on résumé section structure. |
+
+## Application Fit
+
+*Senior UX Engineer, Search UX - Google*
+
+Solid keyword-level fit for the role based on documented themes and skills.
+
+### Strongest alignment
+
+- **Hands-on delivery aligned to matched résumé themes** — Experience → Independent R&D
+- **Project evidence available for selected accomplishments** — Selected Projects → Glen Rock AI Guild
+
+### Weakest / indirect alignment
+
+- **Enterprise-scale process ownership** — Source data may address this need indirectly through related delivery and reliability work already selected; do not invent missing skills.
+- **Formal team leadership at large-org scale** — Background shows individual ownership and stakeholder collaboration on shipped work rather than named leadership titles.
+
+## Revision Directives
+
+**Notes:**
+
+- Stub judge: pass — no revision directives.
+
+## Invented Claim Flags
+
+None flagged.
