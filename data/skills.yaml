@@ -43,6 +43,57 @@ categories:
           - applied-ai-developer
           - agentic-ai-engineer
           - forward-deployed-engineer
+      - name: Antigravity
+        aliases:
+          - Antigravity IDE
+        evidence_ids:
+          - agentic-hitl-security
+          - hybrid-inference-routing
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+      - name: Gemma4
+        aliases:
+          - Gemma 4
+          - Gemma4:26b
+        evidence_ids:
+          - hybrid-inference-routing
+        proficiency: medium
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - forward-deployed-engineer
+      - name: Google AI Studio
+        aliases:
+          - AI Studio
+        evidence_ids:
+          - cognitive-bridge-personality
+          - cognitive-bridge-firebase-productionization
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
+      - name: Codex / GPT
+        aliases:
+          - Codex
+          - GPT
+          - GPT-5.6
+          - OpenAI Codex
+          - ChatGPT
+        evidence_ids:
+          - stack-overlord-openai-build-week
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
       - name: Human-in-the-loop controls
         aliases:
           - HITL
@@ -91,20 +142,6 @@ categories:
           - applied-ai-developer
           - agentic-ai-engineer
           - forward-deployed-engineer
-      - name: Firebase
-        aliases:
-          - Cloud Firestore
-          - Firebase Cloud Functions
-        evidence_ids:
-          - insummery-firebase-production
-          - cognitive-bridge-firebase-productionization
-        proficiency: high
-        target_roles:
-          - applied-ai-developer
-          - agentic-ai-engineer
-          - agentic-software-engineer
-          - forward-deployed-engineer
-          - full-stack-engineer
       - name: Vertex AI
         evidence_ids:
           - insummery-adk-multi-agent-workflow
@@ -227,8 +264,115 @@ categories:
         target_roles:
           - frontend-engineer
           - laravel-livewire-engineer
+      - name: Tailwind CSS
+        aliases:
+          - TailwindCSS
+          - Tailwind
+        evidence_ids:
+          - nami-design-component-library
+        proficiency: high
+        target_roles:
+          - frontend-engineer
+          - ui-engineer
+          - full-stack-engineer
+          - laravel-livewire-engineer
+          - nonprofit-tech
+      - name: Livewire
+        evidence_ids:
+          - nami-cypress-testing-leadership
+          - ccie-tm-registration-release-support
+          - nami-design-component-library
+        proficiency: medium
+        target_roles:
+          - laravel-livewire-engineer
+          - nonprofit-tech
+          - frontend-engineer
+      - name: Figma
+        evidence_ids:
+          - nami-event-planning-ux-prototyping
+        proficiency: high
+        target_roles:
+          - frontend-engineer
+          - ui-engineer
+          - full-stack-engineer
+          - nonprofit-tech
+      - name: Adobe XD
+        aliases:
+          - AdobeXD
+          - Adobe Experience Design
+        evidence_ids:
+          - nami-event-planning-ux-prototyping
+        proficiency: high
+        target_roles:
+          - frontend-engineer
+          - ui-engineer
+          - full-stack-engineer
+          - nonprofit-tech
+      - name: Storybook
+        evidence_ids:
+          - nami-design-component-library
+        proficiency: high
+        target_roles:
+          - frontend-engineer
+          - ui-engineer
+          - full-stack-engineer
+          - qa-minded-frontend
+          - nonprofit-tech
+          - laravel-livewire-engineer
+      - name: UX Design / Prototyping
+        aliases:
+          - UX Design
+          - Prototyping
+          - UX prototyping
+        evidence_ids:
+          - nami-design-component-library
+          - nami-event-planning-ux-prototyping
+        proficiency: high
+        target_roles:
+          - frontend-engineer
+          - ui-engineer
+          - full-stack-engineer
+          - nonprofit-tech
+          - forward-deployed-engineer
   - name: Back-End
     skills:
+      - name: Firebase
+        aliases:
+          - Firebase Cloud Functions
+        evidence_ids:
+          - insummery-firebase-production
+          - cognitive-bridge-firebase-productionization
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
+      - name: Firestore
+        aliases:
+          - Cloud Firestore
+        evidence_ids:
+          - insummery-firebase-production
+          - cognitive-bridge-firebase-productionization
+          - insummery-hitl-confidence-gate
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
+      - name: Sequelize
+        evidence_ids:
+          - cn-sequelize-mysql-frontend
+        proficiency: high
+        target_roles:
+          - full-stack-engineer
+          - agentic-software-engineer
+          - frontend-engineer
+          - nonprofit-tech
+          - forward-deployed-engineer
       - name: Python
         evidence_ids:
           - graic-crewai-supervisor-routing
@@ -343,17 +487,43 @@ categories:
           - agentic-ai-engineer
           - agentic-software-engineer
           - forward-deployed-engineer
-  - name: CMS / Platform
+  - name: DevOps
     skills:
-      - name: Livewire
+      - name: Docker
         evidence_ids:
-          - nami-cypress-testing-leadership
-          - ccie-tm-registration-release-support
-          - nami-design-component-library
+          - cn-docker-cicd-deploy
+        proficiency: high
+        target_roles:
+          - full-stack-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - applied-ai-developer
+          - frontend-engineer
+          - nonprofit-tech
+      - name: CI/CD
+        aliases:
+          - continuous integration
+          - continuous delivery
+          - continuous deployment
+        evidence_ids:
+          - cn-docker-cicd-deploy
+        proficiency: high
+        target_roles:
+          - full-stack-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - frontend-engineer
+          - qa-minded-frontend
+          - nonprofit-tech
+      - name: GitHub Actions
+        aliases:
+          - GHA
         proficiency: medium
         target_roles:
-          - laravel-livewire-engineer
-          - nonprofit-tech
+          - full-stack-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - frontend-engineer
   - name: Collaboration
     skills:
       - name: Release support

@@ -18,6 +18,8 @@
     - SQLite
     - Cursor Agent SDK
     - Weights & Biases Weave
+    - Codex
+    - GPT-5.6
   major_projects:
     - Glen Rock AI Guild (CrewAI / Slack augment demo)
     - Development Knowledge Vault (MCP pattern server)
@@ -26,6 +28,7 @@
     - Hybrid inference routing pilot
     - AgentOS chief-of-staff agent
     - Cognitive Bridge personality alignment
+    - Stack Overlord (OpenAI Build Week)
   accomplishment_ids:
     - rnd-gcp-genai-delivery
     - rnd-hitl-eval-practices
@@ -48,6 +51,7 @@
     - agentos-orchestration
     - cognitive-bridge-personality
     - cognitive-bridge-firebase-productionization
+    - stack-overlord-openai-build-week
     - iblueprint-embedding-work
   project_ids:
     - glen-rock-ai-guild
@@ -57,6 +61,7 @@
     - hybrid-inference-pilot
     - agentos-chief-of-staff
     - cognitive-bridge
+    - stack-overlord
     - iblueprint-embeddings
 - id: nami-front-end-developer
   company: NAMI
@@ -71,12 +76,18 @@
     - Alpine
     - Cypress
     - JavaScript
+    - Tailwind CSS
+    - Storybook
+    - Figma
+    - Adobe XD
   major_projects:
     - Design component library
     - NAMI 720 event platform
     - CCIE-TM training registration
+    - Internal event planning UX prototypes
   accomplishment_ids:
     - nami-design-component-library
+    - nami-event-planning-ux-prototyping
     - nami-cypress-testing-leadership
     - nami-accessibility-compliance
     - ccie-tm-registration-release-support
@@ -84,6 +95,7 @@
     - nami-design-component-library
     - nami-720-event-platform
     - ccie-tm-training-registration
+    - nami-event-planning-ux
 - id: volant-founder-2024
   company: Volant Web Design
   title: Founder & Web Developer
@@ -112,11 +124,16 @@
     - TypeScript
     - GraphQL
     - JavaScript
+    - Sequelize
+    - MySQL
+    - Docker
   major_projects:
     - Client data-review portal
   accomplishment_ids:
     - cn-portal-scale
     - cn-graphql-migration
+    - cn-sequelize-mysql-frontend
+    - cn-docker-cicd-deploy
     - cn-cross-functional-delivery
   project_ids:
     - cn-data-review-portal
