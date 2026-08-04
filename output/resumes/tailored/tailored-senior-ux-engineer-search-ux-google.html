@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tyler Stahl — Front-End Engineer — tailored for Senior UX Engineer, Search UX - Google</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.5;
+      color: var(--text);
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.25rem;
+      font-weight: 700;
+    }
+    .headline {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 0.5rem;
+    }
+    .contact {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact a:hover { text-decoration: underline; }
+    h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.25rem;
+      margin: 1.75rem 0 0.75rem;
+    }
+    h3 {
+      font-size: 1rem;
+      margin: 1rem 0 0.15rem;
+    }
+    .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.35rem;
+    }
+    ul {
+      margin: 0.35rem 0 0.75rem;
+      padding-left: 1.25rem;
+    }
+    li { margin-bottom: 0.25rem; }
+    .tech, .skills-line {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+    .summary { margin-bottom: 0.5rem; }
+    .fit-role {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 0.5rem;
+    }
+    .fit-overall { margin: 0 0 0.75rem; }
+    .fit-subhead {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 0.75rem 0 0.35rem;
+    }
+    @media print {
+      @page { size: letter; margin: 0.5in; }
+      body { margin: 0; max-width: none; padding: 0; }
+      a { color: var(--text); text-decoration: none; }
+      /* Keep headings with following content, but allow long roles to
+         split across pages so page 1 is not left mostly blank. */
+      h2, h3 { break-after: avoid; page-break-after: avoid; }
+      h3 + .meta { break-after: avoid; page-break-after: avoid; }
+      article { break-inside: auto; page-break-inside: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tyler Stahl</h1>
+    <p class="headline">Front-End Engineer — tailored for Senior UX Engineer, Search UX - Google</p>
+    <p class="contact">
+Glen Rock, NJ · <a href="https://tylerstahl.dev">Portfolio</a> · <a href="https://github.com/VolantTyler">GitHub</a> · <a href="https://linkedin.com/in/tyler-j-stahl">LinkedIn</a>    </p>
+  </header>
+
+  <section>
+    <h2>Application Fit</h2>
+<p class="fit-role">Senior UX Engineer, Search UX - Google</p>    <p class="fit-overall">Solid keyword-level fit for the role based on documented themes and skills.</p>
+    <p class="fit-subhead">Strongest alignment</p>
+    <ul>
+      <li><strong>Hands-on delivery aligned to matched résumé themes</strong> — Experience → Independent R&D</li>
+      <li><strong>Project evidence available for selected accomplishments</strong> — Selected Projects → Glen Rock AI Guild</li>
+    </ul>
+    <p class="fit-subhead">Additional alignment</p>
+    <ul>
+      <li><strong>Enterprise-scale process ownership</strong> — Source data may address this need indirectly through related delivery and reliability work already selected; do not invent missing skills.</li>
+      <li><strong>Formal team leadership at large-org scale</strong> — Background shows individual ownership and stakeholder collaboration on shipped work rather than named leadership titles.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">Front-end software engineer focused on accessible UI implementation, practical testing, and maintainable web applications across React, TypeScript, and Laravel/Livewire stacks.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <article>
+      <h3>Applied AI Developer — Independent R&D</h3>
+      <p class="meta">2026-02 – Present · NJ</p>
+<p>Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.</p>      <ul>
+        <li>Shipped a React schedule matrix and alerts sidebar highlighting gaps in high-contrast light/dark themes.</li>
+        <li>Built an accessible React dashboard with onboarding, ingest panel, schedule matrix, alerts sidebar, and light/dark themes.</li>
+      </ul>
+      <p class="tech"><strong>Technologies:</strong> Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave, Codex, GPT-5.6</p>
+    </article>
+    <article>
+      <h3>Front-End Developer — NAMI</h3>
+      <p class="meta">2024-12 – 2026-01 · Remote</p>
+<p>Built and maintained NAMI's Laravel-based core business application with a focus on reusable UI components, accessibility, and Cypress E2E testing.</p>      <ul>
+        <li>Introduced reusable Tailwind design-system components and a Storybook version for rapid iteration and testing across NAMI's Laravel application.</li>
+        <li>Mapped and prototyped event-planning user journeys in Figma and Adobe XD before implementation.</li>
+        <li>Built Cypress coverage for key user flows in a Laravel/Livewire application, helping stabilize releases and improve UI regression testing.</li>
+        <li>Ran accessibility audits and quality improvements that raised aggregate compliance score by 30%.</li>
+        <li>Improved front-end registration behavior for multi-date training workflows in a Laravel/Livewire application.</li>
+      </ul>
+      <p class="tech"><strong>Technologies:</strong> Laravel, Livewire, Alpine, Cypress, JavaScript, Tailwind CSS, Storybook, Figma, Adobe XD</p>
+    </article>
+    <article>
+      <h3>Founder & Web Developer — Volant Web Design</h3>
+      <p class="meta">2024-09 – Present · NJ</p>
+<p>Resumed sole-proprietorship web design and development work for B2B clients, covering requirements through production deployment and SEO.</p>      <ul>
+        <li>Built client-facing web experiences with JavaScript, PHP, and HTML/CSS, including SEO support.</li>
+      </ul>
+      <p class="tech"><strong>Technologies:</strong> PHP, JavaScript, HTML5, CSS</p>
+    </article>
+    <article>
+      <h3>Software Engineer — Charity Navigator</h3>
+      <p class="meta">2023-08 – 2024-09 · NJ</p>
+<p>Contributed to a high-traffic React/TypeScript data portal, GraphQL API transitions, and cross-functional delivery with product and data teams.</p>      <ul>
+        <li>Optimized front-end architecture for a React/TypeScript portal serving tens of thousands of clients under high-traffic load.</li>
+        <li>Integrated GraphQL endpoints into React/TypeScript portal workflows during API modernization.</li>
+        <li>Integrated Sequelize/MySQL data into React/TypeScript portal UI workflows.</li>
+        <li>Worked with Docker-based CI/CD deploy scripts supporting Charity Navigator front-end releases.</li>
+        <li>Partnered with product and data teams to ship tools that streamlined data-review processes.</li>
+      </ul>
+      <p class="tech"><strong>Technologies:</strong> React, TypeScript, GraphQL, JavaScript, Sequelize, MySQL, Docker</p>
+    </article>
+    <article>
+      <h3>Front-End Web Developer — Charity Navigator</h3>
+      <p class="meta">2019-03 – 2023-08 · NJ</p>
+<p>Led frontend design and development for platform rebranding, technology migration, and high-traffic public web experiences.</p>      <ul>
+        <li>Translated agency designs into production frontend for a high-traffic nonprofit platform rebuild.</li>
+        <li>Collaborated with marketing leadership to ship schedule-driven website features alongside major rebrand initiatives.</li>
+        <li>Supported frontend and full-stack initiatives tied to major grant and processing-efficiency outcomes.</li>
+      </ul>
+      <p class="tech"><strong>Technologies:</strong> JavaScript, HTML5, CSS, React</p>
+    </article>
+    <article>
+      <h3>Founder & Web Developer — Volant Web Design</h3>
+      <p class="meta">2017-04 – 2019-03 · NJ</p>
+<p>Founded and ran a web design business offering development, SEO, and analytics for clients across multiple industries.</p>      <ul>
+        <li>Founded a web design business delivering PHP/JS sites, SEO, and analytics for clients across multiple industries.</li>
+      </ul>
+      <p class="tech"><strong>Technologies:</strong> PHP, JavaScript, HTML5, CSS</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Selected Projects</h2>
+    <article>
+      <h3>InSummery.AI — Independent R&D</h3>
+      <p class="meta">2026</p>
+<p>Family scheduling information lives in messy emails, texts, and PDFs; calendar apps assume tidy manual entry and do not detect multi-child childcare gaps or real-time disruptions with a human still in control.</p><p>Built a Google ADK 2.0 multi-agent concierge that masks PII, triages and extracts schedule data, pauses below 80% confidence for HITL clarification, maintains a multi-child schedule matrix with absolute/relative gap analysis, and syncs disruptions to Google Calendar—shipped as a Kaggle + Google 5-Day AI Agents Intensive Consult-track capstone.</p>      <p class="tech"><strong>Technologies:</strong> Google ADK 2.0, Python, Pydantic, Google Gemini, Vertex AI, Gemma, Ollama, Firebase, Firebase Cloud Functions, Cloud Firestore, Firebase Authentication, React, Vite, Google Calendar API, OpenTelemetry</p>
+    </article>
+    <article>
+      <h3>NAMI Design Component Library — NAMI</h3>
+      <p class="meta">2024-2026</p>
+<p>Front-end delivery needed stronger architecture standards and reusable UI patterns across the core business application.</p><p>Built a Tailwind-based centralized design component library—including a custom org-wide shared library and a Storybook version for rapid iteration and testing—to enforce standards and streamline UI deployment.</p>      <p class="tech"><strong>Technologies:</strong> Laravel, Livewire, JavaScript, Tailwind CSS, Storybook</p>
+    </article>
+    <article>
+      <h3>NAMI Internal Event Planning UX — NAMI</h3>
+      <p class="meta">2024-2026</p>
+<p>Internal event planning workflows needed clearer user journeys before front-end implementation.</p><p>Prototyped new user journeys in Figma and Adobe XD for NAMI's internal event planning tool.</p>      <p class="tech"><strong>Technologies:</strong> Figma, Adobe XD</p>
+    </article>
+    <article>
+      <h3>NAMI 720 Event Platform — NAMI</h3>
+      <p class="meta">2024-2026</p>
+<p>Maintain and improve event-management workflows for nonprofit users and staff.</p><p>Contributed front-end implementation and Cypress testing practices in a Laravel/Livewire application.</p>      <p class="tech"><strong>Technologies:</strong> Laravel, Livewire, Alpine, Cypress</p>
+    </article>
+    <article>
+      <h3>CCIE-TM Training Registration — NAMI</h3>
+      <p class="meta">2024-2026</p>
+<p>Support reliable registration behavior for multi-date nonprofit training workflows.</p><p>Improved registration handling, documented testing steps, and supported staging validation.</p>      <p class="tech"><strong>Technologies:</strong> Laravel, Livewire, Alpine, Cypress</p>
+    </article>
+    <article>
+      <h3>Charity Navigator Data Review Portal — Charity Navigator</h3>
+      <p class="meta">2023-2024</p>
+<p>Internal and client data-review workflows needed a scalable React/TypeScript portal with modern API integration.</p><p>Engineered portal features, queried MySQL via Sequelize for front-end data, helped transition legacy flows into GraphQL, and worked with Docker-based CI/CD deploy scripts.</p>      <p class="tech"><strong>Technologies:</strong> React, TypeScript, GraphQL, Sequelize, MySQL, Docker</p>
+    </article>
+    <article>
+      <h3>Charity Navigator Platform Rebuild — Charity Navigator</h3>
+      <p class="meta">2019-2023</p>
+<p>Modernize and rebrand a high-traffic nonprofit platform serving millions of annual users.</p><p>Led frontend execution of the 20th-anniversary rebrand and platform rebuild in collaboration with external design agencies and internal stakeholders.</p>      <p class="tech"><strong>Technologies:</strong> JavaScript, HTML5, CSS, React</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <p class="skills-line"><strong>Applied AI:</strong> Antigravity</p>
+    <p class="skills-line"><strong>Back-End:</strong> Firebase</p>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <article>
+      <h3>Udacity — Front-End Web Developer Nanodegree</h3>
+<p class="meta">Full scholarship from Google through the "Grow with Google" program.</p>    </article>
+    <article>
+      <h3>Seattle University — MA, Counseling</h3>
+    </article>
+    <article>
+      <h3>Dartmouth College — BA, Anthropology</h3>
+    </article>
+  </section>
+</body>
+</html>
