@@ -16,9 +16,9 @@
 
 | Dimension | Score | Critique |
 |-----------|-------|----------|
-| relevance | 10/10 | Selected accomplishments share themes/technologies with the JD (9 overlapping). |
+| relevance | 10/10 | Selected accomplishments share themes/technologies with the JD (11 overlapping). |
 | evidence_alignment | 8/10 | Stub judge only references provided raw_facts; no invented claims detected. |
-| coverage | 5/10 | Possible gaps remain: Angular, AWS, Agile, Performance optimization. |
+| coverage | 6/10 | Possible gaps remain: Angular, AWS. |
 | clarity | 8/10 | Stub clarity check based on résumé section structure. |
 
 ## Application Fit

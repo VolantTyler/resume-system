@@ -9,19 +9,19 @@ Glen Rock, NJ · [Portfolio](https://tylerstahl.dev) · [GitHub](https://github.
 
 *Front-End Engineer II, Amazon Quick (Governance Platform)*
 
-Strong fit for a front-end role at the intersection of AI interaction design and enterprise admin UX. React/TypeScript portal delivery, design-system work, and HITL / privacy-minded agent products map to Quick's conversational configuration and policy surfaces. Cloudscape, named Agile, and Angular are lighter or undocumented in source data.
+Strong fit for AI interaction design and enterprise admin UX. React/TypeScript portals, design-system work, HITL agent products, Agile at CN/NAMI, and front-end performance (traces, analytics, time to paint) map to Quick Governance. Angular and AWS/Cloudscape remain out of source evidence by confirmation.
 
 **Strongest alignment**
 
 - **Agentic / conversational UX with human control points.** Experience → Independent R&D (HITL gates, approval controls) and Selected Projects → InSummery.AI / Cognitive Bridge / OpenClaw
-- **Accessible, design-system-backed operator UI.** Experience → NAMI (component library, Storybook, accessibility audits) and Selected Projects → InSummery React dashboard
-- **Data-dense React/TypeScript product UI at scale.** Experience → Charity Navigator (portal for 50,000+ clients; platform rebuild for 10M+ annual users)
+- **Design-system UI and Agile delivery.** Experience → NAMI (component library, Storybook, a11y, Agile) and Experience → Charity Navigator (Agile)
+- **React/TypeScript product UI with performance work.** Experience → Charity Navigator (portal scale; traces/analytics and reduced time to paint)
 
 **Weakest / indirect alignment**
 
-- **AWS Cloudscape / AWS platform depth.** Not documented; closest signal is shared component libraries (NAMI) and cloud-hosted GenAI apps (Firebase/Vertex), transferable to learning Cloudscape rather than proving AWS tenure.
-- **Named Agile methodology.** Preferred qual not labeled in source data; cross-functional delivery at Charity Navigator and NAMI is the indirect iterative-shipping evidence.
-- **Angular.** No Angular on file; documented path is React/TypeScript portals and design-system work.
+- **AWS Cloudscape.** AWS denied in gap interview; NAMI design-system habits and Firebase/Vertex shipping are the transfer story, not AWS tenure.
+- **Angular.** Denied in gap interview; documented path is React/TypeScript.
+- **Enterprise AI policy admin at Quick scale.** No Quick/Cloudscape policy-builder tenure; closest bridge is HITL/governance controls in agent products plus nonprofit operator portals.
 
 ---
 
@@ -59,6 +59,7 @@ Built and maintained NAMI's Laravel-based core business application with a focus
 - Built a Tailwind-based design component library with a Storybook workflow for rapid iteration, enforcing UI standards across NAMI's core application.
 - Led Cypress automated testing implementation for a Laravel/Livewire event platform, improving regression coverage and team confidence.
 - Contributed to accessibility and code-quality audits that increased aggregate compliance score by 30%.
+- Operated in fully Agile software development settings throughout Charity Navigator and NAMI front-end roles.
 **Technologies:** Laravel, Livewire, Alpine, Cypress, JavaScript, Tailwind CSS, Storybook, Figma, Adobe XD
 
 ### Founder & Web Developer — Volant Web Design
@@ -76,6 +77,8 @@ Contributed to a high-traffic React/TypeScript data portal, GraphQL API transiti
 
 - Built React/TypeScript portal features for 50,000+ clients and helped sustain high-traffic events with hundreds of thousands of concurrent visitors.
 - Partnered with product and data teams to ship tools that streamlined data-review processes.
+- Operated in fully Agile software development settings throughout Charity Navigator and NAMI front-end roles.
+- Improved front-end performance by adding traces and analytics and reducing time to paint.
 **Technologies:** React, TypeScript, GraphQL, JavaScript, Sequelize, MySQL, Docker
 
 ### Front-End Web Developer — Charity Navigator
@@ -173,7 +176,8 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 
 ## Skills
 
-**Front-End:** JavaScript, React, TypeScript
+**Front-End:** JavaScript, React, TypeScript, Performance optimization
+**Collaboration:** Agile
 
 ## Education
 

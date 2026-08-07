@@ -4,7 +4,9 @@
   location: NJ
   start_date: 2026-02
   end_date: present
-  role_summary: Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
+  role_summary: Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM
+    inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple
+    LLMs, harnesses, deployment stacks, and eval platforms.
   technologies:
     - Python
     - Google ADK 2.0
@@ -69,7 +71,8 @@
   location: Remote
   start_date: 2024-12
   end_date: 2026-01
-  role_summary: Built and maintained NAMI's Laravel-based core business application with a focus on reusable UI components, accessibility, and Cypress E2E testing.
+  role_summary: Built and maintained NAMI's Laravel-based core business application with a focus on
+    reusable UI components, accessibility, and Cypress E2E testing.
   technologies:
     - Laravel
     - Livewire
@@ -91,6 +94,7 @@
     - nami-cypress-testing-leadership
     - nami-accessibility-compliance
     - ccie-tm-registration-release-support
+    - gap-agile
   project_ids:
     - nami-design-component-library
     - nami-720-event-platform
@@ -102,7 +106,8 @@
   location: NJ
   start_date: 2024-09
   end_date: present
-  role_summary: Resumed sole-proprietorship web design and development work for B2B clients, covering requirements through production deployment and SEO.
+  role_summary: Resumed sole-proprietorship web design and development work for B2B clients, covering
+    requirements through production deployment and SEO.
   technologies:
     - PHP
     - JavaScript
@@ -118,7 +123,8 @@
   location: NJ
   start_date: 2023-08
   end_date: 2024-09
-  role_summary: Contributed to a high-traffic React/TypeScript data portal, GraphQL API transitions, and cross-functional delivery with product and data teams.
+  role_summary: Contributed to a high-traffic React/TypeScript data portal, GraphQL API transitions,
+    and cross-functional delivery with product and data teams.
   technologies:
     - React
     - TypeScript
@@ -135,6 +141,8 @@
     - cn-sequelize-mysql-frontend
     - cn-docker-cicd-deploy
     - cn-cross-functional-delivery
+    - gap-agile
+    - gap-performance-optimization
   project_ids:
     - cn-data-review-portal
 - id: charity-navigator-frontend
@@ -143,7 +151,8 @@
   location: NJ
   start_date: 2019-03
   end_date: 2023-08
-  role_summary: Led frontend design and development for platform rebranding, technology migration, and high-traffic public web experiences.
+  role_summary: Led frontend design and development for platform rebranding, technology migration, and
+    high-traffic public web experiences.
   technologies:
     - JavaScript
     - HTML5
@@ -163,7 +172,8 @@
   location: NJ
   start_date: 2017-04
   end_date: 2019-03
-  role_summary: Founded and ran a web design business offering development, SEO, and analytics for clients across multiple industries.
+  role_summary: Founded and ran a web design business offering development, SEO, and analytics for
+    clients across multiple industries.
   technologies:
     - PHP
     - JavaScript

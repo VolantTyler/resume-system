@@ -334,6 +334,23 @@ categories:
           - full-stack-engineer
           - nonprofit-tech
           - forward-deployed-engineer
+      - name: Performance optimization
+        aliases:
+          - front-end performance
+          - time to paint
+          - web performance
+        evidence_ids:
+          - gap-performance-optimization
+        proficiency: medium
+        target_roles:
+          - ai-security-product
+          - frontend-engineer
+          - full-stack-engineer
+          - qa-minded-frontend
+          - ui-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - nonprofit-tech
   - name: Back-End
     skills:
       - name: Firebase
@@ -567,3 +584,19 @@ categories:
           - nonprofit-tech
           - full-stack-engineer
           - agentic-software-engineer
+      - name: Agile
+        aliases:
+          - Agile delivery
+          - Agile methodology
+        evidence_ids:
+          - gap-agile
+        proficiency: medium
+        target_roles:
+          - ai-security-product
+          - frontend-engineer
+          - full-stack-engineer
+          - qa-minded-frontend
+          - ui-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - nonprofit-tech
