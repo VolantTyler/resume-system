@@ -1,13 +1,33 @@
 # Tyler Stahl
 
-**Agentic AI Engineer**
+**Front-End Engineer II, Amazon Quick**
 
 Glen Rock, NJ · [Portfolio](https://tylerstahl.dev) · [GitHub](https://github.com/VolantTyler) · [LinkedIn](https://linkedin.com/in/tyler-j-stahl)
 ---
 
+## Application Fit
+
+*Front-End Engineer II, Amazon Quick (Governance Platform)*
+
+Strong fit for AI interaction design and enterprise admin UX. React/TypeScript portals, design-system work, HITL agent products, Agile at CN/NAMI, and front-end performance (traces, analytics, time to paint) map to Quick Governance. Angular and AWS/Cloudscape remain out of source evidence by confirmation.
+
+**Strongest alignment**
+
+- **Agentic / conversational UX with human control points.** Experience → Independent R&D (HITL gates, approval controls) and Selected Projects → InSummery.AI / Cognitive Bridge / OpenClaw
+- **Design-system UI and Agile delivery.** Experience → NAMI (component library, Storybook, a11y, Agile) and Experience → Charity Navigator (Agile)
+- **React/TypeScript product UI with performance work.** Experience → Charity Navigator (portal scale; traces/analytics and reduced time to paint)
+
+**Weakest / indirect alignment**
+
+- **AWS Cloudscape.** AWS denied in gap interview; NAMI design-system habits and Firebase/Vertex shipping are the transfer story, not AWS tenure.
+- **Angular.** Denied in gap interview; documented path is React/TypeScript.
+- **Enterprise AI policy admin at Quick scale.** No Quick/Cloudscape policy-builder tenure; closest bridge is HITL/governance controls in agent products plus nonprofit operator portals.
+
+---
+
 ## Summary
 
-Applied AI engineer who designs and ships multi-agent systems with durable state, retrieval-minded context, evaluation gates, and human-in-the-loop controls—pairing production Python/agent orchestration with a counseling background that prioritizes safe handoffs when model confidence is low.
+Product-minded engineer who designs trustworthy AI experiences—HITL approvals, privacy-by-design PII handling, and accessible operator UX—pairing multi-agent production work with an MA in Counseling that treats safe human handoffs as a first-class product behavior. Comfortable translating stakeholder needs into demos and shipped interfaces for security and governance workflows.
 
 ---
 
@@ -18,21 +38,17 @@ Applied AI engineer who designs and ships multi-agent systems with durable state
 *2026-02 – Present* · NJ
 Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
-- Designed intent-based CrewAI routing with dynamic Engineer/Analyst/Insurance SME/Writer selection and Gemini model failover for a community AI Guild backend.
-- Wired Slack Bolt Socket Mode and FastAPI health/roster endpoints as the real-time interface for a CrewAI specialist Guild.
 - Designed a Google ADK 2.0 conditional workflow with triager and interpreter agents for registration, disruption, and schedule analysis in a Kaggle Agents Intensive capstone.
 - Designed privacy-by-design masking so Gemini sees placeholders for household PII while retaining public schedule context needed for accurate extraction.
 - Routed low-confidence ADK extractions through a HITL node with persisted workflow state instead of silently writing uncertain schedule data.
+- Combined deterministic matrix analysis with calendar updates so parents see uncovered hours and disrupted slots at a glance.
 - Measured InSummery agent quality with deterministic scoring suites and committed model baselines instead of vibe-only demos.
 - Productionized an ADK agent workflow behind Firebase Auth and Cloud Functions with observability instrumentation.
 - Architected an OpenClaw multi-agent ecosystem with orchestrator and specialist agents, durable SQLite state, and structured market-data extraction.
-- Built a tri-tier inference strategy separating reasoning, verification, and formatting across cloud Gemini and local Gemma models, with reported ~40% token-cost optimization.
-- Developed structured-extraction pipelines that turn unstructured web data into relational formats for agent workflows.
 - Added human approval gates and strict subagent controls so high-stakes agent actions require validation before commit.
 - Designed a Cursor Agent SDK orchestrator that splits evaluation and testing subagents behind HITL checkpoints.
+- Prototyped Gemini-backed personality alignment using brief user interviews and OCEAN trait maps.
 - Migrated an AI Studio personality prototype to a serverless Python backend on Firebase/Vertex AI with durable Firestore agent memory.
-- Shipped Stack Overlord in OpenAI Build Week using Codex/GPT-5.6 as the primary build stack and GPT-5.6 for project intelligence.
-- Stress-testing embedding implementations and vector persistence to improve RAG performance in iBlueprint workflows.
 **Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave, Codex, GPT-5.6
 
 ### Front-End Developer — NAMI
@@ -40,8 +56,19 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 *2024-12 – 2026-01* · Remote
 Built and maintained NAMI's Laravel-based core business application with a focus on reusable UI components, accessibility, and Cypress E2E testing.
 
+- Built a Tailwind-based design component library with a Storybook workflow for rapid iteration, enforcing UI standards across NAMI's core application.
 - Led Cypress automated testing implementation for a Laravel/Livewire event platform, improving regression coverage and team confidence.
+- Contributed to accessibility and code-quality audits that increased aggregate compliance score by 30%.
+- Operated in fully Agile software development settings throughout Charity Navigator and NAMI front-end roles.
 **Technologies:** Laravel, Livewire, Alpine, Cypress, JavaScript, Tailwind CSS, Storybook, Figma, Adobe XD
+
+### Founder & Web Developer — Volant Web Design
+
+*2024-09 – Present* · NJ
+Resumed sole-proprietorship web design and development work for B2B clients, covering requirements through production deployment and SEO.
+
+- Delivered full-stack client websites and SEO/analytics reporting from requirements through production deployment.
+**Technologies:** PHP, JavaScript, HTML5, CSS
 
 ### Software Engineer — Charity Navigator
 
@@ -49,7 +76,9 @@ Built and maintained NAMI's Laravel-based core business application with a focus
 Contributed to a high-traffic React/TypeScript data portal, GraphQL API transitions, and cross-functional delivery with product and data teams.
 
 - Built React/TypeScript portal features for 50,000+ clients and helped sustain high-traffic events with hundreds of thousands of concurrent visitors.
-- Helped transition legacy data flows into GraphQL API endpoints, streamlining backend-to-frontend communication.
+- Partnered with product and data teams to ship tools that streamlined data-review processes.
+- Operated in fully Agile software development settings throughout Charity Navigator and NAMI front-end roles.
+- Improved front-end performance by adding traces and analytics and reducing time to paint.
 **Technologies:** React, TypeScript, GraphQL, JavaScript, Sequelize, MySQL, Docker
 
 ### Front-End Web Developer — Charity Navigator
@@ -58,20 +87,11 @@ Contributed to a high-traffic React/TypeScript data portal, GraphQL API transiti
 Led frontend design and development for platform rebranding, technology migration, and high-traffic public web experiences.
 
 - Led frontend execution of a major rebrand and platform rebuild serving 10M+ annual users in collaboration with external design agencies.
+- Partnered with the CMO and marketing team on rebrand work and time-sensitive website feature launches.
 **Technologies:** JavaScript, HTML5, CSS, React
 
 
 ## Selected Projects
-
-### Glen Rock AI Guild — Independent R&D
-
-*2026*
-
-A community AI club needed a mention-driven Slack assistant that could answer simple questions immediately while spinning up the right domain specialists for deeper technical, data, insurance, and writing work—without requiring a public webhook URL.
-
-Built a CrewAI multi-agent backend with a Supervisor that classifies Slack mentions into simple vs detailed intents, dynamically selects Engineer / Data Analyst / Insurance SME / Web Designer / Writer agents, runs on Google Gemini with model failover, and exposes FastAPI health/roster endpoints plus Google Docs/Drive sync with mock fallback.
-
-**Technologies:** CrewAI, Google Gemini, FastAPI, Slack Bolt, Socket Mode, Python, Pydantic, Google Docs API, Google Drive API, AgentOps
 
 ### InSummery.AI — Independent R&D
 
@@ -93,16 +113,6 @@ Built an autonomous research framework on OpenClaw with specialized agents (data
 
 **Technologies:** OpenClaw, Python, SQLite, Google Gemini, Gemma
 
-### Tri-Tier Hybrid Inference Pilot — Independent R&D
-
-*2025-2026*
-
-Agentic workloads need a practical balance of reasoning quality, latency, cost, and privacy across cloud and local models.
-
-Designed a routing strategy that sends complex reasoning to stronger cloud/local models and offloads formatting and utility work to faster, cheaper models via Ollama-hosted local Gemma and cloud Gemini.
-
-**Technologies:** Google Gemini, Gemma, Ollama, Antigravity, Python
-
 ### AgentOS: Chief of Staff Agent — Independent R&D
 
 *2025-2026*
@@ -123,34 +133,51 @@ Built an OCEAN-based personality alignment prototype in Google AI Studio, then p
 
 **Technologies:** Google AI Studio, Google Gemini, Firebase, Firebase Cloud Functions, Cloud Firestore, Firebase Authentication, Vertex AI, Pydantic, Python
 
-### Stack Overlord — Independent R&D
+### NAMI Design Component Library — NAMI
 
-*2026*
+*2024-2026*
 
-OpenAI Build Week required shipping a working product under tight hackathon constraints with AI-assisted development.
+Front-end delivery needed stronger architecture standards and reusable UI patterns across the core business application.
 
-Built Stack Overlord primarily in Codex/GPT-5.6, with project intelligence powered by GPT-5.6.
+Built a Tailwind-based centralized design component library—including a custom org-wide shared library and a Storybook version for rapid iteration and testing—to enforce standards and streamline UI deployment.
 
-**Technologies:** Codex, GPT-5.6
+**Technologies:** Laravel, Livewire, JavaScript, Tailwind CSS, Storybook
 
-### iBlueprint Embeddings Collaboration — Independent R&D / Humanservices.ai
+### NAMI 720 Event Platform — NAMI
 
-*2025-2026*
+*2024-2026*
 
-Domain-specific blueprinting workflows need better embedding accuracy and vector persistence for RAG.
+Maintain and improve event-management workflows for nonprofit users and staff.
 
-Collaborating with Stephen Rockwell on embedding model stress-testing and vector-store integration within existing blueprinting workflows.
+Contributed front-end implementation and Cypress testing practices in a Laravel/Livewire application.
 
-**Technologies:** Vector databases, Embeddings, RAG
+**Technologies:** Laravel, Livewire, Alpine, Cypress
+
+### Charity Navigator Data Review Portal — Charity Navigator
+
+*2023-2024*
+
+Internal and client data-review workflows needed a scalable React/TypeScript portal with modern API integration.
+
+Engineered portal features, queried MySQL via Sequelize for front-end data, helped transition legacy flows into GraphQL, and worked with Docker-based CI/CD deploy scripts.
+
+**Technologies:** React, TypeScript, GraphQL, Sequelize, MySQL, Docker
+
+### Charity Navigator Platform Rebuild — Charity Navigator
+
+*2019-2023*
+
+Modernize and rebrand a high-traffic nonprofit platform serving millions of annual users.
+
+Led frontend execution of the 20th-anniversary rebrand and platform rebuild in collaboration with external design agencies and internal stakeholders.
+
+**Technologies:** JavaScript, HTML5, CSS, React
 
 
 ## Skills
 
-**Applied AI:** Multi-agent orchestration, CrewAI, Hybrid LLM inference, Antigravity, Gemma4, Google AI Studio, Codex / GPT, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Vertex AI, Ollama, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
-**Front-End:** React, TypeScript
-**Back-End:** Firebase, Firestore, Python, FastAPI, Slack Bolt, SQLite
-**Testing:** Cypress
-**Collaboration:** Deep listening
+**Front-End:** JavaScript, React, TypeScript, Performance optimization
+**Collaboration:** Agile
 
 ## Education
 

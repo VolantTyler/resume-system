@@ -53,7 +53,7 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 - Designed a Cursor Agent SDK orchestrator that splits evaluation and testing subagents behind HITL checkpoints.
 - Migrated an AI Studio personality prototype to a serverless Python backend on Firebase/Vertex AI with durable Firestore agent memory.
 - Stress-testing embedding implementations and vector persistence to improve RAG performance in iBlueprint workflows.
-**Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
+**Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave, Codex, GPT-5.6
 
 ### Front-End Developer — NAMI
 
@@ -61,7 +61,7 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 Built and maintained NAMI's Laravel-based core business application with a focus on reusable UI components, accessibility, and Cypress E2E testing.
 
 - Led Cypress automated testing implementation for a Laravel/Livewire event platform, improving regression coverage and team confidence.
-**Technologies:** Laravel, Livewire, Alpine, Cypress, JavaScript
+**Technologies:** Laravel, Livewire, Alpine, Cypress, JavaScript, Tailwind CSS, Storybook, Figma, Adobe XD
 
 ### Software Engineer — Charity Navigator
 
@@ -71,7 +71,7 @@ Contributed to a high-traffic React/TypeScript data portal, GraphQL API transiti
 - Built React/TypeScript portal features for 50,000+ clients and helped sustain high-traffic events with hundreds of thousands of concurrent visitors.
 - Helped transition legacy data flows into GraphQL API endpoints, streamlining backend-to-frontend communication.
 - Partnered with product and data teams to ship tools that streamlined data-review processes.
-**Technologies:** React, TypeScript, GraphQL, JavaScript
+**Technologies:** React, TypeScript, GraphQL, JavaScript, Sequelize, MySQL, Docker
 
 ### Front-End Web Developer — Charity Navigator
 
@@ -162,24 +162,35 @@ Built a multi-agent orchestrator with the Cursor Agent SDK, modular subagents, a
 
 **Technologies:** Cursor Agent SDK, Python
 
+### Stack Overlord — Independent R&D
+
+*2026*
+
+OpenAI Build Week required shipping a working product under tight hackathon constraints with AI-assisted development.
+
+Built Stack Overlord primarily in Codex/GPT-5.6, with project intelligence powered by GPT-5.6.
+
+**Technologies:** Codex, GPT-5.6
+
 ### Charity Navigator Data Review Portal — Charity Navigator
 
 *2023-2024*
 
 Internal and client data-review workflows needed a scalable React/TypeScript portal with modern API integration.
 
-Engineered portal features and helped transition legacy data flows into GraphQL endpoints while collaborating with product and data teams.
+Engineered portal features, queried MySQL via Sequelize for front-end data, helped transition legacy flows into GraphQL, and worked with Docker-based CI/CD deploy scripts.
 
-**Technologies:** React, TypeScript, GraphQL
+**Technologies:** React, TypeScript, GraphQL, Sequelize, MySQL, Docker
 
 
 ## Skills
 
-**Applied AI:** Multi-agent orchestration, CrewAI, Hybrid LLM inference, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Firebase, Vertex AI, Ollama, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
-**Front-End:** JavaScript, React, TypeScript, Next.js
-**Back-End:** Python, FastAPI, Slack Bolt, Google Docs / Drive APIs, GraphQL, SQLite, Clerk OAuth
+**Applied AI:** Multi-agent orchestration, CrewAI, Hybrid LLM inference, Antigravity, Gemma4, Google AI Studio, Codex / GPT, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Vertex AI, Ollama, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
+**Front-End:** JavaScript, React, TypeScript, Next.js, UX Design / Prototyping, Performance optimization
+**Back-End:** Firebase, Firestore, Sequelize, Python, FastAPI, Slack Bolt, Google Docs / Drive APIs, GraphQL, SQLite, Clerk OAuth
 **Testing:** Cypress
-**Collaboration:** Stakeholder collaboration, Deep listening
+**DevOps:** Docker, CI/CD, GitHub Actions
+**Collaboration:** Stakeholder collaboration, Deep listening, Agile
 
 ## Education
 

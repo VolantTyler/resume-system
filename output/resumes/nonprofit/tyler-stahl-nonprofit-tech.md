@@ -18,11 +18,12 @@ Software engineer experienced in mission-driven platforms, stakeholder collabora
 *2024-12 – 2026-01* · Remote
 Built and maintained NAMI's Laravel-based core business application with a focus on reusable UI components, accessibility, and Cypress E2E testing.
 
-- Helped scale nonprofit engineering delivery by centralizing reusable UI components for the core business application.
+- Helped scale nonprofit engineering delivery by centralizing reusable Tailwind UI components and Storybook-based iteration for the core business application.
+- Designed UX prototypes for NAMI's internal event planning workflows to clarify staff user journeys.
 - Strengthened reliability of a nonprofit event-management platform by adding Cypress coverage for critical user workflows.
 - Improved accessibility compliance on a mission-driven platform through audits and follow-through initiatives.
 - Helped improve reliability of nonprofit training registration workflows used by staff and program participants.
-**Technologies:** Laravel, Livewire, Alpine, Cypress, JavaScript
+**Technologies:** Laravel, Livewire, Alpine, Cypress, JavaScript, Tailwind CSS, Storybook, Figma, Adobe XD
 
 ### Software Engineer — Charity Navigator
 
@@ -30,8 +31,10 @@ Built and maintained NAMI's Laravel-based core business application with a focus
 Contributed to a high-traffic React/TypeScript data portal, GraphQL API transitions, and cross-functional delivery with product and data teams.
 
 - Supported a mission-driven data portal used by tens of thousands of clients during peak traffic events.
+- Queried MySQL via Sequelize and surfaced results in Charity Navigator front-end features.
+- Supported Charity Navigator CI/CD deploy scripts that used Docker for application delivery.
 - Worked cross-functionally to improve nonprofit data-review operations.
-**Technologies:** React, TypeScript, GraphQL, JavaScript
+**Technologies:** React, TypeScript, GraphQL, JavaScript, Sequelize, MySQL, Docker
 
 ### Front-End Web Developer — Charity Navigator
 
@@ -52,9 +55,19 @@ Led frontend design and development for platform rebranding, technology migratio
 
 Front-end delivery needed stronger architecture standards and reusable UI patterns across the core business application.
 
-Built and implemented a centralized design component library to enforce standards and streamline UI deployment.
+Built a Tailwind-based centralized design component library—including a custom org-wide shared library and a Storybook version for rapid iteration and testing—to enforce standards and streamline UI deployment.
 
-**Technologies:** Laravel, Livewire, JavaScript
+**Technologies:** Laravel, Livewire, JavaScript, Tailwind CSS, Storybook
+
+### NAMI Internal Event Planning UX — NAMI
+
+*2024-2026*
+
+Internal event planning workflows needed clearer user journeys before front-end implementation.
+
+Prototyped new user journeys in Figma and Adobe XD for NAMI's internal event planning tool.
+
+**Technologies:** Figma, Adobe XD
 
 ### NAMI 720 Event Platform — NAMI
 
@@ -82,9 +95,9 @@ Improved registration handling, documented testing steps, and supported staging 
 
 Internal and client data-review workflows needed a scalable React/TypeScript portal with modern API integration.
 
-Engineered portal features and helped transition legacy data flows into GraphQL endpoints while collaborating with product and data teams.
+Engineered portal features, queried MySQL via Sequelize for front-end data, helped transition legacy flows into GraphQL, and worked with Docker-based CI/CD deploy scripts.
 
-**Technologies:** React, TypeScript, GraphQL
+**Technologies:** React, TypeScript, GraphQL, Sequelize, MySQL, Docker
 
 ### Charity Navigator Platform Rebuild — Charity Navigator
 
@@ -99,10 +112,11 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 
 ## Skills
 
-**Back-End:** Laravel
+**Front-End:** Tailwind CSS, Livewire, Figma, Adobe XD, Storybook, UX Design / Prototyping, Performance optimization
+**Back-End:** Sequelize, Laravel
 **Testing:** Cypress
-**CMS / Platform:** Livewire
-**Collaboration:** Release support, Stakeholder collaboration, Deep listening
+**DevOps:** Docker, CI/CD
+**Collaboration:** Release support, Stakeholder collaboration, Deep listening, Agile
 
 ## Education
 
