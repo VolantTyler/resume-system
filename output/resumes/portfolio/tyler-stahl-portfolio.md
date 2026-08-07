@@ -25,7 +25,8 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 - Built InSummery.AI, an ADK multi-agent family schedule concierge that turns messy registration and disruption messages into a structured multi-child schedule.
 - Deployed InSummery on Firebase (Auth, Cloud Functions, Firestore) with a React dashboard and local CLI mode for zero-cloud demos.
 - Built a multi-agent market-intelligence pilot on OpenClaw with specialized agents and SQLite-backed durable memory for long-running research workflows.
-**Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
+- Built Stack Overlord for OpenAI Build Week primarily with Codex/GPT-5.6, using GPT-5.6 for project intelligence.
+**Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave, Codex, GPT-5.6
 
 ### Front-End Developer — NAMI
 
@@ -33,7 +34,7 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 Built and maintained NAMI's Laravel-based core business application with a focus on reusable UI components, accessibility, and Cypress E2E testing.
 
 - Led Cypress automated testing implementation for a Laravel/Livewire event platform, improving regression coverage and team confidence.
-**Technologies:** Laravel, Livewire, Alpine, Cypress, JavaScript
+**Technologies:** Laravel, Livewire, Alpine, Cypress, JavaScript, Tailwind CSS, Storybook, Figma, Adobe XD
 
 ### Software Engineer — Charity Navigator
 
@@ -41,7 +42,7 @@ Built and maintained NAMI's Laravel-based core business application with a focus
 Contributed to a high-traffic React/TypeScript data portal, GraphQL API transitions, and cross-functional delivery with product and data teams.
 
 - Built React/TypeScript portal features for 50,000+ clients and helped sustain high-traffic events with hundreds of thousands of concurrent visitors.
-**Technologies:** React, TypeScript, GraphQL, JavaScript
+**Technologies:** React, TypeScript, GraphQL, JavaScript, Sequelize, MySQL, Docker
 
 ### Front-End Web Developer — Charity Navigator
 
@@ -103,6 +104,16 @@ Human-AI collaboration can suffer when agent personality is poorly matched to th
 Built an OCEAN-based personality alignment prototype in Google AI Studio, then productionized it on Firebase Cloud Functions with Firestore memory, Firebase Auth, Vertex AI, and Pydantic-validated structured Gemini outputs.
 
 **Technologies:** Google AI Studio, Google Gemini, Firebase, Firebase Cloud Functions, Cloud Firestore, Firebase Authentication, Vertex AI, Pydantic, Python
+
+### Stack Overlord — Independent R&D
+
+*2026*
+
+OpenAI Build Week required shipping a working product under tight hackathon constraints with AI-assisted development.
+
+Built Stack Overlord primarily in Codex/GPT-5.6, with project intelligence powered by GPT-5.6.
+
+**Technologies:** Codex, GPT-5.6
 
 ### Charity Navigator Platform Rebuild — Charity Navigator
 
