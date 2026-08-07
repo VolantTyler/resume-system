@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tyler Stahl — Front-End Engineer II, Amazon Quick</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.5;
+      color: var(--text);
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.25rem;
+      font-weight: 700;
+    }
+    .headline {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 0.5rem;
+    }
+    .contact {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact a:hover { text-decoration: underline; }
+    h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.25rem;
+      margin: 1.75rem 0 0.75rem;
+    }
+    h3 {
+      font-size: 1rem;
+      margin: 1rem 0 0.15rem;
+    }
+    .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.35rem;
+    }
+    ul {
+      margin: 0.35rem 0 0.75rem;
+      padding-left: 1.25rem;
+    }
+    li { margin-bottom: 0.25rem; }
+    .tech, .skills-line {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+    .summary { margin-bottom: 0.5rem; }
+    .fit-role {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 0.5rem;
+    }
+    .fit-overall { margin: 0 0 0.75rem; }
+    .fit-subhead {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 0.75rem 0 0.35rem;
+    }
+    @media print {
+      @page { size: letter; margin: 0.5in; }
+      body { margin: 0; max-width: none; padding: 0; }
+      a { color: var(--text); text-decoration: none; }
+      /* Keep headings with following content, but allow long roles to
+         split across pages so page 1 is not left mostly blank. */
+      h2, h3 { break-after: avoid; page-break-after: avoid; }
+      h3 + .meta { break-after: avoid; page-break-after: avoid; }
+      article { break-inside: auto; page-break-inside: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tyler Stahl</h1>
+    <p class="headline">Front-End Engineer II, Amazon Quick</p>
+    <p class="contact">
+Glen Rock, NJ · <a href="https://tylerstahl.dev">Portfolio</a> · <a href="https://github.com/VolantTyler">GitHub</a> · <a href="https://linkedin.com/in/tyler-j-stahl">LinkedIn</a>    </p>
+  </header>
+
+  <section>
+    <h2>Application Fit</h2>
+<p class="fit-role">Front-End Engineer II, Amazon Quick (Governance Platform)</p>    <p class="fit-overall">Strong fit for a front-end role at the intersection of AI interaction design and enterprise admin UX. React/TypeScript portal delivery, design-system work, and HITL / privacy-minded agent products map to Quick's conversational configuration and policy surfaces. Cloudscape, named Agile, and Angular are lighter or undocumented in source data.</p>
+    <p class="fit-subhead">Strongest alignment</p>
+    <ul>
+      <li><strong>Agentic / conversational UX with human control points.</strong> Experience → Independent R&D (HITL gates, approval controls) and Selected Projects → InSummery.AI / Cognitive Bridge / OpenClaw</li>
+      <li><strong>Accessible, design-system-backed operator UI.</strong> Experience → NAMI (component library, Storybook, accessibility audits) and Selected Projects → InSummery React dashboard</li>
+      <li><strong>Data-dense React/TypeScript product UI at scale.</strong> Experience → Charity Navigator (portal for 50,000+ clients; platform rebuild for 10M+ annual users)</li>
+    </ul>
+    <p class="fit-subhead">Weakest / indirect alignment</p>
+    <ul>
+      <li><strong>AWS Cloudscape / AWS platform depth.</strong> Not documented; closest signal is shared component libraries (NAMI) and cloud-hosted GenAI apps (Firebase/Vertex), transferable to learning Cloudscape rather than proving AWS tenure.</li>
+      <li><strong>Named Agile methodology.</strong> Preferred qual not labeled in source data; cross-functional delivery at Charity Navigator and NAMI is the indirect iterative-shipping evidence.</li>
+      <li><strong>Angular.</strong> No Angular on file; documented path is React/TypeScript portals and design-system work.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">Product-minded engineer who designs trustworthy AI experiences—HITL approvals, privacy-by-design PII handling, and accessible operator UX—pairing multi-agent production work with an MA in Counseling that treats safe human handoffs as a first-class product behavior. Comfortable translating stakeholder needs into demos and shipped interfaces for security and governance workflows.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <article>
+      <h3>Applied AI Developer — Independent R&D</h3>
+      <p class="meta">2026-02 – Present · NJ</p>
+<p>Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.</p>      <ul>
+        <li>Designed a Google ADK 2.0 conditional workflow with triager and interpreter agents for registration, disruption, and schedule analysis in a Kaggle Agents Intensive capstone.</li>
+        <li>Designed privacy-by-design masking so Gemini sees placeholders for household PII while retaining public schedule context needed for accurate extraction.</li>
+        <li>Routed low-confidence ADK extractions through a HITL node with persisted workflow state instead of silently writing uncertain schedule data.</li>
+        <li>Combined deterministic matrix analysis with calendar updates so parents see uncovered hours and disrupted slots at a glance.</li>
+        <li>Measured InSummery agent quality with deterministic scoring suites and committed model baselines instead of vibe-only demos.</li>
+        <li>Productionized an ADK agent workflow behind Firebase Auth and Cloud Functions with observability instrumentation.</li>
+        <li>Architected an OpenClaw multi-agent ecosystem with orchestrator and specialist agents, durable SQLite state, and structured market-data extraction.</li>
+        <li>Added human approval gates and strict subagent controls so high-stakes agent actions require validation before commit.</li>
+        <li>Designed a Cursor Agent SDK orchestrator that splits evaluation and testing subagents behind HITL checkpoints.</li>
+        <li>Prototyped Gemini-backed personality alignment using brief user interviews and OCEAN trait maps.</li>
+        <li>Migrated an AI Studio personality prototype to a serverless Python backend on Firebase/Vertex AI with durable Firestore agent memory.</li>
+      </ul>
+      <p class="tech"><strong>Technologies:</strong> Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave, Codex, GPT-5.6</p>
+    </article>
+    <article>
+      <h3>Front-End Developer — NAMI</h3>
+      <p class="meta">2024-12 – 2026-01 · Remote</p>
+<p>Built and maintained NAMI's Laravel-based core business application with a focus on reusable UI components, accessibility, and Cypress E2E testing.</p>      <ul>
+        <li>Built a Tailwind-based design component library with a Storybook workflow for rapid iteration, enforcing UI standards across NAMI's core application.</li>
+        <li>Led Cypress automated testing implementation for a Laravel/Livewire event platform, improving regression coverage and team confidence.</li>
+        <li>Contributed to accessibility and code-quality audits that increased aggregate compliance score by 30%.</li>
+      </ul>
+      <p class="tech"><strong>Technologies:</strong> Laravel, Livewire, Alpine, Cypress, JavaScript, Tailwind CSS, Storybook, Figma, Adobe XD</p>
+    </article>
+    <article>
+      <h3>Founder & Web Developer — Volant Web Design</h3>
+      <p class="meta">2024-09 – Present · NJ</p>
+<p>Resumed sole-proprietorship web design and development work for B2B clients, covering requirements through production deployment and SEO.</p>      <ul>
+        <li>Delivered full-stack client websites and SEO/analytics reporting from requirements through production deployment.</li>
+      </ul>
+      <p class="tech"><strong>Technologies:</strong> PHP, JavaScript, HTML5, CSS</p>
+    </article>
+    <article>
+      <h3>Software Engineer — Charity Navigator</h3>
+      <p class="meta">2023-08 – 2024-09 · NJ</p>
+<p>Contributed to a high-traffic React/TypeScript data portal, GraphQL API transitions, and cross-functional delivery with product and data teams.</p>      <ul>
+        <li>Built React/TypeScript portal features for 50,000+ clients and helped sustain high-traffic events with hundreds of thousands of concurrent visitors.</li>
+        <li>Partnered with product and data teams to ship tools that streamlined data-review processes.</li>
+      </ul>
+      <p class="tech"><strong>Technologies:</strong> React, TypeScript, GraphQL, JavaScript, Sequelize, MySQL, Docker</p>
+    </article>
+    <article>
+      <h3>Front-End Web Developer — Charity Navigator</h3>
+      <p class="meta">2019-03 – 2023-08 · NJ</p>
+<p>Led frontend design and development for platform rebranding, technology migration, and high-traffic public web experiences.</p>      <ul>
+        <li>Led frontend execution of a major rebrand and platform rebuild serving 10M+ annual users in collaboration with external design agencies.</li>
+        <li>Partnered with the CMO and marketing team on rebrand work and time-sensitive website feature launches.</li>
+      </ul>
+      <p class="tech"><strong>Technologies:</strong> JavaScript, HTML5, CSS, React</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Selected Projects</h2>
+    <article>
+      <h3>InSummery.AI — Independent R&D</h3>
+      <p class="meta">2026</p>
+<p>Family scheduling information lives in messy emails, texts, and PDFs; calendar apps assume tidy manual entry and do not detect multi-child childcare gaps or real-time disruptions with a human still in control.</p><p>Built a Google ADK 2.0 multi-agent concierge that masks PII, triages and extracts schedule data, pauses below 80% confidence for HITL clarification, maintains a multi-child schedule matrix with absolute/relative gap analysis, and syncs disruptions to Google Calendar—shipped as a Kaggle + Google 5-Day AI Agents Intensive Consult-track capstone.</p>      <p class="tech"><strong>Technologies:</strong> Google ADK 2.0, Python, Pydantic, Google Gemini, Vertex AI, Gemma, Ollama, Firebase, Firebase Cloud Functions, Cloud Firestore, Firebase Authentication, React, Vite, Google Calendar API, OpenTelemetry</p>
+    </article>
+    <article>
+      <h3>OpenClaw Multi-Agent Market Intelligence Ecosystem — Independent R&D</h3>
+      <p class="meta">2025-2026</p>
+<p>Long-running agentic market-research tasks lose state and context without durable memory and governance when synthesizing fragmented commodity and market data.</p><p>Built an autonomous research framework on OpenClaw with specialized agents (data pull, profitability analysis, dashboard UI, orchestrator), SQLite persistence, Python ETL workers, and HITL approval gates—applied to real-world and World of Warcraft commodity markets.</p>      <p class="tech"><strong>Technologies:</strong> OpenClaw, Python, SQLite, Google Gemini, Gemma</p>
+    </article>
+    <article>
+      <h3>AgentOS: Chief of Staff Agent — Independent R&D</h3>
+      <p class="meta">2025-2026</p>
+<p>Complex long-running workflows need reliable orchestration with mandatory human checkpoints.</p><p>Built a multi-agent orchestrator with the Cursor Agent SDK, modular subagents, and HITL handoffs for evaluation and testing stages.</p>      <p class="tech"><strong>Technologies:</strong> Cursor Agent SDK, Python</p>
+    </article>
+    <article>
+      <h3>Cognitive Bridge: AI Personality Alignment — Independent R&D</h3>
+      <p class="meta">2025-2026</p>
+<p>Human-AI collaboration can suffer when agent personality is poorly matched to the user, and prototypes need a path from AI Studio into secured production backends.</p><p>Built an OCEAN-based personality alignment prototype in Google AI Studio, then productionized it on Firebase Cloud Functions with Firestore memory, Firebase Auth, Vertex AI, and Pydantic-validated structured Gemini outputs.</p>      <p class="tech"><strong>Technologies:</strong> Google AI Studio, Google Gemini, Firebase, Firebase Cloud Functions, Cloud Firestore, Firebase Authentication, Vertex AI, Pydantic, Python</p>
+    </article>
+    <article>
+      <h3>NAMI Design Component Library — NAMI</h3>
+      <p class="meta">2024-2026</p>
+<p>Front-end delivery needed stronger architecture standards and reusable UI patterns across the core business application.</p><p>Built a Tailwind-based centralized design component library—including a custom org-wide shared library and a Storybook version for rapid iteration and testing—to enforce standards and streamline UI deployment.</p>      <p class="tech"><strong>Technologies:</strong> Laravel, Livewire, JavaScript, Tailwind CSS, Storybook</p>
+    </article>
+    <article>
+      <h3>NAMI 720 Event Platform — NAMI</h3>
+      <p class="meta">2024-2026</p>
+<p>Maintain and improve event-management workflows for nonprofit users and staff.</p><p>Contributed front-end implementation and Cypress testing practices in a Laravel/Livewire application.</p>      <p class="tech"><strong>Technologies:</strong> Laravel, Livewire, Alpine, Cypress</p>
+    </article>
+    <article>
+      <h3>Charity Navigator Data Review Portal — Charity Navigator</h3>
+      <p class="meta">2023-2024</p>
+<p>Internal and client data-review workflows needed a scalable React/TypeScript portal with modern API integration.</p><p>Engineered portal features, queried MySQL via Sequelize for front-end data, helped transition legacy flows into GraphQL, and worked with Docker-based CI/CD deploy scripts.</p>      <p class="tech"><strong>Technologies:</strong> React, TypeScript, GraphQL, Sequelize, MySQL, Docker</p>
+    </article>
+    <article>
+      <h3>Charity Navigator Platform Rebuild — Charity Navigator</h3>
+      <p class="meta">2019-2023</p>
+<p>Modernize and rebrand a high-traffic nonprofit platform serving millions of annual users.</p><p>Led frontend execution of the 20th-anniversary rebrand and platform rebuild in collaboration with external design agencies and internal stakeholders.</p>      <p class="tech"><strong>Technologies:</strong> JavaScript, HTML5, CSS, React</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <p class="skills-line"><strong>Front-End:</strong> JavaScript, React, TypeScript</p>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <article>
+      <h3>Udacity — Front-End Web Developer Nanodegree</h3>
+<p class="meta">Full scholarship from Google through the "Grow with Google" program.</p>    </article>
+    <article>
+      <h3>Seattle University — MA, Counseling</h3>
+    </article>
+    <article>
+      <h3>Dartmouth College — BA, Anthropology</h3>
+    </article>
+  </section>
+</body>
+</html>
