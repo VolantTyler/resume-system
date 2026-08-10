@@ -1213,3 +1213,60 @@
   confidence: high
   source_notes:
     - CV lists example client industries and intern supervision.
+- id: gap-agile
+  company: Charity Navigator and NAMI
+  timeframe: 2019-2026
+  category: collaboration
+  themes:
+    - Agile
+    - iterative delivery
+  raw_fact: Operated in fully Agile software development settings throughout Charity Navigator and NAMI front-end roles.
+  context: Confirmed during gap interview for docs/job-descriptions/amazon-front-end-engineer-ii-amazon-quick.md (Charity Navigator and NAMI).
+  resume_bullets:
+    standard: Operated in fully Agile software development settings throughout Charity Navigator and NAMI front-end roles.
+    frontend: Delivered front-end work in fully Agile teams at Charity Navigator and NAMI.
+    full-stack: Practiced Agile delivery across Charity Navigator and NAMI engineering teams.
+    nonprofit: Contributed to Agile nonprofit engineering teams at Charity Navigator and NAMI.
+  target_roles:
+    - ai-security-product
+    - frontend-engineer
+    - full-stack-engineer
+    - qa-minded-frontend
+    - ui-engineer
+    - agentic-software-engineer
+    - forward-deployed-engineer
+    - nonprofit-tech
+  confidence: medium
+  source_notes:
+    - 'Gap interview confirmation (2026-08-07) for term "Agile" against docs/job-descriptions/amazon-front-end-engineer-ii-amazon-quick.md.'
+    - "Interview transcript: docs/intake/2026-08-07-gap-interview-amazon-front-end-engineer-ii-amazon-quic.md"
+    - No sprint metrics or ceremony ownership claimed beyond operating in fully Agile settings.
+- id: gap-performance-optimization
+  company: Charity Navigator
+  timeframe: 2019-2024
+  category: technical
+  themes:
+    - Performance optimization
+    - observability
+    - time to paint
+  raw_fact: Improved front-end performance by adding traces and analytics and reducing time to paint.
+  context: Confirmed during gap interview for docs/job-descriptions/amazon-front-end-engineer-ii-amazon-quick.md. Employer not specified in interview; linked to Charity Navigator as the primary React/TypeScript portal tenure.
+  resume_bullets:
+    standard: Improved front-end performance by adding traces and analytics and reducing time to paint.
+    frontend: Added front-end traces and analytics and reduced time to paint.
+    full-stack: Improved web performance with tracing, analytics instrumentation, and faster time to paint.
+    qa: Added traces and analytics to support front-end performance visibility and faster paint times.
+  target_roles:
+    - ai-security-product
+    - frontend-engineer
+    - full-stack-engineer
+    - qa-minded-frontend
+    - ui-engineer
+    - agentic-software-engineer
+    - forward-deployed-engineer
+    - nonprofit-tech
+  confidence: medium
+  source_notes:
+    - 'Gap interview confirmation (2026-08-07) for term "Performance optimization" against docs/job-descriptions/amazon-front-end-engineer-ii-amazon-quick.md.'
+    - "Interview transcript: docs/intake/2026-08-07-gap-interview-amazon-front-end-engineer-ii-amazon-quic.md"
+    - No quantified paint-time delta claimed; employer attribution to Charity Navigator is inferred from React portal tenure and marked medium confidence.

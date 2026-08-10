@@ -8,3 +8,4 @@ Record of intake notes processed into structured résumé data.
 | 2026-07-09 | `docs/intake/2026-07-09-insummery-kaggle-writeup.md` | Merged Autobiography-Agent career data including InSummery.AI and Deloitte-tailored resume versions. |
 | 2026-07-31 | `docs/intake/2026-07-31-development-knowledge-vault.md` | Added Development Knowledge Vault MCP project, dual-auth accomplishment, MCP/Next.js/Clerk skills, and personal Cursor skill. |
 | 2026-07-31 | `docs/intake/2026-07-31-glen-rock-ai-guild.md` | Added Glen Rock AI Guild CrewAI/Slack/FastAPI project with supervisor routing, Socket Mode backend, and Docs/Drive sync accomplishments. |
+| 2026-08-07 | `docs/intake/2026-08-07-gap-interview-amazon-front-end-engineer-ii-amazon-quic.md` | Gap interview for Amazon Quick FE II: confirmed Agile (CN+NAMI) and front-end performance optimization (traces/analytics/time-to-paint); denied Angular and AWS. |

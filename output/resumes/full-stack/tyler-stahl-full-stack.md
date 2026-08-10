@@ -29,16 +29,18 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 - Shipped a distributed multi-agent research system with Python workers, SQLite persistence, and production-minded state management.
 - Implemented Python data pipelines with durable SQLite state for agent-driven research and reporting.
 - Shipped a secured serverless Cognitive Bridge backend with Firebase Auth, Firestore state, and type-safe Gemini JSON responses driving UI and DB updates.
-**Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave
+- Developed Stack Overlord for OpenAI Build Week with Codex/GPT-5.6-assisted delivery and GPT-5.6-powered project intelligence.
+**Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave, Codex, GPT-5.6
 
 ### Front-End Developer — NAMI
 
 *2024-12 – 2026-01* · Remote
 Built and maintained NAMI's Laravel-based core business application with a focus on reusable UI components, accessibility, and Cypress E2E testing.
 
-- Implemented a shared component library to enforce architecture standards and accelerate UI delivery.
+- Implemented a shared Tailwind component library plus Storybook for org-wide reuse, architecture standards, and faster UI delivery.
+- Used Figma and Adobe XD to prototype event-planning journeys that informed front-end delivery.
 - Developed automated E2E testing pipelines with Cypress to reduce manual QA cycles and improve release confidence.
-**Technologies:** Laravel, Livewire, Alpine, Cypress, JavaScript
+**Technologies:** Laravel, Livewire, Alpine, Cypress, JavaScript, Tailwind CSS, Storybook, Figma, Adobe XD
 
 ### Software Engineer — Charity Navigator
 
@@ -47,7 +49,9 @@ Contributed to a high-traffic React/TypeScript data portal, GraphQL API transiti
 
 - Engineered portal features in React/TypeScript for a high-traffic nonprofit data platform.
 - Supported GraphQL migration of legacy data flows for a high-traffic nonprofit platform.
-**Technologies:** React, TypeScript, GraphQL, JavaScript
+- Connected MySQL data to the front-end through Sequelize for Charity Navigator portal features.
+- Used Docker in Charity Navigator CI/CD deploy scripts for application delivery.
+**Technologies:** React, TypeScript, GraphQL, JavaScript, Sequelize, MySQL, Docker
 
 ### Front-End Web Developer — Charity Navigator
 
@@ -120,15 +124,35 @@ Built an OCEAN-based personality alignment prototype in Google AI Studio, then p
 
 **Technologies:** Google AI Studio, Google Gemini, Firebase, Firebase Cloud Functions, Cloud Firestore, Firebase Authentication, Vertex AI, Pydantic, Python
 
+### Stack Overlord — Independent R&D
+
+*2026*
+
+OpenAI Build Week required shipping a working product under tight hackathon constraints with AI-assisted development.
+
+Built Stack Overlord primarily in Codex/GPT-5.6, with project intelligence powered by GPT-5.6.
+
+**Technologies:** Codex, GPT-5.6
+
 ### NAMI Design Component Library — NAMI
 
 *2024-2026*
 
 Front-end delivery needed stronger architecture standards and reusable UI patterns across the core business application.
 
-Built and implemented a centralized design component library to enforce standards and streamline UI deployment.
+Built a Tailwind-based centralized design component library—including a custom org-wide shared library and a Storybook version for rapid iteration and testing—to enforce standards and streamline UI deployment.
 
-**Technologies:** Laravel, Livewire, JavaScript
+**Technologies:** Laravel, Livewire, JavaScript, Tailwind CSS, Storybook
+
+### NAMI Internal Event Planning UX — NAMI
+
+*2024-2026*
+
+Internal event planning workflows needed clearer user journeys before front-end implementation.
+
+Prototyped new user journeys in Figma and Adobe XD for NAMI's internal event planning tool.
+
+**Technologies:** Figma, Adobe XD
 
 ### Charity Navigator Data Review Portal — Charity Navigator
 
@@ -136,9 +160,9 @@ Built and implemented a centralized design component library to enforce standard
 
 Internal and client data-review workflows needed a scalable React/TypeScript portal with modern API integration.
 
-Engineered portal features and helped transition legacy data flows into GraphQL endpoints while collaborating with product and data teams.
+Engineered portal features, queried MySQL via Sequelize for front-end data, helped transition legacy flows into GraphQL, and worked with Docker-based CI/CD deploy scripts.
 
-**Technologies:** React, TypeScript, GraphQL
+**Technologies:** React, TypeScript, GraphQL, Sequelize, MySQL, Docker
 
 ### Charity Navigator Platform Rebuild — Charity Navigator
 
@@ -153,11 +177,12 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 
 ## Skills
 
-**Applied AI:** PII masking, Firebase, Model Context Protocol
-**Front-End:** JavaScript, React, TypeScript, Next.js
-**Back-End:** FastAPI, Slack Bolt, Google Docs / Drive APIs, Laravel, GraphQL, SQLite, Clerk OAuth, PHP
+**Applied AI:** Google AI Studio, Codex / GPT, PII masking, Model Context Protocol
+**Front-End:** JavaScript, React, TypeScript, Next.js, Tailwind CSS, Figma, Adobe XD, Storybook, UX Design / Prototyping, Performance optimization
+**Back-End:** Firebase, Firestore, Sequelize, FastAPI, Slack Bolt, Google Docs / Drive APIs, Laravel, GraphQL, SQLite, Clerk OAuth, PHP
 **Testing:** Cypress
-**Collaboration:** Stakeholder collaboration, Deep listening
+**DevOps:** Docker, CI/CD, GitHub Actions
+**Collaboration:** Stakeholder collaboration, Deep listening, Agile
 
 ## Education
 

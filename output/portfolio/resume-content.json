@@ -49,8 +49,8 @@
       "startDate": "2026-02",
       "endDate": "Present",
       "summary": "Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.",
-      "technologies": ["Python","Google ADK 2.0","OpenClaw","CrewAI","Google Gemini","Gemma","FastAPI","Slack Bolt","Firebase","SQLite","Cursor Agent SDK","Weights & Biases Weave"],
-      "bullets": ["Built a CrewAI Supervisor that routes simple Slack prompts to a direct answer and detailed requests to a dynamically selected specialist crew.","Shipped a FastAPI + Slack Socket Mode backend that turns @mentions into threaded multi-agent Guild reports without a public webhook.","Built a Vercel-hosted MCP knowledge vault that serves reusable engineering patterns as tools for AI coding agents.","Designed one-URL MCP auth that accepts either a shared-secret Bearer token or a Clerk OAuth access token based on the client request.","Built InSummery.AI, an ADK multi-agent family schedule concierge that turns messy registration and disruption messages into a structured multi-child schedule.","Deployed InSummery on Firebase (Auth, Cloud Functions, Firestore) with a React dashboard and local CLI mode for zero-cloud demos.","Built a multi-agent market-intelligence pilot on OpenClaw with specialized agents and SQLite-backed durable memory for long-running research workflows."]
+      "technologies": ["Python","Google ADK 2.0","OpenClaw","CrewAI","Google Gemini","Gemma","FastAPI","Slack Bolt","Firebase","SQLite","Cursor Agent SDK","Weights & Biases Weave","Codex","GPT-5.6"],
+      "bullets": ["Built a CrewAI Supervisor that routes simple Slack prompts to a direct answer and detailed requests to a dynamically selected specialist crew.","Shipped a FastAPI + Slack Socket Mode backend that turns @mentions into threaded multi-agent Guild reports without a public webhook.","Built a Vercel-hosted MCP knowledge vault that serves reusable engineering patterns as tools for AI coding agents.","Designed one-URL MCP auth that accepts either a shared-secret Bearer token or a Clerk OAuth access token based on the client request.","Built InSummery.AI, an ADK multi-agent family schedule concierge that turns messy registration and disruption messages into a structured multi-child schedule.","Deployed InSummery on Firebase (Auth, Cloud Functions, Firestore) with a React dashboard and local CLI mode for zero-cloud demos.","Built a multi-agent market-intelligence pilot on OpenClaw with specialized agents and SQLite-backed durable memory for long-running research workflows.","Built Stack Overlord for OpenAI Build Week primarily with Codex/GPT-5.6, using GPT-5.6 for project intelligence."]
     },    {
       "id": "nami-front-end-developer",
       "company": "NAMI",
@@ -59,7 +59,7 @@
       "startDate": "2024-12",
       "endDate": "2026-01",
       "summary": "Built and maintained NAMI's Laravel-based core business application with a focus on reusable UI components, accessibility, and Cypress E2E testing.",
-      "technologies": ["Laravel","Livewire","Alpine","Cypress","JavaScript"],
+      "technologies": ["Laravel","Livewire","Alpine","Cypress","JavaScript","Tailwind CSS","Storybook","Figma","Adobe XD"],
       "bullets": ["Led Cypress automated testing implementation for a Laravel/Livewire event platform, improving regression coverage and team confidence."]
     },    {
       "id": "charity-navigator-software-engineer",
@@ -69,7 +69,7 @@
       "startDate": "2023-08",
       "endDate": "2024-09",
       "summary": "Contributed to a high-traffic React/TypeScript data portal, GraphQL API transitions, and cross-functional delivery with product and data teams.",
-      "technologies": ["React","TypeScript","GraphQL","JavaScript"],
+      "technologies": ["React","TypeScript","GraphQL","JavaScript","Sequelize","MySQL","Docker"],
       "bullets": ["Built React/TypeScript portal features for 50,000+ clients and helped sustain high-traffic events with hundreds of thousands of concurrent visitors."]
     },    {
       "id": "charity-navigator-frontend",
@@ -140,6 +140,14 @@
       "technologies": ["OpenClaw","Python","SQLite","Google Gemini","Gemma"],
       "confidence": "high"
     },    {
+      "id": "stack-overlord-openai-build-week",
+      "company": "Independent R&D",
+      "timeframe": "2026",
+      "bullet": "Built Stack Overlord for OpenAI Build Week primarily with Codex/GPT-5.6, using GPT-5.6 for project intelligence.",
+      "themes": ["Codex","GPT","hackathon","AI-assisted development","project intelligence"],
+      "technologies": ["Codex","GPT-5.6"],
+      "confidence": "high"
+    },    {
       "id": "nami-cypress-testing-leadership",
       "company": "NAMI",
       "timeframe": "2024-2026",
@@ -178,7 +186,7 @@
       "credential": "BA, Anthropology",
       "note": null
     }  ],
-  "generatedAt": "2026-07-31T13:15:19.511Z",
+  "generatedAt": "2026-08-07T16:22:18.355Z",
   "versionId": "portfolio-v1",
   "targetId": "portfolio-focused"
 }
