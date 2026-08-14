@@ -147,7 +147,7 @@ lists everything with JavaScript disabled.
 
 ## Milestone 3 — Automate the pull
 
-**Repo:** `portfolio`.
+**Repo:** `portfolio`, plus one doc update in `resume-system`.
 
 - `.github/workflows/sync-resume.yml`, triggered by `workflow_dispatch` (manual button) and a weekly
   `schedule`.
@@ -155,6 +155,11 @@ lists everything with JavaScript disabled.
   `GITHUB_TOKEN`.
 - Enable **Allow GitHub Actions to create and approve pull requests** in repo settings first —
   otherwise the PR step fails with an opaque permissions error.
+- Update `resume-system/docs/portfolio-integration.md`, which is now stale: it names build-time fetch
+  as "the current recommendation" and still lists site-side wiring as out of scope. Replace the
+  recommendation with the consumer-pull design above and tick the checklist. That file is the
+  producer-side **contract** doc and should stay that — how the site fetches and renders belongs in
+  the portfolio repo, matching the direction of the coupling.
 
 **Note** raw.githubusercontent caches for a few minutes, so a manual run fired seconds after merging
 can still fetch the previous copy.
