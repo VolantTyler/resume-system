@@ -1,8 +1,26 @@
 # Tyler Stahl
 
-**Full-Stack Engineer**
+**Full-Stack Engineer — tailored for Publicis Groupe — Full Stack Developer**
 
 Glen Rock, NJ · [Portfolio](https://tylerstahl.dev) · [GitHub](https://github.com/VolantTyler) · [LinkedIn](https://linkedin.com/in/tyler-j-stahl)
+---
+
+## Application Fit
+
+*Publicis Groupe — Full Stack Developer*
+
+Solid keyword-level fit for the role based on documented themes and skills.
+
+**Strongest alignment**
+
+- **Hands-on delivery aligned to matched résumé themes** — Experience → Independent R&D
+- **Project evidence available for selected accomplishments** — Selected Projects → Glen Rock AI Guild
+
+**Additional alignment**
+
+- **Vue** — Source data may address this need indirectly through related delivery and reliability work already selected; do not invent missing skills.
+- **Node.js** — Background shows individual ownership and stakeholder collaboration on shipped work rather than named leadership titles.
+
 ---
 
 ## Summary
@@ -18,12 +36,16 @@ Full-stack software engineer with experience shipping React/TypeScript and Larav
 *2026-02 – Present* · NJ
 Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.
 
+- Delivered full-stack GenAI apps on Firebase/Vertex AI, taking prototypes through auth, serverless backends, and durable state.
+- Used the Cursor Agent SDK to break requirements into orchestrated agent tasks with human review gates before release handoffs.
 - Shipped a Gemini-backed CrewAI orchestration layer with structured Supervisor decisions and sequential specialist task execution.
 - Built a mention-driven Slack service with immediate ack, background crew execution, threaded replies, and HTTP health/agent roster APIs.
 - Integrated Google Docs and Drive APIs with personal OAuth and service-account paths plus safe mock mode for demo environments.
 - Deployed a Next.js MCP endpoint on Vercel that loads markdown patterns at request time for cross-client agent tooling.
 - Wired Clerk OAuth and optional MCP_SECRET_KEY Bearer acceptance into a Next.js MCP route with well-known authorization-server and protected-resource endpoints left public.
 - Shipped an agentic scheduling product spanning ADK workflow, structured extraction, and a parent-facing schedule matrix.
+- Built a PII masking pipeline that protects family names and contacts before LLM calls and restores them after structured extraction.
+- Built a review-and-resume HITL checkpoint so uncertain agent output is validated before it updates production schedule state.
 - Connected structured schedule state to Google Calendar OAuth sync and a parent-facing dashboard.
 - Shipped a full-stack agentic product with Firebase backend, React frontend, and Google Calendar integration.
 - Shipped a distributed multi-agent research system with Python workers, SQLite persistence, and production-minded state management.
@@ -40,7 +62,18 @@ Built and maintained NAMI's Laravel-based core business application with a focus
 - Implemented a shared Tailwind component library plus Storybook for org-wide reuse, architecture standards, and faster UI delivery.
 - Used Figma and Adobe XD to prototype event-planning journeys that informed front-end delivery.
 - Developed automated E2E testing pipelines with Cypress to reduce manual QA cycles and improve release confidence.
+- Contributed to accessibility and code-quality audits that increased aggregate compliance score by 30%.
+- Supported CCIE-TM registration release work by improving multi-date registration handling, documenting testing steps, and assisting staging release readiness.
+- Practiced Agile delivery across Charity Navigator and NAMI engineering teams.
 **Technologies:** Laravel, Livewire, Alpine, Cypress, JavaScript, Tailwind CSS, Storybook, Figma, Adobe XD
+
+### Founder & Web Developer — Volant Web Design
+
+*2024-09 – Present* · NJ
+Resumed sole-proprietorship web design and development work for B2B clients, covering requirements through production deployment and SEO.
+
+- Consulted with B2B clients to design, build, and deploy PHP/JS web solutions end to end.
+**Technologies:** PHP, JavaScript, HTML5, CSS
 
 ### Software Engineer — Charity Navigator
 
@@ -51,6 +84,9 @@ Contributed to a high-traffic React/TypeScript data portal, GraphQL API transiti
 - Supported GraphQL migration of legacy data flows for a high-traffic nonprofit platform.
 - Connected MySQL data to the front-end through Sequelize for Charity Navigator portal features.
 - Used Docker in Charity Navigator CI/CD deploy scripts for application delivery.
+- Collaborated across product and data teams to translate requirements into portal and API improvements.
+- Practiced Agile delivery across Charity Navigator and NAMI engineering teams.
+- Improved web performance with tracing, analytics instrumentation, and faster time to paint.
 **Technologies:** React, TypeScript, GraphQL, JavaScript, Sequelize, MySQL, Docker
 
 ### Front-End Web Developer — Charity Navigator
@@ -154,6 +190,26 @@ Prototyped new user journeys in Figma and Adobe XD for NAMI's internal event pla
 
 **Technologies:** Figma, Adobe XD
 
+### NAMI 720 Event Platform — NAMI
+
+*2024-2026*
+
+Maintain and improve event-management workflows for nonprofit users and staff.
+
+Contributed front-end implementation and Cypress testing practices in a Laravel/Livewire application.
+
+**Technologies:** Laravel, Livewire, Alpine, Cypress
+
+### CCIE-TM Training Registration — NAMI
+
+*2024-2026*
+
+Support reliable registration behavior for multi-date nonprofit training workflows.
+
+Improved registration handling, documented testing steps, and supported staging validation.
+
+**Technologies:** Laravel, Livewire, Alpine, Cypress
+
 ### Charity Navigator Data Review Portal — Charity Navigator
 
 *2023-2024*
@@ -177,12 +233,8 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 
 ## Skills
 
-**Applied AI:** Google AI Studio, Codex / GPT, PII masking, Model Context Protocol
-**Front-End:** JavaScript, React, TypeScript, Next.js, Tailwind CSS, Figma, Adobe XD, Storybook, UX Design / Prototyping, Performance optimization
-**Back-End:** Firebase, Firestore, Sequelize, FastAPI, Slack Bolt, Google Docs / Drive APIs, Laravel, GraphQL, SQLite, Clerk OAuth, PHP
-**Testing:** Cypress
-**DevOps:** Docker, CI/CD, GitHub Actions
-**Collaboration:** Stakeholder collaboration, Deep listening, Agile
+**Front-End:** React, Next.js, Performance optimization
+**Collaboration:** Agile
 
 ## Education
 

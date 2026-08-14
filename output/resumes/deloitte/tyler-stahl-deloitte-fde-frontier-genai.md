@@ -74,6 +74,7 @@ Led frontend design and development for platform rebranding, technology migratio
 *2017-04 – 2019-03* · NJ
 Founded and ran a web design business offering development, SEO, and analytics for clients across multiple industries.
 
+- Founded a web design business delivering PHP/JS sites, SEO, and analytics for clients across multiple industries.
 **Technologies:** PHP, JavaScript, HTML5, CSS
 
 

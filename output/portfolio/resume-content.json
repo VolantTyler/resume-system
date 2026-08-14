@@ -110,7 +110,7 @@
       "endDate": "2019-03",
       "summary": "Founded and ran a web design business offering development, SEO, and analytics for clients across multiple industries.",
       "technologies": ["PHP","JavaScript","HTML5","CSS"],
-      "bullets": []
+      "bullets": ["Founded a web design business delivering PHP/JS sites, SEO, and analytics for clients across multiple industries."]
     }  ],
   "selectedAccomplishments": [
     {
@@ -201,6 +201,14 @@
       "themes": ["rebrand","platform rebuild","agency collaboration"],
       "technologies": ["JavaScript","HTML5","CSS","React"],
       "confidence": "medium"
+    },    {
+      "id": "volant-business-founding",
+      "company": "Volant Web Design",
+      "timeframe": "2017-2019",
+      "bullet": "Founded a web design business delivering PHP/JS sites, SEO, and analytics for clients across multiple industries.",
+      "themes": ["entrepreneurship","client delivery","SEO"],
+      "technologies": ["PHP","JavaScript","HTML5","CSS"],
+      "confidence": "high"
     }  ],
   "education": [
     {
@@ -216,7 +224,7 @@
       "credential": "BA, Anthropology",
       "note": null
     }  ],
-  "generatedAt": "2026-08-14T00:59:01.256Z",
+  "generatedAt": "2026-08-14T21:12:19.289Z",
   "versionId": "portfolio-v1",
   "targetId": "portfolio-focused"
 }
