@@ -100,23 +100,6 @@
     - nami-720-event-platform
     - ccie-tm-training-registration
     - nami-event-planning-ux
-- id: volant-founder-2024
-  company: Volant Web Design
-  title: Founder & Web Developer
-  location: NJ
-  start_date: 2024-09
-  end_date: present
-  role_summary: Resumed sole-proprietorship web design and development work for B2B clients, covering
-    requirements through production deployment and SEO.
-  technologies:
-    - PHP
-    - JavaScript
-    - HTML5
-    - CSS
-  major_projects: []
-  accomplishment_ids:
-    - volant-fullstack-client-delivery
-  project_ids: []
 - id: charity-navigator-software-engineer
   company: Charity Navigator
   title: Software Engineer

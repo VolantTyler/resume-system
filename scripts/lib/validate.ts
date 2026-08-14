@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { findPortfolioVersion } from "./build-resume-context.js";
 import { loadResumeData } from "./load-data.js";
 import type { ResumeData, ValidationIssue } from "./schemas.js";
 
@@ -11,6 +12,42 @@ function collectUniqueIds(ids: string[], label: string): ValidationIssue[] {
       issues.push({ path: label, message: `Duplicate ID "${id}"` });
     }
     seen.add(id);
+  }
+
+  return issues;
+}
+
+/**
+ * A project reaches the portfolio site only when it is marked `portfolio_visible: true`
+ * *and* listed in the portfolio version's `project_ids`. Miss the second half and the
+ * project is filtered out of the export with no error — the card simply never renders.
+ * This turns that silence into a failed build.
+ *
+ * The reverse is legitimate and deliberately not flagged: a project may sit in
+ * `project_ids` with `portfolio_visible: false`, which is how projects are parked for
+ * later without editing the version.
+ */
+export function validatePortfolioVisibility(data: ResumeData): ValidationIssue[] {
+  const issues: ValidationIssue[] = [];
+  const version = findPortfolioVersion(data);
+
+  if (!version) {
+    return issues;
+  }
+
+  const selectedProjectIds = new Set(version.project_ids ?? []);
+
+  for (const project of data.projects) {
+    if (project.portfolio_visible === true && !selectedProjectIds.has(project.id)) {
+      issues.push({
+        path: `projects.${project.id}.portfolio_visible`,
+        message:
+          `Project is marked portfolio_visible: true but is missing from ` +
+          `resume_versions.${version.id}.project_ids, so it would be dropped from the ` +
+          `portfolio export without warning. Add it to project_ids, or set ` +
+          `portfolio_visible: false.`,
+      });
+    }
   }
 
   return issues;
@@ -192,6 +229,7 @@ export function validateResumeData(): ValidationIssue[] {
       "resume_versions",
     ),
     ...validateCrossReferences(data),
+    ...validatePortfolioVisibility(data),
   ];
 
   return issues;

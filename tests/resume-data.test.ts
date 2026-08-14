@@ -1,7 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { buildResumeContext } from "../scripts/lib/build-resume-context.js";
+import {
+  buildResumeContext,
+  findPortfolioVersion,
+} from "../scripts/lib/build-resume-context.js";
 import { loadResumeData } from "../scripts/lib/load-data.js";
-import { validateResumeData } from "../scripts/lib/validate.js";
+import {
+  validatePortfolioVisibility,
+  validateResumeData,
+} from "../scripts/lib/validate.js";
 
 describe("resume data validation", () => {
   it("passes validation for starter data", () => {
@@ -14,6 +20,66 @@ describe("resume data validation", () => {
     expect(data.profile.name).toBe("Tyler Stahl");
     expect(data.accomplishments.length).toBeGreaterThan(0);
     expect(data.resumeVersions.length).toBeGreaterThan(0);
+  });
+});
+
+describe("portfolio visibility validation", () => {
+  it("errors when a portfolio_visible project is missing from the portfolio version", () => {
+    const data = loadResumeData();
+    const version = findPortfolioVersion(data);
+
+    expect(version).toBeDefined();
+
+    const orphan = data.projects.find(
+      (project) => !(version!.project_ids ?? []).includes(project.id),
+    );
+
+    expect(orphan).toBeDefined();
+
+    const issues = validatePortfolioVisibility({
+      ...data,
+      projects: data.projects.map((project) =>
+        project.id === orphan!.id
+          ? { ...project, portfolio_visible: true }
+          : project,
+      ),
+    });
+
+    expect(issues).toHaveLength(1);
+    expect(issues[0].path).toBe(`projects.${orphan!.id}.portfolio_visible`);
+    expect(issues[0].message).toContain("project_ids");
+  });
+
+  it("allows a project in the portfolio version to be parked with portfolio_visible: false", () => {
+    const data = loadResumeData();
+    const version = findPortfolioVersion(data);
+
+    expect(version).toBeDefined();
+
+    // Park a project that is currently listed *and* visible, so the flip is a real
+    // state change rather than a no-op on an already-hidden project.
+    const parked = data.projects.find(
+      (project) =>
+        project.portfolio_visible === true &&
+        (version!.project_ids ?? []).includes(project.id),
+    );
+
+    expect(parked).toBeDefined();
+
+    const issues = validatePortfolioVisibility({
+      ...data,
+      projects: data.projects.map((project) =>
+        project.id === parked!.id
+          ? { ...project, portfolio_visible: false }
+          : project,
+      ),
+    });
+
+    expect(issues).toEqual([]);
+  });
+
+  it("reports no issues for the committed data", () => {
+    expect(validatePortfolioVisibility(loadResumeData())).toEqual([]);
   });
 });
 

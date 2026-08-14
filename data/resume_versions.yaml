@@ -164,7 +164,6 @@
     - nami-front-end-developer
     - charity-navigator-software-engineer
     - charity-navigator-frontend
-    - volant-founder-2024
   accomplishment_ids:
     - rnd-gcp-genai-delivery
     - rnd-hitl-eval-practices
@@ -174,7 +173,6 @@
     - cn-portal-scale
     - cn-graphql-migration
     - nami-cypress-testing-leadership
-    - volant-fullstack-client-delivery
   project_ids:
     - glen-rock-ai-guild
     - insummery-ai
@@ -244,7 +242,6 @@
     - nami-front-end-developer
     - charity-navigator-software-engineer
     - charity-navigator-frontend
-    - volant-founder-2024
   accomplishment_ids:
     - graic-crewai-supervisor-routing
     - graic-slack-fastapi-backend
@@ -266,7 +263,6 @@
     - cn-portal-scale
     - cn-graphql-migration
     - nami-cypress-testing-leadership
-    - volant-fullstack-client-delivery
   project_ids:
     - glen-rock-ai-guild
     - insummery-ai
@@ -340,7 +336,6 @@
     - nami-front-end-developer
     - charity-navigator-software-engineer
     - charity-navigator-frontend
-    - volant-founder-2024
   accomplishment_ids:
     - graic-crewai-supervisor-routing
     - graic-slack-fastapi-backend
@@ -364,7 +359,6 @@
     - cn-cmo-marketing-partnership
     - cn-rebrand-platform-rebuild
     - cn-processing-efficiency
-    - volant-fullstack-client-delivery
   project_ids:
     - glen-rock-ai-guild
     - development-knowledge-vault
@@ -486,6 +480,7 @@
     - nami-front-end-developer
     - charity-navigator-software-engineer
     - charity-navigator-frontend
+    - volant-founder-2017
   accomplishment_ids:
     - graic-crewai-supervisor-routing
     - graic-slack-fastapi-backend
@@ -504,6 +499,7 @@
     - insummery-ai
     - openclaw-multi-agent-ecosystem
     - cognitive-bridge
+    - agentos-chief-of-staff
     - stack-overlord
     - cn-platform-rebuild
   skill_emphasis: []

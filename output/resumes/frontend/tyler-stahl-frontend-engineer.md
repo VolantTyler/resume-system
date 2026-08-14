@@ -39,7 +39,7 @@ Built and maintained NAMI's Laravel-based core business application with a focus
 *2023-08 – 2024-09* · NJ
 Contributed to a high-traffic React/TypeScript data portal, GraphQL API transitions, and cross-functional delivery with product and data teams.
 
-- Optimized front-end architecture for a React/TypeScript portal serving tens of thousands of clients under high-traffic load.
+- Optimized front-end architecture for a React/TypeScript portal serving 50,000+ clients under high-traffic load.
 - Integrated GraphQL endpoints into React/TypeScript portal workflows during API modernization.
 - Integrated Sequelize/MySQL data into React/TypeScript portal UI workflows.
 - Worked with Docker-based CI/CD deploy scripts supporting Charity Navigator front-end releases.

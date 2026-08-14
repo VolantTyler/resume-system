@@ -5,7 +5,7 @@
 **Résumé version:** `tyler-stahl-nonprofit-tech`
 **Round:** 1
 **Model:** `stub`
-**Generated:** 2026-08-07
+**Generated:** 2026-08-14
 
 ## Verdict
 

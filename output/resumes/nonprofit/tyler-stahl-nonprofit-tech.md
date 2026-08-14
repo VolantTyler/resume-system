@@ -30,7 +30,7 @@ Built and maintained NAMI's Laravel-based core business application with a focus
 *2023-08 – 2024-09* · NJ
 Contributed to a high-traffic React/TypeScript data portal, GraphQL API transitions, and cross-functional delivery with product and data teams.
 
-- Supported a mission-driven data portal used by tens of thousands of clients during peak traffic events.
+- Supported a mission-driven data portal used by 50,000+ clients during peak traffic events.
 - Queried MySQL via Sequelize and surfaced results in Charity Navigator front-end features.
 - Supported Charity Navigator CI/CD deploy scripts that used Docker for application delivery.
 - Worked cross-functionally to improve nonprofit data-review operations.

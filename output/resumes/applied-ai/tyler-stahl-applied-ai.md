@@ -60,7 +60,7 @@ Contributed to a high-traffic React/TypeScript data portal, GraphQL API transiti
 *2019-03 – 2023-08* · NJ
 Led frontend design and development for platform rebranding, technology migration, and high-traffic public web experiences.
 
-- Led frontend execution of a major rebrand and platform rebuild serving 10M+ annual users in collaboration with external design agencies.
+- Led frontend execution of a major rebrand and platform rebuild serving 11M+ annual users in collaboration with external design agencies.
 - Partnered with the CMO and marketing team on rebrand work and time-sensitive website feature launches.
 **Technologies:** JavaScript, HTML5, CSS, React
 
