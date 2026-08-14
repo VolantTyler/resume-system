@@ -1,6 +1,6 @@
 {
   "name": "Tyler Stahl",
-  "headline": "Portfolio-Focused Software Engineer",
+  "headline": "Full-Stack Software Engineer and Applied AI Developer",
   "location": "Glen Rock, NJ",
   "portfolioUrl": "https://tylerstahl.dev",
   "githubUrl": "https://github.com/VolantTyler",
@@ -8,16 +8,6 @@
   "summary": "Full-stack software engineer with experience shipping React/TypeScript and Laravel applications at nonprofit scale, plus hands-on applied AI systems work.",
   "featuredProjects": [
     {
-      "id": "glen-rock-ai-guild",
-      "name": "Glen Rock AI Guild",
-      "organization": "Independent R&D",
-      "timeframe": "2026",
-      "problem": "A community AI club needed a mention-driven Slack assistant that could answer simple questions immediately while spinning up the right domain specialists for deeper technical, data, insurance, and writing work—without requiring a public webhook URL.",
-      "solution": "Built a CrewAI multi-agent backend with a Supervisor that classifies Slack mentions into simple vs detailed intents, dynamically selects Engineer / Data Analyst / Insurance SME / Web Designer / Writer agents, runs on Google Gemini with model failover, and exposes FastAPI health/roster endpoints plus Google Docs/Drive sync with mock fallback.",
-      "technologies": ["CrewAI","Google Gemini","FastAPI","Slack Bolt","Socket Mode","Python","Pydantic","Google Docs API","Google Drive API","AgentOps"],
-      "outcomes": ["Intent-based Supervisor routing with fast-path simple answers and dynamic specialist crew assembly for complex prompts.","Slack Socket Mode integration (no public webhook/ngrok) with threaded Guild reports and `/agents-list` roster card.","Google Docs/Drive create-and-sync path with personal OAuth or service-account credentials and mock fallback when unset."],
-      "portfolioVisible": true
-    },    {
       "id": "development-knowledge-vault",
       "name": "Development Knowledge Vault",
       "organization": "Independent R&D",
@@ -36,6 +26,36 @@
       "solution": "Built a Google ADK 2.0 multi-agent concierge that masks PII, triages and extracts schedule data, pauses below 80% confidence for HITL clarification, maintains a multi-child schedule matrix with absolute/relative gap analysis, and syncs disruptions to Google Calendar—shipped as a Kaggle + Google 5-Day AI Agents Intensive Consult-track capstone.",
       "technologies": ["Google ADK 2.0","Python","Pydantic","Google Gemini","Vertex AI","Gemma","Ollama","Firebase","Firebase Cloud Functions","Cloud Firestore","Firebase Authentication","React","Vite","Google Calendar API","OpenTelemetry"],
       "outcomes": ["Capstone writeup published on Kaggle for the vibecoding agents competition.","Public demo app and GitHub repository with CLI and Firebase web modes.","Deterministic eval harness with absolute quality gates (e.g., 90% triager accuracy, 80% workflow pass rate) and baseline regression tracking."],
+      "portfolioVisible": true
+    },    {
+      "id": "openclaw-multi-agent-ecosystem",
+      "name": "OpenClaw Multi-Agent Market Intelligence Ecosystem",
+      "organization": "Independent R&D",
+      "timeframe": "2025-2026",
+      "problem": "Long-running agentic market-research tasks lose state and context without durable memory and governance when synthesizing fragmented commodity and market data.",
+      "solution": "Built an autonomous research framework on OpenClaw with specialized agents (data pull, profitability analysis, dashboard UI, orchestrator), SQLite persistence, Python ETL workers, and HITL approval gates—applied to real-world and World of Warcraft commodity markets.",
+      "technologies": ["OpenClaw","Python","SQLite","Google Gemini","Gemma"],
+      "outcomes": ["Durable multi-turn agent memory across interrupted research tasks.","Structured extraction of market data into relational formats.","Human validation before high-stakes database commits.","Faster market-context decision making in the pilot domain (self-reported ~15% profit lift in interview notes; medium/low confidence)."],
+      "portfolioVisible": true
+    },    {
+      "id": "cognitive-bridge",
+      "name": "Cognitive Bridge: AI Personality Alignment",
+      "organization": "Independent R&D",
+      "timeframe": "2025-2026",
+      "problem": "Human-AI collaboration can suffer when agent personality is poorly matched to the user, and prototypes need a path from AI Studio into secured production backends.",
+      "solution": "Built an OCEAN-based personality alignment prototype in Google AI Studio, then productionized it on Firebase Cloud Functions with Firestore memory, Firebase Auth, Vertex AI, and Pydantic-validated structured Gemini outputs.",
+      "technologies": ["Google AI Studio","Google Gemini","Firebase","Firebase Cloud Functions","Cloud Firestore","Firebase Authentication","Vertex AI","Pydantic","Python"],
+      "outcomes": ["Personality map generation from a brief user interview.","Demonstration of aligned and unaligned chat responses for evaluation.","Migrated prototype to a serverless Python backend with auth-scoped endpoints and durable Firestore memory."],
+      "portfolioVisible": true
+    },    {
+      "id": "agentos-chief-of-staff",
+      "name": "AgentOS: Chief of Staff Agent",
+      "organization": "Independent R&D",
+      "timeframe": "2025-2026",
+      "problem": "Complex long-running workflows need reliable orchestration with mandatory human checkpoints.",
+      "solution": "Built a multi-agent orchestrator with the Cursor Agent SDK, modular subagents, and HITL handoffs for evaluation and testing stages.",
+      "technologies": ["Cursor Agent SDK","Python"],
+      "outcomes": ["Modular subagent design for evaluation and testing workflows.","Mandatory human approval handoffs at critical stages."],
       "portfolioVisible": true
     }  ],
   "skills": [
@@ -80,7 +100,17 @@
       "endDate": "2023-08",
       "summary": "Led frontend design and development for platform rebranding, technology migration, and high-traffic public web experiences.",
       "technologies": ["JavaScript","HTML5","CSS","React"],
-      "bullets": ["Led frontend execution of a major rebrand and platform rebuild serving 10M+ annual users in collaboration with external design agencies."]
+      "bullets": ["Led frontend execution of a major rebrand and platform rebuild serving 11M+ annual users in collaboration with external design agencies."]
+    },    {
+      "id": "volant-founder-2017",
+      "company": "Volant Web Design",
+      "title": "Founder & Web Developer",
+      "location": "NJ",
+      "startDate": "2017-04",
+      "endDate": "2019-03",
+      "summary": "Founded and ran a web design business offering development, SEO, and analytics for clients across multiple industries.",
+      "technologies": ["PHP","JavaScript","HTML5","CSS"],
+      "bullets": ["Founded a web design business delivering PHP/JS sites, SEO, and analytics for clients across multiple industries."]
     }  ],
   "selectedAccomplishments": [
     {
@@ -167,10 +197,18 @@
       "id": "cn-rebrand-platform-rebuild",
       "company": "Charity Navigator",
       "timeframe": "2019-2023",
-      "bullet": "Led frontend execution of a major rebrand and platform rebuild serving 10M+ annual users in collaboration with external design agencies.",
+      "bullet": "Led frontend execution of a major rebrand and platform rebuild serving 11M+ annual users in collaboration with external design agencies.",
       "themes": ["rebrand","platform rebuild","agency collaboration"],
       "technologies": ["JavaScript","HTML5","CSS","React"],
       "confidence": "medium"
+    },    {
+      "id": "volant-business-founding",
+      "company": "Volant Web Design",
+      "timeframe": "2017-2019",
+      "bullet": "Founded a web design business delivering PHP/JS sites, SEO, and analytics for clients across multiple industries.",
+      "themes": ["entrepreneurship","client delivery","SEO"],
+      "technologies": ["PHP","JavaScript","HTML5","CSS"],
+      "confidence": "high"
     }  ],
   "education": [
     {
@@ -186,7 +224,7 @@
       "credential": "BA, Anthropology",
       "note": null
     }  ],
-  "generatedAt": "2026-08-07T16:22:18.355Z",
+  "generatedAt": "2026-08-14T21:12:19.289Z",
   "versionId": "portfolio-v1",
   "targetId": "portfolio-focused"
 }

@@ -5,7 +5,7 @@
 **Résumé version:** `tyler-stahl-frontend-engineer`
 **Round:** 1
 **Model:** `stub`
-**Generated:** 2026-08-07
+**Generated:** 2026-08-14
 
 ## Verdict
 
@@ -16,7 +16,7 @@
 
 | Dimension | Score | Critique |
 |-----------|-------|----------|
-| relevance | 8/10 | Selected accomplishments share themes/technologies with the JD (4 overlapping). |
+| relevance | 9/10 | Selected accomplishments share themes/technologies with the JD (5 overlapping). |
 | evidence_alignment | 8/10 | Stub judge only references provided raw_facts; no invented claims detected. |
 | coverage | 8/10 | No reference-vocabulary gaps flagged. |
 | clarity | 8/10 | Stub clarity check based on résumé section structure. |

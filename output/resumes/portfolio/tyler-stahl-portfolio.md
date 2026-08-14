@@ -49,8 +49,16 @@ Contributed to a high-traffic React/TypeScript data portal, GraphQL API transiti
 *2019-03 – 2023-08* · NJ
 Led frontend design and development for platform rebranding, technology migration, and high-traffic public web experiences.
 
-- Led frontend execution of a major rebrand and platform rebuild serving 10M+ annual users in collaboration with external design agencies.
+- Led frontend execution of a major rebrand and platform rebuild serving 11M+ annual users in collaboration with external design agencies.
 **Technologies:** JavaScript, HTML5, CSS, React
+
+### Founder & Web Developer — Volant Web Design
+
+*2017-04 – 2019-03* · NJ
+Founded and ran a web design business offering development, SEO, and analytics for clients across multiple industries.
+
+- Founded a web design business delivering PHP/JS sites, SEO, and analytics for clients across multiple industries.
+**Technologies:** PHP, JavaScript, HTML5, CSS
 
 
 ## Selected Projects
@@ -104,6 +112,16 @@ Human-AI collaboration can suffer when agent personality is poorly matched to th
 Built an OCEAN-based personality alignment prototype in Google AI Studio, then productionized it on Firebase Cloud Functions with Firestore memory, Firebase Auth, Vertex AI, and Pydantic-validated structured Gemini outputs.
 
 **Technologies:** Google AI Studio, Google Gemini, Firebase, Firebase Cloud Functions, Cloud Firestore, Firebase Authentication, Vertex AI, Pydantic, Python
+
+### AgentOS: Chief of Staff Agent — Independent R&D
+
+*2025-2026*
+
+Complex long-running workflows need reliable orchestration with mandatory human checkpoints.
+
+Built a multi-agent orchestrator with the Cursor Agent SDK, modular subagents, and HITL handoffs for evaluation and testing stages.
+
+**Technologies:** Cursor Agent SDK, Python
 
 ### Stack Overlord — Independent R&D
 

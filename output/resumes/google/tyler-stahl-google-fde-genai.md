@@ -83,10 +83,10 @@ Led frontend design and development for platform rebranding, technology migratio
 
 ### Founder & Web Developer — Volant Web Design
 
-*2024-09 – Present* · NJ
-Resumed sole-proprietorship web design and development work for B2B clients, covering requirements through production deployment and SEO.
+*2017-04 – 2019-03* · NJ
+Founded and ran a web design business offering development, SEO, and analytics for clients across multiple industries.
 
-- Delivered full-stack client websites and SEO/analytics reporting from requirements through production deployment.
+- Founded a web design business delivering PHP/JS sites, SEO, and analytics for clients across multiple industries.
 **Technologies:** PHP, JavaScript, HTML5, CSS
 
 

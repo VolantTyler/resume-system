@@ -23,7 +23,7 @@
     - graic-crewai-supervisor-routing
     - graic-slack-fastapi-backend
     - graic-gdocs-drive-integration
-  portfolio_visible: true
+  portfolio_visible: false
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
 - id: development-knowledge-vault
   name: Development Knowledge Vault
@@ -104,7 +104,7 @@
     - openclaw-multi-agent-orchestration
     - autonomous-etl-pipelines
     - agentic-hitl-security
-  portfolio_visible: false
+  portfolio_visible: true
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
 - id: hybrid-inference-pilot
   name: Tri-Tier Hybrid Inference Pilot
@@ -140,7 +140,7 @@
     - Mandatory human approval handoffs at critical stages.
   related_accomplishment_ids:
     - agentos-orchestration
-  portfolio_visible: false
+  portfolio_visible: true
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer
 - id: cognitive-bridge
   name: "Cognitive Bridge: AI Personality Alignment"
@@ -165,7 +165,7 @@
   related_accomplishment_ids:
     - cognitive-bridge-personality
     - cognitive-bridge-firebase-productionization
-  portfolio_visible: false
+  portfolio_visible: true
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
 - id: stack-overlord
   name: Stack Overlord
@@ -284,7 +284,7 @@
     - MySQL
     - Docker
   outcomes:
-    - Portal used by tens of thousands of clients.
+    - Portal used by 50,000+ clients.
     - Front-end architecture supporting high-traffic events.
   related_accomplishment_ids:
     - cn-portal-scale
@@ -306,7 +306,7 @@
     - CSS
     - React
   outcomes:
-    - Production system serving 10M+ annual users.
+    - Production system serving 11M+ annual users.
     - Technology initiatives that contributed to a major grant outcome.
   related_accomplishment_ids:
     - cn-rebrand-platform-rebuild

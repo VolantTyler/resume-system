@@ -1,29 +1,29 @@
 # LLM Judge Evaluation Report
 
-**Source:** `resume_targets.yaml#portfolio-focused`
-**Job title:** Portfolio-focused Software Engineer
-**Résumé version:** `portfolio-v1`
+**Source:** `docs/job-descriptions/publicis-groupe-full-stack-developer-nyc.md`
+**Job title:** Publicis Groupe — Full Stack Developer
+**Résumé version:** `tailored-publicis-groupe-full-stack-developer`
 **Round:** 1
 **Model:** `stub`
-**Generated:** 2026-08-14
+**Generated:** 2026-08-10
 
 ## Verdict
 
-- **Overall score:** 7/10
+- **Overall score:** 8/10
 - **Pass:** yes
 
 ## Dimension Scores
 
 | Dimension | Score | Critique |
 |-----------|-------|----------|
-| relevance | 4/10 | Limited theme/technology overlap between selected accomplishments and the JD. |
+| relevance | 10/10 | Selected accomplishments share themes/technologies with the JD (13 overlapping). |
 | evidence_alignment | 8/10 | Stub judge only references provided raw_facts; no invented claims detected. |
-| coverage | 8/10 | No reference-vocabulary gaps flagged. |
+| coverage | 5/10 | Possible gaps remain: Vue, Node.js, REST API, Go, Java, Terraform, REST, API design, AWS, GCP, Azure, System design. |
 | clarity | 8/10 | Stub clarity check based on résumé section structure. |
 
 ## Application Fit
 
-*Portfolio-focused Software Engineer*
+*Publicis Groupe — Full Stack Developer*
 
 Solid keyword-level fit for the role based on documented themes and skills.
 
@@ -34,8 +34,8 @@ Solid keyword-level fit for the role based on documented themes and skills.
 
 ### Weakest / indirect alignment
 
-- **Enterprise-scale process ownership** — Source data may address this need indirectly through related delivery and reliability work already selected; do not invent missing skills.
-- **Formal team leadership at large-org scale** — Background shows individual ownership and stakeholder collaboration on shipped work rather than named leadership titles.
+- **Vue** — Source data may address this need indirectly through related delivery and reliability work already selected; do not invent missing skills.
+- **Node.js** — Background shows individual ownership and stakeholder collaboration on shipped work rather than named leadership titles.
 
 ## Revision Directives
 

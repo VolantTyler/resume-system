@@ -2,7 +2,10 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import nunjucks from "nunjucks";
-import { buildPortfolioContext } from "./lib/build-resume-context.js";
+import {
+  buildPortfolioContext,
+  findPortfolioVersion,
+} from "./lib/build-resume-context.js";
 import { assertValidResumeData } from "./lib/validate.js";
 import {
   PORTFOLIO_OUTPUT_DIR,
@@ -19,10 +22,10 @@ const env = nunjucks.configure(TEMPLATES_DIR, {
 export function generatePortfolioJson(): string {
   const data = assertValidResumeData();
 
-  const portfolioVersion =
-    data.resumeVersions.find((item) => item.target_id === "portfolio-focused") ??
-    data.resumeVersions.find((item) => item.target_id === "frontend-engineer") ??
-    data.resumeVersions[0];
+  const portfolioVersion = findPortfolioVersion(data);
+  if (!portfolioVersion) {
+    throw new Error("No résumé version available to generate the portfolio export");
+  }
 
   const context = buildPortfolioContext(data, portfolioVersion);
   const outputPath = `${PORTFOLIO_OUTPUT_DIR}/resume-content.json`;

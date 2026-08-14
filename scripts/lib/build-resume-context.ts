@@ -207,6 +207,18 @@ export function buildResumeContext(
   };
 }
 
+/**
+ * The résumé version that feeds the portfolio export. Shared by the generator and
+ * the validation rule so the guard always checks the version actually published.
+ */
+export function findPortfolioVersion(data: ResumeData): ResumeVersion | undefined {
+  return (
+    data.resumeVersions.find((item) => item.target_id === "portfolio-focused") ??
+    data.resumeVersions.find((item) => item.target_id === "frontend-engineer") ??
+    data.resumeVersions[0]
+  );
+}
+
 export function buildPortfolioContext(
   data: ResumeData,
   version: ResumeVersion,

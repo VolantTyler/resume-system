@@ -924,9 +924,9 @@
   context: Charity Navigator data-review portal and public high-traffic events.
   resume_bullets:
     standard: Built React/TypeScript portal features for 50,000+ clients and helped sustain high-traffic events with hundreds of thousands of concurrent visitors.
-    frontend: Optimized front-end architecture for a React/TypeScript portal serving tens of thousands of clients under high-traffic load.
+    frontend: Optimized front-end architecture for a React/TypeScript portal serving 50,000+ clients under high-traffic load.
     full-stack: Engineered portal features in React/TypeScript for a high-traffic nonprofit data platform.
-    nonprofit: Supported a mission-driven data portal used by tens of thousands of clients during peak traffic events.
+    nonprofit: Supported a mission-driven data portal used by 50,000+ clients during peak traffic events.
   evidence:
     - Tyler Stahl - CV - 2026.pdf
     - Applied AI Resume.pdf
@@ -1076,10 +1076,10 @@
     - HTML5
     - CSS
     - React
-  raw_fact: Played a key role in frontend execution of Charity Navigator's 20th-anniversary rebrand and platform rebuild, collaborating with external design agencies to ship a production system for 10M+ annual users.
+  raw_fact: Played a key role in frontend execution of Charity Navigator's 20th-anniversary rebrand and platform rebuild, collaborating with external design agencies to ship a production system for 11M+ annual users.
   context: Major public-platform modernization and rebranding initiative.
   resume_bullets:
-    standard: Led frontend execution of a major rebrand and platform rebuild serving 10M+ annual users in collaboration with external design agencies.
+    standard: Led frontend execution of a major rebrand and platform rebuild serving 11M+ annual users in collaboration with external design agencies.
     frontend: Translated agency designs into production frontend for a high-traffic nonprofit platform rebuild.
     nonprofit: Helped modernize a mission-driven public platform used by millions of annual visitors.
     full-stack: Contributed to end-to-end delivery of a large nonprofit platform rebuild and rebrand.
@@ -1095,7 +1095,7 @@
     - nonprofit-tech
   confidence: medium
   source_notes:
-    - CV cites 10M+ annual visitors; Master Career Document and some tailored resumes say 11M+. Used 10M+ from CV. Agency names (Ogilvy, 2nd Melody) appear in AI Solution Architect draft only.
+    - The CV and the Master Career Document disagreed on annual visitors; Tyler confirmed 11M+ annual users as canonical (2026-08-13), and that is the figure used here. Agency names (Ogilvy, 2nd Melody) appear in AI Solution Architect draft only.
 - id: cn-cmo-marketing-partnership
   company: Charity Navigator
   role: Front-End Web Developer

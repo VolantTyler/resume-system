@@ -63,6 +63,14 @@ Led frontend design and development for platform rebranding, technology migratio
 - Supported cross-functional marketing initiatives from large rebrand projects to rapid tactical website deployments.
 **Technologies:** JavaScript, HTML5, CSS, React
 
+### Founder & Web Developer — Volant Web Design
+
+*2017-04 – 2019-03* · NJ
+Founded and ran a web design business offering development, SEO, and analytics for clients across multiple industries.
+
+- Owned end-to-end client delivery from requirements gathering through deployment and SEO reporting.
+**Technologies:** PHP, JavaScript, HTML5, CSS
+
 
 ## Selected Projects
 
