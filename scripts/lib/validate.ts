@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { findPortfolioVersion } from "./build-resume-context.js";
 import { loadResumeData } from "./load-data.js";
+import { PORTFOLIO_FACETS, resolveSkillFacets } from "./portfolio-facets.js";
 import type { ResumeData, ValidationIssue } from "./schemas.js";
 
 function collectUniqueIds(ids: string[], label: string): ValidationIssue[] {
@@ -47,6 +48,53 @@ export function validatePortfolioVisibility(data: ResumeData): ValidationIssue[]
           `portfolio export without warning. Add it to project_ids, or set ` +
           `portfolio_visible: false.`,
       });
+    }
+  }
+
+  return issues;
+}
+
+/**
+ * Exactly one project may be `portfolio_featured` — the site gives that project the
+ * large hero block, so a second one has nowhere to render.
+ */
+export function validatePortfolioFeatured(data: ResumeData): ValidationIssue[] {
+  const featured = data.projects.filter(
+    (project) => project.portfolio_featured === true,
+  );
+
+  if (featured.length <= 1) {
+    return [];
+  }
+
+  return featured.map((project) => ({
+    path: `projects.${project.id}.portfolio_featured`,
+    message:
+      `Only one project may be portfolio_featured: true, but ${featured.length} are ` +
+      `(${featured.map((item) => item.id).join(", ")}). Clear the flag on all but one.`,
+  }));
+}
+
+/**
+ * Every skill must resolve to at least one facet, or it renders in no facet filter
+ * and disappears from the site without an error. Categories outside the four-facet
+ * vocabulary — Testing, Collaboration — have nothing to inherit, so skills there
+ * must tag `portfolio_facets` explicitly. `npm run classify-skills` proposes them.
+ */
+export function validateSkillFacets(data: ResumeData): ValidationIssue[] {
+  const issues: ValidationIssue[] = [];
+
+  for (const category of data.skills.categories) {
+    for (const skill of category.skills) {
+      if (resolveSkillFacets(skill, category.name).length === 0) {
+        issues.push({
+          path: `skills.${category.name}.${skill.name}.portfolio_facets`,
+          message:
+            `Skill resolves to no portfolio facet: category "${category.name}" has no ` +
+            `default facet and the skill sets none. Add portfolio_facets from ` +
+            `[${PORTFOLIO_FACETS.join(", ")}] — see npm run classify-skills.`,
+        });
+      }
     }
   }
 
@@ -230,6 +278,8 @@ export function validateResumeData(): ValidationIssue[] {
     ),
     ...validateCrossReferences(data),
     ...validatePortfolioVisibility(data),
+    ...validatePortfolioFeatured(data),
+    ...validateSkillFacets(data),
   ];
 
   return issues;

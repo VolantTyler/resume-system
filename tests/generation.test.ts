@@ -4,6 +4,7 @@ import { generateAllPdfs } from "../scripts/generate-pdf.js";
 import { generatePortfolioJson } from "../scripts/generate-portfolio-json.js";
 import { generateAllResumes } from "../scripts/generate-resume.js";
 import { findChromeExecutable } from "../scripts/lib/chrome.js";
+import { PORTFOLIO_FACETS } from "../scripts/lib/portfolio-facets.js";
 import { PORTFOLIO_OUTPUT_DIR, RESUMES_OUTPUT_DIR } from "../scripts/lib/paths.js";
 
 function hasLocalChrome(): boolean {
@@ -62,6 +63,42 @@ describe("generation", () => {
     expect(json.featuredProjects.length).toBeGreaterThan(0);
     for (const project of json.featuredProjects) {
       expect(project.portfolioVisible).toBe(true);
+    }
+  });
+
+  it("exports every project with a portfolio headline and exactly one featured", () => {
+    const json = JSON.parse(readFileSync(generatePortfolioJson(), "utf8"));
+
+    for (const project of json.featuredProjects) {
+      expect(project.portfolioHeadline?.length).toBeGreaterThan(0);
+      expect(project.portfolioLinks).toBeInstanceOf(Array);
+      expect(typeof project.portfolioFeatured).toBe("boolean");
+    }
+
+    const featured = json.featuredProjects.filter(
+      (project: { portfolioFeatured: boolean }) => project.portfolioFeatured,
+    );
+    expect(featured).toHaveLength(1);
+    expect(featured[0].id).toBe("cognitive-bridge");
+  });
+
+  // The portfolio export emitted zero skills for as long as it filtered on
+  // target_roles against "portfolio-focused", a target no skill lists.
+  it("exports a non-empty flat skill list covering every facet", () => {
+    const json = JSON.parse(readFileSync(generatePortfolioJson(), "utf8"));
+
+    expect(json.skills.length).toBeGreaterThan(0);
+
+    for (const skill of json.skills) {
+      expect(skill.name?.length).toBeGreaterThan(0);
+      expect(skill.facets.length).toBeGreaterThan(0);
+    }
+
+    const covered = new Set(
+      json.skills.flatMap((skill: { facets: string[] }) => skill.facets),
+    );
+    for (const facet of PORTFOLIO_FACETS) {
+      expect(covered).toContain(facet);
     }
   });
 });

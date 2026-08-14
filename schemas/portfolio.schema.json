@@ -28,7 +28,17 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "name", "organization", "technologies", "outcomes", "portfolioVisible"],
+        "required": [
+          "id",
+          "name",
+          "organization",
+          "technologies",
+          "outcomes",
+          "portfolioVisible",
+          "portfolioHeadline",
+          "portfolioLinks",
+          "portfolioFeatured"
+        ],
         "properties": {
           "id": { "type": "string", "minLength": 1 },
           "name": { "type": "string", "minLength": 1 },
@@ -38,19 +48,55 @@
           "solution": { "type": "string" },
           "technologies": { "type": "array", "items": { "type": "string" } },
           "outcomes": { "type": "array", "items": { "type": "string" } },
-          "portfolioVisible": { "type": "boolean" }
+          "portfolioVisible": { "type": "boolean" },
+          "portfolioHeadline": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Card heading. Falls back to `name` when the project sets no portfolio_headline."
+          },
+          "portfolioBlurb": { "type": ["string", "null"] },
+          "portfolioImage": {
+            "type": ["string", "null"],
+            "description": "Filename only, resolved against the portfolio repo's assets/. Null when no screenshot exists yet."
+          },
+          "portfolioLinks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["label", "url", "download"],
+              "properties": {
+                "label": { "type": "string", "minLength": 1 },
+                "url": { "type": "string", "format": "uri" },
+                "download": { "type": "boolean" }
+              },
+              "additionalProperties": false
+            }
+          },
+          "portfolioFeatured": {
+            "type": "boolean",
+            "description": "At most one project is true; it takes the large hero block on the site."
+          }
         },
         "additionalProperties": false
       }
     },
     "skills": {
       "type": "array",
+      "description": "Flat list of every skill with its facets, so the site can build a facet filter client-side.",
       "items": {
         "type": "object",
-        "required": ["category", "items"],
+        "required": ["name", "facets"],
         "properties": {
-          "category": { "type": "string", "minLength": 1 },
-          "items": { "type": "array", "items": { "type": "string" } }
+          "name": { "type": "string", "minLength": 1 },
+          "facets": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "enum": ["applied-ai", "front-end", "back-end", "devops"]
+            }
+          },
+          "proficiency": { "type": ["string", "null"] }
         },
         "additionalProperties": false
       }
