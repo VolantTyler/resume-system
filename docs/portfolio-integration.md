@@ -31,36 +31,40 @@ To change what shows up on the portfolio site, edit `data/resume_versions.yaml`'
 `portfolio-v1` entry (which accomplishments/experience/projects/skills to include),
 not the generator script.
 
-## Recommended consumption pattern
+## How the portfolio consumes it
 
-This repo does not push anything to `tylerstahl.dev` — the site is expected to pull
-`resume-content.json` on its own schedule. A few options, roughly in order of
-simplicity:
+**This repo pushes nothing.** It publishes a contract and knows nothing about its
+consumers — no credential here has write access to the site, and the site needs no
+credential to read this. Keeping the arrow pointing one way is what makes the whole
+pipeline credential-free.
 
-1. **Fetch at build time from GitHub.** If this repo (or just `output/`) is public,
-   the site's build step can fetch the raw file directly, e.g.:
+`VolantTyler/portfolio` pulls the file itself:
 
-   ```bash
-   curl -sSL \
-     https://raw.githubusercontent.com/VolantTyler/resume-system/main/output/portfolio/resume-content.json \
-     -o data/resume-content.json
-   ```
+1. `.github/workflows/sync-resume.yml` in that repo runs on a manual trigger or a
+   weekly cron.
+2. `scripts/sync-resume-content.mjs` fetches the raw URL below and compares it to
+   the committed copy, ignoring `generatedAt`. Identical content is a no-op.
+3. `scripts/build-site.mjs` re-renders only the regions of `index.html` between
+   `<!-- generated:NAME start -->` markers, and merges `agents.json` / `agents.md`.
+4. The workflow opens a pull request against that repo using its own built-in
+   `GITHUB_TOKEN`. Vercel builds a preview; a human merges.
 
-   This is the lowest-effort option and keeps the site in sync automatically on
-   every deploy, as long as `output/` stays committed to `main`.
+```txt
+https://raw.githubusercontent.com/VolantTyler/resume-system/main/output/portfolio/resume-content.json
+```
 
-2. **CI job that syncs on change.** Add a GitHub Action to this repo that, on push
-   to `main` affecting `output/portfolio/resume-content.json`, copies the file into
-   the `tylerstahl.dev` repo (via a PR or direct commit with a deploy key) or
-   triggers a rebuild/redeploy webhook on the site.
+That URL is the contract. `output/` must stay committed to `main` for it to resolve,
+and note that raw.githubusercontent caches for a few minutes — a sync triggered
+seconds after a merge here can still fetch the previous copy.
 
-3. **Small read-only API.** If the site prefers a URL instead of a static fetch,
-   host `resume-content.json` behind a lightweight endpoint (e.g. a Vercel/Cloudflare
-   redirect to the raw GitHub URL, or a tiny serverless function) so the contract
-   isn't tied to GitHub's raw-content URL scheme.
+### What this repo owns, and what it does not
 
-Option 1 requires no new code in this repo and is the current recommendation until
-there's a concrete reason to add CI plumbing.
+This repo carries *presentation intent* — `portfolio_visible`, `portfolio_headline`,
+`portfolio_blurb`, `portfolio_image`, `portfolio_links`, `portfolio_featured`, and
+`portfolio_facets`. Those describe **what to publish and how to describe it**.
+
+It carries no knowledge of the site's markup, CSS, URLs, or build. Those live in the
+portfolio repo. When adding a field, ask which side of that line it falls on.
 
 ## Versioning and change detection
 
@@ -79,5 +83,5 @@ simply always re-fetch since the file is small.
 - [x] Dedicated `portfolio-focused` résumé version driving the export
 - [x] Generation wired into `npm run generate` / `npm run build`, plus standalone
       `npm run generate:portfolio`
-- [ ] Site-side wiring in the `tylerstahl.dev` codebase (outside this repo's scope —
-      see "Recommended consumption pattern" above)
+- [x] Site-side wiring in the `tylerstahl.dev` codebase — see "How the portfolio
+      consumes it" above
