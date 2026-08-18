@@ -223,7 +223,10 @@
     - GPT-5.6 used for project intelligence.
   related_accomplishment_ids:
     - stack-overlord-openai-build-week
-  portfolio_visible: false
+  portfolio_visible: true
+  portfolio_headline: Stack Overlord
+  portfolio_blurb: An OpenAI Build Week entry built almost entirely through Codex agents, with GPT-5.6 handling project intelligence under hackathon time constraints.
+  portfolio_featured: false
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
 - id: iblueprint-embeddings
   name: iBlueprint Embeddings Collaboration
