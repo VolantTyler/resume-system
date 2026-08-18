@@ -86,3 +86,7 @@ JSON Schema files exist for documentation/external consumers; the actual enforce
 - `.cursor/rules/tailored-resume-fit-analysis.mdc` (applies to Cursor, but the intent applies here too): when tailoring a résumé to a JD, always include a short fit analysis (2–3 strongest JD criteria with a resume-section pointer, 2–3 weakest with how the background addresses them indirectly), and interview the user about any "possible gaps" before treating them as real weaknesses.
 - No lint script/config exists in this repo — correctness is enforced by `npm run validate` (Zod) and `npm test` (Vitest); don't look for `npm run lint`.
 - CI (`.github/workflows/ci.yml`) runs `npm run validate && npm test` on push to `main` and on PRs — mirror that before considering work done.
+
+## Communication
+
+- **Number every question you put to Tyler**, across the whole reply rather than restarting per section, so open items are easy to track and answer by number ("2 yes, 3 skip"). This includes follow-ups and confirmations, not just top-level asks. Gap interviews under `apply-to-job` are the natural case, but it applies everywhere.
