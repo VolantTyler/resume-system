@@ -223,7 +223,9 @@
     - GPT-5.6 used for project intelligence.
   related_accomplishment_ids:
     - stack-overlord-openai-build-week
-  portfolio_visible: true
+  # Parked: the pipeline test is done. Flip back to true once this has a
+  # screenshot and fuller outcomes — it is the thinnest project in the corpus.
+  portfolio_visible: false
   portfolio_headline: Stack Overlord
   portfolio_blurb: An OpenAI Build Week entry built almost entirely through Codex agents, with GPT-5.6 handling project intelligence under hackathon time constraints.
   portfolio_featured: false
