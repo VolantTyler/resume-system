@@ -49,7 +49,19 @@ export const accomplishmentsSchema = z.array(accomplishmentSchema).min(1);
 
 export const portfolioLinkSchema = z.object({
   label: z.string().min(1),
-  url: z.string().url(),
+  /**
+   * Either an absolute URL or a site-relative path. The portfolio serves assets
+   * like `docs/Tyler-Technical-Briefs.pdf` from its own root, so requiring an
+   * absolute URL here would force those links to hard-code the domain.
+   */
+  url: z
+    .string()
+    .min(1)
+    .refine(
+      (value) =>
+        /^https?:\/\//.test(value) || /^[^/\\][^\\]*$/.test(value),
+      "portfolio_links url must be an absolute http(s) URL or a site-relative path",
+    ),
   download: z.boolean().optional(),
 });
 
@@ -102,6 +114,7 @@ export const portfolioFacetSchema = z.enum([
   "front-end",
   "back-end",
   "devops",
+  "collaboration",
 ]);
 
 export const skillEntrySchema = z.object({
@@ -113,7 +126,7 @@ export const skillEntrySchema = z.object({
   /**
    * Many-to-many portfolio facets. Absent, a skill inherits its category's
    * default facet — only cross-listed skills or ones in a category with no
-   * default (Testing, Collaboration) need to set this explicitly.
+   * default (Testing) need to set this explicitly.
    */
   portfolio_facets: z.array(portfolioFacetSchema).optional(),
 });

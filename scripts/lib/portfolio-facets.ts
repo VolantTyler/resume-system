@@ -5,19 +5,21 @@ export const PORTFOLIO_FACETS: readonly PortfolioFacet[] = [
   "front-end",
   "back-end",
   "devops",
+  "collaboration",
 ];
 
 /**
- * A skill with no `portfolio_facets` inherits its category's facet. Testing and
- * Collaboration have no facet of their own, so skills there must tag explicitly
- * — `validateSkillFacets` turns an untagged one into a build error rather than a
- * skill that quietly disappears from every facet filter.
+ * A skill with no `portfolio_facets` inherits its category's facet. Testing has no
+ * facet of its own, so skills there must tag explicitly — `validateSkillFacets`
+ * turns an untagged one into a build error rather than a skill that quietly
+ * disappears from every facet filter.
  */
 const CATEGORY_FACETS: Record<string, PortfolioFacet> = {
   "Applied AI": "applied-ai",
   "Front-End": "front-end",
   "Back-End": "back-end",
   DevOps: "devops",
+  Collaboration: "collaboration",
 };
 
 export function categoryFacet(categoryName: string): PortfolioFacet | undefined {

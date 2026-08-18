@@ -37,7 +37,15 @@
       "portfolioBlurb": "A multi-agent scheduling concierge that masks PII before inference and pauses for a human when its confidence drops below 80%, turning messy family email into a reconciled calendar.",
       "portfolioImage": "insummery-dashboard.png",
       "portfolioLinks": [
-      ],
+        {
+          "label": "Read writeup",
+          "url": "https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/in-summery-ai",
+          "download": false
+        },        {
+          "label": "View live project",
+          "url": "https://in-summery.web.app/",
+          "download": false
+        }      ],
       "portfolioFeatured": false
     },    {
       "id": "openclaw-multi-agent-ecosystem",
@@ -53,7 +61,11 @@
       "portfolioBlurb": "An autonomous research framework whose agents keep durable memory across interrupted tasks and stop for human approval before any high-stakes database commit.",
       "portfolioImage": "alchemia-dashboard.png",
       "portfolioLinks": [
-      ],
+        {
+          "label": "Read brief",
+          "url": "docs/Tyler-Technical-Briefs.pdf",
+          "download": true
+        }      ],
       "portfolioFeatured": false
     },    {
       "id": "cognitive-bridge",
@@ -73,6 +85,10 @@
           "label": "View live project",
           "url": "https://cognitive-bridge-ai.web.app/",
           "download": false
+        },        {
+          "label": "Read brief",
+          "url": "docs/Tyler-Technical-Briefs.pdf",
+          "download": true
         }      ],
       "portfolioFeatured": true
     },    {
@@ -89,7 +105,11 @@
       "portfolioBlurb": "A multi-agent orchestrator with modular subagents and mandatory human checkpoints, built so long-running workflows can be paused and inspected rather than trusted blindly.",
       "portfolioImage": "agentos-capability-map.png",
       "portfolioLinks": [
-      ],
+        {
+          "label": "Read brief",
+          "url": "docs/Tyler-Technical-Briefs.pdf",
+          "download": true
+        }      ],
       "portfolioFeatured": false
     }  ],
   "skills": [
@@ -275,16 +295,24 @@
       "proficiency": "medium"
     },    {
       "name": "Stakeholder collaboration",
-      "facets": ["front-end","back-end"],
+      "facets": ["collaboration"],
       "proficiency": "high"
     },    {
       "name": "Deep listening",
-      "facets": ["front-end","back-end"],
+      "facets": ["collaboration"],
       "proficiency": "high"
     },    {
-      "name": "Agile",
-      "facets": ["front-end"],
+      "name": "Agile / Scrum",
+      "facets": ["collaboration"],
       "proficiency": "medium"
+    },    {
+      "name": "Consensus-building",
+      "facets": ["collaboration"],
+      "proficiency": "high"
+    },    {
+      "name": "Cross-department collaboration",
+      "facets": ["collaboration"],
+      "proficiency": "high"
     }  ],
   "experience": [
     {
@@ -450,7 +478,7 @@
       "credential": "BA, Anthropology",
       "note": null
     }  ],
-  "generatedAt": "2026-08-14T21:30:57.166Z",
+  "generatedAt": "2026-08-18T01:16:14.705Z",
   "versionId": "portfolio-v1",
   "targetId": "portfolio-focused"
 }

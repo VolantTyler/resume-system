@@ -31,7 +31,7 @@ describe("classify-skills candidate selection", () => {
         ...data,
         skills: {
           categories: [
-            { name: "Collaboration", skills: [{ name: "Kubernetes" }] },
+            { name: "Testing", skills: [{ name: "Kubernetes" }] },
           ],
         },
       },

@@ -589,9 +589,6 @@ categories:
           - cn-cmo-marketing-partnership
           - volant-fullstack-client-delivery
         proficiency: high
-        portfolio_facets:
-          - front-end
-          - back-end
         target_roles:
           - nonprofit-tech
           - full-stack-engineer
@@ -608,9 +605,6 @@ categories:
           - cn-cross-functional-delivery
           - volant-fullstack-client-delivery
         proficiency: high
-        portfolio_facets:
-          - front-end
-          - back-end
         target_roles:
           - forward-deployed-engineer
           - applied-ai-developer
@@ -618,15 +612,15 @@ categories:
           - nonprofit-tech
           - full-stack-engineer
           - agentic-software-engineer
-      - name: Agile
+      - name: Agile / Scrum
         aliases:
+          - Agile
+          - Scrum
           - Agile delivery
           - Agile methodology
         evidence_ids:
           - gap-agile
         proficiency: medium
-        portfolio_facets:
-          - front-end
         target_roles:
           - ai-security-product
           - frontend-engineer
@@ -636,3 +630,31 @@ categories:
           - agentic-software-engineer
           - forward-deployed-engineer
           - nonprofit-tech
+      - name: Consensus-building
+        aliases:
+          - alignment facilitation
+          - stakeholder buy-in
+        evidence_ids:
+          - cn-cross-functional-delivery
+          - cn-cmo-marketing-partnership
+        proficiency: high
+        target_roles:
+          - forward-deployed-engineer
+          - applied-ai-developer
+          - nonprofit-tech
+          - full-stack-engineer
+          - agentic-software-engineer
+      - name: Cross-department collaboration
+        aliases:
+          - inter-department collaboration
+          - cross-functional delivery
+        evidence_ids:
+          - cn-cross-functional-delivery
+        proficiency: high
+        target_roles:
+          - forward-deployed-engineer
+          - applied-ai-developer
+          - nonprofit-tech
+          - full-stack-engineer
+          - frontend-engineer
+          - agentic-software-engineer

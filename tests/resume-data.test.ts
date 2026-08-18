@@ -110,14 +110,14 @@ describe("portfolio featured validation", () => {
 });
 
 describe("skill facet validation", () => {
-  it("errors when a skill outside the four facet categories states no facets", () => {
+  it("errors when a skill in a category with no default facet states none", () => {
     const data = loadResumeData();
     const issues = validateSkillFacets({
       ...data,
       skills: {
         categories: [
           {
-            name: "Collaboration",
+            name: "Testing",
             skills: [{ name: "Untagged skill", proficiency: "medium" }],
           },
         ],

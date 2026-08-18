@@ -92,6 +92,11 @@
   portfolio_headline: LLM Reasoning with Human Decisions & PII Masking
   portfolio_blurb: A multi-agent scheduling concierge that masks PII before inference and pauses for a human when its confidence drops below 80%, turning messy family email into a reconciled calendar.
   portfolio_image: insummery-dashboard.png
+  portfolio_links:
+    - label: Read writeup
+      url: https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/in-summery-ai
+    - label: View live project
+      url: https://in-summery.web.app/
   portfolio_featured: false
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer, frontend-engineer, qa-minded-frontend
 - id: openclaw-multi-agent-ecosystem
@@ -119,6 +124,10 @@
   portfolio_headline: Multi-Agent Market Intelligence Ecosystem
   portfolio_blurb: An autonomous research framework whose agents keep durable memory across interrupted tasks and stop for human approval before any high-stakes database commit.
   portfolio_image: alchemia-dashboard.png
+  portfolio_links:
+    - label: Read brief
+      url: docs/Tyler-Technical-Briefs.pdf
+      download: true
   portfolio_featured: false
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
 - id: hybrid-inference-pilot
@@ -159,6 +168,10 @@
   portfolio_headline: "AgentOS: Chief of Staff Agent"
   portfolio_blurb: A multi-agent orchestrator with modular subagents and mandatory human checkpoints, built so long-running workflows can be paused and inspected rather than trusted blindly.
   portfolio_image: agentos-capability-map.png
+  portfolio_links:
+    - label: Read brief
+      url: docs/Tyler-Technical-Briefs.pdf
+      download: true
   portfolio_featured: false
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer
 - id: cognitive-bridge
@@ -191,6 +204,9 @@
   portfolio_links:
     - label: View live project
       url: https://cognitive-bridge-ai.web.app/
+    - label: Read brief
+      url: docs/Tyler-Technical-Briefs.pdf
+      download: true
   portfolio_featured: true
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
 - id: stack-overlord

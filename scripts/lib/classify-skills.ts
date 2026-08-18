@@ -180,6 +180,19 @@ const STUB_KEYWORDS: Record<PortfolioFacet, string[]> = {
     "actions",
     "container",
   ],
+  collaboration: [
+    "stakeholder",
+    "collaboration",
+    "consensus",
+    "listening",
+    "facilitation",
+    "alignment",
+    "agile",
+    "scrum",
+    "cross-functional",
+    "cross-department",
+    "workshop",
+  ],
 };
 
 function matchedKeywords(haystack: string, facet: PortfolioFacet): string[] {

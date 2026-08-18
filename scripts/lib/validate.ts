@@ -78,7 +78,7 @@ export function validatePortfolioFeatured(data: ResumeData): ValidationIssue[] {
 /**
  * Every skill must resolve to at least one facet, or it renders in no facet filter
  * and disappears from the site without an error. Categories outside the four-facet
- * vocabulary — Testing, Collaboration — have nothing to inherit, so skills there
+ * vocabulary — Testing — have nothing to inherit, so skills there
  * must tag `portfolio_facets` explicitly. `npm run classify-skills` proposes them.
  */
 export function validateSkillFacets(data: ResumeData): ValidationIssue[] {
