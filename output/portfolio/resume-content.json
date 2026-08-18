@@ -111,22 +111,6 @@
           "download": true
         }      ],
       "portfolioFeatured": false
-    },    {
-      "id": "stack-overlord",
-      "name": "Stack Overlord",
-      "organization": "Independent R&D",
-      "timeframe": "2026",
-      "problem": "OpenAI Build Week required shipping a working product under tight hackathon constraints with AI-assisted development.",
-      "solution": "Built Stack Overlord primarily in Codex/GPT-5.6, with project intelligence powered by GPT-5.6.",
-      "technologies": ["Codex","GPT-5.6"],
-      "outcomes": ["Hackathon project delivered primarily via Codex/GPT-5.6.","GPT-5.6 used for project intelligence."],
-      "portfolioVisible": true,
-      "portfolioHeadline": "Stack Overlord",
-      "portfolioBlurb": "An OpenAI Build Week entry built almost entirely through Codex agents, with GPT-5.6 handling project intelligence under hackathon time constraints.",
-      "portfolioImage": null,
-      "portfolioLinks": [
-      ],
-      "portfolioFeatured": false
     }  ],
   "skills": [
     {
@@ -494,7 +478,7 @@
       "credential": "BA, Anthropology",
       "note": null
     }  ],
-  "generatedAt": "2026-08-18T02:17:33.978Z",
+  "generatedAt": "2026-08-18T02:47:06.236Z",
   "versionId": "portfolio-v1",
   "targetId": "portfolio-focused"
 }
