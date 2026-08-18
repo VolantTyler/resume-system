@@ -47,6 +47,11 @@
     - knowledge-vault-mcp-server
     - knowledge-vault-dual-auth
   portfolio_visible: true
+  # No screenshot exists in the portfolio repo yet — portfolio_image stays unset
+  # so the renderer falls back rather than pointing at a missing asset.
+  portfolio_headline: Development Knowledge Vault
+  portfolio_blurb: An MCP server that serves distilled engineering patterns to AI coding agents, so a new project reuses prior deploy, auth, and eval practices instead of rediscovering them.
+  portfolio_featured: false
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
 - id: insummery-ai
   name: InSummery.AI
@@ -82,6 +87,17 @@
     - insummery-eval-harness
     - insummery-firebase-production
   portfolio_visible: true
+  # The descriptive headline is deliberate: "InSummery.AI" stays as `name` and
+  # renders as the card subtitle.
+  portfolio_headline: LLM Reasoning with Human Decisions & PII Masking
+  portfolio_blurb: A multi-agent scheduling concierge that masks PII before inference and pauses for a human when its confidence drops below 80%, turning messy family email into a reconciled calendar.
+  portfolio_image: insummery-dashboard.png
+  portfolio_links:
+    - label: Read writeup
+      url: https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/in-summery-ai
+    - label: View live project
+      url: https://in-summery.web.app/
+  portfolio_featured: false
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer, frontend-engineer, qa-minded-frontend
 - id: openclaw-multi-agent-ecosystem
   name: OpenClaw Multi-Agent Market Intelligence Ecosystem
@@ -105,6 +121,14 @@
     - autonomous-etl-pipelines
     - agentic-hitl-security
   portfolio_visible: true
+  portfolio_headline: Multi-Agent Market Intelligence Ecosystem
+  portfolio_blurb: An autonomous research framework whose agents keep durable memory across interrupted tasks and stop for human approval before any high-stakes database commit.
+  portfolio_image: alchemia-dashboard.png
+  portfolio_links:
+    - label: Read brief
+      url: docs/Tyler-Technical-Briefs.pdf
+      download: true
+  portfolio_featured: false
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
 - id: hybrid-inference-pilot
   name: Tri-Tier Hybrid Inference Pilot
@@ -141,6 +165,14 @@
   related_accomplishment_ids:
     - agentos-orchestration
   portfolio_visible: true
+  portfolio_headline: "AgentOS: Chief of Staff Agent"
+  portfolio_blurb: A multi-agent orchestrator with modular subagents and mandatory human checkpoints, built so long-running workflows can be paused and inspected rather than trusted blindly.
+  portfolio_image: agentos-capability-map.png
+  portfolio_links:
+    - label: Read brief
+      url: docs/Tyler-Technical-Briefs.pdf
+      download: true
+  portfolio_featured: false
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer
 - id: cognitive-bridge
   name: "Cognitive Bridge: AI Personality Alignment"
@@ -166,6 +198,16 @@
     - cognitive-bridge-personality
     - cognitive-bridge-firebase-productionization
   portfolio_visible: true
+  portfolio_headline: Cognitive Bridge
+  portfolio_blurb: An OCEAN-based personality alignment engine that tunes an agent's voice to the person it is talking to, taken from an AI Studio prototype to an auth-scoped serverless backend.
+  portfolio_image: cognitive-bridge-light.png
+  portfolio_links:
+    - label: View live project
+      url: https://cognitive-bridge-ai.web.app/
+    - label: Read brief
+      url: docs/Tyler-Technical-Briefs.pdf
+      download: true
+  portfolio_featured: true
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
 - id: stack-overlord
   name: Stack Overlord

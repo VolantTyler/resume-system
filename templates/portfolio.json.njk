@@ -17,15 +17,29 @@
       "solution": {{ project.solution | dump }},
       "technologies": {{ project.technologies | dump }},
       "outcomes": {{ project.outcomes | dump }},
-      "portfolioVisible": {{ project.portfolio_visible | dump }}
+      "portfolioVisible": {{ project.portfolio_visible | dump }},
+      "portfolioHeadline": {{ project.portfolio_headline | dump }},
+      "portfolioBlurb": {{ (project.portfolio_blurb or null) | dump }},
+      "portfolioImage": {{ (project.portfolio_image or null) | dump }},
+      "portfolioLinks": [
+{% for link in project.portfolio_links %}
+        {
+          "label": {{ link.label | dump }},
+          "url": {{ link.url | dump }},
+          "download": {{ (link.download or false) | dump }}
+        }{% if not loop.last %},{% endif %}
+{% endfor %}
+      ],
+      "portfolioFeatured": {{ project.portfolio_featured | dump }}
     }{% if not loop.last %},{% endif %}
 {% endfor %}
   ],
   "skills": [
-{% for category in skills %}
+{% for skill in portfolio_skills %}
     {
-      "category": {{ category.name | dump }},
-      "items": {{ category.skill_names | dump }}
+      "name": {{ skill.name | dump }},
+      "facets": {{ skill.facets | dump }},
+      "proficiency": {{ (skill.proficiency or null) | dump }}
     }{% if not loop.last %},{% endif %}
 {% endfor %}
   ],

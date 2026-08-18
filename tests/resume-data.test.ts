@@ -5,8 +5,10 @@ import {
 } from "../scripts/lib/build-resume-context.js";
 import { loadResumeData } from "../scripts/lib/load-data.js";
 import {
+  validatePortfolioFeatured,
   validatePortfolioVisibility,
   validateResumeData,
+  validateSkillFacets,
 } from "../scripts/lib/validate.js";
 
 describe("resume data validation", () => {
@@ -80,6 +82,72 @@ describe("portfolio visibility validation", () => {
 
   it("reports no issues for the committed data", () => {
     expect(validatePortfolioVisibility(loadResumeData())).toEqual([]);
+  });
+});
+
+describe("portfolio featured validation", () => {
+  it("errors when more than one project is featured", () => {
+    const data = loadResumeData();
+    const issues = validatePortfolioFeatured({
+      ...data,
+      projects: data.projects.map((project) => ({
+        ...project,
+        portfolio_featured: true,
+      })),
+    });
+
+    expect(issues.length).toBe(data.projects.length);
+    expect(issues[0].message).toContain("Only one project");
+  });
+
+  it("accepts the committed data, which features exactly one project", () => {
+    const data = loadResumeData();
+    expect(validatePortfolioFeatured(data)).toEqual([]);
+    expect(
+      data.projects.filter((project) => project.portfolio_featured === true),
+    ).toHaveLength(1);
+  });
+});
+
+describe("skill facet validation", () => {
+  it("errors when a skill in a category with no default facet states none", () => {
+    const data = loadResumeData();
+    const issues = validateSkillFacets({
+      ...data,
+      skills: {
+        categories: [
+          {
+            name: "Testing",
+            skills: [{ name: "Untagged skill", proficiency: "medium" }],
+          },
+        ],
+      },
+    });
+
+    expect(issues).toHaveLength(1);
+    expect(issues[0].path).toContain("Untagged skill");
+    expect(issues[0].message).toContain("classify-skills");
+  });
+
+  it("lets a skill inherit its category facet without tagging", () => {
+    const data = loadResumeData();
+    const issues = validateSkillFacets({
+      ...data,
+      skills: {
+        categories: [
+          {
+            name: "Front-End",
+            skills: [{ name: "Untagged skill", proficiency: "medium" }],
+          },
+        ],
+      },
+    });
+
+    expect(issues).toEqual([]);
+  });
+
+  it("reports no issues for the committed data", () => {
+    expect(validateSkillFacets(loadResumeData())).toEqual([]);
   });
 });
 
