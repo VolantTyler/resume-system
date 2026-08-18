@@ -114,6 +114,9 @@ categories:
         evidence_ids:
           - insummery-pii-masking
         proficiency: high
+        portfolio_facets:
+          - applied-ai
+          - back-end
         target_roles:
           - applied-ai-developer
           - agentic-ai-engineer
@@ -138,6 +141,9 @@ categories:
         evidence_ids:
           - iblueprint-embedding-work
         proficiency: medium
+        portfolio_facets:
+          - applied-ai
+          - back-end
         target_roles:
           - applied-ai-developer
           - agentic-ai-engineer
@@ -183,6 +189,9 @@ categories:
           - knowledge-vault-mcp-server
           - knowledge-vault-dual-auth
         proficiency: high
+        portfolio_facets:
+          - applied-ai
+          - back-end
         target_roles:
           - applied-ai-developer
           - agentic-ai-engineer
@@ -236,6 +245,9 @@ categories:
           - cn-graphql-migration
           - knowledge-vault-mcp-server
         proficiency: high
+        portfolio_facets:
+          - front-end
+          - back-end
         target_roles:
           - frontend-engineer
           - full-stack-engineer
@@ -249,6 +261,9 @@ categories:
           - knowledge-vault-mcp-server
           - knowledge-vault-dual-auth
         proficiency: high
+        portfolio_facets:
+          - front-end
+          - back-end
         target_roles:
           - full-stack-engineer
           - frontend-engineer
@@ -283,6 +298,9 @@ categories:
           - ccie-tm-registration-release-support
           - nami-design-component-library
         proficiency: medium
+        portfolio_facets:
+          - front-end
+          - back-end
         target_roles:
           - laravel-livewire-engineer
           - nonprofit-tech
@@ -398,6 +416,9 @@ categories:
           - autonomous-etl-pipelines
           - openclaw-multi-agent-orchestration
         proficiency: high
+        portfolio_facets:
+          - back-end
+          - applied-ai
         target_roles:
           - applied-ai-developer
           - agentic-ai-engineer
@@ -454,6 +475,9 @@ categories:
         evidence_ids:
           - cn-graphql-migration
         proficiency: high
+        portfolio_facets:
+          - back-end
+          - front-end
         target_roles:
           - full-stack-engineer
           - frontend-engineer
@@ -496,6 +520,8 @@ categories:
           - nami-cypress-testing-leadership
           - ccie-tm-registration-release-support
         proficiency: high
+        portfolio_facets:
+          - front-end
         target_roles:
           - qa-minded-frontend
           - frontend-engineer
@@ -549,6 +575,8 @@ categories:
         evidence_ids:
           - ccie-tm-registration-release-support
         proficiency: medium
+        portfolio_facets:
+          - devops
         target_roles:
           - qa-minded-frontend
           - nonprofit-tech
@@ -584,8 +612,10 @@ categories:
           - nonprofit-tech
           - full-stack-engineer
           - agentic-software-engineer
-      - name: Agile
+      - name: Agile / Scrum
         aliases:
+          - Agile
+          - Scrum
           - Agile delivery
           - Agile methodology
         evidence_ids:
@@ -600,3 +630,31 @@ categories:
           - agentic-software-engineer
           - forward-deployed-engineer
           - nonprofit-tech
+      - name: Consensus-building
+        aliases:
+          - alignment facilitation
+          - stakeholder buy-in
+        evidence_ids:
+          - cn-cross-functional-delivery
+          - cn-cmo-marketing-partnership
+        proficiency: high
+        target_roles:
+          - forward-deployed-engineer
+          - applied-ai-developer
+          - nonprofit-tech
+          - full-stack-engineer
+          - agentic-software-engineer
+      - name: Cross-department collaboration
+        aliases:
+          - inter-department collaboration
+          - cross-functional delivery
+        evidence_ids:
+          - cn-cross-functional-delivery
+        proficiency: high
+        target_roles:
+          - forward-deployed-engineer
+          - applied-ai-developer
+          - nonprofit-tech
+          - full-stack-engineer
+          - frontend-engineer
+          - agentic-software-engineer
