@@ -175,3 +175,10 @@ Engineered portal features, queried MySQL via Sequelize for front-end data, help
 - **Udacity** — Front-End Web Developer Nanodegree · Full scholarship from Google through the "Grow with Google" program.
 - **Seattle University** — MA, Counseling
 - **Dartmouth College** — BA, Anthropology
+- **Google Skills** — Google AI Summit · Jun 2026 (pending)
+- **Kaggle** — 5-Day AI Agents: Intensive Vibe Coding Course with Google · Jun 2026 (pending)
+- **DeepLearning.AI** — Agentic AI · May 2026
+- **Breach Secure Now** — Artificial Intelligence (AI) Skills in Action · Oct 2025
+- **Breach Secure Now** — Artificial Intelligence (AI) Fundamentals · Oct 2025
+- **Breach Secure Now** — 2025 Cybersecurity Training · Jan 2025
+- **IBM** — Enterprise Design Thinking Practitioner · Jun 2021

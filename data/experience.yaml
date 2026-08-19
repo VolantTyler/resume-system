@@ -166,3 +166,16 @@
   accomplishment_ids:
     - volant-business-founding
   project_ids: []
+- id: apple-retail-business-specialist
+  company: Apple
+  title: Business Specialist
+  location: Apple Fifth Avenue, New York, NY
+  start_date: 2013-04
+  end_date: 2014-09
+  role_summary: Business Specialist on the B2B team at the Fifth Avenue store, within a
+    broader Apple Retail tenure running August 2011 to April 2015.
+  technologies: []
+  major_projects: []
+  accomplishment_ids:
+    - apple-b2b-brand-standards
+  project_ids: []

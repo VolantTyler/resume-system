@@ -38,3 +38,26 @@ education:
     credential: MA, Counseling
   - institution: Dartmouth College
     credential: BA, Anthropology
+  # Certifications. The schema has no dedicated certifications field, so these ride
+  # in education until one exists (see TODO.md). Issuer -> institution, cert -> credential.
+  - institution: Google Skills
+    credential: Google AI Summit
+    note: Jun 2026 (pending)
+  - institution: Kaggle
+    credential: "5-Day AI Agents: Intensive Vibe Coding Course with Google"
+    note: Jun 2026 (pending)
+  - institution: DeepLearning.AI
+    credential: Agentic AI
+    note: May 2026
+  - institution: Breach Secure Now
+    credential: Artificial Intelligence (AI) Skills in Action
+    note: Oct 2025
+  - institution: Breach Secure Now
+    credential: Artificial Intelligence (AI) Fundamentals
+    note: Oct 2025
+  - institution: Breach Secure Now
+    credential: 2025 Cybersecurity Training
+    note: Jan 2025
+  - institution: IBM
+    credential: Enterprise Design Thinking Practitioner
+    note: Jun 2021
