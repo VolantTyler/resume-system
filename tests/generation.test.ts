@@ -115,5 +115,10 @@ describe.skipIf(!hasLocalChrome())("PDF export", () => {
       expect(buffer.subarray(0, 5).toString("utf8")).toBe("%PDF-");
       expect(buffer.length).toBeGreaterThan(1000);
     }
-  }, 30000);
+    // Budget scales with resume_versions.yaml: this renders one headless-Chrome
+    // PDF per curated version (~3.4s each on a CI runner). At 9 versions the old
+    // 30s cap was already marginal — it passed on main and failed on a docs-only
+    // PR at 30286ms — and every version added pushes it further over. Keep this
+    // generous so adding a résumé version doesn't turn CI red for timing alone.
+  }, 120000);
 });

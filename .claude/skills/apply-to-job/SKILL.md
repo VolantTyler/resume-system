@@ -156,7 +156,21 @@ Pull the contact line from `data/profile.yaml` rather than retyping it. Four or 
 
 Address a named team when the posting names one ("Dear Search Design Systems hiring team"). Skip the throat-clearing — no "I am writing to express my interest".
 
-### 8. Report back
+### 8. Verify every claim before handing anything over
+
+Nothing above actually checks the draft for fabrication — the tailor is a term-matcher and the stub judge only does keyword overlap, so a rounded metric or a date pulled from the wrong role survives both. Run the deterministic checker:
+
+```bash
+npm run verify-claims -- --jd docs/job-descriptions/<file>.md
+npm run verify-claims -- --version <version-id>     # for a curated version
+npm run verify-claims -- --help                     # --target, --quiet, --no-report
+```
+
+For the judgment-level pass over prose that the checker can't parse — cover letter paragraphs, fit-analysis wording — use the **`resume-tailor-verify`** skill, which re-derives each claim from its source record. That skill and this one overlap by design: it owns the verification pass, this one owns the JD-to-application workflow around it. If you're only being asked to check an existing draft, go straight there instead.
+
+The claims most worth re-checking are the quiet ones: a metric rounded up, a date from an adjacent role, a technology named in the JD that got echoed into a bullet where it was never used, and a `confidence: low` accomplishment stated as flatly as a `high` one.
+
+### 9. Report back
 
 Give Tyler: the recommended target and whether you overrode it, the gap interview outcome, where the files landed, and a straight read on whether this is worth applying to. If the honest answer is that the fit is weak, say so — that's more valuable than a polished application to a role he won't get.
 
@@ -166,6 +180,7 @@ Fetch or extract it (use the `pdf` skill for PDFs), save the text under `docs/jo
 
 ## Related
 
+- `resume-tailor-verify` — the claim-verification pass; use it for step 8, or on its own when the ask is only "check this draft"
 - `process-intake` — the YAML shapes and claim-safety rules for anything a gap interview writes into `data/`
 - `my-writing-style` — Tyler's voice, for the cover letter
 - `.cursor/rules/tailored-resume-fit-analysis.mdc` — the original statement of the fit-analysis requirement

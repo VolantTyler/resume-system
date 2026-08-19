@@ -128,10 +128,11 @@ Step four is the one that gets skipped. Adding an accomplishment without adding 
 ### 7. Build, then log
 
 ```bash
-npm run build     # validate + regenerate everything
+npm run build           # validate + regenerate everything
+npm run verify-claims   # deterministic check that rendered claims trace to source
 ```
 
-Fix anything validation reports before continuing. Then close the loop:
+`npm run validate` only checks structure — it will happily accept an invented metric. `npm run verify-claims` is the one that checks rendered bullets back against their source records, so run it after any write into `data/`. Fix anything either reports before continuing. Then close the loop:
 
 ```bash
 npm run intake:log -- <filename> "<one-line summary of what changed>"
