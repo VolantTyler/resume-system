@@ -14,7 +14,9 @@
     "intake:log": "tsx scripts/process-intake.ts log",
     "tailor": "tsx scripts/tailor-resume.ts",
     "interview-gaps": "tsx scripts/interview-gaps.ts",
-    "judge": "tsx scripts/judge-resume.ts"
+    "classify-skills": "tsx scripts/classify-skills.ts",
+    "judge": "tsx scripts/judge-resume.ts",
+    "verify-claims": "tsx scripts/verify-claims.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

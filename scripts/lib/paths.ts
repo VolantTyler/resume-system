@@ -15,6 +15,7 @@ export const RESUMES_OUTPUT_DIR = join(OUTPUT_DIR, "resumes");
 export const TAILORED_OUTPUT_DIR = join(RESUMES_OUTPUT_DIR, "tailored");
 export const PORTFOLIO_OUTPUT_DIR = join(OUTPUT_DIR, "portfolio");
 export const DEBUG_OUTPUT_DIR = join(OUTPUT_DIR, "debug");
+export const CLAIM_VERIFICATION_OUTPUT_DIR = join(OUTPUT_DIR, "claim-verification");
 
 /** Curated résumé output dir: output/resumes[/output_folder]. */
 export function resumeVersionOutputDir(outputFolder?: string): string {

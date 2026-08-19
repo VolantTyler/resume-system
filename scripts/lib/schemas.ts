@@ -47,6 +47,24 @@ export const accomplishmentSchema = z.object({
 
 export const accomplishmentsSchema = z.array(accomplishmentSchema).min(1);
 
+export const portfolioLinkSchema = z.object({
+  label: z.string().min(1),
+  /**
+   * Either an absolute URL or a site-relative path. The portfolio serves assets
+   * like `docs/Tyler-Technical-Briefs.pdf` from its own root, so requiring an
+   * absolute URL here would force those links to hard-code the domain.
+   */
+  url: z
+    .string()
+    .min(1)
+    .refine(
+      (value) =>
+        /^https?:\/\//.test(value) || /^[^/\\][^\\]*$/.test(value),
+      "portfolio_links url must be an absolute http(s) URL or a site-relative path",
+    ),
+  download: z.boolean().optional(),
+});
+
 export const projectSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
@@ -59,6 +77,18 @@ export const projectSchema = z.object({
   related_accomplishment_ids: z.array(z.string()).optional(),
   portfolio_visible: z.boolean().optional(),
   resume_relevance: z.string().optional(),
+  /** Card <h3>; falls back to `name` when absent. */
+  portfolio_headline: z.string().min(1).optional(),
+  /** 1-2 sentence card copy — problem/solution are too long for a card. */
+  portfolio_blurb: z.string().min(1).optional(),
+  /** Filename only, resolved against the portfolio repo's assets/. */
+  portfolio_image: z
+    .string()
+    .min(1)
+    .regex(/^[^/\\]+$/, "portfolio_image must be a filename only, not a path")
+    .optional(),
+  portfolio_links: z.array(portfolioLinkSchema).optional(),
+  portfolio_featured: z.boolean().optional(),
 });
 
 export const projectsSchema = z.array(projectSchema);
@@ -79,12 +109,26 @@ export const experienceEntrySchema = z.object({
 
 export const experienceSchema = z.array(experienceEntrySchema).min(1);
 
+export const portfolioFacetSchema = z.enum([
+  "applied-ai",
+  "front-end",
+  "back-end",
+  "devops",
+  "collaboration",
+]);
+
 export const skillEntrySchema = z.object({
   name: z.string().min(1),
   aliases: z.array(z.string()).optional(),
   evidence_ids: z.array(z.string()).optional(),
   proficiency: z.string().optional(),
   target_roles: z.array(z.string()).optional(),
+  /**
+   * Many-to-many portfolio facets. Absent, a skill inherits its category's
+   * default facet — only cross-listed skills or ones in a category with no
+   * default (Testing) need to set this explicitly.
+   */
+  portfolio_facets: z.array(portfolioFacetSchema).optional(),
 });
 
 export const skillsSchema = z.object({
@@ -158,6 +202,9 @@ export const resumeVersionSchema = z.object({
 
 export const resumeVersionsSchema = z.array(resumeVersionSchema).min(1);
 
+export type PortfolioFacet = z.infer<typeof portfolioFacetSchema>;
+export type PortfolioLink = z.infer<typeof portfolioLinkSchema>;
+export type SkillEntry = z.infer<typeof skillEntrySchema>;
 export type Profile = z.infer<typeof profileSchema>;
 export type Accomplishment = z.infer<typeof accomplishmentSchema>;
 export type Project = z.infer<typeof projectSchema>;

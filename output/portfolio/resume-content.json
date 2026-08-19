@@ -16,7 +16,13 @@
       "solution": "Built a Vercel-hosted MCP server that exposes markdown engineering patterns as tools (`list_patterns`, `get_pattern`), with dual auth on one URL—Clerk OAuth for cloud clients and an optional shared-secret Bearer for local/curl—so Cursor, Gemini Spark, and other MCP clients can pull operational preferences and prior solutions at request time.",
       "technologies": ["Next.js","Vercel","MCP","Clerk","OAuth","TypeScript","Markdown"],
       "outcomes": ["Production MCP endpoint serving a curated pattern corpus (deploy, auth, evals, PII, multi-agent, YAML SOT, and related practices).","Dual-acceptance auth documented and shipped so the same URL works for OAuth clients and Bearer-configured IDE/curl without smart surface detection.","Personal Cursor skill (`knowledge-vault`) that steers agents to query the vault before inventing process."],
-      "portfolioVisible": true
+      "portfolioVisible": true,
+      "portfolioHeadline": "Development Knowledge Vault",
+      "portfolioBlurb": "An MCP server that serves distilled engineering patterns to AI coding agents, so a new project reuses prior deploy, auth, and eval practices instead of rediscovering them.",
+      "portfolioImage": null,
+      "portfolioLinks": [
+      ],
+      "portfolioFeatured": false
     },    {
       "id": "insummery-ai",
       "name": "InSummery.AI",
@@ -26,7 +32,21 @@
       "solution": "Built a Google ADK 2.0 multi-agent concierge that masks PII, triages and extracts schedule data, pauses below 80% confidence for HITL clarification, maintains a multi-child schedule matrix with absolute/relative gap analysis, and syncs disruptions to Google Calendar—shipped as a Kaggle + Google 5-Day AI Agents Intensive Consult-track capstone.",
       "technologies": ["Google ADK 2.0","Python","Pydantic","Google Gemini","Vertex AI","Gemma","Ollama","Firebase","Firebase Cloud Functions","Cloud Firestore","Firebase Authentication","React","Vite","Google Calendar API","OpenTelemetry"],
       "outcomes": ["Capstone writeup published on Kaggle for the vibecoding agents competition.","Public demo app and GitHub repository with CLI and Firebase web modes.","Deterministic eval harness with absolute quality gates (e.g., 90% triager accuracy, 80% workflow pass rate) and baseline regression tracking."],
-      "portfolioVisible": true
+      "portfolioVisible": true,
+      "portfolioHeadline": "LLM Reasoning with Human Decisions & PII Masking",
+      "portfolioBlurb": "A multi-agent scheduling concierge that masks PII before inference and pauses for a human when its confidence drops below 80%, turning messy family email into a reconciled calendar.",
+      "portfolioImage": "insummery-dashboard.png",
+      "portfolioLinks": [
+        {
+          "label": "Read writeup",
+          "url": "https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/in-summery-ai",
+          "download": false
+        },        {
+          "label": "View live project",
+          "url": "https://in-summery.web.app/",
+          "download": false
+        }      ],
+      "portfolioFeatured": false
     },    {
       "id": "openclaw-multi-agent-ecosystem",
       "name": "OpenClaw Multi-Agent Market Intelligence Ecosystem",
@@ -36,7 +56,17 @@
       "solution": "Built an autonomous research framework on OpenClaw with specialized agents (data pull, profitability analysis, dashboard UI, orchestrator), SQLite persistence, Python ETL workers, and HITL approval gates—applied to real-world and World of Warcraft commodity markets.",
       "technologies": ["OpenClaw","Python","SQLite","Google Gemini","Gemma"],
       "outcomes": ["Durable multi-turn agent memory across interrupted research tasks.","Structured extraction of market data into relational formats.","Human validation before high-stakes database commits.","Faster market-context decision making in the pilot domain (self-reported ~15% profit lift in interview notes; medium/low confidence)."],
-      "portfolioVisible": true
+      "portfolioVisible": true,
+      "portfolioHeadline": "Multi-Agent Market Intelligence Ecosystem",
+      "portfolioBlurb": "An autonomous research framework whose agents keep durable memory across interrupted tasks and stop for human approval before any high-stakes database commit.",
+      "portfolioImage": "alchemia-dashboard.png",
+      "portfolioLinks": [
+        {
+          "label": "Read brief",
+          "url": "docs/Tyler-Technical-Briefs.pdf",
+          "download": true
+        }      ],
+      "portfolioFeatured": false
     },    {
       "id": "cognitive-bridge",
       "name": "Cognitive Bridge: AI Personality Alignment",
@@ -46,7 +76,21 @@
       "solution": "Built an OCEAN-based personality alignment prototype in Google AI Studio, then productionized it on Firebase Cloud Functions with Firestore memory, Firebase Auth, Vertex AI, and Pydantic-validated structured Gemini outputs.",
       "technologies": ["Google AI Studio","Google Gemini","Firebase","Firebase Cloud Functions","Cloud Firestore","Firebase Authentication","Vertex AI","Pydantic","Python"],
       "outcomes": ["Personality map generation from a brief user interview.","Demonstration of aligned and unaligned chat responses for evaluation.","Migrated prototype to a serverless Python backend with auth-scoped endpoints and durable Firestore memory."],
-      "portfolioVisible": true
+      "portfolioVisible": true,
+      "portfolioHeadline": "Cognitive Bridge",
+      "portfolioBlurb": "An OCEAN-based personality alignment engine that tunes an agent's voice to the person it is talking to, taken from an AI Studio prototype to an auth-scoped serverless backend.",
+      "portfolioImage": "cognitive-bridge-light.png",
+      "portfolioLinks": [
+        {
+          "label": "View live project",
+          "url": "https://cognitive-bridge-ai.web.app/",
+          "download": false
+        },        {
+          "label": "Read brief",
+          "url": "docs/Tyler-Technical-Briefs.pdf",
+          "download": true
+        }      ],
+      "portfolioFeatured": true
     },    {
       "id": "agentos-chief-of-staff",
       "name": "AgentOS: Chief of Staff Agent",
@@ -56,10 +100,220 @@
       "solution": "Built a multi-agent orchestrator with the Cursor Agent SDK, modular subagents, and HITL handoffs for evaluation and testing stages.",
       "technologies": ["Cursor Agent SDK","Python"],
       "outcomes": ["Modular subagent design for evaluation and testing workflows.","Mandatory human approval handoffs at critical stages."],
-      "portfolioVisible": true
+      "portfolioVisible": true,
+      "portfolioHeadline": "AgentOS: Chief of Staff Agent",
+      "portfolioBlurb": "A multi-agent orchestrator with modular subagents and mandatory human checkpoints, built so long-running workflows can be paused and inspected rather than trusted blindly.",
+      "portfolioImage": "agentos-capability-map.png",
+      "portfolioLinks": [
+        {
+          "label": "Read brief",
+          "url": "docs/Tyler-Technical-Briefs.pdf",
+          "download": true
+        }      ],
+      "portfolioFeatured": false
     }  ],
   "skills": [
-  ],
+    {
+      "name": "Multi-agent orchestration",
+      "facets": ["applied-ai"],
+      "proficiency": "high"
+    },    {
+      "name": "CrewAI",
+      "facets": ["applied-ai"],
+      "proficiency": "high"
+    },    {
+      "name": "Hybrid LLM inference",
+      "facets": ["applied-ai"],
+      "proficiency": "high"
+    },    {
+      "name": "Antigravity",
+      "facets": ["applied-ai"],
+      "proficiency": "high"
+    },    {
+      "name": "Gemma4",
+      "facets": ["applied-ai"],
+      "proficiency": "medium"
+    },    {
+      "name": "Google AI Studio",
+      "facets": ["applied-ai"],
+      "proficiency": "high"
+    },    {
+      "name": "Codex / GPT",
+      "facets": ["applied-ai"],
+      "proficiency": "high"
+    },    {
+      "name": "Human-in-the-loop controls",
+      "facets": ["applied-ai"],
+      "proficiency": "high"
+    },    {
+      "name": "PII masking",
+      "facets": ["applied-ai","back-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Agent evaluation",
+      "facets": ["applied-ai"],
+      "proficiency": "high"
+    },    {
+      "name": "Embeddings / RAG",
+      "facets": ["applied-ai","back-end"],
+      "proficiency": "medium"
+    },    {
+      "name": "Vertex AI",
+      "facets": ["applied-ai"],
+      "proficiency": "high"
+    },    {
+      "name": "Ollama",
+      "facets": ["applied-ai"],
+      "proficiency": "medium"
+    },    {
+      "name": "Cursor Agent SDK",
+      "facets": ["applied-ai"],
+      "proficiency": "high"
+    },    {
+      "name": "Model Context Protocol",
+      "facets": ["applied-ai","back-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Weights & Biases Weave",
+      "facets": ["applied-ai"],
+      "proficiency": "medium"
+    },    {
+      "name": "JavaScript",
+      "facets": ["front-end"],
+      "proficiency": "high"
+    },    {
+      "name": "React",
+      "facets": ["front-end"],
+      "proficiency": "high"
+    },    {
+      "name": "TypeScript",
+      "facets": ["front-end","back-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Next.js",
+      "facets": ["front-end","back-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Alpine",
+      "facets": ["front-end"],
+      "proficiency": "medium"
+    },    {
+      "name": "Tailwind CSS",
+      "facets": ["front-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Livewire",
+      "facets": ["front-end","back-end"],
+      "proficiency": "medium"
+    },    {
+      "name": "Figma",
+      "facets": ["front-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Adobe XD",
+      "facets": ["front-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Storybook",
+      "facets": ["front-end"],
+      "proficiency": "high"
+    },    {
+      "name": "UX Design / Prototyping",
+      "facets": ["front-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Performance optimization",
+      "facets": ["front-end"],
+      "proficiency": "medium"
+    },    {
+      "name": "Firebase",
+      "facets": ["back-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Firestore",
+      "facets": ["back-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Sequelize",
+      "facets": ["back-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Python",
+      "facets": ["back-end","applied-ai"],
+      "proficiency": "high"
+    },    {
+      "name": "FastAPI",
+      "facets": ["back-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Slack Bolt",
+      "facets": ["back-end"],
+      "proficiency": "medium"
+    },    {
+      "name": "Google Docs / Drive APIs",
+      "facets": ["back-end"],
+      "proficiency": "medium"
+    },    {
+      "name": "Laravel",
+      "facets": ["back-end"],
+      "proficiency": "high"
+    },    {
+      "name": "GraphQL",
+      "facets": ["back-end","front-end"],
+      "proficiency": "high"
+    },    {
+      "name": "SQLite",
+      "facets": ["back-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Clerk OAuth",
+      "facets": ["back-end"],
+      "proficiency": "medium"
+    },    {
+      "name": "PHP",
+      "facets": ["back-end"],
+      "proficiency": "medium"
+    },    {
+      "name": "Cypress",
+      "facets": ["front-end"],
+      "proficiency": "high"
+    },    {
+      "name": "Docker",
+      "facets": ["devops"],
+      "proficiency": "high"
+    },    {
+      "name": "CI/CD",
+      "facets": ["devops"],
+      "proficiency": "high"
+    },    {
+      "name": "GitHub Actions",
+      "facets": ["devops"],
+      "proficiency": "medium"
+    },    {
+      "name": "Release support",
+      "facets": ["devops"],
+      "proficiency": "medium"
+    },    {
+      "name": "Stakeholder collaboration",
+      "facets": ["collaboration"],
+      "proficiency": "high"
+    },    {
+      "name": "Deep listening",
+      "facets": ["collaboration"],
+      "proficiency": "high"
+    },    {
+      "name": "Agile / Scrum",
+      "facets": ["collaboration"],
+      "proficiency": "medium"
+    },    {
+      "name": "Consensus-building",
+      "facets": ["collaboration"],
+      "proficiency": "high"
+    },    {
+      "name": "Cross-department collaboration",
+      "facets": ["collaboration"],
+      "proficiency": "high"
+    }  ],
   "experience": [
     {
       "id": "independent-rnd-applied-ai",
@@ -224,7 +478,7 @@
       "credential": "BA, Anthropology",
       "note": null
     }  ],
-  "generatedAt": "2026-08-14T21:12:19.289Z",
+  "generatedAt": "2026-08-18T02:47:06.236Z",
   "versionId": "portfolio-v1",
   "targetId": "portfolio-focused"
 }

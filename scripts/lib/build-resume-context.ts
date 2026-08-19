@@ -1,7 +1,10 @@
+import { collectFacetedSkills } from "./portfolio-facets.js";
 import type {
   Accomplishment,
   ApplicationFit,
   ExperienceEntry,
+  PortfolioFacet,
+  PortfolioLink,
   Profile,
   Project,
   ResumeData,
@@ -32,11 +35,22 @@ export interface ResumeProjectContext {
   technologies: string[];
   outcomes: string[];
   portfolio_visible: boolean;
+  portfolio_headline: string;
+  portfolio_blurb?: string;
+  portfolio_image?: string;
+  portfolio_links: PortfolioLink[];
+  portfolio_featured: boolean;
 }
 
 export interface ResumeSkillCategoryContext {
   name: string;
   skill_names: string[];
+}
+
+export interface PortfolioSkillContext {
+  name: string;
+  facets: PortfolioFacet[];
+  proficiency?: string;
 }
 
 export interface ResumeAccomplishmentContext {
@@ -58,6 +72,8 @@ export interface ResumeRenderContext {
   experience: ResumeRoleContext[];
   projects: ResumeProjectContext[];
   skills: ResumeSkillCategoryContext[];
+  /** Flat, facet-tagged skill list — populated only for the portfolio export. */
+  portfolio_skills?: PortfolioSkillContext[];
   accomplishments: ResumeAccomplishmentContext[];
   generated_at: string;
 }
@@ -69,7 +85,7 @@ function formatEndDate(value: string | undefined): string {
   return value;
 }
 
-function selectBullet(
+export function selectBullet(
   accomplishment: Accomplishment,
   bulletVariant: string,
 ): string {
@@ -180,6 +196,11 @@ export function buildResumeContext(
       technologies: project.technologies ?? [],
       outcomes: project.outcomes ?? [],
       portfolio_visible: project.portfolio_visible ?? false,
+      portfolio_headline: project.portfolio_headline ?? project.name,
+      portfolio_blurb: project.portfolio_blurb,
+      portfolio_image: project.portfolio_image,
+      portfolio_links: project.portfolio_links ?? [],
+      portfolio_featured: project.portfolio_featured ?? false,
     }));
 
   const accomplishments: ResumeAccomplishmentContext[] =
@@ -231,5 +252,20 @@ export function buildPortfolioContext(
     }),
   };
 
-  return buildResumeContext(data, portfolioVersion);
+  // The portfolio publishes every skill and lets the site filter by facet on the
+  // client, so it deliberately bypasses the résumé's target_roles/skill_emphasis
+  // narrowing — under that filter the export emitted zero skills, because no
+  // skill lists the "portfolio-focused" target.
+  const portfolioSkills: PortfolioSkillContext[] = collectFacetedSkills(
+    data.skills,
+  ).map((skill) => ({
+    name: skill.name,
+    facets: skill.facets,
+    proficiency: skill.proficiency,
+  }));
+
+  return {
+    ...buildResumeContext(data, portfolioVersion),
+    portfolio_skills: portfolioSkills,
+  };
 }
