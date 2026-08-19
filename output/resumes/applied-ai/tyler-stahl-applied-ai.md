@@ -162,7 +162,7 @@ Built Stack Overlord primarily in Codex/GPT-5.6, with project intelligence power
 **Front-End:** Next.js
 **Back-End:** Firebase, Firestore, Python, FastAPI, Slack Bolt, Google Docs / Drive APIs, SQLite, Clerk OAuth
 **DevOps:** Docker
-**Collaboration:** Stakeholder collaboration, Deep listening
+**Collaboration:** Stakeholder collaboration, Deep listening, Consensus-building, Cross-department collaboration
 
 ## Education
 

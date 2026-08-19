@@ -162,7 +162,7 @@ Engineered portal features, queried MySQL via Sequelize for front-end data, help
 **Back-End:** Firebase, Firestore, Sequelize, Python, FastAPI, Slack Bolt, Laravel, GraphQL, SQLite, Clerk OAuth
 **Testing:** Cypress
 **DevOps:** Docker, CI/CD, GitHub Actions
-**Collaboration:** Release support, Stakeholder collaboration, Deep listening, Agile
+**Collaboration:** Release support, Stakeholder collaboration, Deep listening, Agile / Scrum, Consensus-building, Cross-department collaboration
 
 ## Education
 

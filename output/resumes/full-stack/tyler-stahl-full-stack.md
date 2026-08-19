@@ -182,7 +182,7 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 **Back-End:** Firebase, Firestore, Sequelize, FastAPI, Slack Bolt, Google Docs / Drive APIs, Laravel, GraphQL, SQLite, Clerk OAuth, PHP
 **Testing:** Cypress
 **DevOps:** Docker, CI/CD, GitHub Actions
-**Collaboration:** Stakeholder collaboration, Deep listening, Agile
+**Collaboration:** Stakeholder collaboration, Deep listening, Agile / Scrum, Consensus-building, Cross-department collaboration
 
 ## Education
 

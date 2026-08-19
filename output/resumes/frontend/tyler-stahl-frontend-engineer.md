@@ -142,7 +142,7 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 **Back-End:** Sequelize, GraphQL
 **Testing:** Cypress
 **DevOps:** Docker, CI/CD, GitHub Actions
-**Collaboration:** Stakeholder collaboration, Agile
+**Collaboration:** Stakeholder collaboration, Agile / Scrum, Cross-department collaboration
 
 ## Education
 

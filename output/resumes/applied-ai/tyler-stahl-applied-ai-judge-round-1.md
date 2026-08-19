@@ -5,7 +5,7 @@
 **Résumé version:** `tyler-stahl-applied-ai`
 **Round:** 1
 **Model:** `stub`
-**Generated:** 2026-08-14
+**Generated:** 2026-08-19
 
 ## Verdict
 
