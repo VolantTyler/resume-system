@@ -85,7 +85,7 @@ function formatEndDate(value: string | undefined): string {
   return value;
 }
 
-function selectBullet(
+export function selectBullet(
   accomplishment: Accomplishment,
   bulletVariant: string,
 ): string {

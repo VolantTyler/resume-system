@@ -127,6 +127,16 @@ Env: `RESUME_JUDGE_API_KEY` / `OPENAI_API_KEY` for live judging; without a key t
 
 Look back in `docs/judge-log.md` for round counts, scores, and changes demanded.
 
+### Verify claims (deterministic, no LLM)
+
+```bash
+npm run verify-claims                                   # every curated version in resume_versions.yaml
+npm run verify-claims -- --version <version-id>
+npm run verify-claims -- --jd docs/job-descriptions/<file>.md [--target <target-id>]
+```
+
+Re-checks every rendered bullet's numbers, dates, and technology mentions against the exact accomplishment record it came from (`raw_fact`, `evidence`, `source_notes`, and skill `evidence_ids` in `skills.yaml`) and classifies each claim as verified / inferred / unsupported. This is the manual "does this bullet still match the source data" pass Tyler would otherwise do by hand before an application goes out — it complements the LLM judge above rather than replacing it (the judge scores fit/tone against a role brief; this checks factual grounding, and still catches drift when the judge runs in stub mode with no API key). Exits non-zero on any unsupported claim. Writes a markdown ledger per version to `output/claim-verification/` (gitignored).
+
 ## Data Modeling
 
 Each accomplishment is **atomic**. Store:
