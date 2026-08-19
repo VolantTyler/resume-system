@@ -25,9 +25,18 @@ If the source is vague, keep the bullet qualitative and set `confidence: medium`
 npm run intake:list
 ```
 
-This diffs `docs/intake/*.md` against `docs/intake-log.md`. Note the limitation: **it only tracks `.md` files.** `docs/intake/` also accumulates PDFs (CVs, project briefs, cover letters) that never appear in this list and may hold uncaptured facts. If Tyler asks what's outstanding, check `ls docs/intake/` too, not just the script output.
+This diffs `docs/intake/*.md` against `docs/intake-log.md`. Note the limitation: **it only tracks `.md` files.** `docs/intake/` also accumulates PDFs (CVs, project briefs, cover letters) that never appear in this list. If Tyler asks what's outstanding, check `ls docs/intake/` too, not just the script output.
 
-For PDFs, use the `pdf` skill to extract text.
+But be careful about what that invisibility means. **A PDF missing from the log is not evidence it's unprocessed** — as of the last audit, every PDF in `docs/intake/` had already been mined into `data/` without ever getting a log row. The reliable check is `source_notes`, which every accomplishment carries:
+
+```bash
+grep -c "source_notes:" data/accomplishments.yaml
+grep -rn "Master Career Document\|Technical Brief" data/accomplishments.yaml | head
+```
+
+If a document is cited there, its facts are in. Re-processing it wastes effort and risks duplicate accomplishments under new IDs.
+
+For PDFs, use the `pdf` skill to extract text. Watch for files that aren't really PDFs — a browser-saved download can land as HTML with a `.pdf` extension, which fails extraction with a header error rather than an obvious message.
 
 ### 2. Read the source, then read what already exists
 
