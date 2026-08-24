@@ -24,7 +24,7 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 - Deployed a Next.js MCP endpoint on Vercel that loads markdown patterns at request time for cross-client agent tooling.
 - Wired Clerk OAuth and optional MCP_SECRET_KEY Bearer acceptance into a Next.js MCP route with well-known authorization-server and protected-resource endpoints left public.
 - Shipped an agentic scheduling product spanning ADK workflow, structured extraction, and a parent-facing schedule matrix.
-- Connected structured schedule state to Google Calendar OAuth sync and a parent-facing dashboard.
+- Connected structured schedule state to Google Calendar sync and a parent-facing dashboard.
 - Shipped a full-stack agentic product with Firebase backend, React frontend, and Google Calendar integration.
 - Shipped a distributed multi-agent research system with Python workers, SQLite persistence, and production-minded state management.
 - Implemented Python data pipelines with durable SQLite state for agent-driven research and reporting.
@@ -182,10 +182,17 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 **Back-End:** Firebase, Firestore, Sequelize, FastAPI, Slack Bolt, Google Docs / Drive APIs, Laravel, GraphQL, SQLite, Clerk OAuth, PHP
 **Testing:** Cypress
 **DevOps:** Docker, CI/CD, GitHub Actions
-**Collaboration:** Stakeholder collaboration, Deep listening, Agile
+**Collaboration:** Stakeholder collaboration, Deep listening, Agile / Scrum, Consensus-building, Cross-department collaboration
 
 ## Education
 
 - **Udacity** — Front-End Web Developer Nanodegree · Full scholarship from Google through the "Grow with Google" program.
 - **Seattle University** — MA, Counseling
 - **Dartmouth College** — BA, Anthropology
+- **Google Skills** — Google AI Summit · Jun 2026 (pending)
+- **Kaggle** — 5-Day AI Agents: Intensive Vibe Coding Course with Google · Jun 2026 (pending)
+- **DeepLearning.AI** — Agentic AI · May 2026
+- **Breach Secure Now** — Artificial Intelligence (AI) Skills in Action · Oct 2025
+- **Breach Secure Now** — Artificial Intelligence (AI) Fundamentals · Oct 2025
+- **Breach Secure Now** — 2025 Cybersecurity Training · Jan 2025
+- **IBM** — Enterprise Design Thinking Practitioner · Jun 2021

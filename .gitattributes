@@ -1,0 +1,5 @@
+# Append-only timestamped logs: both sides of a merge are always legitimate
+# appends, so union them instead of conflicting. Rows may land out of order
+# after a union merge; sort by the leading timestamp column if that matters.
+docs/judge-log.md   merge=union
+docs/intake-log.md  merge=union

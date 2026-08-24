@@ -286,7 +286,7 @@
     standard: Built multi-child gap analysis (absolute and sibling mismatches) with Google Calendar sync that preserves disruption history.
     applied-ai: Combined deterministic matrix analysis with calendar updates so parents see uncovered hours and disrupted slots at a glance.
     frontend: Shipped a React schedule matrix and alerts sidebar highlighting gaps in high-contrast light/dark themes.
-    full-stack: Connected structured schedule state to Google Calendar OAuth sync and a parent-facing dashboard.
+    full-stack: Connected structured schedule state to Google Calendar sync and a parent-facing dashboard.
   evidence:
     - Kaggle writeup gap analysis and UX sections
     - https://in-summery.web.app/
@@ -436,6 +436,7 @@
   themes:
     - ETL
     - structured extraction
+    - agent workflows
     - Python
     - SQLite
   technologies:
@@ -611,6 +612,7 @@
     - Google Cloud
     - Gemini
     - Firebase
+    - agent workflows
     - productionization
   technologies:
     - Google Gemini
@@ -678,6 +680,7 @@
   themes:
     - multi-agent orchestration
     - Cursor Agent SDK
+    - HITL
     - requirements to production
   technologies:
     - Cursor Agent SDK
@@ -1270,3 +1273,31 @@
     - 'Gap interview confirmation (2026-08-07) for term "Performance optimization" against docs/job-descriptions/amazon-front-end-engineer-ii-amazon-quick.md.'
     - "Interview transcript: docs/intake/2026-08-07-gap-interview-amazon-front-end-engineer-ii-amazon-quic.md"
     - No quantified paint-time delta claimed; employer attribution to Charity Navigator is inferred from React portal tenure and marked medium confidence.
+- id: apple-b2b-brand-standards
+  company: Apple
+  role: Business Specialist
+  timeframe: "2013–2014"
+  category: client-facing
+  themes:
+    - B2B customer engagement
+    - brand standards
+    - customer experience
+  technologies: []
+  raw_fact: Worked on the B2B team at the Apple Fifth Avenue store as a Business Specialist,
+    where brand standards and customer experience practice came from Apple Retail's own
+    operating model.
+  context: Pre-engineering client-facing retail tenure; the B2B/stakeholder-facing habits
+    carry into forward-deployed and customer-facing engineering work.
+  resume_bullets:
+    standard: Served as a Business Specialist on Apple's B2B team at the Fifth Avenue store,
+      working to Apple Retail's brand and customer-experience standards.
+  evidence:
+    - Master AI Career Document interview answers (Apple B2B, Fifth Avenue store)
+  target_roles:
+    - forward-deployed-engineer
+  confidence: medium
+  source_notes:
+    - >-
+      Role, employer, store, and dates confirmed directly by Tyler (2026-08-19) — Apple Retail
+      August 2011 to April 2015, Business Specialist April 2013 to September 2014. No metrics,
+      revenue, or account figures claimed; none were provided.
