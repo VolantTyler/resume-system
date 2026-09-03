@@ -111,6 +111,30 @@
           "download": true
         }      ],
       "portfolioFeatured": false
+    },    {
+      "id": "stack-overlord",
+      "name": "Stack Overlord",
+      "organization": "Independent R&D",
+      "timeframe": "2026",
+      "problem": "A merge can succeed in GitHub while its post-merge deployment fails silently (credentials, quotas, environment config), leaving production stale with no clear notification signal—built for OpenAI Build Week 2026's Developer Tools track under tight hackathon constraints, primarily via Codex/GPT-5.6.",
+      "solution": "Built a Next.js/TypeScript command center that ingests signed GitHub Actions webhooks into a durable Postgres/Drizzle ledger (GitHub stays the source of truth for pass/fail), diagnoses failures with the OpenAI Responses API (GPT-5.6) using evidence citations, confidence levels, and verification steps, alerts Slack, and ships a deterministic credential-free demo mode so judges can exercise the whole flow.",
+      "technologies": ["Codex","GPT-5.6","Next.js","React","TypeScript","Tailwind CSS","shadcn/ui","Postgres","Drizzle ORM","OpenAI Responses API","Vercel","Playwright","Vitest","GitHub Actions","Slack Bolt"],
+      "outcomes": ["Signed, idempotent GitHub webhook ingestion into a Postgres ledger, with GitHub kept as sole source of truth for workflow status.","GPT-5.6 failure diagnosis with evidence citations, confidence levels, and ordered verification steps, plus Slack failure alerts.","Deterministic, credential-free demo mode with fixture replay so OpenAI Build Week judges could evaluate the product without GitHub/OpenAI credentials.","Responsive (desktop/mobile) dashboard covered by Playwright and Vitest tests."],
+      "portfolioVisible": true,
+      "portfolioHeadline": "Stack Overlord",
+      "portfolioBlurb": "A CI/CD command center that catches silent post-merge deployment failures—ingesting signed GitHub webhooks into a durable Postgres ledger and diagnosing failures with cited, confidence-scored GPT-5.6 analysis that never overrides GitHub's own pass/fail verdict.",
+      "portfolioImage": "stack-overlord-hero.png",
+      "portfolioLinks": [
+        {
+          "label": "View live project",
+          "url": "https://stack-overlord.vercel.app/",
+          "download": false
+        },        {
+          "label": "View repository",
+          "url": "https://github.com/VolantTyler/stack-overlord",
+          "download": false
+        }      ],
+      "portfolioFeatured": false
     }  ],
   "skills": [
     {
@@ -238,6 +262,10 @@
       "facets": ["back-end"],
       "proficiency": "high"
     },    {
+      "name": "Postgres / Drizzle ORM",
+      "facets": ["back-end"],
+      "proficiency": "high"
+    },    {
       "name": "Python",
       "facets": ["back-end","applied-ai"],
       "proficiency": "high"
@@ -277,6 +305,10 @@
       "name": "Cypress",
       "facets": ["front-end"],
       "proficiency": "high"
+    },    {
+      "name": "Playwright",
+      "facets": ["front-end"],
+      "proficiency": "medium"
     },    {
       "name": "Docker",
       "facets": ["devops"],
@@ -432,6 +464,30 @@
       "technologies": ["Codex","GPT-5.6"],
       "confidence": "high"
     },    {
+      "id": "stack-overlord-webhook-ledger",
+      "company": "Independent R&D",
+      "timeframe": "2026",
+      "bullet": "Built signed, idempotent GitHub webhook ingestion into a Postgres ledger for Stack Overlord, keeping GitHub as the source of truth for workflow pass/fail state.",
+      "themes": ["CI/CD observability","deployment visibility","durable ledger","webhook ingestion"],
+      "technologies": ["Next.js","TypeScript","Postgres","Drizzle ORM","GitHub Actions","CI/CD","Vercel"],
+      "confidence": "high"
+    },    {
+      "id": "stack-overlord-ai-failure-diagnosis",
+      "company": "Independent R&D",
+      "timeframe": "2026",
+      "bullet": "Built GPT-5.6-powered failure diagnosis for Stack Overlord that returns evidence-cited, confidence-scored analysis and verification steps, with Slack alerts, while treating GitHub's pass/fail status as authoritative.",
+      "themes": ["AI-assisted diagnosis","guardrails","evidence-grounded output","explicit uncertainty"],
+      "technologies": ["OpenAI Responses API","GPT-5.6","Next.js","GitHub Actions","Slack Bolt"],
+      "confidence": "high"
+    },    {
+      "id": "stack-overlord-demo-mode",
+      "company": "Independent R&D",
+      "timeframe": "2026",
+      "bullet": "Built a deterministic, credential-free demo mode for Stack Overlord with fixture-replayed failures on a responsive dashboard, tested with Playwright and Vitest.",
+      "themes": ["deterministic demo mode","fixture replay","hackathon judging","responsive UI"],
+      "technologies": ["Next.js","React","Tailwind CSS","shadcn/ui","Playwright","Vitest"],
+      "confidence": "high"
+    },    {
       "id": "nami-cypress-testing-leadership",
       "company": "NAMI",
       "timeframe": "2024-2026",
@@ -506,7 +562,7 @@
       "credential": "Enterprise Design Thinking Practitioner",
       "note": "Jun 2021"
     }  ],
-  "generatedAt": "2026-08-19T01:39:45.211Z",
+  "generatedAt": "2026-09-03T13:15:58.343Z",
   "versionId": "portfolio-v1",
   "targetId": "portfolio-focused"
 }

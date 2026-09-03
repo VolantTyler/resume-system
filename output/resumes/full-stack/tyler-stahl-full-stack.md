@@ -128,11 +128,11 @@ Built an OCEAN-based personality alignment prototype in Google AI Studio, then p
 
 *2026*
 
-OpenAI Build Week required shipping a working product under tight hackathon constraints with AI-assisted development.
+A merge can succeed in GitHub while its post-merge deployment fails silently (credentials, quotas, environment config), leaving production stale with no clear notification signal—built for OpenAI Build Week 2026's Developer Tools track under tight hackathon constraints, primarily via Codex/GPT-5.6.
 
-Built Stack Overlord primarily in Codex/GPT-5.6, with project intelligence powered by GPT-5.6.
+Built a Next.js/TypeScript command center that ingests signed GitHub Actions webhooks into a durable Postgres/Drizzle ledger (GitHub stays the source of truth for pass/fail), diagnoses failures with the OpenAI Responses API (GPT-5.6) using evidence citations, confidence levels, and verification steps, alerts Slack, and ships a deterministic credential-free demo mode so judges can exercise the whole flow.
 
-**Technologies:** Codex, GPT-5.6
+**Technologies:** Codex, GPT-5.6, Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Postgres, Drizzle ORM, OpenAI Responses API, Vercel, Playwright, Vitest, GitHub Actions, Slack Bolt
 
 ### NAMI Design Component Library — NAMI
 
@@ -179,8 +179,8 @@ Led frontend execution of the 20th-anniversary rebrand and platform rebuild in c
 
 **Applied AI:** Google AI Studio, Codex / GPT, PII masking, Model Context Protocol
 **Front-End:** JavaScript, React, TypeScript, Next.js, Tailwind CSS, Figma, Adobe XD, Storybook, UX Design / Prototyping, Performance optimization
-**Back-End:** Firebase, Firestore, Sequelize, FastAPI, Slack Bolt, Google Docs / Drive APIs, Laravel, GraphQL, SQLite, Clerk OAuth, PHP
-**Testing:** Cypress
+**Back-End:** Firebase, Firestore, Sequelize, Postgres / Drizzle ORM, FastAPI, Slack Bolt, Google Docs / Drive APIs, Laravel, GraphQL, SQLite, Clerk OAuth, PHP
+**Testing:** Cypress, Playwright
 **DevOps:** Docker, CI/CD, GitHub Actions
 **Collaboration:** Stakeholder collaboration, Deep listening, Agile / Scrum, Consensus-building, Cross-department collaboration
 

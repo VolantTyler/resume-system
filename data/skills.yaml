@@ -84,9 +84,11 @@ categories:
           - GPT
           - GPT-5.6
           - OpenAI Codex
+          - OpenAI Responses API
           - ChatGPT
         evidence_ids:
           - stack-overlord-openai-build-week
+          - stack-overlord-ai-failure-diagnosis
         proficiency: high
         target_roles:
           - applied-ai-developer
@@ -244,6 +246,7 @@ categories:
           - cn-portal-scale
           - cn-graphql-migration
           - knowledge-vault-mcp-server
+          - stack-overlord-webhook-ledger
         proficiency: high
         portfolio_facets:
           - front-end
@@ -260,6 +263,8 @@ categories:
         evidence_ids:
           - knowledge-vault-mcp-server
           - knowledge-vault-dual-auth
+          - stack-overlord-webhook-ledger
+          - stack-overlord-demo-mode
         proficiency: high
         portfolio_facets:
           - front-end
@@ -283,8 +288,10 @@ categories:
         aliases:
           - TailwindCSS
           - Tailwind
+          - shadcn/ui
         evidence_ids:
           - nami-design-component-library
+          - stack-overlord-demo-mode
         proficiency: high
         target_roles:
           - frontend-engineer
@@ -408,6 +415,22 @@ categories:
           - frontend-engineer
           - nonprofit-tech
           - forward-deployed-engineer
+      - name: Postgres / Drizzle ORM
+        aliases:
+          - PostgreSQL
+          - Drizzle
+          - SQL
+        evidence_ids:
+          - stack-overlord-webhook-ledger
+        proficiency: high
+        portfolio_facets:
+          - back-end
+        target_roles:
+          - full-stack-engineer
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
       - name: Python
         evidence_ids:
           - graic-crewai-supervisor-routing
@@ -530,6 +553,20 @@ categories:
           - agentic-ai-engineer
           - agentic-software-engineer
           - forward-deployed-engineer
+      - name: Playwright
+        aliases:
+          - Vitest
+        evidence_ids:
+          - stack-overlord-demo-mode
+        proficiency: medium
+        portfolio_facets:
+          - front-end
+        target_roles:
+          - qa-minded-frontend
+          - full-stack-engineer
+          - applied-ai-developer
+          - agentic-software-engineer
+          - forward-deployed-engineer
   - name: DevOps
     skills:
       - name: Docker
@@ -561,6 +598,8 @@ categories:
       - name: GitHub Actions
         aliases:
           - GHA
+        evidence_ids:
+          - stack-overlord-webhook-ledger
         proficiency: medium
         target_roles:
           - full-stack-engineer
