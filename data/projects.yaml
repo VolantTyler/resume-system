@@ -244,6 +244,7 @@
   portfolio_visible: true
   portfolio_headline: Stack Overlord
   portfolio_blurb: A CI/CD command center that catches silent post-merge deployment failures—ingesting signed GitHub webhooks into a durable Postgres ledger and diagnosing failures with cited, confidence-scored GPT-5.6 analysis that never overrides GitHub's own pass/fail verdict.
+  portfolio_image: stack-overlord-hero.png
   portfolio_links:
     - label: View live project
       url: https://stack-overlord.vercel.app/
