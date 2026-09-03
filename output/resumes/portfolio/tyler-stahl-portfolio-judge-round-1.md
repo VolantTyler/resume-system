@@ -5,7 +5,7 @@
 **Résumé version:** `portfolio-v1`
 **Round:** 1
 **Model:** `stub`
-**Generated:** 2026-08-19
+**Generated:** 2026-09-03
 
 ## Verdict
 

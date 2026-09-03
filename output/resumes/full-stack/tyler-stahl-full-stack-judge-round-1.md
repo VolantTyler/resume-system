@@ -5,7 +5,7 @@
 **Résumé version:** `tyler-stahl-full-stack`
 **Round:** 1
 **Model:** `stub`
-**Generated:** 2026-08-19
+**Generated:** 2026-09-03
 
 ## Verdict
 
@@ -16,7 +16,7 @@
 
 | Dimension | Score | Critique |
 |-----------|-------|----------|
-| relevance | 10/10 | Selected accomplishments share themes/technologies with the JD (9 overlapping). |
+| relevance | 10/10 | Selected accomplishments share themes/technologies with the JD (11 overlapping). |
 | evidence_alignment | 8/10 | Stub judge only references provided raw_facts; no invented claims detected. |
 | coverage | 8/10 | No reference-vocabulary gaps flagged. |
 | clarity | 8/10 | Stub clarity check based on résumé section structure. |

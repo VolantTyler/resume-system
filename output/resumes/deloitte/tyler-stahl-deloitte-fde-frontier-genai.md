@@ -144,11 +144,11 @@ Built a multi-agent orchestrator with the Cursor Agent SDK, modular subagents, a
 
 *2026*
 
-OpenAI Build Week required shipping a working product under tight hackathon constraints with AI-assisted development.
+A merge can succeed in GitHub while its post-merge deployment fails silently (credentials, quotas, environment config), leaving production stale with no clear notification signal—built for OpenAI Build Week 2026's Developer Tools track under tight hackathon constraints, primarily via Codex/GPT-5.6.
 
-Built Stack Overlord primarily in Codex/GPT-5.6, with project intelligence powered by GPT-5.6.
+Built a Next.js/TypeScript command center that ingests signed GitHub Actions webhooks into a durable Postgres/Drizzle ledger (GitHub stays the source of truth for pass/fail), diagnoses failures with the OpenAI Responses API (GPT-5.6) using evidence citations, confidence levels, and verification steps, alerts Slack, and ships a deterministic credential-free demo mode so judges can exercise the whole flow.
 
-**Technologies:** Codex, GPT-5.6
+**Technologies:** Codex, GPT-5.6, Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Postgres, Drizzle ORM, OpenAI Responses API, Vercel, Playwright, Vitest, GitHub Actions, Slack Bolt
 
 ### Charity Navigator Data Review Portal — Charity Navigator
 
@@ -165,8 +165,8 @@ Engineered portal features, queried MySQL via Sequelize for front-end data, help
 
 **Applied AI:** Multi-agent orchestration, CrewAI, Hybrid LLM inference, Antigravity, Gemma4, Google AI Studio, Codex / GPT, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Vertex AI, Ollama, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
 **Front-End:** JavaScript, React, TypeScript, Next.js, UX Design / Prototyping, Performance optimization
-**Back-End:** Firebase, Firestore, Sequelize, Python, FastAPI, Slack Bolt, Google Docs / Drive APIs, GraphQL, SQLite, Clerk OAuth
-**Testing:** Cypress
+**Back-End:** Firebase, Firestore, Sequelize, Postgres / Drizzle ORM, Python, FastAPI, Slack Bolt, Google Docs / Drive APIs, GraphQL, SQLite, Clerk OAuth
+**Testing:** Cypress, Playwright
 **DevOps:** Docker, CI/CD, GitHub Actions
 **Collaboration:** Stakeholder collaboration, Deep listening, Agile / Scrum, Consensus-building, Cross-department collaboration
 

@@ -603,6 +603,132 @@
   confidence: high
   source_notes:
     - Added from user confirmation 2026-08-04; no placement, usage, or latency metrics claimed.
+- id: stack-overlord-webhook-ledger
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: applied-ai
+  themes:
+    - CI/CD observability
+    - deployment visibility
+    - durable ledger
+    - webhook ingestion
+  technologies:
+    - Next.js
+    - TypeScript
+    - Postgres
+    - Drizzle ORM
+    - GitHub Actions
+    - CI/CD
+    - Vercel
+  raw_fact: >-
+    Built Stack Overlord's ingestion layer to receive signed GitHub Actions webhooks
+    (HMAC SHA-256 verified) and record workflow run state idempotently in a Postgres
+    database via Drizzle ORM, keeping GitHub itself as the sole source of truth for
+    whether a workflow passed or failed.
+  context: >-
+    Solves the problem of a merge succeeding in GitHub while its post-merge
+    deployment fails silently, leaving production stale with no durable record of
+    what happened.
+  resume_bullets:
+    standard: Built signed, idempotent GitHub webhook ingestion into a Postgres ledger for Stack Overlord, keeping GitHub as the source of truth for workflow pass/fail state.
+    applied-ai: Engineered HMAC-verified GitHub webhook ingestion into a durable Postgres/Drizzle ledger, giving Stack Overlord a trustworthy chronological record of every CI/CD workflow run.
+    full-stack: Built a Next.js/TypeScript webhook receiver with HMAC SHA-256 verification and idempotent Postgres/Drizzle storage to durably track GitHub Actions workflow state end to end.
+  evidence:
+    - GitHub repo README (github.com/VolantTyler/stack-overlord)
+    - docs/hackathon/prd.md in that repo
+  target_roles:
+    - applied-ai-developer
+    - agentic-ai-engineer
+    - agentic-software-engineer
+    - forward-deployed-engineer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - docs/intake/2026-09-03-stack-overlord-repo-review.md
+- id: stack-overlord-ai-failure-diagnosis
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: applied-ai
+  themes:
+    - AI-assisted diagnosis
+    - guardrails
+    - evidence-grounded output
+    - explicit uncertainty
+  technologies:
+    - OpenAI Responses API
+    - GPT-5.6
+    - Next.js
+    - GitHub Actions
+    - Slack Bolt
+  raw_fact: >-
+    Wired failed GitHub workflow runs in Stack Overlord to an OpenAI Responses API
+    (GPT-5.6) diagnosis step that returns structured output with evidence citations,
+    a confidence level, and ordered verification steps, then pushes a Slack failure
+    alert; the AI interpretation is explicitly scoped to never determine or overwrite
+    GitHub-owned pass/fail status.
+  context: >-
+    Designed so judges and future users could trust the tool's output: model
+    responses are traced/auditable and every recommendation is paired with a
+    concrete way to verify it, rather than presenting AI guesses as fact.
+  resume_bullets:
+    standard: Built GPT-5.6-powered failure diagnosis for Stack Overlord that returns evidence-cited, confidence-scored analysis and verification steps, with Slack alerts, while treating GitHub's pass/fail status as authoritative.
+    applied-ai: Designed an OpenAI Responses API (GPT-5.6) diagnosis pipeline that grounds every failure explanation in evidence, states its confidence level, and never overrides GitHub's own workflow status.
+    full-stack: Integrated OpenAI's Responses API into a Next.js API route to auto-diagnose failed GitHub Actions runs with cited evidence, confidence levels, and Slack Block Kit failure alerts.
+  evidence:
+    - GitHub repo README (github.com/VolantTyler/stack-overlord)
+    - docs/hackathon/prd.md and docs/hackathon/submission-draft.md in that repo
+  target_roles:
+    - applied-ai-developer
+    - agentic-ai-engineer
+    - agentic-software-engineer
+    - forward-deployed-engineer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - docs/intake/2026-09-03-stack-overlord-repo-review.md
+- id: stack-overlord-demo-mode
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: applied-ai
+  themes:
+    - deterministic demo mode
+    - fixture replay
+    - hackathon judging
+    - responsive UI
+  technologies:
+    - Next.js
+    - React
+    - Tailwind CSS
+    - shadcn/ui
+    - Playwright
+    - Vitest
+  raw_fact: >-
+    Built a deterministic, credential-free demo mode for Stack Overlord that replays
+    fixture-backed workflow failures so OpenAI Build Week judges could exercise the
+    full failure-analysis flow on a responsive (desktop and mobile) dashboard without
+    needing GitHub or OpenAI credentials; covered with Playwright and Vitest tests.
+  context: >-
+    Removes the credential/setup barrier that would otherwise stop a judge or
+    evaluator from seeing the product work within a hackathon's limited review time.
+  resume_bullets:
+    standard: Built a deterministic, credential-free demo mode for Stack Overlord with fixture-replayed failures on a responsive dashboard, tested with Playwright and Vitest.
+    applied-ai: Designed fixture-backed deterministic replay so evaluators could see Stack Overlord's AI failure-analysis flow end to end without GitHub or OpenAI credentials.
+    full-stack: Built a shadcn/ui-based responsive dashboard for Stack Overlord with a deterministic fixture-replay demo mode, covered by a Playwright/Vitest test suite.
+  evidence:
+    - GitHub repo README (github.com/VolantTyler/stack-overlord)
+    - docs/hackathon/submission-draft.md in that repo
+  target_roles:
+    - applied-ai-developer
+    - agentic-ai-engineer
+    - agentic-software-engineer
+    - forward-deployed-engineer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - docs/intake/2026-09-03-stack-overlord-repo-review.md
 - id: rnd-gcp-genai-delivery
   company: Independent R&D
   role: Applied AI Developer

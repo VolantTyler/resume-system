@@ -26,6 +26,9 @@
     - agentos-orchestration
     - cognitive-bridge-firebase-productionization
     - stack-overlord-openai-build-week
+    - stack-overlord-webhook-ledger
+    - stack-overlord-ai-failure-diagnosis
+    - stack-overlord-demo-mode
     - nami-design-component-library
     - nami-cypress-testing-leadership
     - cn-portal-scale
@@ -58,6 +61,8 @@
       note: Added Glen Rock AI Guild CrewAI / Slack augment demo.
     - date: 2026-08-04
       note: Added Stack Overlord OpenAI Build Week (Codex/GPT-5.6).
+    - date: 2026-09-03
+      note: Enriched Stack Overlord from repo README/PRD — webhook ledger, GPT-5.6 diagnosis, demo mode.
 - id: tyler-stahl-deloitte-agentic-ai
   target_id: agentic-ai-engineer
   label: Agentic AI Engineer
@@ -83,6 +88,9 @@
     - agentos-orchestration
     - cognitive-bridge-firebase-productionization
     - stack-overlord-openai-build-week
+    - stack-overlord-webhook-ledger
+    - stack-overlord-ai-failure-diagnosis
+    - stack-overlord-demo-mode
     - iblueprint-embedding-work
     - nami-cypress-testing-leadership
     - cn-portal-scale
@@ -108,6 +116,8 @@
       note: Added Glen Rock AI Guild CrewAI supervisor routing and Slack backend.
     - date: 2026-08-04
       note: Added Stack Overlord OpenAI Build Week (Codex/GPT-5.6).
+    - date: 2026-09-03
+      note: Enriched Stack Overlord from repo README/PRD — webhook ledger, GPT-5.6 diagnosis, demo mode.
 - id: tyler-stahl-deloitte-agentic-se-ii
   target_id: agentic-software-engineer
   label: Agentic Software Engineer
@@ -131,6 +141,9 @@
     - autonomous-etl-pipelines
     - cognitive-bridge-firebase-productionization
     - stack-overlord-openai-build-week
+    - stack-overlord-webhook-ledger
+    - stack-overlord-ai-failure-diagnosis
+    - stack-overlord-demo-mode
     - nami-cypress-testing-leadership
     - ccie-tm-registration-release-support
     - nami-design-component-library
@@ -161,6 +174,8 @@
       note: Added Glen Rock AI Guild CrewAI / Slack augment demo.
     - date: 2026-08-04
       note: Added Stack Overlord, CN Sequelize/MySQL, and Docker CI/CD deploy evidence.
+    - date: 2026-09-03
+      note: Enriched Stack Overlord from repo README/PRD — webhook ledger, GPT-5.6 diagnosis, demo mode.
 - id: tyler-stahl-deloitte-fde-frontier-genai
   target_id: forward-deployed-engineer
   label: Forward Deployed Engineer
@@ -360,6 +375,9 @@
     - autonomous-etl-pipelines
     - cognitive-bridge-firebase-productionization
     - stack-overlord-openai-build-week
+    - stack-overlord-webhook-ledger
+    - stack-overlord-ai-failure-diagnosis
+    - stack-overlord-demo-mode
     - nami-design-component-library
     - nami-event-planning-ux-prototyping
     - nami-cypress-testing-leadership
@@ -398,6 +416,8 @@
       note: Added Glen Rock AI Guild FastAPI / Slack / CrewAI backend.
     - date: 2026-08-04
       note: Added Stack Overlord, NAMI UX prototyping, CN Sequelize/MySQL, and Docker CI/CD.
+    - date: 2026-09-03
+      note: Enriched Stack Overlord from repo README/PRD — webhook ledger, GPT-5.6 diagnosis, demo mode.
 - id: tyler-stahl-frontend-engineer
   target_id: frontend-engineer
   label: Front-End Engineer
@@ -506,6 +526,9 @@
     - insummery-firebase-production
     - openclaw-multi-agent-orchestration
     - stack-overlord-openai-build-week
+    - stack-overlord-webhook-ledger
+    - stack-overlord-ai-failure-diagnosis
+    - stack-overlord-demo-mode
     - nami-cypress-testing-leadership
     - cn-portal-scale
     - cn-rebrand-platform-rebuild
@@ -531,3 +554,5 @@
       note: Added Glen Rock AI Guild CrewAI / Slack augment demo.
     - date: 2026-08-04
       note: Added Stack Overlord OpenAI Build Week (Codex/GPT-5.6).
+    - date: 2026-09-03
+      note: Enriched Stack Overlord from repo README/PRD; set portfolio_visible true.
