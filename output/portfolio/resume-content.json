@@ -147,7 +147,7 @@
       "portfolioVisible": true,
       "portfolioHeadline": "The State of AI — living briefing",
       "portfolioBlurb": "A periodically updated industry dashboard whose GitHub Actions job refreshes panel data into committed JSON, so Vercel serves a static site that never ships API keys to browsers.",
-      "portfolioImage": null,
+      "portfolioImage": "state-of-ai-model-scores.png",
       "portfolioLinks": [
         {
           "label": "View live project",
@@ -606,7 +606,7 @@
       "credential": "Enterprise Design Thinking Practitioner",
       "note": "Jun 2021"
     }  ],
-  "generatedAt": "2026-10-07T16:02:08.357Z",
+  "generatedAt": "2026-10-07T16:09:40.771Z",
   "versionId": "portfolio-v1",
   "targetId": "portfolio-focused"
 }

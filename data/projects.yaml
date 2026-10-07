@@ -245,6 +245,8 @@
     A periodically updated industry dashboard whose GitHub Actions job refreshes panel
     data into committed JSON, so Vercel serves a static site that never ships API keys
     to browsers.
+  # Filename only — VolantTyler/portfolio resolves assets/${portfolio_image} at build time.
+  portfolio_image: state-of-ai-model-scores.png
   portfolio_links:
     - label: View live project
       url: https://state-of-ai-briefing.vercel.app/

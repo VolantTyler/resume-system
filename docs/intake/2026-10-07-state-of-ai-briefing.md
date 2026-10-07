@@ -20,3 +20,4 @@ Facts captured from the deployed site (https://state-of-ai-briefing.vercel.app/)
 - `data/experience.yaml` → Independent R&D wiring
 - `data/resume_versions.yaml` → applied-ai, Deloitte/Google FDE, full-stack, portfolio-v1
 - `data/skills.yaml` → Anthropic API skill; GitHub Actions evidence link
+- `portfolio_image` → `state-of-ai-model-scores.png` (binary lives in VolantTyler/portfolio `assets/`, not resume-system)
