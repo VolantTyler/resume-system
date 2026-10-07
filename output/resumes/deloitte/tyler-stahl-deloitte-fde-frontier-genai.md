@@ -150,6 +150,16 @@ Built a Next.js/TypeScript command center that ingests signed GitHub Actions web
 
 **Technologies:** Codex, GPT-5.6, Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Postgres, Drizzle ORM, OpenAI Responses API, Vercel, Playwright, Vitest, GitHub Actions, Slack Bolt
 
+### State of AI Briefing — Independent R&D
+
+*2026*
+
+AI industry metrics (valuations, public markets, model benchmarks, usage, capital, energy) are scattered and change often; a one-off report goes stale quickly, and refreshing from the browser on a public URL would mean shipping an API key or exposing an endpoint strangers could abuse.
+
+Built a periodically refreshed industry briefing as a Vite/React static site on Vercel, with GitHub Actions running scripts/refresh.js to update panel data via the Anthropic API (filtered web search for valuations; Haiku-backed panels with configured web search), direct fetches for US app-store ranks and Yahoo Finance closes, and commits to public/data/*.json plus trend.csv so visitors only read published files from the CDN.
+
+**Technologies:** Vite, React, JavaScript, GitHub Actions, Vercel, Anthropic API
+
 ### Charity Navigator Data Review Portal — Charity Navigator
 
 *2023-2024*
@@ -163,7 +173,7 @@ Engineered portal features, queried MySQL via Sequelize for front-end data, help
 
 ## Skills
 
-**Applied AI:** Multi-agent orchestration, CrewAI, Hybrid LLM inference, Antigravity, Gemma4, Google AI Studio, Codex / GPT, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Vertex AI, Ollama, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
+**Applied AI:** Multi-agent orchestration, CrewAI, Hybrid LLM inference, Antigravity, Gemma4, Google AI Studio, Codex / GPT, Anthropic API, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Vertex AI, Ollama, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
 **Front-End:** JavaScript, React, TypeScript, Next.js, UX Design / Prototyping, Performance optimization
 **Back-End:** Firebase, Firestore, Sequelize, Postgres / Drizzle ORM, Python, FastAPI, Slack Bolt, Google Docs / Drive APIs, GraphQL, SQLite, Clerk OAuth
 **Testing:** Cypress, Playwright

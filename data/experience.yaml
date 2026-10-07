@@ -31,6 +31,7 @@
     - AgentOS chief-of-staff agent
     - Cognitive Bridge personality alignment
     - Stack Overlord (OpenAI Build Week)
+    - State of AI Briefing (living industry dashboard)
   accomplishment_ids:
     - rnd-gcp-genai-delivery
     - rnd-hitl-eval-practices
@@ -54,6 +55,8 @@
     - cognitive-bridge-personality
     - cognitive-bridge-firebase-productionization
     - stack-overlord-openai-build-week
+    - soai-briefing-static-publish-pipeline
+    - soai-briefing-anthropic-refresh-pipeline
     - iblueprint-embedding-work
   project_ids:
     - glen-rock-ai-guild
@@ -64,6 +67,7 @@
     - agentos-chief-of-staff
     - cognitive-bridge
     - stack-overlord
+    - state-of-ai-briefing
     - iblueprint-embeddings
 - id: nami-front-end-developer
   company: NAMI

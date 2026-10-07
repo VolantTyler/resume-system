@@ -96,6 +96,19 @@ categories:
           - agentic-software-engineer
           - forward-deployed-engineer
           - full-stack-engineer
+      - name: Anthropic API
+        aliases:
+          - Claude API
+          - Anthropic Messages API
+        evidence_ids:
+          - soai-briefing-anthropic-refresh-pipeline
+        proficiency: high
+        target_roles:
+          - applied-ai-developer
+          - agentic-ai-engineer
+          - agentic-software-engineer
+          - forward-deployed-engineer
+          - full-stack-engineer
       - name: Human-in-the-loop controls
         aliases:
           - HITL
@@ -600,6 +613,7 @@ categories:
           - GHA
         evidence_ids:
           - stack-overlord-webhook-ledger
+          - soai-briefing-static-publish-pipeline
         proficiency: medium
         target_roles:
           - full-stack-engineer

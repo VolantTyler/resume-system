@@ -35,6 +35,8 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 - Designed a Cursor Agent SDK orchestrator that splits evaluation and testing subagents behind HITL checkpoints.
 - Migrated an AI Studio personality prototype to a serverless Python backend on Firebase/Vertex AI with durable Firestore agent memory.
 - Shipped Stack Overlord in OpenAI Build Week using Codex/GPT-5.6 as the primary build stack and GPT-5.6 for project intelligence.
+- Designed State of AI Briefing's publish loop so only GitHub Actions touches the Anthropic API and the public site reads committed public/data files from the CDN.
+- Automated State of AI Briefing panel updates in GitHub Actions using Anthropic filtered web search for valuations and Haiku panels, with usage.json cost tracking and REFRESH_MAX_USD guardrails.
 **Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave, Codex, GPT-5.6
 
 ### Front-End Developer — NAMI
@@ -155,10 +157,20 @@ Built a Next.js/TypeScript command center that ingests signed GitHub Actions web
 
 **Technologies:** Codex, GPT-5.6, Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Postgres, Drizzle ORM, OpenAI Responses API, Vercel, Playwright, Vitest, GitHub Actions, Slack Bolt
 
+### State of AI Briefing — Independent R&D
+
+*2026*
+
+AI industry metrics (valuations, public markets, model benchmarks, usage, capital, energy) are scattered and change often; a one-off report goes stale quickly, and refreshing from the browser on a public URL would mean shipping an API key or exposing an endpoint strangers could abuse.
+
+Built a periodically refreshed industry briefing as a Vite/React static site on Vercel, with GitHub Actions running scripts/refresh.js to update panel data via the Anthropic API (filtered web search for valuations; Haiku-backed panels with configured web search), direct fetches for US app-store ranks and Yahoo Finance closes, and commits to public/data/*.json plus trend.csv so visitors only read published files from the CDN.
+
+**Technologies:** Vite, React, JavaScript, GitHub Actions, Vercel, Anthropic API
+
 
 ## Skills
 
-**Applied AI:** Multi-agent orchestration, CrewAI, Hybrid LLM inference, Antigravity, Gemma4, Google AI Studio, Codex / GPT, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Vertex AI, Ollama, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
+**Applied AI:** Multi-agent orchestration, CrewAI, Hybrid LLM inference, Antigravity, Gemma4, Google AI Studio, Codex / GPT, Anthropic API, Human-in-the-loop controls, PII masking, Agent evaluation, Embeddings / RAG, Vertex AI, Ollama, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
 **Front-End:** Next.js
 **Back-End:** Firebase, Firestore, Postgres / Drizzle ORM, Python, FastAPI, Slack Bolt, Google Docs / Drive APIs, SQLite, Clerk OAuth
 **Testing:** Playwright

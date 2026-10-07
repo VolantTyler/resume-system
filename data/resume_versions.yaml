@@ -29,6 +29,8 @@
     - stack-overlord-webhook-ledger
     - stack-overlord-ai-failure-diagnosis
     - stack-overlord-demo-mode
+    - soai-briefing-static-publish-pipeline
+    - soai-briefing-anthropic-refresh-pipeline
     - nami-design-component-library
     - nami-cypress-testing-leadership
     - cn-portal-scale
@@ -45,6 +47,7 @@
     - agentos-chief-of-staff
     - cognitive-bridge
     - stack-overlord
+    - state-of-ai-briefing
   skill_emphasis: []
   output_folder: applied-ai
   output_slug: tyler-stahl-applied-ai
@@ -63,6 +66,8 @@
       note: Added Stack Overlord OpenAI Build Week (Codex/GPT-5.6).
     - date: 2026-09-03
       note: Enriched Stack Overlord from repo README/PRD — webhook ledger, GPT-5.6 diagnosis, demo mode.
+    - date: 2026-10-07
+      note: Added State of AI Briefing living industry dashboard (portfolio-visible).
 - id: tyler-stahl-deloitte-agentic-ai
   target_id: agentic-ai-engineer
   label: Agentic AI Engineer
@@ -91,6 +96,7 @@
     - stack-overlord-webhook-ledger
     - stack-overlord-ai-failure-diagnosis
     - stack-overlord-demo-mode
+    - soai-briefing-anthropic-refresh-pipeline
     - iblueprint-embedding-work
     - nami-cypress-testing-leadership
     - cn-portal-scale
@@ -105,6 +111,7 @@
     - agentos-chief-of-staff
     - cognitive-bridge
     - stack-overlord
+    - state-of-ai-briefing
     - iblueprint-embeddings
   skill_emphasis: []
   output_folder: deloitte
@@ -144,6 +151,7 @@
     - stack-overlord-webhook-ledger
     - stack-overlord-ai-failure-diagnosis
     - stack-overlord-demo-mode
+    - soai-briefing-anthropic-refresh-pipeline
     - nami-cypress-testing-leadership
     - ccie-tm-registration-release-support
     - nami-design-component-library
@@ -162,6 +170,7 @@
     - openclaw-multi-agent-ecosystem
     - cognitive-bridge
     - stack-overlord
+    - state-of-ai-briefing
     - nami-720-event-platform
     - cn-data-review-portal
   skill_emphasis: []
@@ -204,6 +213,7 @@
     - hybrid-inference-pilot
     - agentos-chief-of-staff
     - stack-overlord
+    - state-of-ai-briefing
     - cn-data-review-portal
   skill_emphasis: []
   application_fit:
@@ -297,6 +307,7 @@
     - iblueprint-embeddings
     - agentos-chief-of-staff
     - stack-overlord
+    - state-of-ai-briefing
     - cn-data-review-portal
   skill_emphasis: []
   application_fit:
@@ -378,6 +389,8 @@
     - stack-overlord-webhook-ledger
     - stack-overlord-ai-failure-diagnosis
     - stack-overlord-demo-mode
+    - soai-briefing-static-publish-pipeline
+    - soai-briefing-anthropic-refresh-pipeline
     - nami-design-component-library
     - nami-event-planning-ux-prototyping
     - nami-cypress-testing-leadership
@@ -396,6 +409,7 @@
     - openclaw-multi-agent-ecosystem
     - cognitive-bridge
     - stack-overlord
+    - state-of-ai-briefing
     - nami-design-component-library
     - nami-event-planning-ux
     - cn-data-review-portal
@@ -529,6 +543,8 @@
     - stack-overlord-webhook-ledger
     - stack-overlord-ai-failure-diagnosis
     - stack-overlord-demo-mode
+    - soai-briefing-static-publish-pipeline
+    - soai-briefing-anthropic-refresh-pipeline
     - nami-cypress-testing-leadership
     - cn-portal-scale
     - cn-rebrand-platform-rebuild
@@ -541,6 +557,7 @@
     - cognitive-bridge
     - agentos-chief-of-staff
     - stack-overlord
+    - state-of-ai-briefing
     - cn-platform-rebuild
   skill_emphasis: []
   output_folder: portfolio
@@ -556,3 +573,5 @@
       note: Added Stack Overlord OpenAI Build Week (Codex/GPT-5.6).
     - date: 2026-09-03
       note: Enriched Stack Overlord from repo README/PRD; set portfolio_visible true.
+    - date: 2026-10-07
+      note: Added State of AI Briefing (portfolio_visible, live + repo links).

@@ -30,6 +30,7 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 - Used the Cursor Agent SDK to orchestrate evaluation and testing subagents with mandatory human review before high-stakes handoffs.
 - Shipped a secured serverless Cognitive Bridge backend with Firebase Auth, Firestore state, and type-safe Gemini JSON responses driving UI and DB updates.
 - Developed Stack Overlord for OpenAI Build Week with Codex/GPT-5.6-assisted delivery and GPT-5.6-powered project intelligence.
+- Shipped scripts/refresh.js for State of AI Briefing to orchestrate Anthropic, market-data, and store-rank fetches in Actions, commit results, and surface refresh failures without blanking live panels.
 **Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave, Codex, GPT-5.6
 
 ### Front-End Developer — NAMI
@@ -134,6 +135,16 @@ Built a Next.js/TypeScript command center that ingests signed GitHub Actions web
 
 **Technologies:** Codex, GPT-5.6, Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Postgres, Drizzle ORM, OpenAI Responses API, Vercel, Playwright, Vitest, GitHub Actions, Slack Bolt
 
+### State of AI Briefing — Independent R&D
+
+*2026*
+
+AI industry metrics (valuations, public markets, model benchmarks, usage, capital, energy) are scattered and change often; a one-off report goes stale quickly, and refreshing from the browser on a public URL would mean shipping an API key or exposing an endpoint strangers could abuse.
+
+Built a periodically refreshed industry briefing as a Vite/React static site on Vercel, with GitHub Actions running scripts/refresh.js to update panel data via the Anthropic API (filtered web search for valuations; Haiku-backed panels with configured web search), direct fetches for US app-store ranks and Yahoo Finance closes, and commits to public/data/*.json plus trend.csv so visitors only read published files from the CDN.
+
+**Technologies:** Vite, React, JavaScript, GitHub Actions, Vercel, Anthropic API
+
 ### NAMI 720 Event Platform — NAMI
 
 *2024-2026*
@@ -157,7 +168,7 @@ Engineered portal features, queried MySQL via Sequelize for front-end data, help
 
 ## Skills
 
-**Applied AI:** Multi-agent orchestration, CrewAI, Antigravity, Codex / GPT, Human-in-the-loop controls, Agent evaluation, Vertex AI, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
+**Applied AI:** Multi-agent orchestration, CrewAI, Antigravity, Codex / GPT, Anthropic API, Human-in-the-loop controls, Agent evaluation, Vertex AI, Cursor Agent SDK, Model Context Protocol, Weights & Biases Weave
 **Front-End:** JavaScript, React, TypeScript, Next.js, Performance optimization
 **Back-End:** Firebase, Firestore, Sequelize, Postgres / Drizzle ORM, Python, FastAPI, Slack Bolt, Laravel, GraphQL, SQLite, Clerk OAuth
 **Testing:** Cypress, Playwright
