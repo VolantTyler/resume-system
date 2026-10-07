@@ -209,6 +209,51 @@
       download: true
   portfolio_featured: true
   resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
+- id: state-of-ai-briefing
+  name: State of AI Briefing
+  organization: Independent R&D
+  timeframe: "2026"
+  problem: >-
+    AI industry metrics (valuations, public markets, model benchmarks, usage, capital,
+    energy) are scattered and change often; a one-off report goes stale quickly, and
+    refreshing from the browser on a public URL would mean shipping an API key or
+    exposing an endpoint strangers could abuse.
+  solution: >-
+    Built a periodically refreshed industry briefing as a Vite/React static site on
+    Vercel, with GitHub Actions running scripts/refresh.js to update panel data via
+    the Anthropic API (filtered web search for valuations; Haiku-backed panels with
+    configured web search), direct fetches for US app-store ranks and Yahoo Finance
+    closes, and commits to public/data/*.json plus trend.csv so visitors only read
+    published files from the CDN.
+  technologies:
+    - Vite
+    - React
+    - JavaScript
+    - GitHub Actions
+    - Vercel
+    - Anthropic API
+  outcomes:
+    - Daily GitHub Actions refresh (08:00 UTC) plus a separate weekly valuations job; each refresh is a dated commit forming an auditable trend log.
+    - Static delivery model — no public refresh URL, no per-visitor API keys, and no database on page load.
+    - Multi-panel dashboard covering valuations, public markets, model capability, usage, app store rankings, capital, energy/data centers, and related analyst notes (per deployed site).
+  related_accomplishment_ids:
+    - soai-briefing-static-publish-pipeline
+    - soai-briefing-anthropic-refresh-pipeline
+  portfolio_visible: true
+  portfolio_headline: The State of AI — living briefing
+  portfolio_blurb: >-
+    A periodically updated industry dashboard whose GitHub Actions job refreshes panel
+    data into committed JSON, so Vercel serves a static site that never ships API keys
+    to browsers.
+  # Filename only — VolantTyler/portfolio resolves assets/${portfolio_image} at build time.
+  portfolio_image: state-of-ai-model-scores.png
+  portfolio_links:
+    - label: View live project
+      url: https://state-of-ai-briefing.vercel.app/
+    - label: View repository
+      url: https://github.com/VolantTyler/state-of-ai-briefing
+  portfolio_featured: false
+  resume_relevance: applied-ai-developer, agentic-ai-engineer, agentic-software-engineer, forward-deployed-engineer, full-stack-engineer
 - id: stack-overlord
   name: Stack Overlord
   organization: Independent R&D

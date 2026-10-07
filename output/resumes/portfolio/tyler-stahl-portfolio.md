@@ -26,6 +26,8 @@ Building applied AI infrastructure spanning multi-agent orchestration, hybrid LL
 - Deployed InSummery on Firebase (Auth, Cloud Functions, Firestore) with a React dashboard and local CLI mode for zero-cloud demos.
 - Built a multi-agent market-intelligence pilot on OpenClaw with specialized agents and SQLite-backed durable memory for long-running research workflows.
 - Built Stack Overlord for OpenAI Build Week primarily with Codex/GPT-5.6, using GPT-5.6 for project intelligence.
+- Built State of AI Briefing as a Vite/React static site whose panel data is refreshed by GitHub Actions into committed JSON/CSV, so Vercel serves updates without shipping API keys to browsers.
+- Built the State of AI Briefing refresh job to update dashboard panels via Anthropic API web search, Yahoo Finance, and app-store chart fetches, with spend caps and failed-panel fallbacks to prior values.
 **Technologies:** Python, Google ADK 2.0, OpenClaw, CrewAI, Google Gemini, Gemma, FastAPI, Slack Bolt, Firebase, SQLite, Cursor Agent SDK, Weights & Biases Weave, Codex, GPT-5.6
 
 ### Front-End Developer — NAMI
@@ -132,6 +134,16 @@ A merge can succeed in GitHub while its post-merge deployment fails silently (cr
 Built a Next.js/TypeScript command center that ingests signed GitHub Actions webhooks into a durable Postgres/Drizzle ledger (GitHub stays the source of truth for pass/fail), diagnoses failures with the OpenAI Responses API (GPT-5.6) using evidence citations, confidence levels, and verification steps, alerts Slack, and ships a deterministic credential-free demo mode so judges can exercise the whole flow.
 
 **Technologies:** Codex, GPT-5.6, Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Postgres, Drizzle ORM, OpenAI Responses API, Vercel, Playwright, Vitest, GitHub Actions, Slack Bolt
+
+### State of AI Briefing — Independent R&D
+
+*2026*
+
+AI industry metrics (valuations, public markets, model benchmarks, usage, capital, energy) are scattered and change often; a one-off report goes stale quickly, and refreshing from the browser on a public URL would mean shipping an API key or exposing an endpoint strangers could abuse.
+
+Built a periodically refreshed industry briefing as a Vite/React static site on Vercel, with GitHub Actions running scripts/refresh.js to update panel data via the Anthropic API (filtered web search for valuations; Haiku-backed panels with configured web search), direct fetches for US app-store ranks and Yahoo Finance closes, and commits to public/data/*.json plus trend.csv so visitors only read published files from the CDN.
+
+**Technologies:** Vite, React, JavaScript, GitHub Actions, Vercel, Anthropic API
 
 ### Charity Navigator Platform Rebuild — Charity Navigator
 

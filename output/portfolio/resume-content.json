@@ -135,6 +135,30 @@
           "download": false
         }      ],
       "portfolioFeatured": false
+    },    {
+      "id": "state-of-ai-briefing",
+      "name": "State of AI Briefing",
+      "organization": "Independent R&D",
+      "timeframe": "2026",
+      "problem": "AI industry metrics (valuations, public markets, model benchmarks, usage, capital, energy) are scattered and change often; a one-off report goes stale quickly, and refreshing from the browser on a public URL would mean shipping an API key or exposing an endpoint strangers could abuse.",
+      "solution": "Built a periodically refreshed industry briefing as a Vite/React static site on Vercel, with GitHub Actions running scripts/refresh.js to update panel data via the Anthropic API (filtered web search for valuations; Haiku-backed panels with configured web search), direct fetches for US app-store ranks and Yahoo Finance closes, and commits to public/data/*.json plus trend.csv so visitors only read published files from the CDN.",
+      "technologies": ["Vite","React","JavaScript","GitHub Actions","Vercel","Anthropic API"],
+      "outcomes": ["Daily GitHub Actions refresh (08:00 UTC) plus a separate weekly valuations job; each refresh is a dated commit forming an auditable trend log.","Static delivery model — no public refresh URL, no per-visitor API keys, and no database on page load.","Multi-panel dashboard covering valuations, public markets, model capability, usage, app store rankings, capital, energy/data centers, and related analyst notes (per deployed site)."],
+      "portfolioVisible": true,
+      "portfolioHeadline": "The State of AI — living briefing",
+      "portfolioBlurb": "A periodically updated industry dashboard whose GitHub Actions job refreshes panel data into committed JSON, so Vercel serves a static site that never ships API keys to browsers.",
+      "portfolioImage": "state-of-ai-model-scores.png",
+      "portfolioLinks": [
+        {
+          "label": "View live project",
+          "url": "https://state-of-ai-briefing.vercel.app/",
+          "download": false
+        },        {
+          "label": "View repository",
+          "url": "https://github.com/VolantTyler/state-of-ai-briefing",
+          "download": false
+        }      ],
+      "portfolioFeatured": false
     }  ],
   "skills": [
     {
@@ -163,6 +187,10 @@
       "proficiency": "high"
     },    {
       "name": "Codex / GPT",
+      "facets": ["applied-ai"],
+      "proficiency": "high"
+    },    {
+      "name": "Anthropic API",
       "facets": ["applied-ai"],
       "proficiency": "high"
     },    {
@@ -356,7 +384,7 @@
       "endDate": "Present",
       "summary": "Building applied AI infrastructure spanning multi-agent orchestration, hybrid LLM inference, structured extraction pipelines, and human-in-the-loop controls. Working in multiple LLMs, harnesses, deployment stacks, and eval platforms.",
       "technologies": ["Python","Google ADK 2.0","OpenClaw","CrewAI","Google Gemini","Gemma","FastAPI","Slack Bolt","Firebase","SQLite","Cursor Agent SDK","Weights & Biases Weave","Codex","GPT-5.6"],
-      "bullets": ["Built a CrewAI Supervisor that routes simple Slack prompts to a direct answer and detailed requests to a dynamically selected specialist crew.","Shipped a FastAPI + Slack Socket Mode backend that turns @mentions into threaded multi-agent Guild reports without a public webhook.","Built a Vercel-hosted MCP knowledge vault that serves reusable engineering patterns as tools for AI coding agents.","Designed one-URL MCP auth that accepts either a shared-secret Bearer token or a Clerk OAuth access token based on the client request.","Built InSummery.AI, an ADK multi-agent family schedule concierge that turns messy registration and disruption messages into a structured multi-child schedule.","Deployed InSummery on Firebase (Auth, Cloud Functions, Firestore) with a React dashboard and local CLI mode for zero-cloud demos.","Built a multi-agent market-intelligence pilot on OpenClaw with specialized agents and SQLite-backed durable memory for long-running research workflows.","Built Stack Overlord for OpenAI Build Week primarily with Codex/GPT-5.6, using GPT-5.6 for project intelligence."]
+      "bullets": ["Built a CrewAI Supervisor that routes simple Slack prompts to a direct answer and detailed requests to a dynamically selected specialist crew.","Shipped a FastAPI + Slack Socket Mode backend that turns @mentions into threaded multi-agent Guild reports without a public webhook.","Built a Vercel-hosted MCP knowledge vault that serves reusable engineering patterns as tools for AI coding agents.","Designed one-URL MCP auth that accepts either a shared-secret Bearer token or a Clerk OAuth access token based on the client request.","Built InSummery.AI, an ADK multi-agent family schedule concierge that turns messy registration and disruption messages into a structured multi-child schedule.","Deployed InSummery on Firebase (Auth, Cloud Functions, Firestore) with a React dashboard and local CLI mode for zero-cloud demos.","Built a multi-agent market-intelligence pilot on OpenClaw with specialized agents and SQLite-backed durable memory for long-running research workflows.","Built Stack Overlord for OpenAI Build Week primarily with Codex/GPT-5.6, using GPT-5.6 for project intelligence.","Built State of AI Briefing as a Vite/React static site whose panel data is refreshed by GitHub Actions into committed JSON/CSV, so Vercel serves updates without shipping API keys to browsers.","Built the State of AI Briefing refresh job to update dashboard panels via Anthropic API web search, Yahoo Finance, and app-store chart fetches, with spend caps and failed-panel fallbacks to prior values."]
     },    {
       "id": "nami-front-end-developer",
       "company": "NAMI",
@@ -488,6 +516,22 @@
       "technologies": ["Next.js","React","Tailwind CSS","shadcn/ui","Playwright","Vitest"],
       "confidence": "high"
     },    {
+      "id": "soai-briefing-static-publish-pipeline",
+      "company": "Independent R&D",
+      "timeframe": "2026",
+      "bullet": "Built State of AI Briefing as a Vite/React static site whose panel data is refreshed by GitHub Actions into committed JSON/CSV, so Vercel serves updates without shipping API keys to browsers.",
+      "themes": ["static site generation","data pipeline","GitOps","industry dashboard"],
+      "technologies": ["Vite","React","GitHub Actions","Vercel","JavaScript"],
+      "confidence": "high"
+    },    {
+      "id": "soai-briefing-anthropic-refresh-pipeline",
+      "company": "Independent R&D",
+      "timeframe": "2026",
+      "bullet": "Built the State of AI Briefing refresh job to update dashboard panels via Anthropic API web search, Yahoo Finance, and app-store chart fetches, with spend caps and failed-panel fallbacks to prior values.",
+      "themes": ["automated research","web search tooling","cost controls","data freshness"],
+      "technologies": ["Anthropic API","GitHub Actions","JavaScript"],
+      "confidence": "high"
+    },    {
       "id": "nami-cypress-testing-leadership",
       "company": "NAMI",
       "timeframe": "2024-2026",
@@ -562,7 +606,7 @@
       "credential": "Enterprise Design Thinking Practitioner",
       "note": "Jun 2021"
     }  ],
-  "generatedAt": "2026-09-03T13:15:58.343Z",
+  "generatedAt": "2026-10-07T16:09:40.771Z",
   "versionId": "portfolio-v1",
   "targetId": "portfolio-focused"
 }

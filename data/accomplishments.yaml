@@ -729,6 +729,103 @@
   confidence: high
   source_notes:
     - docs/intake/2026-09-03-stack-overlord-repo-review.md
+- id: soai-briefing-static-publish-pipeline
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: applied-ai
+  themes:
+    - static site generation
+    - data pipeline
+    - GitOps
+    - industry dashboard
+  technologies:
+    - Vite
+    - React
+    - GitHub Actions
+    - Vercel
+    - JavaScript
+  raw_fact: >-
+    Built State of AI Briefing so GitHub Actions runs scripts/refresh.js, commits
+    public/data/values.json, trend.csv, store-ranks.json, and usage.json to the repo,
+    and Vercel rebuilds to serve those static files from the CDN; the browser only
+    reads /data/*.json with no API key, no database, and no per-visitor refresh
+    endpoint.
+  context: >-
+    Deliberate inversion from a browser-side refresh model that would expose API keys
+    or abusable public endpoints on a static dashboard URL.
+  resume_bullets:
+    standard: >-
+      Built State of AI Briefing as a Vite/React static site whose panel data is
+      refreshed by GitHub Actions into committed JSON/CSV, so Vercel serves updates
+      without shipping API keys to browsers.
+    applied-ai: >-
+      Designed State of AI Briefing's publish loop so only GitHub Actions touches the
+      Anthropic API and the public site reads committed public/data files from the CDN.
+    full-stack: >-
+      Wired GitHub Actions data commits and Vercel static hosting for State of AI
+      Briefing so page loads consume published JSON/CSV only—no database or visitor-side
+      refresh API.
+  evidence:
+    - GitHub repo README (github.com/VolantTyler/state-of-ai-briefing)
+    - https://state-of-ai-briefing.vercel.app/
+  target_roles:
+    - applied-ai-developer
+    - agentic-ai-engineer
+    - agentic-software-engineer
+    - forward-deployed-engineer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - docs/intake/2026-10-07-state-of-ai-briefing.md
+- id: soai-briefing-anthropic-refresh-pipeline
+  company: Independent R&D
+  role: Applied AI Developer
+  timeframe: "2026"
+  category: applied-ai
+  themes:
+    - automated research
+    - web search tooling
+    - cost controls
+    - data freshness
+  technologies:
+    - Anthropic API
+    - GitHub Actions
+    - JavaScript
+  raw_fact: >-
+    Implemented scripts/refresh.js as the GitHub Actions entry point that refreshes
+    State of AI Briefing panels via the Anthropic API (filtered web search for
+    valuations; Haiku-backed panels with configured web search), direct Yahoo Finance
+    chart fetches for public-market closes, and US App Store / Google Play rank
+    fetches; respects REFRESH_MAX_USD (default $1), records per-call usage estimates in
+    usage.json, and leaves prior values in place when a panel fails.
+  context: >-
+    Keeps multi-source industry metrics current without a database—the refresh job and
+    git history are the system of record.
+  resume_bullets:
+    standard: >-
+      Built the State of AI Briefing refresh job to update dashboard panels via
+      Anthropic API web search, Yahoo Finance, and app-store chart fetches, with spend
+      caps and failed-panel fallbacks to prior values.
+    applied-ai: >-
+      Automated State of AI Briefing panel updates in GitHub Actions using Anthropic
+      filtered web search for valuations and Haiku panels, with usage.json cost
+      tracking and REFRESH_MAX_USD guardrails.
+    full-stack: >-
+      Shipped scripts/refresh.js for State of AI Briefing to orchestrate Anthropic,
+      market-data, and store-rank fetches in Actions, commit results, and surface
+      refresh failures without blanking live panels.
+  evidence:
+    - GitHub repo README (github.com/VolantTyler/state-of-ai-briefing)
+  target_roles:
+    - applied-ai-developer
+    - agentic-ai-engineer
+    - agentic-software-engineer
+    - forward-deployed-engineer
+    - full-stack-engineer
+  confidence: high
+  source_notes:
+    - docs/intake/2026-10-07-state-of-ai-briefing.md
 - id: rnd-gcp-genai-delivery
   company: Independent R&D
   role: Applied AI Developer
